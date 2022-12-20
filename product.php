@@ -13,6 +13,7 @@ if(isset($_GET['id']))
 $query = "WHERE aid=$id  ORDER BY `nim_product`.`aid` ASC";			
 $discountList = $fee->Getproductlist($query);
 
+
 $discountList2 = $fee->Getproducttanavolistbyid($id);
 $counttttt = $fee->Getproducttanavolistbyidandif($id);
 foreach($discountList as $discountProp)
@@ -537,10 +538,18 @@ echo'
                                                             </div>
                                                         </div>
                                                         <div class="col-sm-6">
-                                                            <button
-                                                                class="shadow-sm fw-bold btn-add-to-cart mt-sm-0 mt-2 waves-effect waves-light">افزودن
-                                                                به سبد
-                                                                خرید</button>
+                                                         ';
+														 if(!$isLogedIn){
+															 
+									echo'<button  class="shadow-sm fw-bold btn-add-to-cart mt-sm-0 mt-2 waves-effect waves-light">برای خرید وارد شوید</button>';
+															 
+														 }
+									 else{echo'<button  class="shadow-sm fw-bold btn-add-to-cart mt-sm-0 mt-2 waves-effect waves-light">افزودن به سبد خرید</button>';
+									 }
+echo'														 
+                        
+                                                                
+                                                                
                                                         </div>
                                                     </div>
                                                 </form>

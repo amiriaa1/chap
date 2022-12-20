@@ -47,7 +47,7 @@ echo'
             <div class="row">
                 <div class="col-md-6">
                     <div class="banner-item">
-                        <a href="category.html">
+                        <a href="category?type=1">
                             <img src="img/banner/banner-22-1.jpg" alt="" class="img-fluid shadow-md">
                         </a>
                     </div>
@@ -55,7 +55,7 @@ echo'
 				
 				<div class="col-md-6">
                     <div class="banner-item">
-                        <a href="category.html">
+                        <a href="category?type=1">
                             <img src="img/banner/banner-22-1.jpg" alt="" class="img-fluid shadow-md">
                         </a>
                     </div>
@@ -63,7 +63,7 @@ echo'
 				
 				<div class="col-md-6">
                     <div class="banner-item">
-                        <a href="category.html">
+                        <a href="category?type=1">
                             <img src="img/banner/banner-22-1.jpg" alt="" class="img-fluid shadow-md">
                         </a>
                     </div>
@@ -72,7 +72,7 @@ echo'
 				
                 <div class="col-md-6">
                     <div class="banner-item">
-                        <a href="category.html">
+                        <a href="category?type=1">
                             <img src="img/banner/banner-22-2.jpg" alt="" class="img-fluid shadow-md">
                         </a>
                     </div>
@@ -294,7 +294,7 @@ echo'
                         <h6 class="slider-title">برخی همکاران ما</h6>
                     </div>
                     <div class="pbt-header-link">
-                        <a href="category.html" class="fromCenter border-animate">مشاهده همه</a>
+                        <a href="category?type=1" class="fromCenter border-animate">مشاهده همه</a>
                     </div>
                 </div>
                 <div class="swiper partnerSwipper">

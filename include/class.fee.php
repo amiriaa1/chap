@@ -51,6 +51,13 @@ function Getproductlist($query) { global $table_prefix;
  
  
 
+function Getproductlistcount($query) { global $table_prefix;
+ $query = $this->link->query("SELECT * FROM `nim_product` $query");
+ $counts = $query->rowCount(); $result = $query->fetchAll();
+ return $counts; }
+ 
+ 
+
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 

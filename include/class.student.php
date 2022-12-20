@@ -95,9 +95,9 @@ function GetUserinvestlistcron($query1) { global $table_prefix; $tids=implode(',
  ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
  
- function LoginStudent($username,$password)
-{ global $table_prefix; $query = $this->link->prepare("SELECT * FROM `".$table_prefix."users` WHERE `uusername`=? AND `upass`=?");
- $values = array($username,$password); $query->execute($values); $counts = $query->rowCount();
+ function LoginStudent($username)
+{ global $table_prefix; $query = $this->link->prepare("SELECT * FROM `".$table_prefix."users` WHERE `uusername`=?");
+ $values = array($username); $query->execute($values); $counts = $query->rowCount();
  return $counts; }
  ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 

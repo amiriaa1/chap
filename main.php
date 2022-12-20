@@ -70,23 +70,23 @@ if($isLogedIn)
 {
 	if($cookie==0)
 	{
-		if(!$student->LoginStudent($_SESSION[$user_session_name],$_SESSION[$user_password_session_name]))
+		if(!$student->LoginStudent($_SESSION[$user_session_name]))
 			header ('Location: logout.php');
 		$studentProp=$student->GetStudentInfo($_SESSION[$user_session_name]);
 	}
 	else
 	{
-		if(!$student->LoginStudent($_COOKIE[$user_session_name],$_COOKIE[$user_password_session_name]))
+		if(!$student->LoginStudent($_COOKIE[$user_session_name]))
 			header ('Location: logout.php');
 		$studentProp=$student->GetStudentInfo($_COOKIE[$user_session_name]);
 	}
-	$uactive=$studentProp['uactive'];
+	
 	$uid=$studentProp['uid'];
 	$uusername=$studentProp['uusername'];
-	$referral=$studentProp['umobile'];
 	$ucomment=$studentProp['ucomment'];
 	$utimestampuserupdatee=$studentProp['aut_time_add'];
 	$autver=$studentProp['autver'];
+	$utimestampuser=$studentProp['utimestamp'];
 }
 
 if ($dir=="rtl")
