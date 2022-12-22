@@ -45,6 +45,7 @@ if(!$db_connection->connect())
 }
 include_once('include/class.admin.php');
 include_once('include/functions.php');
+include_once('bankApi.php');
 include_once('func.php');
 include_once('include/class.settings.php');
 $settings_class = new ManageSettings();
@@ -57,7 +58,9 @@ $language = $system_settings["language"];
 $institute_name = $system_settings["institute_name"];
 $system_title = $system_settings["system_title"];
 $uusername_title = $system_settings["uusername_title"];
-$sendinblueapikey = $system_settings["gateway1_key"];
+$client_id = $system_settings["gateway1_key"];
+$secret_id = $system_settings["gateway2_key"];
+$refresh_token = $system_settings["gateway3_key"];
 
 
 

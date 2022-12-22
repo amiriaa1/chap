@@ -4,7 +4,8 @@ include('main.php');
 include('header.php');
 $student = new ManageStudents();
 $fee = new ManageFees();	
-session_destroy();
+unset($_SESSION['product']);
+unset($_SESSION['product2']);
 if(isset($_GET['id']))
 {
 			
@@ -29,6 +30,10 @@ foreach($discountList as $discountProp)
 					
 
 
+}
+else{
+	exit;
+	
 }
 $uptrack_code= $_REQUEST['btn'];
 
@@ -191,6 +196,45 @@ echo'
 
 									    document.getElementById("test10").innerHTML = proce;
 							
+										
+										
+									}
+							      });
+							
+							
+							
+								
+							
+							
+							
+							
+							}
+						</script>
+						
+						
+						
+						<script type="text/javascript">
+							function Myshoplist(item)
+							{
+								var x = $(productid).attr("value");
+								
+								
+								
+							$.ajax({
+							
+								    url: "aj.php",
+								    type: "POST",
+								    data: {op:"shop_list",x:x},
+									dataType: "json",
+								    success: function(data){
+										
+									if(data.statusCode==200){
+										
+									
+										
+										window.location.href = data.url;
+										
+									}
 										
 										
 									}
@@ -521,7 +565,8 @@ echo'
                                                    
 												   
 												   
-                                                 test
+                                                  <input type="hidden" name="productid" id="productid" class="form-control" value="'.$_GET['id'].'">
+												   <input type="hidden" name="tavlkkf" id="tavlkkf" class="form-control" value="">
                                                    
                                                    
                                                     
@@ -529,7 +574,7 @@ echo'
                                             </div>
                                          
                                             <div class="se-cart-form">
-                                                <form action="">
+                                               
                                                     <div class="row align-items-center">
                                                         <div class="col-sm-6">
                                                             <div class="cart-counter">
@@ -544,7 +589,7 @@ echo'
 									echo'<button  class="shadow-sm fw-bold btn-add-to-cart mt-sm-0 mt-2 waves-effect waves-light">برای خرید وارد شوید</button>';
 															 
 														 }
-									 else{echo'<button  class="shadow-sm fw-bold btn-add-to-cart mt-sm-0 mt-2 waves-effect waves-light">افزودن به سبد خرید</button>';
+									 else{echo'<button  class="shadow-sm fw-bold btn-add-to-cart mt-sm-0 mt-2 waves-effect waves-light" onclick="Myshoplist(this)">افزودن به سبد خرید</button>';
 									 }
 echo'														 
                         
@@ -552,7 +597,7 @@ echo'
                                                                 
                                                         </div>
                                                     </div>
-                                                </form>
+                                               
                                             </div>
                                         </div>
                                     </div>
@@ -773,7 +818,7 @@ echo'
     </div>
     <!-- end product box two -->
 
- 
+
 	
 	
 	 ';
@@ -782,71 +827,6 @@ echo'
 	
 	
 	
-    <!-- end product modal-->
-    <div class="modal fade login-modal" id="loginModal" tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <div class="modal-title">
-                        <div class="d-flex">
-                            <i class="bi bi-person me-1"></i>
-                            <h6 class="text-center">فرم ورود کاربران</h6>
-                        </div>
-                    </div>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="item">
-                        <form action="">
-                            <div class="form-group">
-                                <div class="input-group">
-                                    <span class="input-group-text"><i class="bi bi-person"></i></span>
-                                    <input type="text" class="form-control" placeholder="نام کاربری">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="input-group">
-                                    <span class="input-group-text"><i class="bi bi-key"></i></span>
-                                    <input type="password" placeholder="رمز عبور" class="form-control">
-                                </div>
-                            </div>
-                            <div class="form-check form-check-box">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                <label class="form-check-label" for="flexCheckDefault">
-                                    مرا فراموش نکن
-                                </label>
-                            </div>
-                            <div class="d-flex justify-content-center align-items-center">
-                                <button type="submit" class="btn-login me-2 waves-effect waves-light"><i
-                                        class="bi bi-person"></i> ورود به
-                                    سایت</button>
-                                <a class="btn-login forget waves-effect waves-light" href="forget.html"><i
-                                        class="bi bi-person"></i>
-                                    فراموشی رمز عبور
-                                </a>
-                            </div>
-                        </form>
-                        <div class="register-box">
-                            <div class="dash-border">
-                                <span>یا</span>
-                            </div>
-                            <div class="register-link">
-                                <a href="register.html" class="btn btn-outline-secondary">ثبت نام <i
-                                        class="bi bi-person-plus ms-1"></i></a>
-                            </div>
-                        </div>
-                        <div class="social">
-                            <a href="" class="bi bi-google"></a>
-                            <a href="" class="bi bi-facebook"></a>
-                            <a href="" class="bi bi-github"></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- end login modal -->
- 
  
    
     

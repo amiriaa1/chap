@@ -23,6 +23,22 @@ function Addcustomersapproval($name,$lat,$lng,$addres,$cutomerstype,$submitby,$a
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
+
+
+
+function Addshoplist($productid,$uusername,$amount,$product,$product2,$acomment,$state,$unid)
+ { global $table_prefix;
+ $query = $this->link->prepare("INSERT INTO `nim_shop_list` (`productid`,`user`,`amount`,`data1`,`data2`,`acomment`,`state`,`unid`) VALUES (?,?,?,?,?,?,?,?) ");
+
+ $values = array($productid,$uusername,$amount,$product,$product2,$acomment,$state,$unid);
+ $query->execute($values); $counts = $query->rowCount();
+ return $counts; }
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
 function Addtanavoproduct($username,$gps,$lat,$lng)
  { global $table_prefix;
  $query = $this->link->prepare("INSERT INTO `nim_product_tanavo` (`product_id`,`soal`,`javab-1`,`vazn-1`,`javab-2`,`vazn-2`,`javab-3`,`vazn-3`,`javab-4`,`vazn-4`,`javab-5`,`vazn-5`
@@ -84,6 +100,14 @@ function Getproducttanavolist($query) { global $table_prefix;
 
    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+ function Getshoplist1($uusername,$unid)
+ { global $table_prefix; $query = $this->link->prepare("SELECT * FROM `nim_shop_list` WHERE `user`=? AND `unid`=?"); $values = array($uusername,$unid);
+ $query->execute($values); $result = $query->fetchAll(); return $result; } 
+
+   ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+  
   
   
  function Getproducttanavolistbyidcount($id)
@@ -134,11 +158,36 @@ function Deletecustomerapp($id)
 
  ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
  
+ function AddUserPaymentlog($Authority,$uusername,$status,$amount)
+ { global $table_prefix; $now = gmdate("Y-m-d H:i:s");
+ $query = $this->link->prepare("INSERT INTO `nim_payment_log` (`Authority`,`uid`,`status`,`amount`) VALUES (?,?,?,?) ");
+ $values = array($Authority,$uusername,$status,$amount); $query->execute($values); $counts = $query->rowCount(); return $counts;} 
+
+ 
+ 
+ 
+ function updateUserPaymentlog($comment,$RefID,$Authority)
+ { global $table_prefix; $now = gmdate("Y-m-d H:i:s"); $query = $this->link->prepare("UPDATE `nim_payment_log` SET comment=? , RefID=? WHERE Authority=? ");
+ $values = array($comment,$RefID,$Authority); $query->execute($values); $counts = $query->rowCount(); return $counts;} 
+
+ 
+  ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+ 
  function customerappupdate($id)
  { global $table_prefix; $query = $this->link->prepare("UPDATE `nim_customers_add_app` SET `approve`=1 WHERE `aid`=?");
  $values = array($id); $query->execute($values); $counts = $query->rowCount(); return $counts; } 
 
   ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+ 
+ 
+ 
+ 
+  function Updateshoplist($json,$unid)
+ { global $table_prefix; $query = $this->link->prepare("UPDATE `nim_shop_list` SET `state`=2 ,`data3`=? WHERE `unid`=?");
+ $values = array($json,$unid); $query->execute($values); $counts = $query->rowCount(); return $counts; } 
+
+  ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+ 
  
  
  function GetmaWalletList($submitby)
