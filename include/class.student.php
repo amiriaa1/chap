@@ -8,19 +8,19 @@ class ManageStudents
  { global $table_prefix; $db_connection = new dbConnection(); $this->link = $db_connection->connect(); return $this->link; }
  
  
-function AddStudent($aid,$uusername,$upass,$uactive,$uexpiration_date,$ufaname,$uemail,$umobile,$ucomment,$ureg_date)
+function AddStudent($aid,$username,$pass,$uactive,$name,$email)
  { global $table_prefix;
- $query = $this->link->prepare("INSERT INTO `".$table_prefix."users` (`aid`,`uusername`,`upass`,`uactive`,`uexpiration_date`,`ufaname`,`uemail`,`umobile`,`ucomment`,`ureg_date`) VALUES (?,?,?,?,?,?,?,?,?,?) ");
+ $query = $this->link->prepare("INSERT INTO `".$table_prefix."users` (`aid`,`uusername`,`upass`,`uactive`,`ufaname`,`uemail`) VALUES (?,?,?,?,?,?) ");
 
- $values = array($aid,$uusername,$upass,$uactive,$uexpiration_date,$ufaname,$uemail,$umobile,$ucomment,$ureg_date);
+ $values = array($aid,$username,$pass,$uactive,$name,$email);
  $query->execute($values); $counts = $query->rowCount();
  return $counts; }
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-function UsetTwoFactorupdate($mobile)
+function UsetTwoFactorupdate($username)
  { global $table_prefix; 
  $query = $this->link->prepare("UPDATE `".$table_prefix."users` SET `uactive`=1 WHERE `uusername`=?");
- $values = array($mobile); $query->execute($values); $counts = $query->rowCount(); return $counts; } 
+ $values = array($username); $query->execute($values); $counts = $query->rowCount(); return $counts; } 
  
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 

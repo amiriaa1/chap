@@ -90,6 +90,7 @@ if($isLogedIn)
 	$utimestampuserupdatee=$studentProp['aut_time_add'];
 	$autver=$studentProp['autver'];
 	$utimestampuser=$studentProp['utimestamp'];
+	$uactive=$studentProp['uactive'];
 }
 
 if ($dir=="rtl")

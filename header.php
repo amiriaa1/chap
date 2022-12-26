@@ -2,7 +2,10 @@
 include('main.php');
 
 
-
+if($uactive!=='1' && $isLogedIn){
+	
+	header("Location: verification");
+}
 
 
 
@@ -32,7 +35,7 @@ echo'
 ';
 		if(!isset($responsive) || $responsive==1)
 			
-		include('main.php');
+	
 if($system_settings["maintenance"]==1)
 {
  header("Location: ma");
