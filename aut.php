@@ -16,8 +16,8 @@ if(isset($_POST['up-submit'])){
 	$studentProp = $student->AddStudent(1,$username,md5($pass),$uactive,$name,$email);
 	
 $llvm=$_POST['up-username'];
-
-sendemailverfy($llvm);
+$stat=1;
+sendemailverfy($llvm,$stat);
 
 
 
@@ -147,7 +147,9 @@ $autver=$studentProp['autver'];
 $password=$autver;
 if($autver==$cod)
 {
-	
+	$stat=2;
+	$llvm=$_POST['username'];
+	sendemailverfy($llvm,$stat);
 	if(isset($_POST['aut-up-submit'])){
 	
 	$studentProp2 = $student->UsetTwoFactorupdate($username);

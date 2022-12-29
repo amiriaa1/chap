@@ -73,6 +73,7 @@ include_once('../language/'.$language.'.php');
 include_once('../include/class.admin.php');
 include_once('../include/class.student.php');
 include_once('../include/class.fee.php');
+include_once('../include/class.pm.php');
 
 $admin = new ManageAdmins();
 
