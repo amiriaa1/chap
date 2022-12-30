@@ -130,19 +130,11 @@ echo'
 		<li><a href="list_product"><i class="icon-Equalizer"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></i>لیست محصولات</a>
 			
 		</li>
-		<li><a href="invest-pack"><i class="icon-Chart-pie"><span class="path1"></span><span class="path2"></span></i>invest pack</a>
+		<li><a href="tanavo_product.php"><i class="icon-Chart-pie"><span class="path1"></span><span class="path2"></span></i>تنوع محصول</a>
 			
 		</li>
 	
-		
-		<li><a href="wallet-ttp"><i class="icon-Repeat"><span class="path1"></span><span class="path2"></span></i>wallet add</a></li> 
-		<li><a href="withdraw"><i class="icon-Repeat"><span class="path1"></span><span class="path2"></span></i>withdraw</a></li> 
-		
-		<li><a href="user"><i class="icon-Repeat"><span class="path1"></span><span class="path2"></span></i>user list</a></li> 
-		
-		
-		
-		</li>
+	
 	  </ul>
 	</nav>
 

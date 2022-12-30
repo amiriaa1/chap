@@ -174,7 +174,7 @@ if(!$counts==1)
 						$message = _USER_YOUR_ACCOUNT_IS_DISABLED;
 					setcookie($user_session_name,$username,time()+2592000);
 					setcookie($user_password_session_name,$password,time()+2592000);
-                      header('Location: verification');		exit;
+                      header('Location: index');		exit;
 					}
 					
 					
@@ -244,7 +244,12 @@ $timemin=round($timemin, 0);
 
 if($test > $sum OR $utimestampuserupdatee==NULL)
 {
-	sendemailverfy($llvm);
+	
+	$stat=1;
+	$llvm=$_POST['uusername'];
+	sendemailverfy($llvm,$stat);
+	
+	
 	
 	}
 
