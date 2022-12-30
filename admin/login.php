@@ -214,7 +214,7 @@ echo'
     <meta name="author" content="">
     <link rel="icon" href="images/favicon.ico">
 
-    <title>Crypto Admin - Responsive Bootstrap Admin HTML Templates + Bitcoin Dashboards + ICO </title>
+    <title>چاپ</title>
   
 	<!-- Bootstrap 4.0-->
 	<link rel="stylesheet" href="assets/vendor_components/bootstrap/dist/css/bootstrap.min.css">
@@ -232,7 +232,7 @@ echo'
 	<div class="auth-2-outer row align-items-center h-p100 m-0">
 		<div class="auth-2">
 		  <div class="auth-logo font-size-30">
-			<a href="index.html" class="text-dark"><b>Crypto</b>Admin</a>
+			<a href="index.html" class="text-dark"><b>chap</b>Admin</a>
 		  </div>
 		  <!-- /.login-logo -->
 		  <div class="auth-body">

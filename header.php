@@ -108,7 +108,7 @@ if($system_settings["maintenance"]==1)
 								if($isLogedIn){
 									
 									echo'
-									
+									<a href="profile" class="text-muted">
 									<button class="auth-btn-index-two pointer">
                                      
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -118,7 +118,7 @@ if($system_settings["maintenance"]==1)
                                     </svg>
                                    خوش آمدی '.$uusername.'
                                 </button>
-									
+								</a>
 									';
 									
 									

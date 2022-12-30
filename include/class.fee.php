@@ -13,6 +13,18 @@ function Addcustomers($name,$lat,$lng,$addres,$cutomerstype,$submitby)
 
 
 
+function Addproductt($name,$desc,$davtive,$baseprice,$type,$pic)
+ { global $table_prefix;
+ $query = $this->link->prepare("INSERT INTO `nim_product` (`title`,`description`,`avtive`,`baseprice`,`type`,`pic`) VALUES (?,?,?,?,?,?) ");
+
+ $values = array($name,$desc,$davtive,$baseprice,$type,$pic);
+ $query->execute($values); $counts = $query->rowCount();
+ return $counts; }
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
 function Addcustomersapproval($name,$lat,$lng,$addres,$cutomerstype,$submitby,$approve)
  { global $table_prefix;
  $query = $this->link->prepare("INSERT INTO `nim_customers_add_app` (`name`,`lat`,`lng`,`addres`,`cusomer_type`,`submitby`,`approve`) VALUES (?,?,?,?,?,?,?) ");
@@ -116,7 +128,15 @@ function Getproducttanavolist($query) { global $table_prefix;
 
    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+   
+ function getcountshoplistpart($uusername,$unid)
+ { global $table_prefix; $query = $this->link->prepare("SELECT * FROM `nim_shop_list` WHERE `user`=? AND `unid`=?"); $values = array($uusername,$unid);
+ $query->execute($values);$counts = $query->rowCount(); $result = $query->fetchAll(); return $counts; } 
+
+   ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
  
+
 
 
 function GetcustomersListapproval($query) { global $table_prefix;
@@ -178,13 +198,16 @@ function Deletecustomerapp($id)
  $values = array($id); $query->execute($values); $counts = $query->rowCount(); return $counts; } 
 
   ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
- 
- 
- 
- 
+
   function Updateshoplist($json,$unid)
  { global $table_prefix; $query = $this->link->prepare("UPDATE `nim_shop_list` SET `state`=2 ,`data3`=? WHERE `unid`=?");
  $values = array($json,$unid); $query->execute($values); $counts = $query->rowCount(); return $counts; } 
+
+  ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+ 
+   function Updateshoplistafterpay($unid)
+ { global $table_prefix; $query = $this->link->prepare("UPDATE `nim_shop_list` SET `state`=3 ,`pay`=1 WHERE `unid`=?");
+ $values = array($unid); $query->execute($values); $counts = $query->rowCount(); return $counts; } 
 
   ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
  

@@ -91,6 +91,7 @@ if($isLogedIn)
 	$autver=$studentProp['autver'];
 	$utimestampuser=$studentProp['utimestamp'];
 	$uactive=$studentProp['uactive'];
+		$ufaname=$studentProp['ufaname'];
 }
 
 if ($dir=="rtl")

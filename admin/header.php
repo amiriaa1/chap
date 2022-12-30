@@ -128,7 +128,8 @@ echo'
 	  <ul id="main-menu" class="sm sm-blue">
 		<li><a href="index"><i class="icon-Layout-4-blocks"><span class="path1"></span><span class="path2"></span></i>Dashboard</a></li>
 		<li><a href="list_product"><i class="icon-Equalizer"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></i>لیست محصولات</a>
-			
+	<li><a href="add_product"><i class="icon-Equalizer"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></i>افزودن محصول</a>
+		
 		</li>
 		<li><a href="tanavo_product.php"><i class="icon-Chart-pie"><span class="path1"></span><span class="path2"></span></i>تنوع محصول</a>
 			
