@@ -59,7 +59,7 @@ if($system_settings["maintenance"]==1)
             <div class="row top-menu justify-content-center align-items-center">
                 <div class="col-lg-2 col-4 order-lg-1 order-2">
                     <div class="top-menu-logo">
-                        <a href="index"><img src="img/default-icon/logo.svg" alt="" class="img-fluid"></a>
+                        <a href="index"><img src="img/default-icon/logo.jpg" alt="" class="img-fluid"></a>
                     </div>
                 </div>
                 <div class="col-lg-6 text-center d-none d-lg-block order-lg-2 order-3">

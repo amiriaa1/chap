@@ -43,6 +43,7 @@ echo'
 <script type="text/javascript">
 							function showStudentProp(item)
 							{
+								$("#replyResult").html(\'<img src="img/default-icon/wait.gif">\');
 								const myArray = $(item).attr("value").split("-");
 								var soalposit = myArray[0];
 								var idsoal = myArray[1];
@@ -68,6 +69,11 @@ echo'
 										document.getElementById("wallet_type").style.visibility = "visible";
 										
 										
+										$(basesoal1).css("background", "transparent");
+										$(basesoal2).css("background", "transparent");
+										$(basesoal3).css("background", "transparent");
+										$(item).css("background", "#007fee");
+										$("#replyResult").html("");
 										
 										
 										
@@ -88,6 +94,7 @@ echo'
 <script type="text/javascript">
 							function showStudentProppp(item)
 							{
+								$("#replyResult").html(\'<img src="img/default-icon/wait.gif">\');
 								const myArray = $(item).attr("value").split("-");
 								var soalposit = myArray[0];
 								var idsoal = myArray[1];
@@ -113,7 +120,7 @@ echo'
 										document.getElementById("wallet_type").style.visibility = "visible";
 										
 										
-										
+										$("#replyResult").html("");
 										
 										
 										
@@ -134,6 +141,7 @@ echo'
 						<script type="text/javascript">
 							function myFunction(item)
 							{
+								$("#replyResult").html(\'<img src="img/default-icon/wait.gif">\');
 								var x = document.getElementById("count").value;
 								
 								
@@ -157,7 +165,7 @@ echo'
 									document.getElementById("yelwayfori").innerHTML = data.foriyero;
 									
 									document.getElementById("finalproce").innerHTML = data.foriyero;
-							
+							$("#replyResult").html("");
 										}
 										
 									}
@@ -177,6 +185,7 @@ echo'
 						<script type="text/javascript">
 							function Myfinalss(item)
 							{
+								$("#replyResult").html(\'<img src="img/default-icon/wait.gif">\');
 								var x = $(item).attr("value");
 								var y = $(item).attr("name")
 								
@@ -195,7 +204,7 @@ echo'
 									var proce = y;
 
 									    document.getElementById("test10").innerHTML = proce;
-							
+							$("#replyResult").html("");
 										
 										
 									}
@@ -216,6 +225,7 @@ echo'
 						<script type="text/javascript">
 							function Myshoplist(item)
 							{
+								$("#replyResult").html(\'<img src="img/default-icon/wait.gif">\');
 								var x = $(productid).attr("value");
 								
 								
@@ -325,7 +335,7 @@ echo'
                                     </h6>
                                 </div>
                                 
-                                  <div class="col-sm-6"><center>
+                                  <div class="col-sm-6"><center><div id="replyResult"></div>
                      ';
 					 $soalposit=1;
 					 foreach($counttttt as $discountProp3)
