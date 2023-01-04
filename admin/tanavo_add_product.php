@@ -7,10 +7,10 @@ $student = new ManageStudents();
 $fee = new ManageFees();	
 
 
-if(isset($_GET['id']))
+if(isset($_GET['product_id']))
 			{
 			
-			$id=$_GET['id'];
+			
 			$product_id=$_GET['product_id'];
 		if(isset($_POST['soal'])){
 			
@@ -49,14 +49,13 @@ if(isset($_GET['id']))
 						$vazn10=$_POST['vazn10'];
 						
 						
-$discountList = $fee->updateproducttanavo($product_id,$soal,$javab1,$vazn1,$javab2,$vazn2,$javab3,$vazn3,$javab4,$vazn4,$javab5,$vazn5,$javab6,$vazn6,$javab7,$vazn7,$javab8,$vazn8,$javab9,$vazn9,$javab10,$vazn10,$id);
+$discountList = $fee->Addtanavoproduct($product_id,$soal,$javab1,$vazn1,$javab2,$vazn2,$javab3,$vazn3,$javab4,$vazn4,$javab5,$vazn5,$javab6,$vazn6,$javab7,$vazn7,$javab8,$vazn8,$javab9,$vazn9,$javab10,$vazn10);
 			
 		}
 			
 		
-$discountList = $fee->Getproducttanavolistbyid2($id);			
 
-
+	
 	
 			}
 		
@@ -64,43 +63,6 @@ $discountList = $fee->Getproducttanavolistbyid2($id);
 			
 			
 			
-					foreach($discountList as $discountProp)
-					{
-						
-						$soal=$discountProp['soal'];
-						
-						$javab1=$discountProp['javab-1'];
-						$vazn1=$discountProp['vazn-1'];
-						
-						$javab2=$discountProp['javab-2'];
-						$vazn2=$discountProp['vazn-2'];
-						
-						$javab3=$discountProp['javab-3'];
-						$vazn3=$discountProp['vazn-3'];
-						
-						$javab4=$discountProp['javab-4'];
-						$vazn4=$discountProp['vazn-4'];
-						
-						$javab5=$discountProp['javab-5'];
-						$vazn5=$discountProp['vazn-5'];
-						
-						$javab6=$discountProp['javab-6'];
-						$vazn6=$discountProp['vazn-6'];
-						
-						$javab7=$discountProp['javab-7'];
-						$vazn7=$discountProp['vazn-7'];
-						
-						$javab8=$discountProp['javab-8'];
-						$vazn8=$discountProp['vazn-8'];
-						
-						$javab9=$discountProp['javab-9'];
-						$vazn9=$discountProp['vazn-9'];
-						
-						$javab10=$discountProp['javab-10'];
-						$vazn10=$discountProp['vazn-10'];
-						
-							
-					}
 					
 					echo'
 			
@@ -111,7 +73,7 @@ $discountList = $fee->Getproducttanavolistbyid2($id);
 							<form   action=""	method="post">
 								<div class="form-group">
 									<label for="1hashid">سوال</label>
-									<input type="text" class="form-control" value="'.$soal.'" name="soal" id="soal">
+									<input type="text" class="form-control" value="" name="soal" id="soal">
 									</div>
 							</div>
 							
@@ -138,7 +100,7 @@ $discountList = $fee->Getproducttanavolistbyid2($id);
 	<div class="form-group">
 	<label for="1amount">جواب 1 </label>
 	<div class="input-group">
-	<input type="text" name="javab1" id="javab1" class="form-control" value="'.$javab1.'" ></div>
+	<input type="text" name="javab1" id="javab1" class="form-control" value="" ></div>
 
 					</div>
 					</div>
@@ -147,7 +109,7 @@ $discountList = $fee->Getproducttanavolistbyid2($id);
 	<div class="form-group">
 	<label for="1amount">وزن 1 </label>
 	<div class="input-group">
-	<input type="text" name="vazn1" id="vazn1" class="form-control" value="'.$vazn1.'" ></div>
+	<input type="text" name="vazn1" id="vazn1" class="form-control" value="" ></div>
 
 					</div>
 					</div>
@@ -167,7 +129,7 @@ $discountList = $fee->Getproducttanavolistbyid2($id);
 	<div class="form-group">
 	<label for="1amount">جواب 2</label>
 	<div class="input-group">
-	<input type="text" name="javab2" id="javab2" class="form-control" value="'.$javab2.'" ></div>
+	<input type="text" name="javab2" id="javab2" class="form-control" value="" ></div>
 
 					</div>
 					</div>
@@ -176,7 +138,7 @@ $discountList = $fee->Getproducttanavolistbyid2($id);
 	<div class="form-group">
 	<label for="1amount">وزن 2</label>
 	<div class="input-group">
-	<input type="text" name="vazn2" id="vazn2" class="form-control" value="'.$vazn2.'" ></div>
+	<input type="text" name="vazn2" id="vazn2" class="form-control" value="" ></div>
 
 					</div>
 					</div>
@@ -202,7 +164,7 @@ $discountList = $fee->Getproducttanavolistbyid2($id);
 	<div class="form-group">
 	<label for="1amount">جواب 3</label>
 	<div class="input-group">
-	<input type="text" name="javab3" id="javab3" class="form-control" value="'.$javab3.'" ></div>
+	<input type="text" name="javab3" id="javab3" class="form-control" value="" ></div>
 
 					</div>
 					</div>
@@ -211,7 +173,7 @@ $discountList = $fee->Getproducttanavolistbyid2($id);
 	<div class="form-group">
 	<label for="1amount">وزن 3</label>
 	<div class="input-group">
-	<input type="text" name="vazn3" id="vazn3" class="form-control" value="'.$vazn3.'" ></div>
+	<input type="text" name="vazn3" id="vazn3" class="form-control" value="" ></div>
 
 					</div>
 					</div>
@@ -237,7 +199,7 @@ $discountList = $fee->Getproducttanavolistbyid2($id);
 	<div class="form-group">
 	<label for="1amount">جواب 4 </label>
 	<div class="input-group">
-	<input type="text" name="javab4" id="javab4" class="form-control" value="'.$javab4.'" ></div>
+	<input type="text" name="javab4" id="javab4" class="form-control" value="" ></div>
 
 					</div>
 					</div>
@@ -246,7 +208,7 @@ $discountList = $fee->Getproducttanavolistbyid2($id);
 	<div class="form-group">
 	<label for="1amount">وزن 4 </label>
 	<div class="input-group">
-	<input type="text" name="vazn4" id="vazn4" class="form-control" value="'.$vazn4.'" ></div>
+	<input type="text" name="vazn4" id="vazn4" class="form-control" value="" ></div>
 
 					</div>
 					</div>
@@ -272,7 +234,7 @@ $discountList = $fee->Getproducttanavolistbyid2($id);
 	<div class="form-group">
 	<label for="1amount">جواب 5 </label>
 	<div class="input-group">
-	<input type="text" name="javab5" id="javab5" class="form-control" value="'.$javab5.'" ></div>
+	<input type="text" name="javab5" id="javab5" class="form-control" value="" ></div>
 
 					</div>
 					</div>
@@ -281,7 +243,7 @@ $discountList = $fee->Getproducttanavolistbyid2($id);
 	<div class="form-group">
 	<label for="1amount">وزن 5 </label>
 	<div class="input-group">
-	<input type="text" name="vazn5" id="vazn5" class="form-control" value="'.$vazn5.'" ></div>
+	<input type="text" name="vazn5" id="vazn5" class="form-control" value="" ></div>
 
 					</div>
 					</div>
@@ -307,7 +269,7 @@ $discountList = $fee->Getproducttanavolistbyid2($id);
 	<div class="form-group">
 	<label for="1amount">جواب 6 </label>
 	<div class="input-group">
-	<input type="text" name="javab6" id="javab6" class="form-control" value="'.$javab6.'" ></div>
+	<input type="text" name="javab6" id="javab6" class="form-control" value="" ></div>
 
 					</div>
 					</div>
@@ -316,7 +278,7 @@ $discountList = $fee->Getproducttanavolistbyid2($id);
 	<div class="form-group">
 	<label for="1amount">وزن 6</label>
 	<div class="input-group">
-	<input type="text" name="vazn6" id="vazn6" class="form-control" value="'.$vazn6.'" ></div>
+	<input type="text" name="vazn6" id="vazn6" class="form-control" value="" ></div>
 
 					</div>
 					</div>
@@ -342,7 +304,7 @@ $discountList = $fee->Getproducttanavolistbyid2($id);
 	<div class="form-group">
 	<label for="1amount">جواب 7 </label>
 	<div class="input-group">
-	<input type="text" name="javab7" id="javab7" class="form-control" value="'.$javab7.'" ></div>
+	<input type="text" name="javab7" id="javab7" class="form-control" value="" ></div>
 
 					</div>
 					</div>
@@ -351,7 +313,7 @@ $discountList = $fee->Getproducttanavolistbyid2($id);
 	<div class="form-group">
 	<label for="1amount">وزن 7 </label>
 	<div class="input-group">
-	<input type="text" name="vazn7" id="vazn7" class="form-control" value="'.$vazn7.'" ></div>
+	<input type="text" name="vazn7" id="vazn7" class="form-control" value="" ></div>
 
 					</div>
 					</div>
@@ -377,7 +339,7 @@ $discountList = $fee->Getproducttanavolistbyid2($id);
 	<div class="form-group">
 	<label for="1amount">جواب 8 </label>
 	<div class="input-group">
-	<input type="text" name="javab8" id="javab8" class="form-control" value="'.$javab8.'" ></div>
+	<input type="text" name="javab8" id="javab8" class="form-control" value="" ></div>
 
 					</div>
 					</div>
@@ -386,7 +348,7 @@ $discountList = $fee->Getproducttanavolistbyid2($id);
 	<div class="form-group">
 	<label for="1amount">وزن 8 </label>
 	<div class="input-group">
-	<input type="text" name="vazn8" id="vazn8" class="form-control" value="'.$vazn8.'" ></div>
+	<input type="text" name="vazn8" id="vazn8" class="form-control" value="" ></div>
 
 					</div>
 					</div>
@@ -412,7 +374,7 @@ $discountList = $fee->Getproducttanavolistbyid2($id);
 	<div class="form-group">
 	<label for="1amount">جواب 9 </label>
 	<div class="input-group">
-	<input type="text" name="javab9" id="javab9" class="form-control" value="'.$javab9.'" ></div>
+	<input type="text" name="javab9" id="javab9" class="form-control" value="" ></div>
 
 					</div>
 					</div>
@@ -421,7 +383,7 @@ $discountList = $fee->Getproducttanavolistbyid2($id);
 	<div class="form-group">
 	<label for="1amount">وزن 9</label>
 	<div class="input-group">
-	<input type="text" name="vazn9" id="vazn9" class="form-control" value="'.$vazn9.'" ></div>
+	<input type="text" name="vazn9" id="vazn9" class="form-control" value="" ></div>
 
 					</div>
 					</div>
@@ -447,7 +409,7 @@ $discountList = $fee->Getproducttanavolistbyid2($id);
 	<div class="form-group">
 	<label for="1amount">جواب 10</label>
 	<div class="input-group">
-	<input type="text" name="javab10" id="javab10" class="form-control" value="'.$javab10.'" ></div>
+	<input type="text" name="javab10" id="javab10" class="form-control" value="" ></div>
 
 					</div>
 					</div>
@@ -456,7 +418,7 @@ $discountList = $fee->Getproducttanavolistbyid2($id);
 	<div class="form-group">
 	<label for="1amount">وزن 10</label>
 	<div class="input-group">
-	<input type="text" name="vazn10" id="vazn10" class="form-control" value="'.$vazn10.'" ></div>
+	<input type="text" name="vazn10" id="vazn10" class="form-control" value="" ></div>
 
 					</div>
 					</div>

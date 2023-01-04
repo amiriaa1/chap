@@ -240,33 +240,18 @@ $soalposit1= $fgt2['fgt']['1']['soalposit'];
 		case "send_getway":
 		
 		
-		$name= $_REQUEST['name'];
-		$lname= $_REQUEST['lname'];
-		$ostan= $_REQUEST['ostan'];
-		$city= $_REQUEST['city'];
-		$street= $_REQUEST['street'];
-		$street1= $_REQUEST['street1'];
-		$tel= $_REQUEST['tel'];
-		$postal= $_REQUEST['postal'];
-		$descOrder= $_REQUEST['descOrder'];
+
+		$addr= $_REQUEST['addr'];
 		$unid= $_REQUEST['unid'];
-		$price= $_REQUEST['price'];
+
 		
 		$json=json_encode(array(
-				"name"=>$name,
-				"lname"=>$lname,
-				"ostan"=>$ostan,
-				"city"=>$city,
-				"street"=>$street,
-				"street1"=>$street1,
-				"tel"=>$tel,
-				"postal"=>$postal,
-				"descOrder"=>$descOrder,
-				"unid"=>$unid,
-				"price"=>$price,
+				"addr"=>$addr
+				),JSON_UNESCAPED_UNICODE);
+				
 				
 
-			),JSON_UNESCAPED_UNICODE);
+			
 			$fee = new ManageFees();
 			$counttttt = $fee->Updateshoplist($json,$unid);
 			

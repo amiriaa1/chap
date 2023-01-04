@@ -61,37 +61,8 @@ echo'
                     </div>
 					
 					
-                    
-        <!-- start category -->
-        <div class="category">
-            <div class="container-fluid">
-                <div class="filter-items shadow-box">
-                    <div class="items">
-                        <div class="link d-md-block d-none">
-                            <a href="" class="active">پیشفرض</a>
-                            <a href="" class="waves-effect waves-light">محبوب ترین</a>
-                            <a href="" class="waves-effect waves-light">پرفروش ترین</a>
-                            <a href="" class="waves-effect waves-light">جدیدترین</a>
-                            <a href="" class="waves-effect waves-light">ارزان ترین</a>
-                            <a href="" class="waves-effect waves-light">گران ترین</a>
-                        </div>
-                        <div class="count">
-                            <p>مشاهده همه <span class="fw-bold">'.$discountListcount.'</span> نتیجه</p>
-                        </div>
-                        <div class="link-responsive d-md-none d-block">
-                            <form action="">
-                                <select class="form-select bg-light">
-                                    <option>پیشفرض</option>
-                                    <option>محبوب ترین</option>
-                                    <option>پر فروش ترین</option>
-                                    <option>جدیدترین</option>
-                                    <option>ارزان ترین</option>
-                                    <option>گران ترین</option>
-                                </select>
-                            </form>
-                        </div>
-                    </div>
-                </div>
+
+				
                 <div class="row">
                     <div class="col-lg-3">
                         <div class="category-filters">
@@ -131,12 +102,9 @@ echo'
                         </div>
                     </div>
 					
-					
-                    <div class="col-lg-9">
+					 <div class="col-lg-9">
                         <div class="category-item">
                             <div class="row">
-							
-							
                              
                                ';
 							   
@@ -149,55 +117,50 @@ echo'
 					
 							   echo'
 							   
-							   
-                           
-                                <div class="col-12">
-                                    <div class="product-row shadow-box rounded-3 mb-3">
+							    <div class="col-md-4">
+                                    <div class="product-box-item">
+                                        <div class="product-box-item-img">
+                                            <a href="product?id='.$discountProp['aid'].'">
+                                                <img src="img/product/111.png" alt="" class="img-fluid one-image">
+                                                <img src="img/product/111.png" alt="" class="img-fluid two-image">
+                                            </a>
+                                            
+                                        </div>
+										
                                         <a href="product?id='.$discountProp['aid'].'">
-                                            <div class="product-row-desc justify-content-start">
-                                                <div class="product-row-desc-item">
-                                                    <div class="product-row-img">
-                                                        <img src="img/product/product-image5.jpg" alt="" class=""
-                                                            width="150">
-                                                    </div>
-                                                    <div class="product-row-title">
-                                                        <h6 class="font-16">'.$discountProp['title'].'</h6>
-                                                        <div class="product-price">
-                                                            <span class="badge rounded-pill bg-danger me-2">13%</span>
-                                                         شروع قیمت از :
-                                                            <p>'.$discountProp['baseprice'].' تومان</p>
+                                            <div class="product-box-item-desc">
+                                                <div class="product-box-item-title">
+                                                    <h6>
+                                                       '.$discountProp['title'].'
+                                                    </h6>
+                                                </div>
+                                                <div class="product-box-price">
+                                                    <div class="d-flex justify-content-between align-items-center">
+                                                        <div class="d-flex flex-column">
+                                                            <span class="text-danger fw-bold fs-5">٪48</span>
+                                                            <span class="fw-bold">تخفیف</span>
                                                         </div>
-                                                        <a href="product?id='.$discountProp['aid'].'" class="btnx btnx-default">مشاهده محصول</a>
+                                                        <div class="d-flex flex-column">
+                                                            <span class="new-price">'.$discountProp['baseprice'].' تومان</span>
                                                             
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </a>
                                     </div>
                                 </div>
+                         
 								
 								';
 								}
 								echo'
                            
 								
-								
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- end category -->
+				  </div>
+				    </div>
+					  </div>
 
-      
-
-
-
-
-    </div>
-</div>
-</div>
 
 
     <div class="modal fade login-modal" id="loginModal" tabindex="-1">
@@ -291,26 +254,7 @@ echo'
         });
     </script>
 
-    <script>
-        $(document).ready(function () {
-            $("#catRange").slider({
-                id: "slider5b",
-                min: 0,
-                max: 1000000,
-                range: true,
-                step: 10000,
-                value: [0, 1000000],
-                rtl: false,
-                formatter: function formatter(val) {
-                    if (Array.isArray(val)) {
-                        return " تومان " +val[0] +" - " + val[1] + " تومان ";
-                    } else {
-                        return val;
-                    }
-                },
-            });
-        });
-    </script>
+  
 ';
    include('footer.php');
 ?>

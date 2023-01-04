@@ -131,8 +131,8 @@ echo'
 	<li><a href="add_product"><i class="icon-Equalizer"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></i>افزودن محصول</a>
 		
 		</li>
-		<li><a href="tanavo_product.php"><i class="icon-Chart-pie"><span class="path1"></span><span class="path2"></span></i>تنوع محصول</a>
-			
+		<li><a href="tanavo_product"><i class="icon-Chart-pie"><span class="path1"></span><span class="path2"></span></i>تنوع محصول</a>
+		<li><a href="shop_list"><i class="icon-Chart-pie"><span class="path1"></span><span class="path2"></span></i>لیست سفارش ها</a>	
 		</li>
 	
 	

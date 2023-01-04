@@ -27,8 +27,8 @@ $fee = new ManageFees();
 
 
 			
-$query = "ORDER BY `nim_product`.`aid` ASC";			
-$discountList = $fee->Getproductlist($query);			
+$query = "WHERE pay=1 ORDER BY `nim_shop_list`.`atimestamp`  DESC";			
+$discountList = $fee->Getshoplistadmin($query);			
 			
 echo'
 
@@ -37,7 +37,7 @@ echo'
 
  <div class="box box-default">
 			<div class="box-header with-border">
-			  <h4 class="box-title">لیست محصولات کلی</h4>
+			  <h4 class="box-title">لیست سفار ها</h4>
 			 		
 			</div>
 			<!-- /.box-header -->
@@ -52,33 +52,25 @@ echo'
 							';
 					echo '
 							<td style="width:70px;" class="small">
-								ویرایش محصول
+							مشاهده
 							</td>';
 							echo '
 							<td style="width:70px;" class="small">
-								تنوع محصول
+								وضعیت پرداخت
 							</td>';
 							echo '
 							<td style="width:70px;" class="small">
-								افزودن تنوع
+								کد سفارش
 							</td>';
-					echo '
-							<td style="width:120px;" class="small">
-									<b>نام</b>
+					
+							echo '
+							<td style="width:70px;" class="small">
+								کاربر
 							</td>';
-					echo '
-							<td style="width:120px;" class="small">
-									<b>فعال؟</b>
-							</td>';
-					echo '
-							<td style="width:120px;" class="small">
-									<b>قیمت پایه</b>
-							</td>';
+					
+					
+					
 				
-					echo '
-							<td style="width:140px;" class="small">
-									<b>نوع محصول</b>
-							</td>';
 					
 					
 						
@@ -96,74 +88,28 @@ echo'
 									<!-- Split button -->
 									<div class="btn-group">
 									
-									<a href="edit_product?id='.$discountProp['aid'].'">
-										<button type="submit" class="btn btn-rounded btn-info">ویرایش</button></a>
+									<a href="vei_shop?id='.$discountProp['aid'].'">
+										<button type="submit" class="btn btn-rounded btn-info">غیر فعال</button></a>
 										
 								';
-echo '<td style="text-align:left;">
-									<!-- Split button -->
-									<div class="btn-group">
-									
-									<a href="tanavo_product?id='.$discountProp['aid'].'">
-										<button type="submit" class="btn btn-rounded btn-info">تنوع محصول</button></a>
-										
-								';
-								echo '<td style="text-align:left;">
-									<!-- Split button -->
-									<div class="btn-group">
-									
-									<a href="tanavo_add_product?product_id='.$discountProp['aid'].'">
-										<button type="submit" class="btn btn-rounded btn-info">افزودن تنوع محصول</button></a>
-										
-								';
+
+								
 							
 							echo'
 										
 									</div>
 								</td>';
 						echo '<td style="text-align:center;">
-							'.$discountProp['title'].'
-							</td>';
-						
-						
-						if($discountProp['avtive']==0){
-						
-						echo '<td style="text-align:center;">
-							<span class="label label-xl label-rounded label-danger">غیر فعال</span>
-							</td>';
-						}
-						else{
-						echo '<td style="text-align:center;">
-							<span class="label label-xl label-rounded label-success">فعال</span>
-							</td>';
-						}
-						
-						
-							
-							
-							
-						
-							
-							
-						echo '<td style="text-align:left;">
-							'.$discountProp['baseprice'].'
+							پرداخت انجام شده
 							</td>';
 							
-						
-							if($discountProp['type']==1){
-							
-						echo '<td style="text-align:'.$align1.';">
-						<span class="label label-xl label-rounded label-danger">افست</span>
-							
-							</td>';}
-							else{
-								
-									echo '<td style="text-align:'.$align1.';">
-						<span class="label label-xl label-rounded label-success">دیجیتال</span>
-							
+							echo '<td style="text-align:center;">
+							'.$discountProp['unid'].'
 							</td>';
-								
-							}
+								echo '<td style="text-align:center;">
+							'.$discountProp['user'].'
+							</td>';
+						
 						
 						echo '</tr>';	
 						$i++;				

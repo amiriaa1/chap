@@ -51,12 +51,12 @@ function Addshoplist($productid,$uusername,$amount,$product,$product2,$acomment,
 
 
 
-function Addtanavoproduct($username,$gps,$lat,$lng)
+function Addtanavoproduct($product_id,$soal,$javab1,$vazn1,$javab2,$vazn2,$javab3,$vazn3,$javab4,$vazn4,$javab5,$vazn5,$javab6,$vazn6,$javab7,$vazn7,$javab8,$vazn8,$javab9,$vazn9,$javab10,$vazn10)
  { global $table_prefix;
  $query = $this->link->prepare("INSERT INTO `nim_product_tanavo` (`product_id`,`soal`,`javab-1`,`vazn-1`,`javab-2`,`vazn-2`,`javab-3`,`vazn-3`,`javab-4`,`vazn-4`,`javab-5`,`vazn-5`
  ,`javab-6`,`vazn-6`,`javab-7`,`vazn-7`,`javab-8`,`vazn-8`,`javab-9`,`vazn-9`,`javab-10`,`vazn-10`) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) ");
 
- $values = array($username,$gps,$lat,$lng);
+ $values = array($product_id,$soal,$javab1,$vazn1,$javab2,$vazn2,$javab3,$vazn3,$javab4,$vazn4,$javab5,$vazn5,$javab6,$vazn6,$javab7,$vazn7,$javab8,$vazn8,$javab9,$vazn9,$javab10,$vazn10);
  $query->execute($values); $counts = $query->rowCount();
  return $counts; }
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -79,6 +79,13 @@ function Getproductlist($query) { global $table_prefix;
  
  
 
+function Getshoplistadmin($query) { global $table_prefix;
+ $query = $this->link->query("SELECT * FROM `nim_shop_list` $query");
+ $counts = $query->rowCount(); $result = $query->fetchAll();
+ return $result; }
+ 
+ 
+ 
 function Getproductlistcount($query) { global $table_prefix;
  $query = $this->link->query("SELECT * FROM `nim_product` $query");
  $counts = $query->rowCount(); $result = $query->fetchAll();
@@ -106,6 +113,12 @@ function Getproducttanavolist($query) { global $table_prefix;
  $query->execute($values); $result = $query->fetchAll(); return $result; } 
 
    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+   
+    function Getproducttanavolistbyid2($id)
+ { global $table_prefix; $query = $this->link->prepare("SELECT * FROM `nim_product_tanavo` WHERE `id`=?"); $values = array($id);
+ $query->execute($values); $result = $query->fetchAll(); return $result; } 
+
+   ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
  function Getproducttanavolistbyidandif($id)
  { global $table_prefix; $query = $this->link->prepare("SELECT * FROM `nim_product_tanavo` WHERE `product_id`=? AND `baser`=1"); $values = array($id);
  $query->execute($values); $result = $query->fetchAll(); return $result; } 
@@ -115,6 +128,12 @@ function Getproducttanavolist($query) { global $table_prefix;
      ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
  function Getshoplist1($uusername,$unid)
  { global $table_prefix; $query = $this->link->prepare("SELECT * FROM `nim_shop_list` WHERE `user`=? AND `unid`=?"); $values = array($uusername,$unid);
+ $query->execute($values); $result = $query->fetchAll(); return $result; } 
+
+   ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+   function Getshopusers($uusername)
+ { global $table_prefix; $query = $this->link->prepare("SELECT * FROM `nim_shop_list` WHERE `user`=?"); $values = array($uusername);
  $query->execute($values); $result = $query->fetchAll(); return $result; } 
 
    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////

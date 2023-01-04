@@ -8,13 +8,25 @@ class ManageStudents
  { global $table_prefix; $db_connection = new dbConnection(); $this->link = $db_connection->connect(); return $this->link; }
  
  
-function AddStudent($aid,$username,$pass,$uactive,$name,$email)
+function AddStudent($aid,$username,$pass,$uactive,$name,$email,$codmeli)
  { global $table_prefix;
- $query = $this->link->prepare("INSERT INTO `".$table_prefix."users` (`aid`,`uusername`,`upass`,`uactive`,`ufaname`,`uemail`) VALUES (?,?,?,?,?,?) ");
+ $query = $this->link->prepare("INSERT INTO `".$table_prefix."users` (`aid`,`uusername`,`upass`,`uactive`,`ufaname`,`uemail`,`nacode`) VALUES (?,?,?,?,?,?,?) ");
 
- $values = array($aid,$username,$pass,$uactive,$name,$email);
+ $values = array($aid,$username,$pass,$uactive,$name,$email,$codmeli);
  $query->execute($values); $counts = $query->rowCount();
  return $counts; }
+ 
+ 
+ 
+  
+function Addusersaddr($uusername,$name,$ostan,$shahr,$postcod,$number,$addr)
+ { global $table_prefix;
+ $query = $this->link->prepare("INSERT INTO `nim_users_addr` (`uusername`,`name`,`ostan`,`shahr`,`postcod`,`number`,`addr`) VALUES (?,?,?,?,?,?,?) ");
+
+ $values = array($uusername,$name,$ostan,$shahr,$postcod,$number,$addr);
+ $query->execute($values); $counts = $query->rowCount();
+ return $counts; }
+ 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 function UsetTwoFactorupdate($username)
@@ -74,6 +86,12 @@ function Useraddtoken($token,$username)
 
  
 function GetUserinvestlistcron($query1) { global $table_prefix; $tids=implode(',', $tids); $query = $this->link->prepare("SELECT * FROM `nim_invest` WHERE `aactive`=?"); $values = array($query1); $query->execute($values); $result = $query->fetchAll(); return $result; } 
+
+
+ 
+function Getusersaddr($uusername)
+ { global $table_prefix; $tids=implode(',', $tids); $query = $this->link->prepare("SELECT * FROM `nim_users_addr` WHERE `uusername`=?");
+ $values = array($uusername); $query->execute($values); $result = $query->fetchAll(); return $result; } 
 
 
 

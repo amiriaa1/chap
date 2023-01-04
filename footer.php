@@ -12,7 +12,7 @@ echo'
                 <div class="row justify-content-center">
                     <div class="col-md-3 col-6 text-center">
                         <div class="footer-feature-item">
-                            <a href="">
+                            <a href="#">
                                 <img src="img/product-feature/delivery.png" alt="">
                             </a>
                             <h6>تحویل اکسپرس</h6>
@@ -20,7 +20,7 @@ echo'
                     </div>
                     <div class="col-md-3 col-6 text-center">
                         <div class="footer-feature-item">
-                            <a href="">
+                            <a href="#">
                                 <img src="img/product-feature/contact-us.png" alt="">
                             </a>
                             <h6>پشتیبانی 24 ساعته</h6>
@@ -28,7 +28,7 @@ echo'
                     </div>
                     <div class="col-md-3 col-6 text-center">
                         <div class="footer-feature-item">
-                            <a href="">
+                            <a href="#">
                                 <img src="img/product-feature/payment-terms.png" alt="">
                             </a>
                             <h6>پرداخت در محل</h6>
@@ -36,7 +36,7 @@ echo'
                     </div>
                     <div class="col-md-3 col-6 text-center">
                         <div class="footer-feature-item">
-                            <a href="">
+                            <a href="#">
                                 <img src="img/product-feature/return-policy.png" alt="">
                             </a>
                             <h6>۷ روز ضمانت بازگشت
@@ -118,13 +118,14 @@ echo'
                     </div>
                     <div class="col-lg-3">
                         <div class="footer-item">
-                            <h5>خدمات مشتریان</h5>
-                            <ul class="footer-item-link">
-                                <li><a href="">پاسخ به پرسش های متداول</a></li>
-                                <li><a href="">رویه بازگرداندن کالا</a></li>
-                                <li><a href="">شرایط استفاده</a></li>
-                                <li><a href="">حریم خصوصی</a></li>
-                            </ul>
+                            <div class="footer-desc-item">
+                                <ul class="d-flex justify-content-md-end justify-content-center">
+                                    <li><a href=""><img src="img/default-icon/enamad.png" alt=""></a></li>
+                                    <li><a href=""><img src="img/default-icon/kasbokar.png" alt=""></a></li>
+                                    <li><a href=""><img src="img/default-icon/rezi.png" alt=""></a></li>
+                                </ul>
+                            </div>
+                            
                         </div>
                     </div>
                     <div class="col-lg-3">
@@ -143,13 +144,13 @@ echo'
                                     </div>
                                 </form>
                             </div>
-                            <div class="footer-desc-item">
-                                <ul class="d-flex justify-content-md-end justify-content-center">
-                                    <li><a href=""><img src="img/default-icon/enamad.png" alt=""></a></li>
-                                    <li><a href=""><img src="img/default-icon/kasbokar.png" alt=""></a></li>
-                                    <li><a href=""><img src="img/default-icon/rezi.png" alt=""></a></li>
-                                </ul>
-                            </div>
+                                 <div class="social-link justify-content-md-end justify-content-center">
+                            <a href="" class="bi bi-instagram"></a>
+                            <a href="" class="bi bi-twitter"></a>
+                            <a href="" class="bi bi-whatsapp"></a>
+                            <a href="" class="bi bi-youtube"></a>
+                            <a href="" class="bi bi-linkedin"></a>
+                        </div>
                         </div>
                     </div>
                 </div>
@@ -159,12 +160,7 @@ echo'
                             <div class="footer-desc-item">
                                 <h3>چاپ خانه چاپ اینجا ، بررسی ، انتخاب و خرید آنلاین</h3>
                                 <p class="text-muted">
-                                    یک خرید اینترنتی مطمئن، نیازمند چاپ خانه ای است که بتواند کالاهایی متنوع، باکیفیت و
-                                    دارای قیمت مناسب را در مدت زمانی کوتاه به دست مشتریان خود برساند و ضمانت بازگشت
-                                    کالا
-                                    هم داشته باشد؛ ویژگی‌هایی که چاپ خانه اینترنتی چاپ اینجا سال‌هاست بر روی آن‌ها کار
-                                    کرده و
-                                    توانسته از این طریق مشتریان ثابت خود را داشته باشد
+                                   متن کوتاه
                                 </p>
                             </div>
                         </div>
@@ -228,13 +224,7 @@ echo'
                 </div>
                 <div class="col-md-4">
                     <div class="social mt-md-0 mt-2">
-                        <div class="social-link justify-content-md-end justify-content-center">
-                            <a href="" class="bi bi-instagram"></a>
-                            <a href="" class="bi bi-twitter"></a>
-                            <a href="" class="bi bi-whatsapp"></a>
-                            <a href="" class="bi bi-youtube"></a>
-                            <a href="" class="bi bi-linkedin"></a>
-                        </div>
+                   
                     </div>
                 </div>
             </div>

@@ -502,7 +502,7 @@ header {
 .top-menu-search .search-txt {
     padding: 14px 15px;
     font-size: 13px;
-    width: 100%;
+    width: 20%;
     border: none;
     outline: none;
     background: #eee;
@@ -513,7 +513,7 @@ header {
     background: transparent;
     position: absolute;
     top: 0px;
-    left: 10px;
+    left: 1px;
     border: none;
     z-index: 10;
 }

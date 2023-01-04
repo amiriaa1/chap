@@ -2,8 +2,26 @@
 include_once('main.php');
 include_once('header.php');
 
+$student = new ManageStudents();
+$fee = new ManageFees();	
 
 
+
+$discountList = $fee->Getshopusers($uusername);	
+
+
+
+
+					foreach($discountList as $discountProp)
+					{
+						
+							$amount=$discountProp['amount'];
+							$data1=$discountProp['data1'];
+							$data2=$discountProp['data2'];
+						$data3=$discountProp['data3'];
+						$baseprice=$discountProp['baseprice'];	
+						$avtive=$discountProp['avtive'];	
+					}
 
 
 echo'
@@ -41,6 +59,8 @@ echo'
                            
                         </div>
                     </div>
+					
+					
                     <div class="col-lg-9">
                         <div class="content-box" style="padding:40px 20px;">
                             <div class="row">
@@ -63,40 +83,29 @@ echo'
                                                         <tr>
                                                             <td colspan="2">
                                                                 <h6 class="text-muted">نام و نام خانوادگی</h6>
-                                                                <p class="fw-bold mt-2">امیر رضایی</p>
+                                                                <p class="fw-bold mt-2">'.$ufaname.'</p>
                                                             </td>
                                                             <td colspan="2">
                                                                 <h6 class="text-muted">شماره تلفن</h6>
-                                                                <p class="fw-bold mt-2">09165550000</p>
+                                                                <p class="fw-bold mt-2">'.$uusername.'</p>
                                                             </td>
                                                         </tr>
                                                         <tr>
                                                             <td colspan="2">
                                                                 <h6>پست الکترونیک</h6>
-                                                                <p class="fw-bold mt-2">Amir@gmail.com</p>
+                                                                <p class="fw-bold mt-2">'.$uemail.'</p>
                                                             </td>
-                                                            <td colspan="2">
-                                                                <h6>کد ملی</h6>
-                                                                <p class="fw-bold mt-2">61400011133322</p>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td colspan="2">
-                                                                <h6>عضویت</h6>
-                                                                <p class="fw-bold mt-2">8 آبان 1401</p>
-                                                            </td>
-                                                            <td colspan="2">
-                                                                <h6>کد پستی </h6>
-                                                                <p class="fw-bold mt-2">_</p>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td colspan="4">
-                                                                <h6>آدرس: </h6>
-                                                                <p class="fw-bold mt-2">خرم آباد شهریار انتهای کوچه</p>
-                                                            </td>
-                                                        </tr>
+                                                         
+                                                        
                                                     </table>
+													<br>
+													<div class="d-flex justify-content-between align-items-center">
+                                                        <h4 class="fw-bold">
+                                                            سفارشات
+                                                        </h4>
+													</div>
+													
+													
                                                 </div>
                                             </div>
                                         </div>
@@ -105,11 +114,23 @@ echo'
                             </div>
                         </div>
                     </div>
+					
+					
+					
+					
+					
+					
                 </div>
             </div>
         </div>
         <!-- end dashboard -->
     </div>
+
+
+
+
+
+
 
 ';
 include_once('footer.php');

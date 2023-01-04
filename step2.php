@@ -56,24 +56,16 @@ echo'
 <script type="text/javascript">
 							function Mygetway()
 							{
-var name = document.getElementById("name").value;
-var lname = document.getElementById("lname").value;
-var ostan = document.getElementById("ostan").value;
-var city = document.getElementById("city").value;
-var street = document.getElementById("street").value;
-var street1 = document.getElementById("street1").value;
-var tel = document.getElementById("tel").value;
-var postal = document.getElementById("postal").value
-var descOrder = document.getElementById("descOrder").value;
+
+var addr = document.getElementById("addr").value;
 var unid = document.getElementById("unid").value;
-var price = document.getElementById("price").value;
 
 							
 							$.ajax({
 							
 								    url: "aj.php",
 								    type: "POST",
-								    data: {op:"send_getway",name:name,lname:lname,ostan:ostan,city:city,street:street,street1:street1,tel:tel,postal:postal,descOrder:descOrder,unid:unid,price:price},
+								    data: {op:"send_getway",addr:addr,unid:unid},
 									dataType: "json",
 								    success: function(data){
 										
@@ -180,79 +172,41 @@ var price = document.getElementById("price").value;
                                 </div>
                                 <div class="checkout-form">
                                    
+                                        
                                         <div class="form-group">
                                             <div class="row">
                                                 <div class="col-md-6">
                                                     <div class="form-group">
-                                                        <label for="name" class="form-label">نام <span
+                                                        <label for="addr" class="form-label">آدرس ها <span
                                                             class="text-danger ms-1">*</span></label>
-                                                        <input type="text" id="name" class="form-control rounded-pill">
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <div class="form-group">
-                                                        <label for="lname" class="form-label">نام خانوادگی <span
-                                                            class="text-danger ms-1">*</span></label>
-                                                        <input type="text" id="lname" class="form-control rounded-pill">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <div class="row">
-                                                <div class="col-md-6">
-                                                    <div class="form-group">
-                                                        <label for="ostan" class="form-label">استان <span
-                                                            class="text-danger ms-1">*</span></label>
-                                                    <select id="ostan" class="form-select rounded-pill">
-                                                        <option>تهران</option>
-                                                        <option>یزد</option>
-                                                        <option>اصفهان</option>
-                                                        <option>لرستان</option>
-                                                        <option>کردستان</option>
+                                                    <select id="addr" class="form-select rounded-pill">
+													
+													';
+													
+												
+												
+$discountList = $student->Getusersaddr($uusername);
+foreach($discountList as $discountProp)
+					{
+						
+													echo'
+                                                        <option>'.$discountProp['addr'].'-----'.$discountProp['name'].'</option>
+                                                 ';
+					}
+												 echo'
                                                     </select>
                                                     </div>
                                                 </div>
-                                                <div class="col-md-6">
-                                                    <div class="form-group">
-                                                        <label for="city" class="form-label">شهر <span
-                                                            class="text-danger ms-1">*</span></label>
-                                                    <select id="city" class="form-select rounded-pill">
-                                                        <option>کرج</option>
-                                                        <option>خرم آباد</option>
-                                                        <option>کرمانشاه</option>
-                                                        <option>مهاباد</option>
-                                                        <option>بروجرد</option>
-                                                    </select>
-                                                    </div>
-                                                </div>
+                                             
+												
+												
                                             </div>
                                         </div>
-                                        <div class="form-group">
-                                            <label for="street" class="form-label">خیابان<span
-                                                    class="text-danger ms-1">*</span></label>
-                                            <input type="text"  placeholder="پلاک خانه و نام خیابان" id="street"
-                                                class="form-control rounded-pill">
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="text" placeholder="شماره واحد ، بلوک ، پلاک (دلخواه)"
-                                                id="street1" class="form-control rounded-pill">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="tel" class="form-label">تلفن<span
-                                                    class="text-danger ms-1">*</span></label>
-                                            <input type="text" id="tel" class="form-control rounded-pill">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="email" class="form-label">آدرس ایمیل<span
-                                                    class="text-danger ms-1">*</span></label>
-                                            <input type="text" id="email" class="form-control rounded-pill">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="postal-code" class="form-label">کد پستی<span
-                                                    class="text-danger ms-1">*</span></label>
-                                            <input type="text" id="postal" class="form-control rounded-pill">
-                                        </div>
+                                     
+                                      
+                                     
+                                     
+                                      
                                         <div class="form-group">
                                             <label for="descOrder" class="form-label">یادداشت های سفارش اختیاری<span
                                                     class="text-danger ms-1">*</span></label>

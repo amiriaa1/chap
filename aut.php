@@ -11,9 +11,10 @@ if(isset($_POST['up-submit'])){
 	$email=$_POST['up-email'];
 	$name=$_POST['up-name'];
 	$pass=$_POST['up-pass'];
+	$codmeli=$_POST['up-codmeli'];
 	$uactive=0;
 	
-	$studentProp = $student->AddStudent(1,$username,md5($pass),$uactive,$name,$email);
+	$studentProp = $student->AddStudent(1,$username,md5($pass),$uactive,$name,$email,$codmeli);
 	
 $llvm=$_POST['up-username'];
 $stat=1;
@@ -431,6 +432,12 @@ echo'
                                             <div class="input-group">
                                                 <span class="input-group-text"><i class="bi bi-envelope"></i></span>
                                                 <input type="text" name="up-email" id="up-email" class="form-control" placeholder="ایمیل">
+                                            </div>
+                                        </div>
+										 <div class="form-group">
+                                            <div class="input-group">
+                                                <span class="input-group-text"><i class="bi bi-envelope"></i></span>
+                                                <input type="text" name="up-codmeli" id="up-codmeli" class="form-control" placeholder="کدملی">
                                             </div>
                                         </div>
 										
