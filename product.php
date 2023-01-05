@@ -68,14 +68,25 @@ echo'
 										
 										document.getElementById("wallet_type").style.visibility = "visible";
 										
-										
-										$(basesoal1).css("background", "transparent");
-										$(basesoal2).css("background", "transparent");
-										$(basesoal3).css("background", "transparent");
-										$(item).css("background", "#007fee");
 										$("#replyResult").html("");
 										
 										
+											if (typeof basesoal1 != "undefined") {
+                                              $(basesoal1).css("background", "transparent");
+											  $(item).css("background", "#007fee");
+                                                                           }  
+                                    if (typeof basesoal2 != "undefined") {
+                                              $(basesoal2).css("background", "transparent");
+											  $(item).css("background", "#007fee");
+                                                                           } 
+									if (typeof basesoal3 != "undefined") {
+                                              $(basesoal3).css("background", "transparent");
+											  $(item).css("background", "#007fee");
+                                                                           } 
+									if (typeof basesoal4 != "undefined") {
+                                              $(basesoal4).css("background", "transparent");
+											  $(item).css("background", "#007fee");
+                                                                           } 				
 										
 									}
 							      });
@@ -121,6 +132,26 @@ echo'
 										
 										
 										$("#replyResult").html("");
+										
+										
+									
+									
+									if (typeof secentsoal != "undefined") {
+                                              $(secentsoal).css("background", "transparent");
+											  $(item).css("background", "#007fee");
+                                                                           }  
+                                    if (typeof secentsoa2 != "undefined") {
+                                              $(secentsoa2).css("background", "transparent");
+											  $(item).css("background", "#007fee");
+                                                                           } 
+									if (typeof secentsoa3 != "undefined") {
+                                              $(secentsoa3).css("background", "transparent");
+											  $(item).css("background", "#007fee");
+                                                                           } 
+									if (typeof secentsoa4 != "undefined") {
+                                              $(secentsoa4).css("background", "transparent");
+											  $(item).css("background", "#007fee");
+                                                                           } 									   
 										
 										
 										
@@ -596,7 +627,7 @@ echo'
                                                          ';
 														 if(!$isLogedIn){
 															 
-									echo'<button  class="shadow-sm fw-bold btn-add-to-cart mt-sm-0 mt-2 waves-effect waves-light">برای خرید وارد شوید</button>';
+									echo'<a href="login"> <button  class="shadow-sm fw-bold btn-add-to-cart mt-sm-0 mt-2 waves-effect waves-light">برای خرید وارد شوید</button></a>';
 															 
 														 }
 									 else{echo'<button  class="shadow-sm fw-bold btn-add-to-cart mt-sm-0 mt-2 waves-effect waves-light" onclick="Myshoplist(this)">افزودن به سبد خرید</button>';

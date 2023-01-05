@@ -31,7 +31,7 @@ echo'
                             <div class="auth-forms-item">
                                 <div class="auth-title">
                                     <div class="auth-logo d-lg-none d-block">
-                                        <a href="index.html"><img src="img/default-icon/logo.png" class="img-fluid"
+                                        <a href="index.html"><img src="img/default-icon/logo.jpg" class="img-fluid"
                                                 alt=""></a>
                                     </div><br><br><br><br><br><br>
                                     <h3>وارد شوید یا ثبت نام کنید</h3>
@@ -74,7 +74,7 @@ echo'
                             </div>
                             <div class="auth-desc">
                                 <div class="auth-logo">
-                                    <a href="index.html"><img src="img/default-icon/logo.svg" class="img-fluid" alt=""></a>
+                                    <a href="index.html"><img src="img/default-icon/logo.jpg" class="img-fluid" alt=""></a>
                                 </div>
                                 <h3 class="fw-bold">خوش آمدید</h3>
                                 

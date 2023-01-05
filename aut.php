@@ -56,7 +56,7 @@ sendemailverfy($llvm,$stat);
                         <div class="auth-forms">
                             <div class="auth-forms-item">
                                 <div class="auth-logo d-lg-none d-block">
-                                    <a href="index.html"><img src="img/default-icon/logo.png" class="img-fluid" alt=""></a>
+                                    <a href="index.html"><img src="img/default-icon/logo.jpg" class="img-fluid" alt=""></a>
                                 </div>
                                 <div class="auth-title">
 							<br><br><br><br><br><br>
@@ -98,7 +98,7 @@ sendemailverfy($llvm,$stat);
                             </div>
                               <div class="auth-desc">
                                 <div class="auth-logo">
-                                    <a href="index.html"><img src="img/default-icon/logo.svg" class="img-fluid" alt=""></a>
+                                    <a href="index.html"><img src="img/default-icon/logo.jpg" class="img-fluid" alt=""></a>
                                 </div>
                                 <h3 class="fw-bold">خوش آمدید</h3>
                                 
@@ -298,7 +298,7 @@ echo'ersal nashod time limit';
                         <div class="auth-forms">
                             <div class="auth-forms-item">
                                 <div class="auth-logo d-lg-none d-block">
-                                    <a href="index.html"><img src="img/default-icon/logo.png" class="img-fluid" alt=""></a>
+                                    <a href="index.html"><img src="img/default-icon/logo.jpg" class="img-fluid" alt=""></a>
                                 </div>
                                 <div class="auth-title">
 							<br><br><br><br><br><br>
@@ -341,7 +341,7 @@ echo'ersal nashod time limit';
                             </div>
                               <div class="auth-desc">
                                 <div class="auth-logo">
-                                    <a href="index.html"><img src="img/default-icon/logo.svg" class="img-fluid" alt=""></a>
+                                    <a href="index.html"><img src="img/default-icon/logo.jpg" class="img-fluid" alt=""></a>
                                 </div>
                                 <h3 class="fw-bold">خوش آمدید</h3>
                                 
@@ -414,7 +414,7 @@ echo'
                         <div class="auth-forms">
                             <div class="auth-forms-item">
                                 <div class="auth-logo d-lg-none d-block">
-                                    <a href="index.html"><img src="img/default-icon/logo.png" class="img-fluid" alt=""></a>
+                                    <a href="index.html"><img src="img/default-icon/logo.jpg" class="img-fluid" alt=""></a>
                                 </div>
                                 <div class="auth-title">
                                     <h3>ثبت نام کنید</h3>
@@ -479,7 +479,7 @@ echo'
                             </div>
                               <div class="auth-desc">
                                 <div class="auth-logo">
-                                    <a href="index.html"><img src="img/default-icon/logo.svg" class="img-fluid" alt=""></a>
+                                    <a href="index.html"><img src="img/default-icon/logo.jpg" class="img-fluid" alt=""></a>
                                 </div>
                                 <h3 class="fw-bold">خوش آمدید</h3>
                                 

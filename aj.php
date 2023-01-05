@@ -164,10 +164,10 @@ $soalposit1= $fgt2['fgt']['1']['soalposit'];
 
 		 if(!$cooin==0){
 			 
-			$fglprice1 = $listprice * $value ;
-			$fglprice2 = $listprice * $fglprice1 ;
-			$fglprice3 = $listprice * $fglprice2 ;
-			$fglprice4 = $listprice * $fglprice3 ;
+			$fglprice1 = $listprice * $value + 1000 ;
+			$fglprice2 = $listprice * $value + 5000 ;
+			$fglprice3 = $listprice * $value + 8000 ;
+			$fglprice4 = $listprice * $value + 10000 ;
 			echo json_encode(array(
 				"statusCode"=>200,
 				"foridoro"=>$fglprice1,
@@ -182,6 +182,11 @@ $soalposit1= $fgt2['fgt']['1']['soalposit'];
 			
 		break;
 		
+		
+		
+		
+		
+
 		case "basket":
 		$finalprice= $_REQUEST['x'];
 		$btn3farsi= $_REQUEST['y'];
@@ -229,7 +234,7 @@ $soalposit1= $fgt2['fgt']['1']['soalposit'];
 			echo json_encode(array(
 				"statusCode"=>200,
 				"state"=>"1",
-				"url"=>'step2?unid='.$unid.'',
+				"url"=>'file?unid='.$unid.'',
 				"unid"=>$unid
 				
 

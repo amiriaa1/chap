@@ -119,14 +119,46 @@ if($system_settings["maintenance"]==1)
 								}
 								echo'
 								</li>
-                            <li class="nav-item"><span class="auth-icon-responsive d-xl-none d-block pointer"
-                                    data-bs-toggle="modal" data-bs-target="#loginModal">
+								
+                            <li class="nav-item"><span class="auth-icon-responsive d-xl-none d-block pointer">
+                                    
                                     <div class="header-box">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                            fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
-                                            <path
-                                                d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z" />
-                                        </svg>
+                                        ';
+								if($isLogedIn){
+									
+									echo'
+									<a href="profile" class="text-muted">
+									<button class="auth-btn-index-two pointer">
+                                     
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-person" viewBox="0 0 16 16">
+                                        <path
+                                            d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z" />
+                                    </svg>
+                                   خوش آمدی '.$uusername.'
+                                </button>
+								</a>
+									';
+									
+									
+								}else{
+									
+									echo'
+									<a href="login">
+									<button class="auth-btn-index-two pointer">
+                                    
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-person" viewBox="0 0 16 16">
+                                        <path
+                                            d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z" />
+                                    </svg>
+                                  ورود
+                                </button></a>
+									
+									';
+									
+								}
+								echo'
                                     </div>
                             </li>
                          
@@ -212,7 +244,7 @@ if($system_settings["maintenance"]==1)
                            
                         </ul>
 						   <ul class="nav header-contact-left">
-                                <li class="nav-item"><a href="" class="nav-link font-14">
+                                <li class="nav-item"><a href="login" class="nav-link font-14">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                             fill="currentColor" class="bi bi-telephone" viewBox="0 0 16 16">
                                             <path
@@ -220,7 +252,7 @@ if($system_settings["maintenance"]==1)
                                         </svg>
                                         021-91004545
                                     </a></li>
-                                <li class="nav-item"><a href="" class="nav-link font-14">
+                                <li class="nav-item"><a href="login" class="nav-link font-14">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                             fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
                                             <path
@@ -241,14 +273,14 @@ if($system_settings["maintenance"]==1)
                                     <i class="bi bi-x"></i>
                                 </div>
                                 <div class="rm-item-img">
-                                    <img src="img/default-icon/logo.png" alt="">
+                                    <img src="img/default-icon/logo.jpg" alt="">
                                 </div>
                                 <div class="rm-item-search">
                                     <div class="top-menu-search ">
                                         <form action="" method="get">
                                             <div class="input-group">
                                                 <input name="txt" type="text" class="search-txt rounded-pill"
-                                                    placeholder="نام محصول مورد نظر خود را وارد کنید">
+                                                    placeholder="جست و جو">
                                                 <button type="submit" class="search-btn input-group-text rounded-pill">
                                                     <i class="bi bi-search"></i>
                                                 </button>
