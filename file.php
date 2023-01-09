@@ -3,16 +3,16 @@
 include_once('main.php');
 include_once('header.php');
 
-
+$unid=$_GET['unid'];
 $bytes = openssl_random_pseudo_bytes(4);
 $ram = bin2hex($bytes);
 
-if(isset($_POST['but_upload'])){
+if(isset($_POST['but_upload']) && $_POST['category']=="2"){
    $maxsize = 5242880; // 5MB
    
    if(isset($_FILES['file']['name']) && $_FILES['file']['name'] != ''){
 	   
-       $name = $_POST['category'];
+       $name = $unid;
        $target_dir = "file/";
        $target_file = $target_dir . $ram . $_FILES["file"]["name"];
 
@@ -34,49 +34,20 @@ if(isset($_POST['but_upload'])){
                // Insert record
 			   $fee=new ManageFees();	
 			   $location=$target_file;
-               $amp = $fee->AddUserUpload($name,$location,$uid);
+               $amp = $fee->AddUserUpload($name,$location,$uusername);
                $success = _YOUR_video_upload_SUCCESSFULLY;
 			   Success($success);
 			   
 			   
 			   
-			   echo'
-			   
-			   
+			  
 
-<script type="text/javascript">
-							function Mygetway()
-							{
-
-var addr = document.getElementById("addr").value;
-var unid = document.getElementById("unid").value;
-
-							
-							$.ajax({
-							
-								    url: "aj.php",
-								    type: "POST",
-								    data: {op:"send_getway",addr:addr,unid:unid},
-									dataType: "json",
-								    success: function(data){
-										
-										
-								
-								window.location.href = data.url;
-										
-										
-										
-									}
-							      });
-							
-							
-							}
-						</script>
+echo "<script>window.location.href='step2?unid=$unid';</script>";
 
 
 			   
 			   
-			   ';
+			   
 			   
 			   
              }
@@ -90,7 +61,10 @@ var unid = document.getElementById("unid").value;
    }
   
 } 
-
+if(isset($_POST['category']) && $_POST['category']=="1"){
+	
+	echo "<script>window.location.href='step2?unid=$unid';</script>";
+}
 $unid=$_GET['unid'];
 echo'
 
@@ -130,13 +104,62 @@ echo'
                 </div>
             </div>
         </div>
-      
-								<input id="upload" name="file" type="file" multiple/>
-<button name="but_upload" id="but_upload"  class="shadow-sm fw-bold btn-add-to-cart mt-sm-0 mt-2 waves-effect waves-light" onclick="Mygetway()">آپلود</button>
+      <form method="post" action="" enctype="multipart/form-data">
+	
+                                                
+								
+
 
     
-  
-  
+            <div class="col-lg-5">
+                            <div class="cart-payment">
+                                <div class="title text-center">
+                                  
+                                </div>
+								<center>
+                                <table class="table main-table">
+                                
+                                    <tr>
+                                        <td class="fw-bold">
+                                           نوع ارسال فایل چاپ
+                                        </td>
+                                        <td class="txt">
+										
+										  <select id="category" name="category" class="form-select form-select-lg shadow-none">
+	   <option  id="category" name="category" selected value="1">ارسال فایل بعدا</option>
+	   <option  id="category" name="category" value="2">الان آپلود میکنم</option>
+	   </select>
+												
+												</td>
+                                    </tr>
+                                 
+                                    <tr>
+                                        <td class="fw-bold">آپلود فایل</td>
+                                        <td class="txt"><span class="fw-bold">
+										<input id="upload" name="file" type="file" multiple/>
+										
+										<button name="but_upload" id="but_upload"  class="shadow-sm fw-bold btn-add-to-cart mt-sm-0 mt-2 waves-effect waves-light">آپلود</button>
+                                    </tr>
+									
+              
+                                </table>
+							</center>
+
+                               
+                            </div>
+							
+							
+							
+							
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+  </form>
 <script src="js/jquery-3.6.1.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/swiper-bundle.min.js"></script>

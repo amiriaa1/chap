@@ -6,6 +6,7 @@ $student = new ManageStudents();
 $fee = new ManageFees();	
 unset($_SESSION['product']);
 unset($_SESSION['product2']);
+$id=$_GET['id'];
 if(isset($_GET['id']))
 {
 			
@@ -14,7 +15,7 @@ if(isset($_GET['id']))
 $query = "WHERE aid=$id  ORDER BY `nim_product`.`aid` ASC";			
 $discountList = $fee->Getproductlist($query);
 
-
+$discountList77 = $fee->Getproducttanavolistbyid($id);
 $discountList2 = $fee->Getproducttanavolistbyid($id);
 $counttttt = $fee->Getproducttanavolistbyidandif($id);
 foreach($discountList as $discountProp)
@@ -62,9 +63,12 @@ echo'
 								
 										var proce = data.fgt["0"].farijavab;
 									
+									if (soalposit != "1") {
+										var proce2 = data.fgt["1"].farijavab;
+										document.getElementById("test2").innerHTML = proce2;
+									}
 										
-										
-									    document.getElementById("test").innerHTML = proce;
+									    document.getElementById("test1").innerHTML = proce;
 										
 										document.getElementById("wallet_type").style.visibility = "visible";
 										
@@ -87,7 +91,18 @@ echo'
                                               $(basesoal4).css("background", "transparent");
 											  $(item).css("background", "#007fee");
                                                                            } 				
-										
+									if (typeof basesoal5 != "undefined") {
+                                              $(basesoal5).css("background", "transparent");
+											  $(item).css("background", "#007fee");
+                                                                           } 
+									if (typeof basesoal6 != "undefined") {
+                                              $(basesoal6).css("background", "transparent");
+											  $(item).css("background", "#007fee");
+                                                                           } 
+									if (typeof basesoal7 != "undefined") {
+                                              $(basesoal7).css("background", "transparent");
+											  $(item).css("background", "#007fee");
+                                                                           } 
 									}
 							      });
 							
@@ -184,7 +199,7 @@ echo'
 									dataType: "json",
 								    success: function(data){
 										if(data.statusCode==200){ 
-									document.getElementById("test3").style.visibility = "visible";
+									document.getElementById("test5").style.visibility = "visible";
 									
 									$("#twowayfori").val(data.foridoro);
 									$("#twowayno").val(data.doroghyrfori);
@@ -229,7 +244,7 @@ echo'
 									dataType: "json",
 								    success: function(data){
 										
-									document.getElementById("test3").style.visibility = "visible";
+									document.getElementById("test5").style.visibility = "visible";
 									
 									
 									var proce = y;
@@ -549,6 +564,9 @@ echo'
 							}
 					$soalposit++;}
 											
+											
+											
+											
 											echo'
 											
 									 </div> </div>
@@ -562,25 +580,35 @@ echo'
 								
                                         <div class="se-cart shadow-sm">
                                             <div class="se-cart-detail">
-                                                <span class="scd-item text-muted">
-                                                    <i class="bi bi-tag"></i>
-                                                 '.$soal1.' :
-                                                 <span name="test" id="test" onchange="myFunction(this)"></span>
+                                              
+                                                    
+													';
+													$tgyt=1;
+											foreach($discountList77 as $discountProp5)
+											{
+												
+												
+													echo'
+													  <span class="scd-item text-muted">
+												<i class="bi bi-tag"></i>
+                                                 '.$discountProp5['soal'].' :
+                                                 <span name="test'.$tgyt.'" id="test'.$tgyt.'"></span>
+                                                </span>
+												
+                                           
+												';
+												$tgyt++;
+												}
+												echo'
+												
+												 <span class="scd-item text-muted">
+												<i class="bi bi-tag"></i>
+                                                 نوع:
+                                                 <span name="test10" id="test10"></span>
                                                 </span>
 												
 												
-                                                <span class="scd-item text-muted">
-                                                    <i class="bi bi-shop"></i>
-                                                    '.$soal.' :
-                                                 <span name="test2" id="test2" ></span>
-                                                </span>
-												  <span class="scd-item text-muted">
-                                                    <i class="bi bi-shop"></i>
-                                                   نوع:
-                                                 <span name="test10" id="test10" ></span>
-                                                </span>
-												
-                                            	<div name="test3" id="test3" style="visibility:hidden;>
+                                            	<div name="test5" id="test5" style="visibility:hidden;>
 								<h4 class="fw-bold">
                                               
                                             </h4>

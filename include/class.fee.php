@@ -11,6 +11,15 @@ function Addcustomers($name,$lat,$lng,$addres,$cutomerstype,$submitby)
  return $counts; }
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+function AddUserUpload($name,$location,$uusername)
+ { global $table_prefix;
+ $query = $this->link->prepare("INSERT INTO `files` (`name`,`location`,`uusername`) VALUES (?,?,?) ");
+
+ $values = array($name,$location,$uusername);
+ $query->execute($values); $counts = $query->rowCount();
+ return $counts; }
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 
 
 function Addproductt($name,$desc,$davtive,$baseprice,$type,$pic)
