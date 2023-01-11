@@ -7,21 +7,7 @@ $fee = new ManageFees();
 
 
 
-$discountList = $fee->Getshopusers($uusername);	
 
-
-
-
-					foreach($discountList as $discountProp)
-					{
-						
-							$amount=$discountProp['amount'];
-							$data1=$discountProp['data1'];
-							$data2=$discountProp['data2'];
-						$data3=$discountProp['data3'];
-						$baseprice=$discountProp['baseprice'];	
-						$avtive=$discountProp['avtive'];	
-					}
 
 
 echo'
@@ -49,6 +35,7 @@ echo'
                                            
                                             <div>
                                                 <i class="bi bi-arrow-left-circle"></i>
+												
                                                 <a href="logout" class="text-muted">خروج از حساب</a>
                                             </div>
                                         </div>
@@ -57,8 +44,48 @@ echo'
                             </div>
 							
                            
+                   
+					
+						<div class="ui-box">
+                                <div class="ui-box-item">
+                                    <div class="ui-box-item-title" style="padding: 15px;">
+                                        <h4 class="fw-bold">
+                                            حساب کاربری شما
+                                        </h4>
+                                    </div>
+                                    <div class="ui-box-item-desc p-0">
+                                        <ul class="nav flex-column sidebar-menu">
+                                            <li class="nav-item  active">
+                                                <a href="profile" class="nav-link text-muted">
+                                                    <i class="bi bi-house"></i>
+                                                    <span>ناحیه کاربری</span>
+                                                </a>
+                                            </li>
+                                           
+                                            <li class="nav-item">
+                                                <a href="order" class="nav-link text-muted">
+                                                    <i class="bi bi-basket-fill"></i>
+                                                    <span>سفارش ها</span>
+                                                </a>
+                                            </li>
+                                           
+                                           
+                                            
+                                            <li class="nav-item">
+                                                <a href="address" class="nav-link text-muted">
+                                                    <i class="bi bi-pin-map"></i>
+                                                    <span>آدرس ها</span>
+                                                </a>
+                                            </li>
+                                          
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
+					
+					
 					
 					
                     <div class="col-lg-9">
@@ -99,11 +126,7 @@ echo'
                                                         
                                                     </table>
 													<br>
-													<div class="d-flex justify-content-between align-items-center">
-                                                        <h4 class="fw-bold">
-                                                            سفارشات
-                                                        </h4>
-													</div>
+													
 													
 													
                                                 </div>

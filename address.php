@@ -21,6 +21,10 @@ if(isset($_POST['addr'])){
 	$addr=$_POST['addr'];
 
 	$counttttt = $student->Addusersaddr($uusername,$name,$ostan,$shahr,$postcod,$number,$addr);
+	if($counttttt==1){
+		
+		echo'آدرس با موفقیت اضافه شد';
+	}
 }
 
 if(isset($_GET['add'])){
@@ -80,12 +84,7 @@ if(isset($_GET['add'])){
                                             </li>
                                            
                                           
-                                            <li class="nav-item">
-                                                <a href="comments" class="nav-link text-muted">
-                                                    <i class="bi bi-pencil"></i>
-                                                    <span>نقد و نظرات</span>
-                                                </a>
-                                            </li>
+                                          
                                             <li class="nav-item active">
                                                 <a href="address" class="nav-link text-muted">
                                                     <i class="bi bi-pin-map"></i>
@@ -113,7 +112,7 @@ if(isset($_GET['add'])){
                                                         <h4 class="fw-bold">
                                                             آدرس ها
                                                         </h4>
-                                                        <a class="btn btn-danger btn-sm waves-effect waves-light" href="">ثبت آدرس جدید <i
+                                                        <a class="btn btn-danger btn-sm waves-effect waves-light" href="address?add=1">ثبت آدرس جدید <i
                                                                 class="bi bi-plus-circle-dotted"></i></a>
                                                     </div>
                                                 </div>
@@ -294,12 +293,7 @@ echo'
                                             </li>
                                            
                                           
-                                            <li class="nav-item">
-                                                <a href="comments" class="nav-link text-muted">
-                                                    <i class="bi bi-pencil"></i>
-                                                    <span>نقد و نظرات</span>
-                                                </a>
-                                            </li>
+                                           
                                             <li class="nav-item active">
                                                 <a href="address" class="nav-link text-muted">
                                                     <i class="bi bi-pin-map"></i>
@@ -327,7 +321,7 @@ echo'
                                                         <h4 class="fw-bold">
                                                             آدرس ها
                                                         </h4>
-                                                        <a class="btn btn-danger btn-sm waves-effect waves-light" href="">ثبت آدرس جدید <i
+                                                        <a class="btn btn-danger btn-sm waves-effect waves-light" href="address?add">ثبت آدرس جدید <i
                                                                 class="bi bi-plus-circle-dotted"></i></a>
                                                     </div>
                                                 </div>

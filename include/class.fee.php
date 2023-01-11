@@ -142,7 +142,7 @@ function Getproducttanavolist($query) { global $table_prefix;
    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
    function Getshopusers($uusername)
- { global $table_prefix; $query = $this->link->prepare("SELECT * FROM `nim_shop_list` WHERE `user`=?"); $values = array($uusername);
+ { global $table_prefix; $query = $this->link->prepare("SELECT * FROM `nim_shop_list`  WHERE `user`=? ORDER BY `nim_shop_list`.`aid` DESC"); $values = array($uusername);
  $query->execute($values); $result = $query->fetchAll(); return $result; } 
 
    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
