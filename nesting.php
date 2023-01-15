@@ -2,10 +2,12 @@
 
 include_once('main.php');
 
-$json='test';
-$unid='wv91e69fj8hggyuk6w1k';
+$idproduct="3";
+$soalaval="پاکت A4";
+$soalaval2="بدون چسب";
+$soalaval3="افقی";
 $fee = new ManageFees();
-$counttttt = $fee->Updateshoplist($json,$unid);
-			
-	echo $counttttt;		
+$btnsolcount2 = $fee->Getsol1fromsol4($idproduct,$soalaval,$soalaval2,$soalaval3);
+
+echo $btnsolcount2['0']['sol4'];
 ?>

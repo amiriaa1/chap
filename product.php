@@ -15,9 +15,8 @@ if(isset($_GET['id']))
 $query = "WHERE aid=$id  ORDER BY `nim_product`.`aid` ASC";			
 $discountList = $fee->Getproductlist($query);
 
-$discountList77 = $fee->Getproducttanavolistbyid($id);
-$discountList2 = $fee->Getproducttanavolistbyid($id);
-$counttttt = $fee->Getproducttanavolistbyidandif($id);
+
+$btnsolcount = $fee->Getsol1fromsol($id);
 foreach($discountList as $discountProp)
 					{
 						
@@ -25,10 +24,11 @@ foreach($discountList as $discountProp)
 							$description=$discountProp['description'];
 							$type=$discountProp['type'];
 							$qa=$discountProp['qa'];
+							$soal_count=$discountProp['soal_count'];
 						
 									
 					}
-					
+
 
 
 }
@@ -46,35 +46,27 @@ echo'
 							{
 								$("#replyResult").html(\'<img src="img/default-icon/wait.gif">\');
 								const myArray = $(item).attr("value").split("-");
-								var soalposit = myArray[0];
-								var idsoal = myArray[1];
-								var btn = myArray[2];
-								var farijavab = myArray[3];
-								var price = myArray[4];
+								var farijavab = myArray[0];
+								var idproduct = myArray[1];
+								var soalposit = myArray[2];
+								
 							$.ajax({
 							
 								    url: "aj.php",
 								    type: "POST",
-								    data: {op:"cioice",soalposit:soalposit,idsoal:idsoal,btn:btn,farijavab:farijavab,price:price,},
+								    data: {op:"cioice",farijavab:farijavab,idproduct:idproduct,soalposit:soalposit},
 									dataType: "json",
 								    success: function(data){
 										
-										
 								
-										var proce = data.fgt["0"].farijavab;
-									
-									if (soalposit != "1") {
-										var proce2 = data.fgt["1"].farijavab;
-										document.getElementById("test2").innerHTML = proce2;
-									}
-										
-									    document.getElementById("test1").innerHTML = proce;
-										
-										document.getElementById("wallet_type").style.visibility = "visible";
-										
 										$("#replyResult").html("");
-										
-										
+									
+										  $("#content").html(data.html);
+										  
+										 if (data.backbtn1 != "undefined") {
+                                             $("#content2").html(data.backbtn1);
+                                                                           }  
+										  
 											if (typeof basesoal1 != "undefined") {
                                               $(basesoal1).css("background", "transparent");
 											  $(item).css("background", "#007fee");
@@ -116,60 +108,139 @@ echo'
 							}
 						</script>
 
-	
-<script type="text/javascript">
-							function showStudentProppp(item)
+	<script type="text/javascript">
+							function showStudentProp1(item)
 							{
 								$("#replyResult").html(\'<img src="img/default-icon/wait.gif">\');
 								const myArray = $(item).attr("value").split("-");
-								var soalposit = myArray[0];
-								var idsoal = myArray[1];
-								var btn = myArray[2];
-								var farijavab = myArray[3];
-								var price = myArray[4];
+								var farijavab = myArray[0];
+								var idproduct = myArray[1];
+								var soalposit = myArray[2];
+								
 							$.ajax({
 							
 								    url: "aj.php",
 								    type: "POST",
-								    data: {op:"cioice",soalposit:soalposit,idsoal:idsoal,btn:btn,farijavab:farijavab,price:price,},
+								    data: {op:"cioice2",farijavab:farijavab,idproduct:idproduct,soalposit:soalposit},
 									dataType: "json",
 								    success: function(data){
 										
-										
 								
-										var proce = data.fgt["1"].farijavab;
-									
-										
-										
-									    document.getElementById("test2").innerHTML = proce;
-										
-										document.getElementById("wallet_type").style.visibility = "visible";
-										
-										
 										$("#replyResult").html("");
-										
-										
 									
-									
-									if (typeof secentsoal != "undefined") {
-                                              $(secentsoal).css("background", "transparent");
+										  $("#contentnew").html(data.html);
+										  
+										 if (data.backbtn1 != "undefined") {
+                                             $("#content4").html(data.backbtn1);
+                                                                           }  
+										  
+											if (typeof soal2-1 != "undefined") {
+												
+                                              $(soal2-1).css("background", "transparent");
 											  $(item).css("background", "#007fee");
                                                                            }  
-                                    if (typeof secentsoa2 != "undefined") {
-                                              $(secentsoa2).css("background", "transparent");
+                                    if (typeof soal2-2 != "undefined") {
+                                              $(soal2-2).css("background", "transparent");
 											  $(item).css("background", "#007fee");
                                                                            } 
-									if (typeof secentsoa3 != "undefined") {
-                                              $(secentsoa3).css("background", "transparent");
+									if (typeof soal2-3 != "undefined") {
+                                              $(soal2-3).css("background", "transparent");
 											  $(item).css("background", "#007fee");
                                                                            } 
-									if (typeof secentsoa4 != "undefined") {
-                                              $(secentsoa4).css("background", "transparent");
+									if (typeof soal2-4 != "undefined") {
+                                              $(soal2-4).css("background", "transparent");
 											  $(item).css("background", "#007fee");
-                                                                           } 									   
+                                                                           } 				
+									if (typeof soal2-5 != "undefined") {
+                                              $(soal2-5).css("background", "transparent");
+											  $(item).css("background", "#007fee");
+                                                                           } 
+									if (typeof soal2-6 != "undefined") {
+                                              $(soal2-6).css("background", "transparent");
+											  $(item).css("background", "#007fee");
+                                                                           } 
+									if (typeof soal2-7 != "undefined") {
+                                              $(soal2-7).css("background", "transparent");
+											  $(item).css("background", "#007fee");
+                                                                           } 
+									}
+							      });
+							
+							
+							
+								
+							
+							
+							
+							
+							}
+						</script>
+						
+							<script type="text/javascript">
+							function showStudentProp3(item)
+							{
+								$("#replyResult").html(\'<img src="img/default-icon/wait.gif">\');
+								const myArray = $(item).attr("value").split("-");
+								var farijavab = myArray[0];
+								var idproduct = myArray[1];
+								var soalposit = myArray[2];
+								
+							$.ajax({
+							
+								    url: "aj.php",
+								    type: "POST",
+								    data: {op:"cioice3",farijavab:farijavab,idproduct:idproduct,soalposit:soalposit},
+									dataType: "json",
+								    success: function(data){
 										
-										
-										
+								
+										$("#replyResult").html("");
+									if (data.backbtn1 != "0"){
+											   $("#contentneww").html(data.html);
+											  
+										  }
+										  
+										  document.getElementById("countervibvib").style.visibility = "visible";
+										 if (data.backbtn1 != "undefined") {
+                                             $("#content5").html(data.backbtn1);
+											 $("#niaz1").html(data.pop1);
+											 $("#niaz2").html(data.pop2);
+											 $("#niaz3").html(data.pop3);
+											 $("#niaz4").html(data.pop4);
+                                                                           }  
+										  
+										  
+										  
+										  
+											if (typeof soal3 != "undefined") {
+												
+                                              $(soal2-1).css("background", "transparent");
+											  $(item).css("background", "#007fee");
+                                                                           }  
+                                    if (typeof soal2-2 != "undefined") {
+                                              $(soal2-2).css("background", "transparent");
+											  $(item).css("background", "#007fee");
+                                                                           } 
+									if (typeof soal2-3 != "undefined") {
+                                              $(soal2-3).css("background", "transparent");
+											  $(item).css("background", "#007fee");
+                                                                           } 
+									if (typeof soal2-4 != "undefined") {
+                                              $(soal2-4).css("background", "transparent");
+											  $(item).css("background", "#007fee");
+                                                                           } 				
+									if (typeof soal2-5 != "undefined") {
+                                              $(soal2-5).css("background", "transparent");
+											  $(item).css("background", "#007fee");
+                                                                           } 
+									if (typeof soal2-6 != "undefined") {
+                                              $(soal2-6).css("background", "transparent");
+											  $(item).css("background", "#007fee");
+                                                                           } 
+									if (typeof soal2-7 != "undefined") {
+                                              $(soal2-7).css("background", "transparent");
+											  $(item).css("background", "#007fee");
+                                                                           } 
 									}
 							      });
 							
@@ -184,34 +255,66 @@ echo'
 						</script>
 						
 						
+						
+
+						
+						
 						<script type="text/javascript">
 							function myFunction(item)
 							{
 								$("#replyResult").html(\'<img src="img/default-icon/wait.gif">\');
 								var x = document.getElementById("count").value;
 								
+								var pse1 = 1;
+								var pse2 = 2;
+								var pse3 = 3;
+								var pse4 = 4;
+								
+								
+								if (typeof price1 != "undefined") {
+									
+								const myArray1 = $(price1).attr("value").split("-");
+								var pse1 = myArray1[3];	
+								}
+								
+								if (typeof price2 != "undefined") {
+									
+								const myArray2 = $(price2).attr("value").split("-");
+								var pse2 = myArray2[3];	
+								}
+								
+								if (typeof price3 != "undefined") {
+									
+								const myArray3 = $(price3).attr("value").split("-");
+								var pse3 = myArray3[3];	
+								}
+								
+								if (typeof price4 != "undefined") {
+									
+								const myArray4 = $(price4).attr("value").split("-");
+								var pse4 = myArray4[3];	
+								}
+								
+								
 								
 							$.ajax({
 							
 								    url: "aj.php",
 								    type: "POST",
-								    data: {op:"final",x:x},
+								    data: {op:"final",x:x,pse1:pse1,pse2:pse2,pse3:pse3,pse4:pse4},
 									dataType: "json",
 								    success: function(data){
 										if(data.statusCode==200){ 
-									document.getElementById("test5").style.visibility = "visible";
 									
-									$("#twowayfori").val(data.foridoro);
-									$("#twowayno").val(data.doroghyrfori);
-									$("#yekwayno").val(data.yeroghyrfori);
-									$("#yelwayfori").val(data.foriyero);
-									document.getElementById("twowayfori").innerHTML = data.foridoro;
-									document.getElementById("twowayno").innerHTML = data.doroghyrfori;
-									document.getElementById("yekwayno").innerHTML = data.yeroghyrfori;
-									document.getElementById("yelwayfori").innerHTML = data.foriyero;
 									
-									document.getElementById("finalproce").innerHTML = data.foriyero;
-							$("#replyResult").html("");
+									
+									
+									document.getElementById("price1").innerHTML = data.btn_fori_yero;
+									document.getElementById("price2").innerHTML = data.btn_fori_doro;
+									document.getElementById("price3").innerHTML = data.btn_no_fori_yero;
+									document.getElementById("price4").innerHTML = data.btn_no_fori_doro;
+									
+									$("#replyResult").html("");
 										}
 										
 									}
@@ -383,85 +486,83 @@ echo'
                                 
                                   <div class="col-sm-6"><center><div id="replyResult"></div>
                      ';
-					 $soalposit=1;
-					 foreach($counttttt as $discountProp3)
-					{
-						
-						$soal1=$discountProp3['soal'];
-						$id=$discountProp3['id'];
-						$javab1=$discountProp3['javab-1'];
-						$vazn1=$discountProp3['vazn-1'];
-						
-						$javab2=$discountProp3['javab-2'];
-						$vazn2=$discountProp3['vazn-2'];
-						
-						$javab3=$discountProp3['javab-3'];
-						$vazn3=$discountProp3['vazn-3'];
-						
-						$javab4=$discountProp3['javab-4'];
-						$vazn4=$discountProp3['vazn-4'];
-						
-						$javab5=$discountProp3['javab-5'];
-						$vazn5=$discountProp3['vazn-5'];
-						
-						$javab6=$discountProp3['javab-6'];
-						$vazn6=$discountProp3['vazn-6'];
-						
-						$javab7=$discountProp3['javab-7'];
-						$vazn7=$discountProp3['vazn-7'];
-						
-						$javab8=$discountProp3['javab-8'];
-						$vazn8=$discountProp3['vazn-8'];
-						
-						$javab9=$discountProp3['javab-9'];
-						$vazn9=$discountProp3['vazn-9'];
-						
-						$javab10=$discountProp3['javab-10'];
-						$vazn10=$discountProp3['vazn-10'];
-					
-					echo'
+
+
+
+
+
+    echo'
 					 <div class="category-filter">
                                     <div class="category-filter-box">
                                         <div class="category-filter-box-title">
                                             <h4 class="fw-bold">
-                                              '.$soal1.':
+                                              سوال:
                                             </h4>
                                         </div>
                                         <div class="category-filter-box-desc">
                                             
                                                 <div class="form-group form-check">
-					
 					';
+					foreach($btnsolcount as $discountProp69)
+					{
+						
+							$sol1=$discountProp69['sol1'];
+							echo'
+						
+						<button name="basesoal1" id="basesoal1" value="'.$sol1.'-'.$id.'-1"  type="button" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProp(this)">'.$sol1.'</button>
+						';
+						
+									
+					}
+
 					
-					                    if(!$javab1==''){echo'<button name="basesoal1" id="basesoal1" value="'.$soalposit.'-'.$id.'-1-'.$javab1.'-'.$vazn1.'"  type="button" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProp(this)">'.$javab1.'</button>';}
-										if(!$javab2==''){echo'<button name="basesoal2" id="basesoal2" value="'.$soalposit.'-'.$id.'-2-'.$javab2.'-'.$vazn2.'" type="button" class="btn btn-outline btn-rounded mb-5"  onclick="showStudentProp(this)">'.$javab2.'</button>';}
-										if(!$javab3==''){echo'<button name="basesoal3" id="basesoal3" value="'.$soalposit.'-'.$id.'-3-'.$javab3.'-'.$vazn3.'" type="button" class="btn btn-outline btn-rounded mb-5"  onclick="showStudentProp(this)">'.$javab3.'</button>';}
-										if(!$javab4==''){echo'<button name="basesoal4" id="basesoal4" value="'.$soalposit.'-'.$id.'-4-'.$javab4.'-'.$vazn4.'" type="button" class="btn btn-outline btn-rounded mb-5"  onclick="showStudentProp(this)">'.$javab4.'</button>';}
-									    if(!$javab5==''){echo'<button name="basesoal5" id="basesoal5" value="'.$soalposit.'-'.$id.'-5-'.$javab5.'-'.$vazn5.'" type="button" class="btn btn-outline btn-rounded mb-5"  onclick="showStudentProp(this)">'.$javab5.'</button>';}
-										if(!$javab6==''){echo'<button name="basesoal6" id="basesoal6" value="'.$soalposit.'-'.$id.'-6-'.$javab6.'-'.$vazn6.'" type="button" class="btn btn-outline btn-rounded mb-5"  onclick="showStudentProp(this)">'.$javab6.'</button>';}
-										if(!$javab7==''){echo'<button name="basesoal7" id="basesoal7" value="'.$soalposit.'-'.$id.'-7-'.$javab7.'-'.$vazn7.'"  type="button" class="btn btn-outline btn-rounded mb-5"  onclick="showStudentProp(this)">'.$javab7.'</button>';}
-										if(!$javab8==''){echo'<button name="basesoal8" id="basesoal8" value="'.$soalposit.'-'.$id.'-8-'.$javab8.'-'.$vazn8.'"  type="button" class="btn btn-outline btn-rounded mb-5"  onclick="showStudentProp(this)">'.$javab8.'</button>';}
-										if(!$javab9==''){echo'<button name="basesoal9" id="basesoal9" value="'.$soalposit.'-'.$id.'-9-'.$javab9.'-'.$vazn9.'"  type="button" class="btn btn-outline btn-rounded mb-5"  onclick="showStudentProp(this)">'.$javab9.'</button>';}
-										if(!$javab10==''){echo'<button name="basesoal10" id="basesoal10" value="'.$soalposit.'-'.$id.'-10-'.$javab10.'-'.$vazn10.'"  type="button" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProp(this)">'.$javab10.'</button>';}
 					echo'
-					
 					
 					 </div>
                        </div> </div>
                      </div> 
 					';
-					$soalposit++;}
+
+
 					
 					echo'
-			                    
-     
-                                       
+			                 <div name="content" id="content"></div> 
+                             <div name="contentnew" id="contentnew"></div> 
+							 <div name="contentnew" id="contentneww"></div> 
+                              
 
    
 								
-				            				
+				            			 <div class="col-sm-6" name="countervibvib" id="countervibvib" style="visibility:hidden;>
+                                                            <div class="cart-counter">
+                                                                <input type="text" name="count" id="count" class="counter" value="1" onchange="myFunction(this)">
+                                                                    
+                                                            </div>
+                                                        </div>	
+<div name="niaz" id="niaz">
+							 <div class="se-body">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                      
+                                        <div class="se-desc">
+							 
+							 <span name="niaz1" id="niaz1"></span>
+							 <span name="niaz2" id="niaz2"></span>
+							 <span name="niaz3" id="niaz3"></span>
+							 <span name="niaz4" id="niaz4"></span>
+							 
+							 
+							 
+							 </div></div></div></div>
+							 </div>        
+
 
                             </div>
+							
+							
+							
+							
+							
                             <div class="se-body">
                                 <div class="row">
                                     <div class="col-lg-6">
@@ -469,100 +570,10 @@ echo'
                                         <div class="se-desc">
 										
                                         
-                                          
-											
-											';
+                                       ';
 											
 											
-											foreach($discountList2 as $discountProp2)
-					{
-						
-						$soal=$discountProp2['soal'];
-						$id=$discountProp2['id'];
-						
-						$javab1=$discountProp2['javab-1'];
-						$zvazn1=$discountProp2['vazn-1'];
-						
-						$javab2=$discountProp2['javab-2'];
-						$zvazn2=$discountProp2['vazn-2'];
-						
-						$javab3=$discountProp2['javab-3'];
-						$zvazn3=$discountProp2['vazn-3'];
-						
-						$javab4=$discountProp2['javab-4'];
-						$zvazn4=$discountProp2['vazn-4'];
-						
-						$javab5=$discountProp2['javab-5'];
-						$zvazn5=$discountProp2['vazn-5'];
-						
-						$javab6=$discountProp2['javab-6'];
-						$zvazn6=$discountProp2['vazn-6'];
-						
-						$javab7=$discountProp2['javab-7'];
-						$zvazn7=$discountProp2['vazn-7'];
-						
-						$javab8=$discountProp2['javab-8'];
-						$zvazn8=$discountProp2['vazn-8'];
-						
-						$javab9=$discountProp2['javab-9'];
-						$zvazn9=$discountProp2['vazn-9'];
-						
-						$javab10=$discountProp2['javab-10'];
-						$zvazn10=$discountProp2['vazn-10'];
-						$baser=$discountProp2['baser'];
-					if($baser==1){$soalposit=$soalposit-1;} 
-					
-					else{
-						
-						
-							echo'<center>
-							
-							
-						
-
-							
-							
-							 <div class="category-filter" name="wallet_type" id="wallet_type" style="visibility:hidden;>
-                                    <div class="category-filter-box">
-                                        <div class="category-filter-box-title">
-                                            <h4 class="fw-bold">
-                                              '.$soal.':
-                                            </h4>
-                                        </div>
-                                        <div class="category-filter-box-desc">
-                                            
-                                                <div class="form-group form-check">
-					
-							 
-						
-                           
-							
-												';
-												  if(!$javab1==''){echo'<button name="secentsoal" id="secentsoal" type="button"  value="'.$soalposit.'-'.$id.'-1-'.$javab1.'-'.$vazn1.'" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProppp(this)">'.$javab1.'</button>';}
-												  if(!$javab2==''){echo'<button name="secentsoa2" id="secentsoa2" type="button"  value="'.$soalposit.'-'.$id.'-2-'.$javab2.'-'.$vazn2.'" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProppp(this)">'.$javab2.'</button>';}
-												  if(!$javab3==''){echo'<button name="secentsoa3" id="secentsoa3" type="button"  value="'.$soalposit.'-'.$id.'-3-'.$javab3.'-'.$vazn3.'" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProppp(this)">'.$javab3.'</button>';}
-											      if(!$javab4==''){echo'<button name="secentsoa4" id="secentsoa4" type="button"  value="'.$soalposit.'-'.$id.'-4-'.$javab4.'-'.$vazn4.'" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProppp(this)">'.$javab4.'</button>';}
-												  if(!$javab5==''){echo'<button name="secentsoa5" id="secentsoa5" type="button"  value="'.$soalposit.'-'.$id.'-5-'.$javab5.'-'.$vazn5.'" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProppp(this)">'.$javab5.'</button>';}
-												  if(!$javab6==''){echo'<button name="secentsoa6" id="secentsoa6" type="button"  value="'.$soalposit.'-'.$id.'-6-'.$javab6.'-'.$vazn6.'" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProppp(this)">'.$javab6.'</button>';}
-												  if(!$javab7==''){echo'<button name="secentsoa7" id="secentsoa7" type="button"  value="'.$soalposit.'-'.$id.'-7-'.$javab7.'-'.$vazn7.'" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProppp(this)">'.$javab7.'</button>';}
-												  if(!$javab8==''){echo'<button name="secentsoa8" id="secentsoa8" type="button"  value="'.$soalposit.'-'.$id.'-8-'.$javab8.'-'.$vazn8.'" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProppp(this)">'.$javab8.'</button>';}
-												  if(!$javab9==''){echo'<button name="secentsoa9" id="secentsoa9" type="button"  value="'.$soalposit.'-'.$id.'-9-'.$javab9.'-'.$vazn9.'" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProppp(this)">'.$javab9.'</button>';}
-												  if(!$javab10==''){echo'<button name="secentsoal0" id="secentsoal0" type="button" value="'.$soalposit.'-'.$id.'-10-'.$javab10.'-'.$vazn10.'" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProppp(this)">'.$javab10.'</button>';}
-														  
-							echo'
-					
-					
-				
-                      
-                     </center>
-					';
-
-
-							
-							 
-							
-							}
-					$soalposit++;}
+											
 											
 											
 											
@@ -579,56 +590,9 @@ echo'
 									
 								
                                         <div class="se-cart shadow-sm">
-                                            <div class="se-cart-detail">
-                                              
-                                                    
-													';
-													$tgyt=1;
-											foreach($discountList77 as $discountProp5)
-											{
-												
-												
-													echo'
-													  <span class="scd-item text-muted">
-												<i class="bi bi-tag"></i>
-                                                 '.$discountProp5['soal'].' :
-                                                 <span name="test'.$tgyt.'" id="test'.$tgyt.'"></span>
-                                                </span>
-												
-                                           
-												';
-												$tgyt++;
-												}
-												echo'
-												
-												 <span class="scd-item text-muted">
-												<i class="bi bi-tag"></i>
-                                                 نوع:
-                                                 <span name="test10" id="test10"></span>
-                                                </span>
-												
-												
-                                            	<div name="test5" id="test5" style="visibility:hidden;>
-								<h4 class="fw-bold">
-                                              
-                                            </h4>
-							دو رو فوری<button name="دو رو فوری" id="twowayfori" type="button"  value="ttt" class="btn btn-outline btn-rounded mb-5" onclick="Myfinalss(this)">0</button>
-									دو رو غیر فوری<button name="دو رو غیر فوری" id="twowayno" type="button"  value="ttt" class="btn btn-outline btn-rounded mb-5" onclick="Myfinalss(this)">0</button>
-									<br>
-									یک رو فوری<button name="یک رو فوری" id="yelwayfori" type="button"  value="ttt" class="btn btn-outline btn-rounded mb-5" onclick="Myfinalss(this)">0</button>
-									 یک رو غیر فوری<button name="یک رو غیر فوری" id="yekwayno" type="button"  value="ttt" class="btn btn-outline btn-rounded mb-5" onclick="Myfinalss(this)">0</button>
-
-									
-									</div>
-                                              
-                                            </div>
-                                            <div class="se-cart-price">
-                                                
-                                                <span id="finalproce" class="se-cart-price-new">0</span>  تومان
-                                            </div>
-                                            <div class="se-cart-price">
-                                               
-                                            </div>
+                                            
+                                            
+                                            
                                             <div class="se-cart-color">
                                                 <div class="color-box">
                                                    
@@ -645,12 +609,7 @@ echo'
                                             <div class="se-cart-form">
                                                
                                                     <div class="row align-items-center">
-                                                        <div class="col-sm-6">
-                                                            <div class="cart-counter">
-                                                                <input type="text" name="count" id="count" class="counter" value="1" onchange="myFunction(this)">
-                                                                    
-                                                            </div>
-                                                        </div>
+                                                       
                                                         <div class="col-sm-6">
                                                          ';
 														 if(!$isLogedIn){
