@@ -4,30 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bc047395-12cc-4474-b2fe-72233fb553d9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/cupfile.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/28fe30b91.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/28fe30b92.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/cf5546fd1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/cf5546fd2.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/d79c4d561.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/d79c4d562.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7ff1c0ba-e02c-409f-9700-d7b8f0643607.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/7ff1c0ba-e02c-409f-9700-d7b8f0643607.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/aj.php" beforeDir="false" afterPath="$PROJECT_DIR$/aj.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/category.php" beforeDir="false" afterPath="$PROJECT_DIR$/category.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/file.php" beforeDir="false" afterPath="$PROJECT_DIR$/file.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/footer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/class.fee.php" beforeDir="false" afterPath="$PROJECT_DIR$/include/class.fee.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product.php" beforeDir="false" afterPath="$PROJECT_DIR$/product.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/step2.php" beforeDir="false" afterPath="$PROJECT_DIR$/step2.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor.php" afterDir="false" />
-    </list>
+    <list default="true" id="bc047395-12cc-4474-b2fe-72233fb553d9" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -80,7 +57,7 @@
       <updated>1673644251802</updated>
       <workItem from="1673644253683" duration="8907000" />
       <workItem from="1673738370284" duration="5557000" />
-      <workItem from="1673801511284" duration="9204000" />
+      <workItem from="1673801511284" duration="9565000" />
     </task>
     <servers />
   </component>
