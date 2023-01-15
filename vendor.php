@@ -6,33 +6,6 @@ $fee = new ManageFees();
 
 echo'
 
-    <div class="content">
-        <!-- start bradcrumb -->
-        <div class="category-bread">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="product-meta-breadcrumb shadow-sm">
-                            <nav>
-                                <ol class="breadcrumb mb-0">
-                                    <li class="breadcrumb-item">
-                                        <a href="#">خانه</a>
-                                    </li>
-                                    <li class="breadcrumb-item">
-                                        <a href="#">محصولات</a>
-                                    </li>
-                                    <li class="breadcrumb-item active" aria-current="page">
-                                        <span>دسته بندی محصولات '.$nametype.'</span>
-                                    </li>
-                                </ol>
-                            </nav>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- end bradcrumb -->
-
    
 							
 				<div class="main-category">
@@ -44,22 +17,53 @@ echo'
 			 <div class="col-lg-2 col-sm-4 col-6 mb-3">
                     <a href="category?type=1">
                         <div class="cart-small">
-                           
+                            <div class="cart-small-icon">
+                                <img width="50" src="img/1.jpg" alt="" class="img-fluid">
+                            </div>
                             <div class="cart-small-desc ms-lg-3 text-center">
-                                <h6>افست</h6>
-                                <p class="text-muted d-none d-lg-block">1173 محصول</p>
+                                <h6>چاپ افست</h6>
+                               <p>سفارش آنلاین</p>
                             </div>
                         </div>
                     </a>
                 </div>
 			
-				 <div class="col-lg-2 col-sm-4 col-6 mb-3">
+			<div class="col-lg-2 col-sm-4 col-6 mb-3">
                     <a href="category?type=2">
                         <div class="cart-small">
-                           
+                            <div class="cart-small-icon">
+                                <img width="50" src="img/3.jpg" alt="" class="img-fluid">
+                            </div>
                             <div class="cart-small-desc ms-lg-3 text-center">
-                                <h6>دیجیتال</h6>
-                                <p class="text-muted d-none d-lg-block">1173 محصول</p>
+                                <h6>چاپ دیجیتال</h6>
+                               <p>سفارش آنلاین</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+			<div class="col-lg-2 col-sm-4 col-6 mb-3">
+                   
+                        <div class="cart-small">
+                            <div class="cart-small-icon">
+                                <img width="50" src="img/4.jpg" alt="" class="img-fluid">
+                            </div>
+                            <div class="cart-small-desc ms-lg-3 text-center">
+                                <h6>چاپ پلات و لمینت</h6>
+                               <p>براس سفارش تماس بگیرید 1702</p>
+                            </div>
+                        </div>
+                    
+                </div>
+                
+                <div class="col-lg-2 col-sm-4 col-6 mb-3">
+                    <a href="category?type=2">
+                        <div class="cart-small">
+                            <div class="cart-small-icon">
+                                <img width="50" src="img/5.jpg" alt="" class="img-fluid">
+                            </div>
+                            <div class="cart-small-desc ms-lg-3 text-center">
+                                <h6>اکوسالت</h6>
+                               <p>براس سفارش تماس بگیرید 1702</p>
                             </div>
                         </div>
                     </a>
@@ -67,8 +71,24 @@ echo'
 			
 			
 			
+			
+			<div class="col-lg-2 col-sm-4 col-6 mb-3">
+                    <a href="category?type=3">
+                        <div class="cart-small">
+                            <div class="cart-small-icon">
+                                <img width="50" src="img/6.jpg" alt="" class="img-fluid">
+                            </div>
+                            <div class="cart-small-desc ms-lg-3 text-center">
+                                <h6>چاپ بنر و فلکس</h6>
+                               <p>براس سفارش تماس بگیرید 1702</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
 			</div>
+			
 			</div>
+			
 			</div>
 
 

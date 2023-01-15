@@ -1,9 +1,12 @@
 <?php
-
-
-
-
-
+include('main.php');
+$fee = new ManageFees();
+$query="ORDER BY `nim_product`.`aid` ASC";
+$allprcount=$discountList = $fee->Getproductlistcount($query);
+$allusercount=$discountList2 = $fee->Getuserscount($submitby);
+$allsjoplist=$discountList3 = $fee->Getproductlistcount($submitby2);
+$allprcount=$allprcount+52;
+$allusercount=$allusercount+100;
 echo'
 
  <footer class="shadow-md">
@@ -55,7 +58,7 @@ echo'
                                 </svg>
                             </div>
                             <div class="info-bar-desc">
-                                <h6 class="counter">751</h6>
+                                <h6 class="counter">'.$allprcount.'</h6>
                                 <p>محصولات</p>
                             </div>
                         </div>
@@ -69,7 +72,7 @@ echo'
                                 </svg>
                             </div>
                             <div class="info-bar-desc">
-                                <h6 class="counter">325</h6>
+                                <h6 class="counter">'.$allsjoplist.'</h6>
                                 <p>سفارش تکمیل شده</p>
                             </div>
                         </div>
@@ -82,7 +85,7 @@ echo'
                                 </svg>
                             </div>
                             <div class="info-bar-desc">
-                                <h6 class="counter">2762</h6>
+                                <h6 class="counter">'.$allusercount.'</h6>
                                 <p>کاربران</p>
                             </div>
                         </div>
@@ -124,8 +127,16 @@ echo'
                                     <li><a href=""><img src="img/default-icon/kasbokar.png" alt=""></a></li>
                                     <li><a href=""><img src="img/default-icon/rezi.png" alt=""></a></li>
                                 </ul>
+                                
                             </div>
-                            
+                           
+                             <div class="social-link justify-content-md-end justify-content-center">
+                            <a href="" class="bi bi-instagram"></a>
+                            <a href="" class="bi bi-twitter"></a>
+                            <a href="" class="bi bi-whatsapp"></a>
+                            <a href="" class="bi bi-youtube"></a>
+                            <a href="" class="bi bi-linkedin"></a>
+                        </div>
                         </div>
                     </div>
                     <div class="col-lg-3">
@@ -144,13 +155,7 @@ echo'
                                     </div>
                                 </form>
                             </div>
-                                 <div class="social-link justify-content-md-end justify-content-center">
-                            <a href="" class="bi bi-instagram"></a>
-                            <a href="" class="bi bi-twitter"></a>
-                            <a href="" class="bi bi-whatsapp"></a>
-                            <a href="" class="bi bi-youtube"></a>
-                            <a href="" class="bi bi-linkedin"></a>
-                        </div>
+                                
                         </div>
                     </div>
                 </div>

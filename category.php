@@ -136,14 +136,8 @@ echo'
                                                 </div>
                                                 <div class="product-box-price">
                                                     <div class="d-flex justify-content-between align-items-center">
-                                                        <div class="d-flex flex-column">
-                                                            <span class="text-danger fw-bold fs-5">٪48</span>
-                                                            <span class="fw-bold">تخفیف</span>
-                                                        </div>
-                                                        <div class="d-flex flex-column">
-                                                            <span class="new-price">'.$discountProp['baseprice'].' تومان</span>
-                                                            
-                                                        </div>
+                                                      
+                                                        
                                                     </div>
                                                 </div>
                                             </div>

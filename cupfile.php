@@ -37,15 +37,53 @@ if(isset($_POST['but_upload']) && $_POST['category']=="2"){
                $amp = $fee->AddUserUpload($name,$location,$uusername);
                $success = _YOUR_video_upload_SUCCESSFULLY;
 			   Success($success);
+
+                 if(isset($_FILES['file2']['name']) && $_FILES['file2']['name'] != ''){
+
+                     $name = $unid;
+                     $target_dir = "uploads/";
+                     $target_file = $target_dir . $ram . $_FILES["file2"]["name"];
+
+                     // Select file type
+                     $extension = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+
+                     // Valid file extensions
+                     $extensions_arr = array("png","tif","jpg","jpeg","psd");
+
+                     // Check extension
+                     if( in_array($extension,$extensions_arr) ){
+
+                         // Check file size
+                         if(($_FILES['file2']['size'] >= $maxsize) || ($_FILES["file2"]["size"] == 0)) {
+                             echo'mahdodiat hajm';
+                         }else{
+                             // Upload
+                             if(move_uploaded_file($_FILES['file2']['tmp_name'],$target_file)){
+                                 // Insert record
+                                 $fee=new ManageFees();
+                                 $location=$target_file;
+                                 $amp = $fee->AddUserUpload($name,$location,$uusername);
+                                 $success = _YOUR_video_upload_SUCCESSFULLY;
+                                 Success($success);
+
+
+
+                             }
+                         }
+
+                     }else{
+                         echo'format not supported';
+                     }
+                 }else{
+                     echo'file khali ast';
+                 }
 			   
-			   
-			   
-			  
+
 
 echo "<script>window.location.href='step2?unid=$unid';</script>";
 
 
-			   
+
 			   
 			   
 			   
@@ -137,7 +175,7 @@ echo'
                                         <td class="fw-bold">آپلود فایل</td>
                                         <td class="txt"><span class="fw-bold">
 										<input id="upload" name="file" type="file" multiple/>
-										
+										<input id="upload2" name="file2" type="file" multiple/>
 										<button name="but_upload" id="but_upload"  class="shadow-sm fw-bold btn-add-to-cart mt-sm-0 mt-2 waves-effect waves-light">آپلود</button>
                                     </tr>
 									

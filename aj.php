@@ -32,10 +32,10 @@ if($soalposit==1)
 	$btnsolcount = $fee->Getsol1fromsol2($idproduct,$soalaval);
 	$btnsolcount2 = $fee->Getsol1fromsol2counts($idproduct,$soalaval);
 
-	if($btnsolcount2==1){$btnsazi='<button name="soal2-1" id="soal2-1" value="'.$btnsolcount['0']['sol2'].'-'.$idproduct.'-2"  type="button" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProp1(this)">'.$btnsolcount['0']['sol2'].'</button>';}
-	if($btnsolcount2==2){$btnsazi='<button name="soal2-1" id="soal2-1" value="'.$btnsolcount['0']['sol2'].'-'.$idproduct.'-2"  type="button" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProp1(this)">'.$btnsolcount['0']['sol2'].'</button><button name="soal2-2" id="soal2-2" value="'.$btnsolcount['1']['sol2'].'-'.$idproduct.'-2"  type="button" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProp1(this)">'.$btnsolcount['1']['sol2'].'</button>';}
-	if($btnsolcount2==3){$btnsazi='<button name="soal2-1" id="soal2-1" value="'.$btnsolcount['0']['sol2'].'-'.$idproduct.'-2"  type="button" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProp1(this)">'.$btnsolcount['0']['sol2'].'</button>';}
-	if($btnsolcount2==4){$btnsazi='<button name="soal2-1" id="soal2-1" value="'.$btnsolcount['0']['sol2'].'-'.$idproduct.'-2"  type="button" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProp1(this)">'.$btnsolcount['0']['sol2'].'</button>';}
+	if($btnsolcount2==1){$btnsazi='<button name="soal2" id="soal2" value="'.$btnsolcount['0']['sol2'].'-'.$idproduct.'-2"  type="button" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProp1(this)">'.$btnsolcount['0']['sol2'].'</button>';}
+	if($btnsolcount2==2){$btnsazi='<button name="soal2" id="soal2" value="'.$btnsolcount['0']['sol2'].'-'.$idproduct.'-2"  type="button" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProp1(this)">'.$btnsolcount['0']['sol2'].'</button><button name="soal2" id="soal2" value="'.$btnsolcount['1']['sol2'].'-'.$idproduct.'-2"  type="button" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProp1(this)">'.$btnsolcount['1']['sol2'].'</button>';}
+	if($btnsolcount2==3){$btnsazi='<button name="soal2" id="soal2" value="'.$btnsolcount['0']['sol2'].'-'.$idproduct.'-2"  type="button" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProp1(this)">'.$btnsolcount['0']['sol2'].'</button>';}
+	if($btnsolcount2==4){$btnsazi='<button name="soal2" id="soal2" value="'.$btnsolcount['0']['sol2'].'-'.$idproduct.'-2"  type="button" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProp1(this)">'.$btnsolcount['0']['sol2'].'</button>';}
 
 	session_start();
 $json=json_encode(array(
@@ -260,13 +260,18 @@ $cooin=1;
 		
 
 		case "basket":
-		$finalprice= $_REQUEST['x'];
-		$btn3farsi= $_REQUEST['y'];
+		$x= $_REQUEST['x'];
+        $name= $_REQUEST['name'];
+        $idproduct= $_REQUEST['idproduct'];
+        $pricefinal= $_REQUEST['pricefinal'];
+          $fglprice1 = $pricefinal * $x;
 		session_start();
 		$json=json_encode(array(
 				"statusCode"=>200,
-				"finalprice"=>$finalprice,
-				"btn3farsi"=>$btn3farsi
+				"count"=>$x,
+                "name"=>$name,
+                "idproduct"=>$idproduct,
+				"pricefinal"=>$fglprice1
 				
 
 			),JSON_UNESCAPED_UNICODE);
@@ -278,19 +283,20 @@ $cooin=1;
 		
 		case "shop_list":
 		$productid= $_REQUEST['x'];
+        $amount= $_REQUEST['y'];
 		
 		$product2=$_SESSION["product2"];
 		$product=$_SESSION["product"];
 		
 		
-		$fgt2 = json_decode($_SESSION["product2"],true);
-		$amount=$fgt2["finalprice"];
+
+
 		$fee = new ManageFees();
 		$acomment="submit by user";
 		$state='1';
 		
 		$unid=randomPassword();
-		if($fgt2["finalprice"]==''){
+		if($amount==''){
 			echo json_encode(array(
 				"statusCode"=>210,
 				"state"=>"0"
@@ -306,7 +312,7 @@ $cooin=1;
 			echo json_encode(array(
 				"statusCode"=>200,
 				"state"=>"1",
-				"url"=>'file?unid='.$unid.'',
+				"url"=>'cupfile?unid='.$unid.'',
 				"unid"=>$unid
 				
 

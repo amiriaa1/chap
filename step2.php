@@ -22,6 +22,8 @@ if(isset($_GET['unid']))
 							$farijavab1= $fgt1['fgt']['0']['farijavab'];
 							$farijavab2= $fgt1['fgt']['1']['farijavab'];
 							$farijavab3= $fgt1['fgt']['2']['farijavab'];
+						$count= $fgt2['count'];
+						$name= $fgt2['name'];
 							
 							
 							$finalprice= $fgt2['finalprice'];
@@ -234,9 +236,9 @@ foreach($discountList as $discountProp)
                                     <tr>
                                         <td class="fw-bold">
                                             <img src="img/product/'.$pic.'" class="img-fluid align-middle"
-                                                alt="" width="80"><br>'.$title.'<br>'.$farijavab1.'<br>'.$farijavab2.'<br>'.$farijavab3.'<br>'.$btn3farsi.'
+                                                alt="" width="80"><br>'.$title.'<br>'.$farijavab1.'<br>'.$farijavab2.'<br>'.$farijavab3.'<br>'.$name.'<br>تیراژ:'.$count.'
                                         </td>
-                                        <td class="txt"><span class="fw-bold">'.$finalprice.'</span> <span
+                                        <td class="txt"><span class="fw-bold">'.$amount.'</span> <span
                                                 class="text-muted">تومان</span></td>
                                     </tr>
                                  
@@ -246,7 +248,7 @@ foreach($discountList as $discountProp)
                                                 class="text-muted">تومان</span></td>
                                     </tr>
 									';
-									$ftr=$finalprice+5000;
+									$ftr=$amount+5000;
 									echo'
                                     <tr>
                                         <td class="fw-bold">مجموع</td>

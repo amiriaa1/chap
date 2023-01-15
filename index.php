@@ -21,19 +21,55 @@ echo'
 				
 				<div class="main-category">
         <div class="container-fluid">
+		
+		<center>
+					<div class="col-lg-2 col-sm-4 col-6 mb-3">
+                    <a href="vendor">
+                        <div class="cart-small">
+                            <div class="cart-small-icon">
+                                <img width="50" src="img/1.jpg" alt="" class="img-fluid">
+                            </div>
+                            <div class="cart-small-desc ms-lg-3 text-center">
+                               <h6>فروش ملزومات اداری</h6>
+                              
+                            </div>
+                        </div>
+                    </a>
+                </div>
+				
+				</center>
+	
+		
             <div class="row justify-content-center">
 			
 			
-			
-			
-	
-     <div class="col-lg-2 col-sm-4 col-6 mb-3">
+			<div class="col-lg-2 col-sm-4 col-6 mb-3">
                     <a href="vendor">
                         <div class="cart-small">
-                          
+                            <div class="cart-small-icon">
+                                <img width="50" src="img/1.jpg" alt="" class="img-fluid">
+                            </div>
                             <div class="cart-small-desc ms-lg-3 text-center">
-                                <h6>چاپ طراحی</h6>
-                                <p class="text-muted d-none d-lg-block">1173 محصول</p>
+                               <h6>چاپ طراحی</h6>
+                              
+                            </div>
+                        </div>
+                    </a>
+                </div>
+				
+
+			
+	
+   
+					<div class="col-lg-2 col-sm-4 col-6 mb-3">
+                    <a href="vendor">
+                        <div class="cart-small">
+                            <div class="cart-small-icon">
+                                <img width="50" src="img/1.jpg" alt="" class="img-fluid">
+                            </div>
+                            <div class="cart-small-desc ms-lg-3 text-center">
+                               <h6>فروش و خدمات ماشین های اداری</h6>
+                              
                             </div>
                         </div>
                     </a>
@@ -41,48 +77,16 @@ echo'
 				
 				
 	
-     <div class="col-lg-2 col-sm-4 col-6 mb-3">
-                    <a href="shop">
-                        <div class="cart-small">
-                            
-                            <div class="cart-small-desc ms-lg-3 text-center">
-                                <h6>فروشگاه</h6>
-                                <p class="text-muted d-none d-lg-block">1173 محصول</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-			
-			
 			
 	
-     <div class="col-lg-2 col-sm-4 col-6 mb-3">
-                    <a href="category.html">
-                        <div class="cart-small">
-                           
-                            <div class="cart-small-desc ms-lg-3 text-center">
-                                <h6>تست</h6>
-                                <p class="text-muted d-none d-lg-block">1173 محصول</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
 				
 				
 	
-     <div class="col-lg-2 col-sm-4 col-6 mb-3">
-                    <a href="category.html">
-                        <div class="cart-small">
-                           
-                            <div class="cart-small-desc ms-lg-3 text-center">
-                                <h6>تست۲</h6>
-                                <p class="text-muted d-none d-lg-block">1173 محصول</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
 			
 			</div>
+			
+			
+			
 			</div>
 			</div>
 
@@ -95,7 +99,7 @@ echo'
                     <div class="col-12">
                         <div class="al-header d-flex align-items-start justify-content-between">
                             <h6 class="slider-title">آخرین مقالات سایت</h6>
-                            <a href="blog.html" class="fromCenter border-animate">مشاهده همه</a>
+                            <a href="blog" class="fromCenter border-animate">مشاهده همه</a>
                         </div>
                     </div>
                 </div>
@@ -119,7 +123,7 @@ echo'
                                             <div class="form-group form-check form-switch">
                                                 <input class="form-check-input" type="checkbox"
                                                     id="flexSwitchCheckDefault">
-                                                <label class="form-check-label" for="flexSwitchCheckDefault">کارت ویزیت</label>
+                                                <label class="form-check-label" for="flexSwitchCheckDefault">چاپ و طراحی</label>
                                                    
                                             </div>
                                             <div class="form-group form-check form-switch">

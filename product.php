@@ -25,8 +25,13 @@ foreach($discountList as $discountProp)
 							$type=$discountProp['type'];
 							$qa=$discountProp['qa'];
 							$soal_count=$discountProp['soal_count'];
-						
-									
+
+                        $decption1=$discountProp['decption1'];
+                        $decption2=$discountProp['decption2'];
+
+                        $qsoal=$discountProp['qsoal'];
+
+
 					}
 
 
@@ -134,35 +139,11 @@ echo'
                                              $("#content4").html(data.backbtn1);
                                                                            }  
 										  
-											if (typeof soal2-1 != "undefined") {
-												
-                                              $(soal2-1).css("background", "transparent");
-											  $(item).css("background", "#007fee");
-                                                                           }  
-                                    if (typeof soal2-2 != "undefined") {
-                                              $(soal2-2).css("background", "transparent");
+											 if (typeof soal2 != "undefined") {
+                                              $(soal2).css("background", "transparent");
 											  $(item).css("background", "#007fee");
                                                                            } 
-									if (typeof soal2-3 != "undefined") {
-                                              $(soal2-3).css("background", "transparent");
-											  $(item).css("background", "#007fee");
-                                                                           } 
-									if (typeof soal2-4 != "undefined") {
-                                              $(soal2-4).css("background", "transparent");
-											  $(item).css("background", "#007fee");
-                                                                           } 				
-									if (typeof soal2-5 != "undefined") {
-                                              $(soal2-5).css("background", "transparent");
-											  $(item).css("background", "#007fee");
-                                                                           } 
-									if (typeof soal2-6 != "undefined") {
-                                              $(soal2-6).css("background", "transparent");
-											  $(item).css("background", "#007fee");
-                                                                           } 
-									if (typeof soal2-7 != "undefined") {
-                                              $(soal2-7).css("background", "transparent");
-											  $(item).css("background", "#007fee");
-                                                                           } 
+                               
 									}
 							      });
 							
@@ -213,32 +194,7 @@ echo'
 										  
 										  
 											if (typeof soal3 != "undefined") {
-												
-                                              $(soal2-1).css("background", "transparent");
-											  $(item).css("background", "#007fee");
-                                                                           }  
-                                    if (typeof soal2-2 != "undefined") {
-                                              $(soal2-2).css("background", "transparent");
-											  $(item).css("background", "#007fee");
-                                                                           } 
-									if (typeof soal2-3 != "undefined") {
-                                              $(soal2-3).css("background", "transparent");
-											  $(item).css("background", "#007fee");
-                                                                           } 
-									if (typeof soal2-4 != "undefined") {
-                                              $(soal2-4).css("background", "transparent");
-											  $(item).css("background", "#007fee");
-                                                                           } 				
-									if (typeof soal2-5 != "undefined") {
-                                              $(soal2-5).css("background", "transparent");
-											  $(item).css("background", "#007fee");
-                                                                           } 
-									if (typeof soal2-6 != "undefined") {
-                                              $(soal2-6).css("background", "transparent");
-											  $(item).css("background", "#007fee");
-                                                                           } 
-									if (typeof soal2-7 != "undefined") {
-                                              $(soal2-7).css("background", "transparent");
+                                              $(soal3).css("background", "transparent");
 											  $(item).css("background", "#007fee");
                                                                            } 
 									}
@@ -329,6 +285,56 @@ echo'
 							
 							}
 						</script>
+						<script type="text/javascript">
+							function showStudentProp4(item)
+							{
+								$("#replyResult").html(\'<img src="img/default-icon/wait.gif">\');
+								var x = document.getElementById("count").value;
+								
+								const myArray = $(item).attr("value").split("-");
+								var name = myArray[0];
+								var idproduct = myArray[1];
+								var pricefinal = myArray[3];
+								
+							$.ajax({
+							
+								    url: "aj.php",
+								    type: "POST",
+								    data: {op:"basket",x:x,name:name,idproduct:idproduct,pricefinal:pricefinal},
+									dataType: "json",
+								    success: function(data){
+										
+								if (typeof price1 != "undefined") {
+                                              $(price1).css("background", "transparent");
+											  $(item).css("background", "#007fee");
+                                                                           } 
+								
+														if (typeof price2 != "undefined") {
+                                              $(price2).css("background", "transparent");
+											  $(item).css("background", "#007fee");
+                                                                           } 
+								
+														if (typeof price3 != "undefined") {
+                                              $(price3).css("background", "transparent");
+											  $(item).css("background", "#007fee");
+                                                                           } 
+								
+														if (typeof price4 != "undefined") {
+                                              $(price4).css("background", "transparent");
+											  $(item).css("background", "#007fee");
+                                                                           } 
+								
+								document.getElementById("price_show").innerHTML = data.pricefinal;
+								
+								
+										$("#replyResult").html("");
+									}
+							      });
+							
+							
+							
+							}
+						</script>
 						
 						
 						<script type="text/javascript">
@@ -377,13 +383,13 @@ echo'
 								$("#replyResult").html(\'<img src="img/default-icon/wait.gif">\');
 								var x = $(productid).attr("value");
 								
-								
+							var y =	document.getElementById("price_show").innerHTML;
 								
 							$.ajax({
 							
 								    url: "aj.php",
 								    type: "POST",
-								    data: {op:"shop_list",x:x},
+								    data: {op:"shop_list",x:x,y:y},
 									dataType: "json",
 								    success: function(data){
 										
@@ -410,81 +416,7 @@ echo'
 						</script>
 						
 
-    <div class="content" style="padding: 10px 0;">
-        <!-- start product meta -->
-        <div class="product-meta">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="product-meta-breadcrumb shadow-sm">
-                            <nav>
-                                <ol class="breadcrumb mb-0">
-                                    <li class="breadcrumb-item">
-                                        <a href="#">خانه</a>
-                                    </li>
-                                    <li class="breadcrumb-item">
-                                        <a href="#">محصولات</a>
-                                    </li>
-                                    <li class="breadcrumb-item active" aria-current="page">
-                                        <span>'.$title.'</span>
-										
-                                    </li>
-                                </ol>
-                            </nav>
-                        </div>
-                    </div>
-                </div>
-                <div class="summary shadow-sm">
-                    <div class="row">
-                        <div class="col-lg-4">
-                            <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
-                                class="swiper product-gallery">
-                                <div class="summary-offer">
-                                    <span></span>9%</span>
-                                </div>
-                                <div class="icon-product-box">
-                                    
-                                    
-                                 
-                                   
-                                    
-                                </div>
-                                <div class="swiper-wrapper" title="برای بزرگنمایی تصویر دابل کلیک کنید">
-                                    
-                                    <div class="swiper-slide">
-                                        <div class="swiper-zoom-container">
-                                            <img class="img-fluid" src="img/product/product-image5.jpg" />
-                                        </div>
-                                    </div>
-                                   
-                                </div>
-                                <div class="swiper-button-next d-none d-lg-flex"></div>
-                                <div class="swiper-button-prev d-none d-lg-flex"></div>
-                                <div class="swiper-pagination d-none d-lg-block"></div>
-                            </div>
-                            <div thumbsSlider="" class="swiper product-gallery-thumb">
-                                <div class="swiper-wrapper">
-                                
-                                   
-                                   
-                                   
-                                    <div class="swiper-slide">
-                                        <img class="img-fluid" src="img/product/product-image5.jpg" />
-                                    </div>
-                                    
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-8 border-right-product">
-                            <div class="summary-entry mt-lg-0 mt-4">
-                                <div class="se-title">
-                                    <h5>'.$title.'
-                                    </h5>
-                                    <h6 class="text-muted">'.$description.'
-                                    </h6>
-                                </div>
-                                
-                                  <div class="col-sm-6"><center><div id="replyResult"></div>
+
                      ';
 
 
@@ -492,11 +424,27 @@ echo'
 
 
     echo'
+
+    <div class="content" style="padding: 10px 0;">
+        <!-- start product meta -->
+        <div class="product-meta">
+            <div class="container-fluid">
+               
+                <div class="summary shadow-sm">
+                    <div class="row">
+                        
+                        <div class="col-lg-8 border-right-product">
+                            <div class="summary-entry mt-lg-0 mt-4">
+                                
+                                  <div class="col-sm-6"><center><div id="replyResult"></div>
+
+
+
 					 <div class="category-filter">
                                     <div class="category-filter-box">
                                         <div class="category-filter-box-title">
                                             <h4 class="fw-bold">
-                                              سوال:
+                                              '.$qsoal.'
                                             </h4>
                                         </div>
                                         <div class="category-filter-box-desc">
@@ -601,7 +549,7 @@ echo'
                                                   <input type="hidden" name="productid" id="productid" class="form-control" value="'.$_GET['id'].'">
 												   <input type="hidden" name="tavlkkf" id="tavlkkf" class="form-control" value="">
                                                    
-                                                   
+                                                   خلاصه انتخاب ها
                                                     
                                                 </div>
                                             </div>
@@ -609,7 +557,11 @@ echo'
                                             <div class="se-cart-form">
                                                
                                                     <div class="row align-items-center">
-                                                       
+                                                    
+                                                       <div class="se-cart-price">
+                                                
+                                                <span class="se-cart-price-new" name="price_show" id="price_show">تنوع را انتخاب کنید</span>تومان
+                                            </div>
                                                         <div class="col-sm-6">
                                                          ';
 														 if(!$isLogedIn){
@@ -632,6 +584,33 @@ echo'
                                 </div>
                             </div>
                         </div>
+                        
+                        <div class="col-lg-4">
+                        
+                            <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
+                                class="swiper product-gallery">
+                               
+                                <div class="icon-product-box">
+                                    
+                                    
+                                 
+                                   
+                                    
+                                </div>
+                                <div class="swiper-wrapper" title="برای بزرگنمایی تصویر دابل کلیک کنید">
+                                    
+                                    <div class="swiper-slide">
+                                        <div class="swiper-zoom-container">
+                                            <img class="img-fluid" src="img/product/product-image5.jpg" />
+                                        </div>
+                                    </div>
+                                   
+                                </div>
+                               
+                            </div>
+                            
+                        </div>
+                        
                         <div class="col-12">
                             <div class="product-feature">
                                 <nav class="navbar">
@@ -698,11 +677,11 @@ echo'
                                 <div class="read-more-wrap">
                                     <h2 class="title gold mb-2">معرفی محصول</h2>
                                     <p>
-                                       معرفی پاکت
+                                       '.$decption1.'
                                     </p>
                                     <!-- متن بیشتر -->
                                     <div class="read-more-target">
-                                       معرفی پاکت ۲
+                                      '.$decption2.'
                                     </div>
                                     <!-- پایان متن بیشتر -->
                                 </div>
@@ -744,60 +723,21 @@ echo'
                         <h6 class="slider-title">محصولات مشابه</h6>
                     </div>
                     <div class="pbt-header-link">
-                        <a href="category.html" class="fromCenter border-animate">مشاهده همه</a>
+                 
+                        <a href="category?type='.$type.'" class="fromCenter border-animate">مشاهده همه</a>
                     </div>
                 </div>
+                
+                
                 <div class="swiper product-box-two-slider">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="product-box-item">
-                                <div class="product-box-item-img">
-                                    <a href="">
-                                        <img src="img/product/wach2.jpg" alt="" class="img-fluid one-image">
-                                        <img src="img/product/wach3.jpg" alt="" class="img-fluid two-image">
-                                    </a>
-                                    
-                                </div>
-                                <a href="product.html">
-                                    <div class="product-box-item-desc">
-                                        <div class="product-box-item-title">
-                                            <h6>
-                                                تست
-                                            </h6>
-                                        </div>
-                                        <div class="product-box-price default">
-                                            <span class="new-price">590,000 تومان</span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
+                       
 						
-						
-                       <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="product-box-item">
-                                <div class="product-box-item-img">
-                                    <a href="">
-                                        <img src="img/product/wach2.jpg" alt="" class="img-fluid one-image">
-                                        <img src="img/product/wach3.jpg" alt="" class="img-fluid two-image">
-                                    </a>
-                                    
-                                </div>
-                                <a href="product.html">
-                                    <div class="product-box-item-desc">
-                                        <div class="product-box-item-title">
-                                            <h6>
-                                                تست
-                                            </h6>
-                                        </div>
-                                        <div class="product-box-price default">
-                                            <span class="new-price">590,000 تومان</span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                        </div> </div>
+					';
+$query = "WHERE type=$type  ORDER BY `nim_product`.`aid` ASC";
+$discountList = $fee->Getproductlist34($query);
+foreach($discountList as $discountProp){
+                                     echo'
 						
 						<div class="swiper-wrapper">
                         <div class="swiper-slide">
@@ -809,28 +749,28 @@ echo'
                                     </a>
                                     
                                 </div>
-                                <a href="product.html">
+                                <a href="product?id='.$discountProp['aid'].'">
                                     <div class="product-box-item-desc">
                                         <div class="product-box-item-title">
                                             <h6>
-                                                تست
+                                                 '.$discountProp['title'].'
                                             </h6>
                                         </div>
-                                        <div class="product-box-price default">
-                                            <span class="new-price">590,000 تومان</span>
-                                        </div>
+                                        
                                     </div>
                                 </a>
                             </div>
                         </div></div>
                         
-                     
+                     ';
+                                      }
+                                     echo'
                      
                      
                         <div class="swiper-slide">
                             <div class="product-box-item see-more-item">
                                 <div class="see-all">
-                                    <a href="category.html">
+                                    <a href="category?type='.$type.'">
                                         <i class="bi bi-arrow-left-circle"></i>
                                         <p>مشاهده همه</p>
                                     </a>

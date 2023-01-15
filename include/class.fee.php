@@ -85,10 +85,15 @@ function Getproductlist($query) { global $table_prefix;
  $query = $this->link->query("SELECT * FROM `nim_product` $query");
  $counts = $query->rowCount(); $result = $query->fetchAll();
  return $result; }
- 
- 
 
-function Getshoplistadmin($query) { global $table_prefix;
+    function Getproductlist34($query) { global $table_prefix;
+        $query = $this->link->query("SELECT * FROM `nim_product` $query LIMIT 3");
+        $counts = $query->rowCount(); $result = $query->fetchAll();
+        return $result; }
+
+
+
+    function Getshoplistadmin($query) { global $table_prefix;
  $query = $this->link->query("SELECT * FROM `nim_shop_list` $query");
  $counts = $query->rowCount(); $result = $query->fetchAll();
  return $result; }
@@ -300,10 +305,14 @@ function Deletecustomerapp($id)
  $values = array($unid); $query->execute($values); $counts = $query->rowCount(); return $counts; } 
 
   ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
- 
- 
- 
- function GetmaWalletList($submitby)
+
+
+    function Getuserscount($submitby)
+    { global $table_prefix; $query = $this->link->prepare("SELECT * FROM `nim_users`"); $values = array($submitby);
+        $query->execute($values); $result = $query->fetchAll(); $counts = $query->rowCount(); return $counts; }
+
+
+    function GetmaWalletList($submitby)
  { global $table_prefix; $query = $this->link->prepare("SELECT * FROM `nim_users` WHERE `uusername`=?"); $values = array($submitby);
  $query->execute($values); $result = $query->fetchAll(); return $result; } 
 
