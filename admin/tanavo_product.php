@@ -30,12 +30,12 @@ if(isset($_GET['id'])){
 $discountList = $fee->Getproducttanavolistbyid($id);			
 	
 foreach($discountList as $discountProp)
-					{$soal=$discountProp['soal'];}
+					{$name=$discountProp['name'];}
 }
 else
 	{
 		
-$query = "ORDER BY `nim_product_tanavo`.`id` ASC";			
+$query = "ORDER BY `nim_product_solutions`.`id` ASC";
 $discountList = $fee->Getproducttanavolist($query);		
 }	
 
@@ -61,11 +61,11 @@ echo'
 							';
 					echo '
 							<td style="width:70px;" class="small">
-							ویرایش تنوع
+							ویرایش سولوشن
 							</td>';
 							echo '
 							<td style="width:70px;" class="small">
-								سوال
+								نام
 							</td>';
 					echo '
 							<td style="width:120px;" class="small">
@@ -73,16 +73,16 @@ echo'
 							</td>';
 					echo '
 							<td style="width:120px;" class="small">
-									<b>وزن اول</b>
+									<b>جواب دوم</b>
 							</td>';
 					echo '
 							<td style="width:120px;" class="small">
-									<b>جواب دوم</b>
+									<b>جواب سوم</b>
 							</td>';
 				
 					echo '
 							<td style="width:140px;" class="small">
-									<b>وزن دوم</b>
+									<b>جواب چهارم</b>
 							</td>';
 					
 					
@@ -101,12 +101,12 @@ echo'
 									<!-- Split button -->
 									<div class="btn-group">
 									
-									<a href="tanavo_edit_product?id='.$discountProp['id'].'&product_id='.$discountProp['product_id'].'">
+									<a href="tanavo_edit_product?id='.$discountProp['sid'].'&product_id='.$discountProp['product_id'].'">
 										<button type="submit" class="btn btn-rounded btn-info">ویرایش</button></a>
 										
 								';
 echo '<td style="text-align:center;">
-							'.$discountProp['soal'].'
+							'.$name.'
 							</td>';
 							
 							echo'
@@ -114,14 +114,14 @@ echo '<td style="text-align:center;">
 									</div>
 								</td>';
 						echo '<td style="text-align:center;">
-							'.$discountProp['javab-1'].'
+							'.$discountProp['sol1'].'
 							</td>';
 						
 						
 					
 						
 						echo '<td style="text-align:center;">
-							<span class="label label-xl label-rounded label-danger">'.$discountProp['vazn-1'].'</span>
+							<span class="label label-xl label-rounded label-danger">'.$discountProp['sol2'].'</span>
 							</td>';
 						
 						
@@ -133,14 +133,14 @@ echo '<td style="text-align:center;">
 							
 							
 						echo '<td style="text-align:left;">
-							'.$discountProp['javab-2'].'
+							'.$discountProp['sol3'].'
 							</td>';
 							
 						
 							
 							
 						echo '<td style="text-align:'.$align1.';">
-						<span class="label label-xl label-rounded label-danger">'.$discountProp['vazn-2'].'</span>
+						<span class="label label-xl label-rounded label-danger">'.$discountProp['sol4'].'</span>
 							
 							</td>';
 							
