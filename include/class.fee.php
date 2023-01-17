@@ -60,12 +60,12 @@ function Addshoplist($productid,$uusername,$amount,$product,$product2,$acomment,
 
 
 
-function Addtanavoproduct($product_id,$soal,$javab1,$vazn1,$javab2,$vazn2,$javab3,$vazn3,$javab4,$vazn4,$javab5,$vazn5,$javab6,$vazn6,$javab7,$vazn7,$javab8,$vazn8,$javab9,$vazn9,$javab10,$vazn10)
+function Addtanavoproduct($product_id,$name,$javab1,$javab2,$javab3,$javab4,$fori,$no_fori,$yero,$doro,$fori_yero_price,$fori_doro_price,$no_fori_yero_price,$no_fori_doro_price)
  { global $table_prefix;
- $query = $this->link->prepare("INSERT INTO `nim_product_tanavo` (`product_id`,`soal`,`javab-1`,`vazn-1`,`javab-2`,`vazn-2`,`javab-3`,`vazn-3`,`javab-4`,`vazn-4`,`javab-5`,`vazn-5`
- ,`javab-6`,`vazn-6`,`javab-7`,`vazn-7`,`javab-8`,`vazn-8`,`javab-9`,`vazn-9`,`javab-10`,`vazn-10`) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) ");
+ $query = $this->link->prepare("insert into `nim_product_solutions` (`product_id`,`acomment`,`sol1`,`sol2`,`sol3`,`sol4`,`fori`,`no_fori`,`yero`,`doro`,`price_fori_yero`,`price_fori_doro`,`price_no_fori_yero`,`price_no_fori_doro`)
+values (?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
 
- $values = array($product_id,$soal,$javab1,$vazn1,$javab2,$vazn2,$javab3,$vazn3,$javab4,$vazn4,$javab5,$vazn5,$javab6,$vazn6,$javab7,$vazn7,$javab8,$vazn8,$javab9,$vazn9,$javab10,$vazn10);
+ $values = array($product_id,$name,$javab1,$javab2,$javab3,$javab4,$fori,$no_fori,$yero,$doro,$fori_yero_price,$fori_doro_price,$no_fori_yero_price,$no_fori_doro_price);
  $query->execute($values); $counts = $query->rowCount();
  return $counts; }
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -112,7 +112,7 @@ function Getproductlistcount($query) { global $table_prefix;
 
 
 function Getproducttanavolist($query) { global $table_prefix;
- $query = $this->link->query("SELECT * FROM `nim_product_tanavo` $query");
+ $query = $this->link->query("SELECT * FROM `nim_product_solutions` $query");
  $counts = $query->rowCount(); $result = $query->fetchAll();
  return $result; }
  
@@ -123,7 +123,7 @@ function Getproducttanavolist($query) { global $table_prefix;
 
  
  function Getproducttanavolistbyid($id)
- { global $table_prefix; $query = $this->link->prepare("SELECT * FROM `nim_product_tanavo` WHERE `product_id`=?"); $values = array($id);
+ { global $table_prefix; $query = $this->link->prepare("SELECT * FROM `nim_product_solutions` WHERE `product_id`=?"); $values = array($id);
  $query->execute($values); $result = $query->fetchAll(); return $result; } 
 
    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -138,7 +138,7 @@ function Getproducttanavolist($query) { global $table_prefix;
 
 
     function Getproducttanavolistbyid2($id)
- { global $table_prefix; $query = $this->link->prepare("SELECT * FROM `nim_product_tanavo` WHERE `id`=?"); $values = array($id);
+ { global $table_prefix; $query = $this->link->prepare("SELECT * FROM `nim_product_solutions` WHERE `sid`=?"); $values = array($id);
  $query->execute($values); $result = $query->fetchAll(); return $result; } 
 
    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -183,13 +183,13 @@ function Getproducttanavolist($query) { global $table_prefix;
 
    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     function Getsol1fromsol2($idproduct,$soalaval)
- { global $table_prefix; $query = $this->link->prepare("SELECT sol2,   COUNT(*) AS CNT FROM nim_product_solutions where product_id=? AND sol1=? GROUP BY sol2;"); $values = array($idproduct,$soalaval);
+ { global $table_prefix; $query = $this->link->prepare("SELECT sol2,sid,fori,no_fori,yero,doro,price_fori_doro,price_fori_yero,price_no_fori_doro,price_no_fori_yero,   COUNT(*) AS CNT FROM nim_product_solutions where product_id=? AND sol1=? GROUP BY sol2;"); $values = array($idproduct,$soalaval);
  $query->execute($values);$counts = $query->rowCount(); $result = $query->fetchAll(); return $result; } 
 
    
    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
        function Getsol1fromsol3($idproduct,$soalaval,$soalaval2)
- { global $table_prefix; $query = $this->link->prepare("SELECT sol3,   COUNT(*) AS CNT FROM nim_product_solutions where product_id=? AND sol1=? AND sol2=? GROUP BY sol3;"); $values = array($idproduct,$soalaval,$soalaval2);
+ { global $table_prefix; $query = $this->link->prepare("SELECT sol3,sid,fori,no_fori,yero,doro,price_fori_doro,price_fori_yero,price_no_fori_doro,price_no_fori_yero,   COUNT(*) AS CNT FROM nim_product_solutions where product_id=? AND sol1=? AND sol2=? GROUP BY sol3;"); $values = array($idproduct,$soalaval,$soalaval2);
  $query->execute($values);$counts = $query->rowCount(); $result = $query->fetchAll(); return $result; } 
 
    
@@ -263,12 +263,14 @@ function Deletecustomerapp($id)
  return $result; }
  
  ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
- 
- function updateproducttanavo($product_id,$soal,$javab1,$vazn1,$javab2,$vazn2,$javab3,$vazn3,$javab4,$vazn4,$javab5,$vazn5,$javab6,$vazn6,$javab7,$vazn7,$javab8,$vazn8,$javab9,$vazn9,$javab10,$vazn10,$id)
+
+
+
+
+ function updateproducttanavo($product_id,$javab1,$javab2,$javab3,$javab4,$fori,$no_fori,$yero,$doro,$acomment,$fori_yero_price,$fori_doro_price,$no_fori_yero_price,$no_fori_doro_price,$id)
  { global $table_prefix;
- $query = $this->link->prepare("UPDATE `nim_product_tanavo` SET `product_id`=? ,`soal`=? ,`javab-1`=? ,`vazn-1`=? ,`javab-2`=? ,`vazn-2`=? ,`javab-3`=? ,`vazn-3`=? ,`javab-4`=? ,`vazn-4`=? ,`javab-5`=? ,
- `vazn-5`=?,`javab-6`=? ,`vazn-6`=? ,`javab-7`=? ,`vazn-7`=? ,`javab-8`=? ,`vazn-8`=? ,`javab-9`=? ,`vazn-9`=? ,`javab-10`=? ,`vazn-10`=?  WHERE `id`=?"); 
- $values = array($product_id,$soal,$javab1,$vazn1,$javab2,$vazn2,$javab3,$vazn3,$javab4,$vazn4,$javab5,$vazn5,$javab6,$vazn6,$javab7,$vazn7,$javab8,$vazn8,$javab9,$vazn9,$javab10,$vazn10,$id);
+ $query = $this->link->prepare("update nim_product_solutions set  `product_id`=? , `sol1`=?  , `sol2`=? , `sol3`=? , `sol4`=? , `fori`=? , `no_fori`=? , `yero`=? , `doro`=? , `acomment`=? , `price_fori_yero`=? ,`price_fori_doro`=? , `price_no_fori_yero`=? , `price_no_fori_doro`=? WHERE `sid`=?");
+ $values = array($product_id,$javab1,$javab2,$javab3,$javab4,$fori,$no_fori,$yero,$doro,$acomment,$fori_yero_price,$fori_doro_price,$no_fori_yero_price,$no_fori_doro_price,$id);
  $query->execute($values); $counts = $query->rowCount(); return $counts; }
 
  ////////////////////////////////////////////////////////////////////////////////////////////////////////////////

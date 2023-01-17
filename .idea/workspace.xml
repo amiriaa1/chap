@@ -7,7 +7,8 @@
     <list default="true" id="bc047395-12cc-4474-b2fe-72233fb553d9" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/7ff1c0ba-e02c-409f-9700-d7b8f0643607.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/7ff1c0ba-e02c-409f-9700-d7b8f0643607.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/tanavo_add_product.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/tanavo_add_product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/tanavo_edit_product.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/tanavo_edit_product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/tanavo_product.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/tanavo_product.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/aj.php" beforeDir="false" afterPath="$PROJECT_DIR$/aj.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/include/class.fee.php" beforeDir="false" afterPath="$PROJECT_DIR$/include/class.fee.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/product.php" beforeDir="false" afterPath="$PROJECT_DIR$/product.php" afterDir="false" />
@@ -66,7 +67,7 @@
       <workItem from="1673738370284" duration="5557000" />
       <workItem from="1673801511284" duration="12766000" />
       <workItem from="1673842805196" duration="164000" />
-      <workItem from="1673989646392" duration="3494000" />
+      <workItem from="1673989646392" duration="7792000" />
     </task>
     <servers />
   </component>

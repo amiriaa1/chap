@@ -117,6 +117,7 @@ echo'
 							function showStudentProp1(item)
 							{
 								$("#replyResult").html(\'<img src="img/default-icon/wait.gif">\');
+								$("#contentnew").html("");
 								const myArray = $(item).attr("value").split("-");
 								var farijavab = myArray[0];
 								var idproduct = myArray[1];
@@ -130,10 +131,23 @@ echo'
 									dataType: "json",
 								    success: function(data){
 										
-								
+								if(data.isfinal=="1"){
+								document.getElementById("countervibvib").style.visibility = "visible";
+								if (data.backbtn1 =="0") {
+                                           
+											 $("#niaz1").html(data.pop1);
+											 $("#niaz2").html(data.pop2);
+											 $("#niaz3").html(data.pop3);
+											 $("#niaz4").html(data.pop4);
+                                                                           }  
+								}
+								else{
+								 $("#contentnew").html(data.html);
+								 
+								}
 										$("#replyResult").html("");
 									
-										  $("#contentnew").html(data.html);
+										 
 										  
 										 if (data.backbtn1 != "undefined") {
                                              $("#content4").html(data.backbtn1);
@@ -160,6 +174,7 @@ echo'
 							<script type="text/javascript">
 							function showStudentProp3(item)
 							{
+							
 								$("#replyResult").html(\'<img src="img/default-icon/wait.gif">\');
 								const myArray = $(item).attr("value").split("-");
 								var farijavab = myArray[0];
@@ -263,12 +278,13 @@ echo'
 										if(data.statusCode==200){ 
 									
 									
+									$("#replyResult").html("");
+									if (typeof price1 != "undefined") {document.getElementById("price1").innerHTML = data.btn_fori_yero;}
+									if (typeof price2 != "undefined") {document.getElementById("price2").innerHTML = data.btn_fori_doro;}
+									if (typeof price3 != "undefined") {document.getElementById("price3").innerHTML = data.btn_no_fori_yero;}
+									if (typeof price4 != "undefined") {document.getElementById("price4").innerHTML = data.btn_no_fori_doro;}
 									
 									
-									document.getElementById("price1").innerHTML = data.btn_fori_yero;
-									document.getElementById("price2").innerHTML = data.btn_fori_doro;
-									document.getElementById("price3").innerHTML = data.btn_no_fori_yero;
-									document.getElementById("price4").innerHTML = data.btn_no_fori_doro;
 									
 									$("#replyResult").html("");
 										}
