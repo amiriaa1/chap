@@ -35,7 +35,7 @@ if(isset($_GET['id']))
 
 
         $discountList = $fee->updateproducttanavo($product_id,$javab1,$javab2,$javab3,$javab4,$fori,$no_fori,$yero,$doro,$acomment,$fori_yero_price,$fori_doro_price,$no_fori_yero_price,$no_fori_doro_price,$id);
-        
+
         if($discountList==1){echo'با موفقیت اپدیت شد';}
     }
 

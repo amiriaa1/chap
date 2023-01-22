@@ -8,7 +8,24 @@ $allsjoplist=$discountList3 = $fee->Getproductlistcount($submitby2);
 $allprcount=$allprcount+52;
 $allusercount=$allusercount+100;
 echo'
-
+<script type="text/javascript">
+function addemalkhabar(item)
+							{
+                 $("#replyResult2").html(\'<img src="img/default-icon/wait.gif">\');  
+                 var email = $(email33).attr("value");             
+                            $.ajax({
+							
+								    url: "aj.php",
+								    type: "POST",
+								    data: {op:"mailadd",email:email},
+									dataType: "json",
+								    success: function(data){  
+                                        	
+							     
+							}
+  });
+	</script>
+	
  <footer class="shadow-md">
         <div class="container-fluid">
             <div class="footer-feature">
@@ -147,13 +164,14 @@ echo'
                             <div class="feed">
                                 <h6>از تخفیف‌ها چاپ خانه باخبر شوید:
                                 </h6>
-                                <form action="">
+                              <form action="">
                                     <div class="form-group">
-                                        <input type="text" class="form-control feed-inp"
+                                        <input type="text" name="email33" id="email33" class="form-control feed-inp"
                                             placeholder="آدرس ایمیل خود را وارد کنید">
-                                        <button type="submit" class="feed-btn waves-effect waves-light">ارسال</button>
+                                            
+                                        <button class="feed-btn waves-effect waves-light" onclick="addemalkhabar(this)">ارسال</button>
                                     </div>
-                                </form>
+                               </form>
                             </div>
                                 
                         </div>

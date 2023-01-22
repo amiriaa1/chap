@@ -8,8 +8,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/7ff1c0ba-e02c-409f-9700-d7b8f0643607.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/7ff1c0ba-e02c-409f-9700-d7b8f0643607.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/tanavo_edit_product.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/tanavo_edit_product.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/tanavo_product.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/tanavo_product.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/aj.php" beforeDir="false" afterPath="$PROJECT_DIR$/aj.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/footer.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/include/class.fee.php" beforeDir="false" afterPath="$PROJECT_DIR$/include/class.fee.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/product.php" beforeDir="false" afterPath="$PROJECT_DIR$/product.php" afterDir="false" />
     </list>
@@ -39,6 +39,7 @@
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
@@ -48,6 +49,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/SQL Dialect" value="MySQL" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../pezeshk-site" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -67,7 +69,10 @@
       <workItem from="1673738370284" duration="5557000" />
       <workItem from="1673801511284" duration="12766000" />
       <workItem from="1673842805196" duration="164000" />
-      <workItem from="1673989646392" duration="7792000" />
+      <workItem from="1673989646392" duration="10278000" />
+      <workItem from="1674034542682" duration="1314000" />
+      <workItem from="1674037867750" duration="613000" />
+      <workItem from="1674298174720" duration="715000" />
     </task>
     <servers />
   </component>

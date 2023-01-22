@@ -278,12 +278,19 @@ function Deletecustomerapp($id)
  function AddUserPaymentlog($Authority,$uusername,$status,$amount)
  { global $table_prefix; $now = gmdate("Y-m-d H:i:s");
  $query = $this->link->prepare("INSERT INTO `nim_payment_log` (`Authority`,`uid`,`status`,`amount`) VALUES (?,?,?,?) ");
- $values = array($Authority,$uusername,$status,$amount); $query->execute($values); $counts = $query->rowCount(); return $counts;} 
+ $values = array($Authority,$uusername,$status,$amount); $query->execute($values); $counts = $query->rowCount(); return $counts;}
 
- 
- 
- 
- function updateUserPaymentlog($comment,$RefID,$Authority)
+
+    function emailadd($mail)
+    { global $table_prefix; $now = gmdate("Y-m-d H:i:s");
+        $query = $this->link->prepare("INSERT INTO `mails` (`email`) VALUES (?) ");
+        $values = array($mail); $query->execute($values); $counts = $query->rowCount(); return $counts;}
+
+
+
+
+
+    function updateUserPaymentlog($comment,$RefID,$Authority)
  { global $table_prefix; $now = gmdate("Y-m-d H:i:s"); $query = $this->link->prepare("UPDATE `nim_payment_log` SET comment=? , RefID=? WHERE Authority=? ");
  $values = array($comment,$RefID,$Authority); $query->execute($values); $counts = $query->rowCount(); return $counts;} 
 

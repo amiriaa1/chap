@@ -49,6 +49,10 @@ echo'
 <script type="text/javascript">
 							function showStudentProp(item)
 							{
+							$("#niaz1").html("");
+							$("#niaz2").html("");
+							$("#niaz3").html("");
+							$("#niaz4").html("");
 								$("#replyResult").html(\'<img src="img/default-icon/wait.gif">\');
 								const myArray = $(item).attr("value").split("-");
 								var farijavab = myArray[0];
