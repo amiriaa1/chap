@@ -21,6 +21,7 @@ foreach($discountList as $discountProp)
 					{
 						
 							$title=$discountProp['title'];
+                        $baseprice=$discountProp['baseprice'];
 							$description=$discountProp['description'];
 							$type=$discountProp['type'];
 							$qa=$discountProp['qa'];
@@ -44,375 +45,28 @@ else{
 $uptrack_code= $_REQUEST['btn'];
 
 
-echo'
+
+
+
+
+
+
+    echo'
 
 <script type="text/javascript">
-							function showStudentProp(item)
-							{
-							$("#niaz1").html("");
-							$("#niaz2").html("");
-							$("#niaz3").html("");
-							$("#niaz4").html("");
-								
-								const myArray = $(item).attr("value").split("-");
-								var farijavab = myArray[0];
-								var idproduct = myArray[1];
-								var soalposit = myArray[2];
-								
-							$.ajax({
-							
-								    url: "aj.php",
-								    type: "POST",
-								    data: {op:"cioice",farijavab:farijavab,idproduct:idproduct,soalposit:soalposit},
-									dataType: "json",
-								    success: function(data){
-										
-								
-									
-									
-										  $("#content").html(data.html);
-										  
-										 if (data.backbtn1 != "undefined") {
-                                             $("#content2").html(data.backbtn1);
-                                                                           }  
-										  
-											if (typeof basesoal1 != "undefined") {
-                                              $(basesoal1).css("background", "transparent");
-											  $(item).css("background", "#007fee");
-                                                                           }  
-                                    if (typeof basesoal2 != "undefined") {
-                                              $(basesoal2).css("background", "transparent");
-											  $(item).css("background", "#007fee");
-                                                                           } 
-									if (typeof basesoal3 != "undefined") {
-                                              $(basesoal3).css("background", "transparent");
-											  $(item).css("background", "#007fee");
-                                                                           } 
-									if (typeof basesoal4 != "undefined") {
-                                              $(basesoal4).css("background", "transparent");
-											  $(item).css("background", "#007fee");
-                                                                           } 				
-									if (typeof basesoal5 != "undefined") {
-                                              $(basesoal5).css("background", "transparent");
-											  $(item).css("background", "#007fee");
-                                                                           } 
-									if (typeof basesoal6 != "undefined") {
-                                              $(basesoal6).css("background", "transparent");
-											  $(item).css("background", "#007fee");
-                                                                           } 
-									if (typeof basesoal7 != "undefined") {
-                                              $(basesoal7).css("background", "transparent");
-											  $(item).css("background", "#007fee");
-                                                                           } 
-									}
-							      });
-							
-							
-							
-								
-							
-							
-							
-							
-							}
-						</script>
-
-	<script type="text/javascript">
-							function showStudentProp1(item)
-							{
-								
-								$("#contentnew").html("");
-								const myArray = $(item).attr("value").split("-");
-								var farijavab = myArray[0];
-								var idproduct = myArray[1];
-								var soalposit = myArray[2];
-								
-							$.ajax({
-							
-								    url: "aj.php",
-								    type: "POST",
-								    data: {op:"cioice2",farijavab:farijavab,idproduct:idproduct,soalposit:soalposit},
-									dataType: "json",
-								    success: function(data){
-										
-								if(data.isfinal=="1"){
-								document.getElementById("countervibvib").style.visibility = "visible";
-								if (data.backbtn1 =="0") {
-                                           
-											 $("#niaz1").html(data.pop1);
-											 $("#niaz2").html(data.pop2);
-											 $("#niaz3").html(data.pop3);
-											 $("#niaz4").html(data.pop4);
-                                                                           }  
-								}
-								else{
-								 $("#contentnew").html(data.html);
-								 
-								}
-										
-									
-										 
-										  
-										 if (data.backbtn1 != "undefined") {
-                                             $("#content4").html(data.backbtn1);
-                                                                           }  
-										  
-											 if (typeof soal2 != "undefined") {
-                                              $(soal2).css("background", "transparent");
-											  $(item).css("background", "#007fee");
-                                                                           } 
-                               
-									}
-							      });
-							
-							
-							
-								
-							
-							
-							
-							
-							}
-						</script>
-						
-							<script type="text/javascript">
-							function showStudentProp3(item)
-							{
-							
-								
-								
-								const myArray = $(item).attr("value").split("-");
-								var farijavab = myArray[0];
-								var idproduct = myArray[1];
-								var soalposit = myArray[2];
-								
-							$.ajax({
-							
-								    url: "aj.php",
-								    type: "POST",
-								    data: {op:"cioice3",farijavab:farijavab,idproduct:idproduct,soalposit:soalposit},
-									dataType: "json",
-								    success: function(data){
-										
-								
-									
-									
-									if (data.backbtn1 != "0"){
-											   $("#contentneww").html(data.html);
-											  
-										  }
-										  
-										  document.getElementById("countervibvib").style.visibility = "visible";
-										 if (data.backbtn1 != "undefined") {
-                                             $("#content5").html(data.backbtn1);
-											 $("#niaz1").html(data.pop1);
-											 $("#niaz2").html(data.pop2);
-											 $("#niaz3").html(data.pop3);
-											 $("#niaz4").html(data.pop4);
-                                                                           }  
-										  
-										  
-										  
-										  
-											if (typeof soal3 != "undefined") {
-                                              $(soal3).css("background", "transparent");
-											  $(item).css("background", "#007fee");
-                                                                           } 
-									}
-							      });
-							
-							
-							
-								
-							
-							
-							
-							
-							}
-						</script>
-						
-						
-						
-
-						
-						
-						<script type="text/javascript">
-							function myFunction(item)
-							{
-								
-								
-								var x = document.getElementById("count").value;
-								
-								var pse1 = 1;
-								var pse2 = 2;
-								var pse3 = 3;
-								var pse4 = 4;
-								
-								
-								if (typeof price1 != "undefined") {
-									
-								const myArray1 = $(price1).attr("value").split("-");
-								var pse1 = myArray1[3];	
-								}
-								
-								if (typeof price2 != "undefined") {
-									
-								const myArray2 = $(price2).attr("value").split("-");
-								var pse2 = myArray2[3];	
-								}
-								
-								if (typeof price3 != "undefined") {
-									
-								const myArray3 = $(price3).attr("value").split("-");
-								var pse3 = myArray3[3];	
-								}
-								
-								if (typeof price4 != "undefined") {
-									
-								const myArray4 = $(price4).attr("value").split("-");
-								var pse4 = myArray4[3];	
-								}
-								
-								
-								
-							$.ajax({
-							
-								    url: "aj.php",
-								    type: "POST",
-								    data: {op:"final",x:x,pse1:pse1,pse2:pse2,pse3:pse3,pse4:pse4},
-									dataType: "json",
-								    success: function(data){
-										if(data.statusCode==200){ 
-									
-									
-									
-									if (typeof price1 != "undefined") {document.getElementById("price1").innerHTML = data.btn_fori_yero;}
-									if (typeof price2 != "undefined") {document.getElementById("price2").innerHTML = data.btn_fori_doro;}
-									if (typeof price3 != "undefined") {document.getElementById("price3").innerHTML = data.btn_no_fori_yero;}
-									if (typeof price4 != "undefined") {document.getElementById("price4").innerHTML = data.btn_no_fori_doro;}
-									
-									
-									
-									
-										}
-										
-									}
-							      });
-							
-							
-							
-								
-							
-							
-							
-							
-							}
-						</script>
-						<script type="text/javascript">
-							function showStudentProp4(item)
-							{
-								
-								var x = document.getElementById("count").value;
-								
-								const myArray = $(item).attr("value").split("-");
-								var name = myArray[0];
-								var idproduct = myArray[1];
-								var pricefinal = myArray[3];
-								
-							$.ajax({
-							
-								    url: "aj.php",
-								    type: "POST",
-								    data: {op:"basket",x:x,name:name,idproduct:idproduct,pricefinal:pricefinal},
-									dataType: "json",
-								    success: function(data){
-										
-								if (typeof price1 != "undefined") {
-                                              $(price1).css("background", "transparent");
-											  $(item).css("background", "#007fee");
-                                                                           } 
-								
-														if (typeof price2 != "undefined") {
-                                              $(price2).css("background", "transparent");
-											  $(item).css("background", "#007fee");
-                                                                           } 
-								
-														if (typeof price3 != "undefined") {
-                                              $(price3).css("background", "transparent");
-											  $(item).css("background", "#007fee");
-                                                                           } 
-								
-														if (typeof price4 != "undefined") {
-                                              $(price4).css("background", "transparent");
-											  $(item).css("background", "#007fee");
-                                                                           } 
-								
-								document.getElementById("price_show").innerHTML = data.pricefinal;
-								
-								
-										
-									}
-							      });
-							
-							
-							
-							}
-						</script>
-						
-						
-						<script type="text/javascript">
-							function Myfinalss(item)
-							{
-								
-								var x = $(item).attr("value");
-								var y = $(item).attr("name")
-								
-								
-							$.ajax({
-							
-								    url: "aj.php",
-								    type: "POST",
-								    data: {op:"basket",x:x,y:y},
-									dataType: "json",
-								    success: function(data){
-										
-									document.getElementById("test5").style.visibility = "visible";
-									
-									
-									var proce = y;
-
-									    document.getElementById("test10").innerHTML = proce;
-
-										
-										
-									}
-							      });
-							
-							
-							
-								
-							
-							
-							
-							
-							}
-						</script>
-						
-						
-						
-						<script type="text/javascript">
 							function Myshoplist(item)
 							{
-								
+								$("#replyResult").html(\'<img src="img/default-icon/wait.gif">\');
 								var x = $(productid).attr("value");
 								
 							var y =	document.getElementById("price_show").innerHTML;
+                            
 								
 							$.ajax({
 							
 								    url: "aj.php",
 								    type: "POST",
-								    data: {op:"shop_list",x:x,y:y},
+								    data: {op:"shop_list2",x:x,y:y},
 									dataType: "json",
 								    success: function(data){
 										
@@ -440,14 +94,6 @@ echo'
 						
 
 
-                     ';
-
-
-
-
-
-    echo'
-
     <div class="content" style="padding: 10px 0;">
         <!-- start product meta -->
         <div class="product-meta">
@@ -467,88 +113,17 @@ echo'
                                     <div class="category-filter-box">
                                         <div class="category-filter-box-title">
                                             <h4 class="fw-bold">
-                                              '.$qsoal.'
+                                              '.$title.'<br><br>'.$description.'
                                             </h4>
                                         </div>
-                                        <div class="category-filter-box-desc">
-                                            
-                                                <div class="form-group form-check">
-					';
-					foreach($btnsolcount as $discountProp69)
-					{
-						
-							$sol1=$discountProp69['sol1'];
-							echo'
-						
-						<button name="basesoal1" id="basesoal1" value="'.$sol1.'-'.$id.'-1"  type="button" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProp(this)">'.$sol1.'</button>
-						';
-						
-									
-					}
-
-					
-					echo'
-					
-					 </div>
-                       </div> </div>
+                                     </div>
                      </div> 
-					';
-
-
 					
-					echo'
-			                 <div name="content" id="content"></div> 
-                             <div name="contentnew" id="contentnew"></div> 
-							 <div name="contentnew" id="contentneww"></div> 
-                              
-
-   
-								
-				            			 <div class="col-sm-6" name="countervibvib" id="countervibvib" style="visibility:hidden;>
-                                                            <div class="cart-counter">
-                         
-                                                                ';
-
-                    if ($type==2){
-
-                        echo'
-                        
-                        <input type="text" name="count" id="count" class="counter" value="1" onchange="myFunction(this)">
-                        ';
-                    }
-                    else{
-                        echo'
-                        
-                        <input type="text" name="count" id="count"  required data-validation-required-message="This field is required" minlength="1000" maxlength="1000000" class="counter" value="1000" onchange="myFunction(this)">
-                        ';
-                    }
-
-                    echo'
-                                                                    
-                                                            </div>
+			          
                                                         </div>	
-<div name="niaz" id="niaz">
-							 <div class="se-body">
-                                <div class="row">
-                                    <div class="col-lg-6">
-                                      
-                                        <div class="se-desc">
-							 
-							 <span name="niaz1" id="niaz1"></span>
-							 <span name="niaz2" id="niaz2"></span>
-							 <span name="niaz3" id="niaz3"></span>
-							 <span name="niaz4" id="niaz4"></span>
-							 
-							 
-							 
-							 </div></div></div></div>
-							 </div>        
 
 
                             </div>
-							
-							
-							
 							
 							
                             <div class="se-body">
@@ -559,12 +134,7 @@ echo'
 										
                                         
                                        ';
-											
-											
-											
-											
-											
-											
+
 											
 											echo'
 											
@@ -572,46 +142,31 @@ echo'
 									
                                     <div class="col-lg-6 m-auto mt-lg-2 mt-3">
 									
-									
-									
-									
-									
 								
                                         <div class="se-cart shadow-sm">
-                                            
-                                            
-                                            
-                                            <div class="se-cart-color">
-                                                <div class="color-box">
-                                                   
-												   
-												   
+                                             
                                                   <input type="hidden" name="productid" id="productid" class="form-control" value="'.$_GET['id'].'">
 												   <input type="hidden" name="tavlkkf" id="tavlkkf" class="form-control" value="">
                                                    
-                                                   خلاصه انتخاب ها
-                                                    
-                                                </div>
-                                            </div>
-                                         
+                                                   
                                             <div class="se-cart-form">
                                                
                                                     <div class="row align-items-center">
                                                     
                                                        <div class="se-cart-price">
                                                 
-                                                <span class="se-cart-price-new" name="price_show" id="price_show">تنوع را انتخاب کنید</span>تومان
+                                                <span class="se-cart-price-new" name="price_show" id="price_show">'. $baseprice.'</span> تومان
                                             </div>
                                                         <div class="col-sm-6">
                                                          ';
 														 if(!$isLogedIn){
 															 
 									echo'<a href="login"> <button  class="shadow-sm fw-bold btn-add-to-cart mt-sm-0 mt-2 waves-effect waves-light">برای خرید وارد شوید</button></a>';
-															 
+
 														 }
 									 else{echo'<button  class="shadow-sm fw-bold btn-add-to-cart mt-sm-0 mt-2 waves-effect waves-light" onclick="Myshoplist(this)">افزودن به سبد خرید</button>';
 									 }
-echo'														 
+echo'													 
                         
                                                                 
                                                                 
@@ -784,8 +339,8 @@ foreach($discountList as $discountProp){
                             <div class="product-box-item">
                                 <div class="product-box-item-img">
                                     <a href="">
-                                        <img src="img/product/wach2.jpg" alt="" class="img-fluid one-image">
-                                        <img src="img/product/wach3.jpg" alt="" class="img-fluid two-image">
+                                        <img src="img/product/'.$discountProp['pic'].'" alt="" class="img-fluid one-image">
+                                        <img src="img/product/'.$discountProp['pic'].'" alt="" class="img-fluid two-image">
                                     </a>
                                     
                                 </div>

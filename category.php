@@ -64,44 +64,7 @@ echo'
 
 				
                 <div class="row">
-                    <div class="col-lg-3">
-                        <div class="category-filters">
-                           
-                            
-                            <div class="category-filter">
-                                <div class="category-filter-box">
-                                    <div class="category-filter-box-title">
-                                        <h4 class="fw-bold">
-                                            فیلتر متنوع
-                                        </h4>
-                                    </div>
-                                    <div class="category-filter-box-desc">
-                                        <form action="">
-                                            <div class="form-group form-check form-switch">
-                                                <input class="form-check-input" type="checkbox"
-                                                    id="flexSwitchCheckDefault">
-                                                <label class="form-check-label" for="flexSwitchCheckDefault">کارت ویزیت</label>
-                                                   
-                                            </div>
-                                            <div class="form-group form-check form-switch">
-                                                <input class="form-check-input" type="checkbox"
-                                                    id="flexSwitchCheckChecked" checked>
-                                                <label class="form-check-label" for="flexSwitchCheckChecked">کارت ویزیت</label>
-                                                   <div class="show-more-btn mt-2">
-                                                    <button class="shadow-box waves-effect waves-light" type="submit">اعمال فیلتر <i
-                                                            class="bi bi-filter"></i></button>
-                                                </div>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                           
-                           
-                           
-                        </div>
-                    </div>
-					
+                  
 					 <div class="col-lg-9">
                         <div class="category-item">
                             <div class="row">
@@ -120,9 +83,16 @@ echo'
 							    <div class="col-md-4">
                                     <div class="product-box-item">
                                         <div class="product-box-item-img">
-                                            <a href="product?id='.$discountProp['aid'].'">
-                                                <img src="img/product/111.png" alt="" class="img-fluid one-image">
-                                                <img src="img/product/111.png" alt="" class="img-fluid two-image">
+                                        ';
+                               if ($type==4){echo'<a href="shop?id='.$discountProp['aid'].'">';}
+                               else{
+
+                                   echo'<a href="product?id='.$discountProp['aid'].'">';
+                               }
+                               echo'
+                                           
+                                                <img src="img/product/'.$discountProp['pic'].'" alt="" class="img-fluid one-image">
+                                                <img src="img/product/'.$discountProp['pic'].'" alt="" class="img-fluid two-image">
                                             </a>
                                             
                                         </div>
@@ -137,7 +107,10 @@ echo'
                                                 <div class="product-box-price">
                                                     <div class="d-flex justify-content-between align-items-center">
                                                       
-                                                        
+                                                        ';
+                        if ($type==4){echo''.$discountProp['baseprice'].' تومان';}
+
+                        echo'
                                                     </div>
                                                 </div>
                                             </div>

@@ -38,13 +38,18 @@ if($soalposit==1)
 	if($btnsolcount2==4){$btnsazi='<button name="soal2" id="soal2" value="'.$btnsolcount['0']['sol2'].'-'.$idproduct.'-2"  type="button" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProp1(this)">'.$btnsolcount['0']['sol2'].'</button><button name="soal2" id="soal2" value="'.$btnsolcount['1']['sol2'].'-'.$idproduct.'-2"  type="button" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProp1(this)">'.$btnsolcount['1']['sol2'].'</button><button name="soal2" id="soal2" value="'.$btnsolcount['2']['sol2'].'-'.$idproduct.'-2"  type="button" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProp1(this)">'.$btnsolcount['2']['sol2'].'</button><button name="soal2" id="soal2" value="'.$btnsolcount['3']['sol2'].'-'.$idproduct.'-2"  type="button" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProp1(this)">'.$btnsolcount['3']['sol2'].'</button>';}
     if($btnsolcount2==5){$btnsazi='<button name="soal2" id="soal2" value="'.$btnsolcount['0']['sol2'].'-'.$idproduct.'-2"  type="button" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProp1(this)">'.$btnsolcount['0']['sol2'].'</button><button name="soal2" id="soal2" value="'.$btnsolcount['1']['sol2'].'-'.$idproduct.'-2"  type="button" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProp1(this)">'.$btnsolcount['1']['sol2'].'</button><button name="soal2" id="soal2" value="'.$btnsolcount['2']['sol2'].'-'.$idproduct.'-2"  type="button" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProp1(this)">'.$btnsolcount['2']['sol2'].'</button><button name="soal2" id="soal2" value="'.$btnsolcount['3']['sol2'].'-'.$idproduct.'-2"  type="button" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProp1(this)">'.$btnsolcount['3']['sol2'].'</button><button name="soal2" id="soal2" value="'.$btnsolcount['4']['sol2'].'-'.$idproduct.'-2"  type="button" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProp1(this)">'.$btnsolcount['4']['sol2'].'</button>';}
     if($btnsolcount2==6){$btnsazi='<button name="soal2" id="soal2" value="'.$btnsolcount['0']['sol2'].'-'.$idproduct.'-2"  type="button" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProp1(this)">'.$btnsolcount['0']['sol2'].'</button><button name="soal2" id="soal2" value="'.$btnsolcount['1']['sol2'].'-'.$idproduct.'-2"  type="button" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProp1(this)">'.$btnsolcount['1']['sol2'].'</button><button name="soal2" id="soal2" value="'.$btnsolcount['2']['sol2'].'-'.$idproduct.'-2"  type="button" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProp1(this)">'.$btnsolcount['2']['sol2'].'</button><button name="soal2" id="soal2" value="'.$btnsolcount['3']['sol2'].'-'.$idproduct.'-2"  type="button" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProp1(this)">'.$btnsolcount['3']['sol2'].'</button><button name="soal2" id="soal2" value="'.$btnsolcount['4']['sol2'].'-'.$idproduct.'-2"  type="button" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProp1(this)">'.$btnsolcount['4']['sol2'].'</button><button name="soal2" id="soal2" value="'.$btnsolcount['5']['sol2'].'-'.$idproduct.'-2"  type="button" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProp1(this)">'.$btnsolcount['5']['sol2'].'</button>';}
+    if($btnsolcount2==7){$btnsazi='<button name="soal2" id="soal2" value="'.$btnsolcount['0']['sol2'].'-'.$idproduct.'-2"  type="button" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProp1(this)">'.$btnsolcount['0']['sol2'].'</button><button name="soal2" id="soal2" value="'.$btnsolcount['1']['sol2'].'-'.$idproduct.'-2"  type="button" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProp1(this)">'.$btnsolcount['1']['sol2'].'</button><button name="soal2" id="soal2" value="'.$btnsolcount['2']['sol2'].'-'.$idproduct.'-2"  type="button" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProp1(this)">'.$btnsolcount['2']['sol2'].'</button><button name="soal2" id="soal2" value="'.$btnsolcount['3']['sol2'].'-'.$idproduct.'-2"  type="button" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProp1(this)">'.$btnsolcount['3']['sol2'].'</button><button name="soal2" id="soal2" value="'.$btnsolcount['4']['sol2'].'-'.$idproduct.'-2"  type="button" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProp1(this)">'.$btnsolcount['4']['sol2'].'</button><button name="soal2" id="soal2" value="'.$btnsolcount['5']['sol2'].'-'.$idproduct.'-2"  type="button" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProp1(this)">'.$btnsolcount['5']['sol2'].'</button><button name="soal2" id="soal2" value="'.$btnsolcount['6']['sol2'].'-'.$idproduct.'-2"  type="button" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProp1(this)">'.$btnsolcount['6']['sol2'].'</button>';}
+    if($btnsolcount2==8){$btnsazi='<button name="soal2" id="soal2" value="'.$btnsolcount['0']['sol2'].'-'.$idproduct.'-2"  type="button" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProp1(this)">'.$btnsolcount['0']['sol2'].'</button><button name="soal2" id="soal2" value="'.$btnsolcount['1']['sol2'].'-'.$idproduct.'-2"  type="button" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProp1(this)">'.$btnsolcount['1']['sol2'].'</button><button name="soal2" id="soal2" value="'.$btnsolcount['2']['sol2'].'-'.$idproduct.'-2"  type="button" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProp1(this)">'.$btnsolcount['2']['sol2'].'</button><button name="soal2" id="soal2" value="'.$btnsolcount['3']['sol2'].'-'.$idproduct.'-2"  type="button" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProp1(this)">'.$btnsolcount['3']['sol2'].'</button><button name="soal2" id="soal2" value="'.$btnsolcount['4']['sol2'].'-'.$idproduct.'-2"  type="button" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProp1(this)">'.$btnsolcount['4']['sol2'].'</button><button name="soal2" id="soal2" value="'.$btnsolcount['5']['sol2'].'-'.$idproduct.'-2"  type="button" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProp1(this)">'.$btnsolcount['5']['sol2'].'</button><button name="soal2" id="soal2" value="'.$btnsolcount['6']['sol2'].'-'.$idproduct.'-2"  type="button" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProp1(this)">'.$btnsolcount['6']['sol2'].'</button><button name="soal2" id="soal2" value="'.$btnsolcount['7']['sol2'].'-'.$idproduct.'-2"  type="button" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProp1(this)">'.$btnsolcount['7']['sol2'].'</button>';}
+    if($btnsolcount2==9){$btnsazi='<button name="soal2" id="soal2" value="'.$btnsolcount['0']['sol2'].'-'.$idproduct.'-2"  type="button" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProp1(this)">'.$btnsolcount['0']['sol2'].'</button><button name="soal2" id="soal2" value="'.$btnsolcount['1']['sol2'].'-'.$idproduct.'-2"  type="button" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProp1(this)">'.$btnsolcount['1']['sol2'].'</button><button name="soal2" id="soal2" value="'.$btnsolcount['2']['sol2'].'-'.$idproduct.'-2"  type="button" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProp1(this)">'.$btnsolcount['2']['sol2'].'</button><button name="soal2" id="soal2" value="'.$btnsolcount['3']['sol2'].'-'.$idproduct.'-2"  type="button" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProp1(this)">'.$btnsolcount['3']['sol2'].'</button><button name="soal2" id="soal2" value="'.$btnsolcount['4']['sol2'].'-'.$idproduct.'-2"  type="button" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProp1(this)">'.$btnsolcount['4']['sol2'].'</button><button name="soal2" id="soal2" value="'.$btnsolcount['5']['sol2'].'-'.$idproduct.'-2"  type="button" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProp1(this)">'.$btnsolcount['5']['sol2'].'</button><button name="soal2" id="soal2" value="'.$btnsolcount['6']['sol2'].'-'.$idproduct.'-2"  type="button" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProp1(this)">'.$btnsolcount['6']['sol2'].'</button><button name="soal2" id="soal2" value="'.$btnsolcount['7']['sol2'].'-'.$idproduct.'-2"  type="button" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProp1(this)">'.$btnsolcount['7']['sol2'].'</button><button name="soal2" id="soal2" value="'.$btnsolcount['8']['sol2'].'-'.$idproduct.'-2"  type="button" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProp1(this)">'.$btnsolcount['8']['sol2'].'</button>';}
+    if($btnsolcount2==10){$btnsazi='<button name="soal2" id="soal2" value="'.$btnsolcount['0']['sol2'].'-'.$idproduct.'-2"  type="button" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProp1(this)">'.$btnsolcount['0']['sol2'].'</button><button name="soal2" id="soal2" value="'.$btnsolcount['1']['sol2'].'-'.$idproduct.'-2"  type="button" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProp1(this)">'.$btnsolcount['1']['sol2'].'</button><button name="soal2" id="soal2" value="'.$btnsolcount['2']['sol2'].'-'.$idproduct.'-2"  type="button" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProp1(this)">'.$btnsolcount['2']['sol2'].'</button><button name="soal2" id="soal2" value="'.$btnsolcount['3']['sol2'].'-'.$idproduct.'-2"  type="button" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProp1(this)">'.$btnsolcount['3']['sol2'].'</button><button name="soal2" id="soal2" value="'.$btnsolcount['4']['sol2'].'-'.$idproduct.'-2"  type="button" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProp1(this)">'.$btnsolcount['4']['sol2'].'</button><button name="soal2" id="soal2" value="'.$btnsolcount['5']['sol2'].'-'.$idproduct.'-2"  type="button" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProp1(this)">'.$btnsolcount['5']['sol2'].'</button><button name="soal2" id="soal2" value="'.$btnsolcount['6']['sol2'].'-'.$idproduct.'-2"  type="button" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProp1(this)">'.$btnsolcount['6']['sol2'].'</button><button name="soal2" id="soal2" value="'.$btnsolcount['7']['sol2'].'-'.$idproduct.'-2"  type="button" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProp1(this)">'.$btnsolcount['7']['sol2'].'</button><button name="soal2" id="soal2" value="'.$btnsolcount['8']['sol2'].'-'.$idproduct.'-2"  type="button" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProp1(this)">'.$btnsolcount['8']['sol2'].'</button><button name="soal2" id="soal2" value="'.$btnsolcount['9']['sol2'].'-'.$idproduct.'-2"  type="button" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProp1(this)">'.$btnsolcount['9']['sol2'].'</button>';}
+    if($btnsolcount2==11){$btnsazi='<button name="soal2" id="soal2" value="'.$btnsolcount['0']['sol2'].'-'.$idproduct.'-2"  type="button" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProp1(this)">'.$btnsolcount['0']['sol2'].'</button><button name="soal2" id="soal2" value="'.$btnsolcount['1']['sol2'].'-'.$idproduct.'-2"  type="button" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProp1(this)">'.$btnsolcount['1']['sol2'].'</button><button name="soal2" id="soal2" value="'.$btnsolcount['2']['sol2'].'-'.$idproduct.'-2"  type="button" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProp1(this)">'.$btnsolcount['2']['sol2'].'</button><button name="soal2" id="soal2" value="'.$btnsolcount['3']['sol2'].'-'.$idproduct.'-2"  type="button" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProp1(this)">'.$btnsolcount['3']['sol2'].'</button><button name="soal2" id="soal2" value="'.$btnsolcount['4']['sol2'].'-'.$idproduct.'-2"  type="button" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProp1(this)">'.$btnsolcount['4']['sol2'].'</button><button name="soal2" id="soal2" value="'.$btnsolcount['5']['sol2'].'-'.$idproduct.'-2"  type="button" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProp1(this)">'.$btnsolcount['5']['sol2'].'</button><button name="soal2" id="soal2" value="'.$btnsolcount['6']['sol2'].'-'.$idproduct.'-2"  type="button" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProp1(this)">'.$btnsolcount['6']['sol2'].'</button><button name="soal2" id="soal2" value="'.$btnsolcount['7']['sol2'].'-'.$idproduct.'-2"  type="button" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProp1(this)">'.$btnsolcount['7']['sol2'].'</button><button name="soal2" id="soal2" value="'.$btnsolcount['8']['sol2'].'-'.$idproduct.'-2"  type="button" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProp1(this)">'.$btnsolcount['8']['sol2'].'</button><button name="soal2" id="soal2" value="'.$btnsolcount['9']['sol2'].'-'.$idproduct.'-2"  type="button" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProp1(this)">'.$btnsolcount['9']['sol2'].'</button><button name="soal2" id="soal2" value="'.$btnsolcount['10']['sol2'].'-'.$idproduct.'-2"  type="button" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProp1(this)">'.$btnsolcount['10']['sol2'].'</button>';}
 
 
-	session_start();
+    session_start();
 $json=json_encode(array(
 				"statusCode"=>200,
 				"backbtn1"=>$btnsazi,
-				"html"=>'<div name="ttty" id="ttty"><div class="category-filter"><div class="category-filter-box"><div class="category-filter-box-title"><h4 class="fw-bold">ddda</h4></div><div class="category-filter-box-desc"><div class="form-group form-check"><div name="content2" id="content2"></div><div name="content3" id="content3"></div></div></div></div></div></div>',
+				"html"=>'<div name="ttty" id="ttty"><div class="category-filter"><div class="category-filter-box"><div class="category-filter-box-title"><h4 class="fw-bold"></h4></div><div class="category-filter-box-desc"><div class="form-group form-check"><div name="content2" id="content2"></div><div name="content3" id="content3"></div></div></div></div></div></div>',
 				 "fgt" => [
 [
 				"soalposit"=>$soalposit,
@@ -99,7 +104,7 @@ $soalaval= $fgt2['fgt']['0']['farijavab'];
 
                 if($btnsolcount['0']['no_fori']==1 & $btnsolcount['0']['yero']==1){
                     $pop2_price=$btnsolcount['0']['price_no_fori_yero'];
-                    $pop2='<button name="price2" id="price2" value="غیر فوری یه رو-'.$idproduct.'-99-'.$pop2_price.'"  type="button" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProp4(this)">غیر فوری یه رو--'.$pop2_price.'تومان</button>';}
+                    $pop2='<button name="price2" id="price2" value="عادی یه رو-'.$idproduct.'-99-'.$pop2_price.'"  type="button" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProp4(this)">عادی یه رو--'.$pop2_price.'تومان</button>';}
 
                 if($btnsolcount['0']['fori']==1 & $btnsolcount['0']['doro']==1){
                     $pop3_price=$btnsolcount['0']['price_fori_doro'];
@@ -108,7 +113,7 @@ $soalaval= $fgt2['fgt']['0']['farijavab'];
 
                 if($btnsolcount['0']['no_fori']==1 & $btnsolcount['0']['doro']==1){
                     $pop4_price=$btnsolcount['0']['price_no_fori_doro'];
-                    $pop4='<button name="price4" id="price4" value="غیر فوری دو رو-'.$idproduct.'-99-'.$pop4_price.'"  type="button" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProp4(this)">غیر فوری دو رو--'.$pop4_price.'تومان</button>';}
+                    $pop4='<button name="price4" id="price4" value="عادی دو رو-'.$idproduct.'-99-'.$pop4_price.'"  type="button" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProp4(this)">عادی دو رو--'.$pop4_price.'تومان</button>';}
 
 
             }
@@ -132,7 +137,7 @@ $json=json_encode(array(
                 "pop2_price"=>$pop2_price,
                 "pop3_price"=>$pop3_price,
                 "pop4_price"=>$pop4_price,
-				"html"=>'<div name="ttty" id="ttty"><div class="category-filter"><div class="category-filter-box"><div class="category-filter-box-title"><h4 class="fw-bold">ddda</h4></div><div class="category-filter-box-desc"><div class="form-group form-check"><div name="content4" id="content4"></div></div></div></div></div></div>',
+				"html"=>'<div name="ttty" id="ttty"><div class="category-filter"><div class="category-filter-box"><div class="category-filter-box-title"><h4 class="fw-bold"></h4></div><div class="category-filter-box-desc"><div class="form-group form-check"><div name="content4" id="content4"></div></div></div></div></div></div>',
 				 "fgt" => [
  [
 				"soalposit"=>$soalposit1,
@@ -180,7 +185,7 @@ if($btnsolcount['0']['fori']==1 & $btnsolcount['0']['yero']==1){
 
 if($btnsolcount['0']['no_fori']==1 & $btnsolcount['0']['yero']==1){
 	$pop2_price=$btnsolcount['0']['price_no_fori_yero'];
-	$pop2='<button name="price2" id="price2" value="غیر فوری یه رو-'.$idproduct.'-99-'.$pop2_price.'"  type="button" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProp4(this)">غیر فوری یه رو--'.$pop2_price.'تومان</button>';}
+	$pop2='<button name="price2" id="price2" value="عادی یه رو-'.$idproduct.'-99-'.$pop2_price.'"  type="button" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProp4(this)">عادی یه رو--'.$pop2_price.'تومان</button>';}
 
 if($btnsolcount['0']['fori']==1 & $btnsolcount['0']['doro']==1){
 	$pop3_price=$btnsolcount['0']['price_fori_doro'];
@@ -189,7 +194,7 @@ if($btnsolcount['0']['fori']==1 & $btnsolcount['0']['doro']==1){
 
 if($btnsolcount['0']['no_fori']==1 & $btnsolcount['0']['doro']==1){
 	$pop4_price=$btnsolcount['0']['price_no_fori_doro'];
-	$pop4='<button name="price4" id="price4" value="غیر فوری دو رو-'.$idproduct.'-99-'.$pop4_price.'"  type="button" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProp4(this)">غیر فوری دو رو--'.$pop4_price.'تومان</button>';}
+	$pop4='<button name="price4" id="price4" value="عادی دو رو-'.$idproduct.'-99-'.$pop4_price.'"  type="button" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProp4(this)">عادی دو رو--'.$pop4_price.'تومان</button>';}
 
 
 	
@@ -223,7 +228,7 @@ $json=json_encode(array(
 				"pop2_price"=>$pop2_price,
 				"pop3_price"=>$pop3_price,
 				"pop4_price"=>$pop4_price,
-				"html"=>'<div name="ttty" id="ttty"><div class="category-filter"><div class="category-filter-box"><div class="category-filter-box-title"><h4 class="fw-bold">ddda</h4></div><div class="category-filter-box-desc"><div class="form-group form-check"><div name="content5" id="content5"></div></div></div></div></div></div>',
+				"html"=>'<div name="ttty" id="ttty"><div class="category-filter"><div class="category-filter-box"><div class="category-filter-box-title"><h4 class="fw-bold"></h4></div><div class="category-filter-box-desc"><div class="form-group form-check"><div name="content5" id="content5"></div></div></div></div></div></div>',
 				 "fgt" => [
  [
 				"soalposit"=>$soalposit1,
@@ -273,8 +278,8 @@ $cooin=1;
 			
 			$btn_fglprice1 ='فوری یک رو - '.$fglprice1.' تومان';
 			$btn_fglprice2 ='فوری دو رو - '.$fglprice2.' تومان';
-			$btn_fglprice3 ='غیر فوری یک رو '.$fglprice3.' تومان';
-			$btn_fglprice4 ='غیر فوری دو رو '.$fglprice4.' تومان';
+			$btn_fglprice3 ='عادی یک رو '.$fglprice3.' تومان';
+			$btn_fglprice4 ='عادی دو رو '.$fglprice4.' تومان';
 			echo json_encode(array(
 				"statusCode"=>200,
 				"fori_yero"=>$fglprice1,
@@ -326,7 +331,7 @@ $cooin=1;
 		
 		$product2=$_SESSION["product2"];
 		$product=$_SESSION["product"];
-		
+
 		
 
 
@@ -346,19 +351,65 @@ $cooin=1;
 		}
 		$counttttt = $fee->Addshoplist($productid,$uusername,$amount,$product,$product2,$acomment,$state,$unid);
 		
-		if($counttttt==1){
-			
-			echo json_encode(array(
-				"statusCode"=>200,
-				"state"=>"1",
-				"url"=>'cupfile?unid='.$unid.'',
-				"unid"=>$unid
-				
 
-			),JSON_UNESCAPED_UNICODE);
-			
-		}
+            if($counttttt==1){
+
+                echo json_encode(array(
+                    "statusCode"=>200,
+                    "state"=>"1",
+                    "url"=>'cupfile?unid='.$unid.'',
+                    "unid"=>$unid
+
+
+                ),JSON_UNESCAPED_UNICODE);
+
+            }
+
 		break;
+
+
+    case "shop_list2":
+        $productid= $_REQUEST['x'];
+        $amount= $_REQUEST['y'];
+
+        $product2=$_SESSION["product2"];
+        $product="shop_pro";
+
+
+
+
+        $fee = new ManageFees();
+        $acomment="submit by user";
+        $state='1';
+
+        $unid=randomPassword();
+        if($amount==''){
+            echo json_encode(array(
+                "statusCode"=>210,
+                "state"=>"0"
+
+
+            ),JSON_UNESCAPED_UNICODE);
+            exit;
+        }
+        $counttttt = $fee->Addshoplist($productid,$uusername,$amount,$product,$product2,$acomment,$state,$unid);
+
+        if($counttttt==1){
+
+            echo json_encode(array(
+                "statusCode"=>200,
+                "state"=>"1",
+                "url"=>'step2?unid='.$unid.'',
+                "unid"=>$unid
+
+
+            ),JSON_UNESCAPED_UNICODE);
+
+        }
+
+
+        break;
+
 		case "send_getway":
 		
 		

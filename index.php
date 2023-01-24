@@ -24,13 +24,15 @@ echo'
 		
 		<center>
 					<div class="col-lg-2 col-sm-4 col-6 mb-3">
-                    <a href="vendor">
+                   
+                     <a href="vendor">
                         <div class="cart-small">
                             <div class="cart-small-icon">
                                 <img width="50" src="img/1.jpg" alt="" class="img-fluid">
                             </div>
                             <div class="cart-small-desc ms-lg-3 text-center">
-                               <h6>فروش ملزومات اداری</h6>
+                              
+                               <h6>چاپ طراحی</h6>
                               
                             </div>
                         </div>
@@ -44,13 +46,13 @@ echo'
 			
 			
 			<div class="col-lg-2 col-sm-4 col-6 mb-3">
-                    <a href="vendor">
+                    <a href="category?type=4">
                         <div class="cart-small">
                             <div class="cart-small-icon">
                                 <img width="50" src="img/1.jpg" alt="" class="img-fluid">
                             </div>
                             <div class="cart-small-desc ms-lg-3 text-center">
-                               <h6>چاپ طراحی</h6>
+                               <h6>فروش و خدمات ماشین های اداری</h6>
                               
                             </div>
                         </div>
@@ -62,14 +64,14 @@ echo'
 	
    
 					<div class="col-lg-2 col-sm-4 col-6 mb-3">
-                    <a href="vendor">
+                    <a href="category?type=4">
                         <div class="cart-small">
                             <div class="cart-small-icon">
                                 <img width="50" src="img/1.jpg" alt="" class="img-fluid">
                             </div>
                             <div class="cart-small-desc ms-lg-3 text-center">
-                               <h6>فروش و خدمات ماشین های اداری</h6>
-                              
+                               
+                               <h6>فروش ملزومات اداری</h6>
                             </div>
                         </div>
                     </a>

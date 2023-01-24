@@ -6,6 +6,37 @@ $fee = new ManageFees();
 
 echo'
 
+<script type="text/javascript">
+							function myFunction(item)
+							{
+                                $("#content").html("1");
+							var type = $(item).attr("value");
+								$.ajax({
+							
+								    url: "vendorjr.php",
+								    type: "POST",
+								    data: {op:"vemon",type:type},
+									dataType: "json",
+								    success: function(data){
+										
+									if(data.statusCode==200){
+										
+									$("#content").html(data.html1);
+										$(basesoal1).css("background", "#FFFFFF");
+                                        $(basesoal2).css("background", "#FFFFFF");
+                                        
+											  $(item).css("background", "#007fee");
+										if (type == "1"){$("#hedrr").html("انتخاب شما افست ");}
+										if (type == "2"){$("#hedrr").html("انتخاب شما دیجیتال ");}
+									}
+										
+										
+									}
+							      });
+							
+							}
+						</script>
+						
    
 							
 				<div class="main-category">
@@ -15,35 +46,35 @@ echo'
 			
 			
 			 <div class="col-lg-2 col-sm-4 col-6 mb-3">
-                    <a href="category?type=1">
-                        <div class="cart-small">
+                
+                        <div class="cart-small"   value="1" onclick="myFunction(this)" name="basesoal1" id="basesoal1">
                             <div class="cart-small-icon">
-                                <img width="50" src="img/1.jpg" alt="" class="img-fluid">
+                                <img width="50" src="img/5.jpg" alt="" class="img-fluid">
                             </div>
                             <div class="cart-small-desc ms-lg-3 text-center">
                                 <h6>چاپ افست</h6>
                                <p>سفارش آنلاین</p>
                             </div>
                         </div>
-                    </a>
+                   
                 </div>
 			
 			<div class="col-lg-2 col-sm-4 col-6 mb-3">
-                    <a href="category?type=2">
-                        <div class="cart-small">
+                    
+                         <div class="cart-small"   value="2" onclick="myFunction(this)" name="basesoal2" id="basesoal2">
                             <div class="cart-small-icon">
-                                <img width="50" src="img/3.jpg" alt="" class="img-fluid">
+                                <img width="50" src="img/6.jpg" alt="" class="img-fluid">
                             </div>
                             <div class="cart-small-desc ms-lg-3 text-center">
                                 <h6>چاپ دیجیتال</h6>
                                <p>سفارش آنلاین</p>
                             </div>
                         </div>
-                    </a>
+                    
                 </div>
 			<div class="col-lg-2 col-sm-4 col-6 mb-3">
                    
-                        <div class="cart-small">
+                        <div class="cart-small" value="soon" onclick="myFunction2(this)"  name="basesoal3" id="basesoal3">
                             <div class="cart-small-icon">
                                 <img width="50" src="img/4.jpg" alt="" class="img-fluid">
                             </div>
@@ -56,34 +87,34 @@ echo'
                 </div>
                 
                 <div class="col-lg-2 col-sm-4 col-6 mb-3">
-                    <a href="category?type=2">
-                        <div class="cart-small">
+                   
+                        <div class="cart-small"  name="basesoal4" id="basesoal4">
                             <div class="cart-small-icon">
-                                <img width="50" src="img/5.jpg" alt="" class="img-fluid">
+                                <img width="50" src="img/1.jpg" alt="" class="img-fluid">
                             </div>
                             <div class="cart-small-desc ms-lg-3 text-center">
-                                <h6>اکوسالت</h6>
+                                <h6> چاپ بنر و فلکس ,اکوسالت</h6>
                                <p>براس سفارش تماس بگیرید 1702</p>
                             </div>
                         </div>
-                    </a>
+                   
                 </div>
 			
 			
 			
 			
 			<div class="col-lg-2 col-sm-4 col-6 mb-3">
-                    <a href="category?type=3">
-                        <div class="cart-small">
+                  
+                        <div class="cart-small"   name="basesoal5" id="basesoal5">
                             <div class="cart-small-icon">
-                                <img width="50" src="img/6.jpg" alt="" class="img-fluid">
+                                <img width="50" src="img/3.jpg" alt="" class="img-fluid">
                             </div>
                             <div class="cart-small-desc ms-lg-3 text-center">
-                                <h6>چاپ بنر و فلکس</h6>
+                                <h6>طراحی</h6>
                                <p>براس سفارش تماس بگیرید 1702</p>
                             </div>
                         </div>
-                    </a>
+                    
                 </div>
 			</div>
 			
@@ -91,72 +122,55 @@ echo'
 			
 			</div>
 
+   <div class="about-us py-3">
+            <div class="container-fluid">
+                <div class="content-box shadow-box px-3">
+                  <center>  <h4 name="hedrr" id="hedrr">
+                        دسته بندی محصول خود را از بالا انتخاب کنید
+                    </h4>
+                    
+                    
+                     
+        <div class="main-category">
+            <div class="container-fluid">
+                <div class="row justify-content-center">
+                   
+			
+                    		
+
+				
+                <div class="row">
+                  
+					 <div class="col-lg-9">
+                        <div class="category-item">
+                            <div class="row" name="content" id="content">
+                             
+          					
+       
 
 
-    <div class="modal fade login-modal" id="loginModal" tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <div class="modal-title">
-                        <div class="d-flex">
-                            <i class="bi bi-person me-1"></i>
-                            <h6 class="text-center">فرم ورود کاربران</h6>
-                        </div>
-                    </div>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="item">
-                        <form action="">
-                            <div class="form-group">
-                                <div class="input-group">
-                                    <span class="input-group-text"><i class="bi bi-person"></i></span>
-                                    <input type="text" class="form-control" placeholder="نام کاربری">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="input-group">
-                                    <span class="input-group-text"><i class="bi bi-key"></i></span>
-                                    <input type="password" placeholder="رمز عبور" class="form-control">
-                                </div>
-                            </div>
-                            <div class="form-check form-check-box">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                <label class="form-check-label" for="flexCheckDefault">
-                                    مرا فراموش نکن
-                                </label>
-                            </div>
-                            <div class="d-flex justify-content-center align-items-center">
-                                <button type="submit" class="btn-login me-2 waves-effect waves-light"><i
-                                        class="bi bi-person"></i> ورود به
-                                    سایت</button>
-                                <a class="btn-login forget waves-effect waves-light" href="forget.html"><i
-                                        class="bi bi-person"></i>
-                                    فراموشی رمز عبور
-                                </a>
-                            </div>
+                                
+                                </div></div></div></div>		
 
-                        </form>
-                        <div class="register-box">
-                            <div class="dash-border">
-                                <span>یا</span>
-                            </div>
-                            <div class="register-link">
-                                <a href="register.html" class="btn btn-outline-secondary waves-effect waves-light">ثبت نام <i
-                                        class="bi bi-person-plus ms-1"></i></a>
-                            </div>
-                        </div>
-                        <div class="social">
-                            <a href="" class="bi bi-google"></a>
-                            <a href="" class="bi bi-facebook"></a>
-                            <a href="" class="bi bi-github"></a>
-                        </div>
-                    </div>
+				
+                     
+                     
+                     
+                     
+								
+				  </div>
+				    </div>
+					  </div>
+  
+                     
+                     
+                     
+                     
+                 
                 </div>
             </div>
         </div>
-    </div>
-    <!-- end login modal -->
+
 
 
 
