@@ -59,8 +59,19 @@ function Addshoplist($productid,$uusername,$amount,$product,$product2,$acomment,
 
 
 
+    function Addshoplistbasket($productid,$uusername,$amount,$product,$product2,$unid)
+    { global $table_prefix;
+        $query = $this->link->prepare("INSERT INTO `nim_basket` (`product_id`,`uusername`,`price`,`data1`,`data2`,`uinid`) VALUES (?,?,?,?,?,?) ");
 
-function Addtanavoproduct($product_id,$name,$javab1,$javab2,$javab3,$javab4,$fori,$no_fori,$yero,$doro,$fori_yero_price,$fori_doro_price,$no_fori_yero_price,$no_fori_doro_price)
+        $values = array($productid,$uusername,$amount,$product,$product2,$unid);
+        $query->execute($values); $counts = $query->rowCount();
+        return $counts; }
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+    function Addtanavoproduct($product_id,$name,$javab1,$javab2,$javab3,$javab4,$fori,$no_fori,$yero,$doro,$fori_yero_price,$fori_doro_price,$no_fori_yero_price,$no_fori_doro_price)
  { global $table_prefix;
  $query = $this->link->prepare("insert into `nim_product_solutions` (`product_id`,`acomment`,`sol1`,`sol2`,`sol3`,`sol4`,`fori`,`no_fori`,`yero`,`doro`,`price_fori_yero`,`price_fori_doro`,`price_no_fori_yero`,`price_no_fori_doro`)
 values (?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
@@ -104,8 +115,8 @@ function Getproductlistcount($query) { global $table_prefix;
  $query = $this->link->query("SELECT * FROM `nim_product` $query");
  $counts = $query->rowCount(); $result = $query->fetchAll();
  return $counts; }
- 
- 
+
+
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -135,6 +146,17 @@ function Getproducttanavolist($query) { global $table_prefix;
         $query->execute($values); $result = $query->fetchAll(); return $result; }
 
 
+    function Getbasketforuser($uusername)
+    { global $table_prefix; $query = $this->link->prepare("SELECT * FROM `nim_basket` WHERE `uusername`=?"); $values = array($uusername);
+        $query->execute($values); $result = $query->fetchAll(); return $result; }
+
+
+
+    function Getbasketforusersum($uusername)
+    { global $table_prefix; $query = $this->link->prepare("SELECT SUM(price) AS total  FROM `nim_basket` WHERE `uusername`=?"); $values = array($uusername);
+        $query->execute($values); $result = $query->fetchAll(); return $result; }
+
+
 
 
     function Getproducttanavolistbyid2($id)
@@ -161,10 +183,14 @@ function Getproducttanavolist($query) { global $table_prefix;
 
    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-  
-  
-  
- function Getproducttanavolistbyidcount($id)
+
+
+    function Getbasketforusercount($uusername)
+    { global $table_prefix; $query = $this->link->prepare("SELECT * FROM `nim_basket` WHERE `uusername`=?"); $values = array($uusername);
+        $query->execute($values); $counts = $query->rowCount(); return $counts; }
+
+
+    function Getproducttanavolistbyidcount($id)
  { global $table_prefix; $query = $this->link->prepare("SELECT * FROM `nim_product_tanavo` WHERE `product_id`=?"); $values = array($id);
  $query->execute($values);$counts = $query->rowCount(); $result = $query->fetchAll(); return $counts; } 
 
@@ -243,8 +269,18 @@ function GetcustomersListapproval($query) { global $table_prefix;
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 function Deletecustomerapp($id)
  { global $table_prefix; $query = $this->link->prepare("DELETE FROM `nim_customers_add_app` WHERE `aid`=?");
- $values = array($id); $query->execute($values); $counts = $query->rowCount(); if($counts==1) return 1; else return $counts; } 
- 
+ $values = array($id); $query->execute($values); $counts = $query->rowCount(); if($counts==1) return 1; else return $counts; }
+
+
+    function deletebasketitem($delet)
+    { global $table_prefix; $query = $this->link->prepare("DELETE FROM `nim_basket` WHERE `id`=?");
+        $values = array($delet); $query->execute($values); $counts = $query->rowCount(); if($counts==1) return 1; else return $counts; }
+
+    function deletebasketallitem($uusername)
+    { global $table_prefix; $query = $this->link->prepare("DELETE FROM `nim_basket` WHERE `uusername`=?");
+        $values = array($uusername); $query->execute($values); $counts = $query->rowCount(); if($counts==1) return 1; else return $counts; }
+
+
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
   function GEtmissionsapi($promoter) { global $table_prefix; $query = $this->link->prepare("SELECT * FROM `nim_missions` WHERE `promoter`='00' OR `promoter`=? ");

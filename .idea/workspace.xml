@@ -5,19 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bc047395-12cc-4474-b2fe-72233fb553d9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/contact-us.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/privacy.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendorjr.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/basket.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7ff1c0ba-e02c-409f-9700-d7b8f0643607.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/7ff1c0ba-e02c-409f-9700-d7b8f0643607.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/aj.php" beforeDir="false" afterPath="$PROJECT_DIR$/aj.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/category.php" beforeDir="false" afterPath="$PROJECT_DIR$/category.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/footer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cupfile.php" beforeDir="false" afterPath="$PROJECT_DIR$/cupfile.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product.php" beforeDir="false" afterPath="$PROJECT_DIR$/product.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/class.fee.php" beforeDir="false" afterPath="$PROJECT_DIR$/include/class.fee.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/step2.php" beforeDir="false" afterPath="$PROJECT_DIR$/step2.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +75,9 @@
       <workItem from="1674037867750" duration="613000" />
       <workItem from="1674298174720" duration="715000" />
       <workItem from="1674378163321" duration="195000" />
-      <workItem from="1674451325376" duration="13682000" />
+      <workItem from="1674451325376" duration="18505000" />
+      <workItem from="1674588858422" duration="2288000" />
+      <workItem from="1674637651241" duration="3482000" />
     </task>
     <servers />
   </component>
@@ -101,16 +98,5 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/product.php</url>
-          <line>26</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

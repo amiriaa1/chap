@@ -7,42 +7,8 @@ unset($_SESSION['product']);
 unset($_SESSION['product2']);	
 if(isset($_GET['unid']))
 {
-	
 	$unid=$_GET['unid'];
-	$discountList2 = $fee->Getshoplist1($uusername,$unid);
-	foreach($discountList2 as $discountProp)
-					{
-						
-							$amount=$discountProp['amount'];
-							$data1=$discountProp['data1'];
-							$data2=$discountProp['data2'];
-							$productid=$discountProp['productid'];
-							$fgt1 = json_decode($data1,true);
-							$fgt2 = json_decode($data2,true);
-							$farijavab1= $fgt1['fgt']['0']['farijavab'];
-							$farijavab2= $fgt1['fgt']['1']['farijavab'];
-							$farijavab3= $fgt1['fgt']['2']['farijavab'];
-						$count= $fgt2['count'];
-						$name= $fgt2['name'];
-							
-							
-							$finalprice= $fgt2['finalprice'];
-							$btn3farsi= $fgt2['btn3farsi'];
-						
-									
-					}
-					
-$query = "WHERE aid=$productid  ORDER BY `nim_product`.`aid` ASC";		
-$productgeter = $fee->Getproductlist($query);
-foreach($productgeter as $discountProp2)
-					{
-						
-							$title=$discountProp2['title'];
-							$description=$discountProp2['description'];
-							$pic=$discountProp2['pic'];
-						
-									
-					}
+
 					
 }
 else{
@@ -106,28 +72,28 @@ var unid = document.getElementById("unid").value;
                     <div class="line-step">
                         <div class="line-step-boxs">
                             <div class="line-step-box complete">
-                                <a href="cart.html">
+                                
                                     <div class="icon">
                                         <i class="bi bi-bag"></i>
                                     </div>
                                     <p>سبد خرید</p>
-                                </a>
+                                
                             </div>
                             <div class="line-step-box complete">
-                                <a href="cart.html">
+                               
                                     <div class="icon">
                                         <i class="bi bi-file-earmark-text"></i>
                                     </div>
                                     <p>جزییات پرداخت</p>
-                                </a>
+                               
                             </div>
                             <div class="line-step-box">
-                                <a href="cart.html">
+                                
                                     <div class="icon">
                                         <i class="bi bi-file-earmark-break"></i>
                                     </div>
                                     <p>تکمیل سفارش</p>
-                                </a>
+                             
                             </div>
                         </div>
                     </div>
@@ -137,40 +103,13 @@ var unid = document.getElementById("unid").value;
         <div class="cart">
             <div class="container-fluid">
                 <div class="cart-content shadow-box">
-                    <div class="alert alert-warning" role="alert">
-                        کوپن تخفیف دارید <span class="alert-link pointer" id="showFormDiscount">برای نوشتن کد اینجا کلیک
-                            کنید</span>
-                    </div>
-                    <div class="category-filter" id="discountForm" style="display:none;">
-                        <div class="category-filter-box">
-                            <div class="category-filter-box-title">
-                                <h4 class="fw-bold">
-                                    اگر شما کد تخفیف دارید ، برای ثبت آن از طریق زیر اقدام کنید.
-                                </h4>
-                            </div>
-                            <div class="category-filter-box-desc">
-                                <form action="">
-                                    <div class="row align-items-center">
-                                        <div class="col-sm-8">
-                                            <div class="form-group">
-                                                <label for="discount" class="form-label">کد تخفیف:</label>
-                                                <input type="text" class="form-control rounded-pill" id="discount">
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-4">
-                                            <button class="btn btn-primary btn-sm rounded-pill mt-sm-3 mt-0">ثبت کد
-                                                تخفیف</button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
+                    
+                  
                     <div class="row">
                         <div class="col-lg-7">
                             <div class="checkout-forms">
                                 <div class="checkout-form-title">
-                                    <h5>جزییات پرداخت</h5>
+                                    <h5> جزییات آدرس</h5>
                                 </div>
                                 <div class="checkout-form">
                                    
@@ -230,22 +169,17 @@ foreach($discountList as $discountProp)
                                 </div>
                                 <table class="table main-table">
                                     <tr>
-                                        <th class="pb-3">محصول</th>
-                                        <th class="pb-3">قیمت کل</th>
+                                        <th class="pb-3">نوع</th>
+                                        <th class="pb-3">مبلغ</th>
                                     </tr>
                                     <tr>
-                                        <td class="fw-bold">
-                                            <img src="img/product/'.$pic.'" class="img-fluid align-middle"
-                                                alt="" width="80"><br>'.$title.'<br>'.$farijavab1.'<br>'.$farijavab2.'<br>'.$farijavab3.'<br>'.$name.'<br>تیراژ:'.$count.'
-                                        </td>
-                                        <td class="txt"><span class="fw-bold">'.$amount.'</span> <span
-                                                class="text-muted">تومان</span></td>
+                                       
+                                      
                                     </tr>
                                  
                                     <tr>
-                                        <td class="fw-bold">حمل و نقل</td>
-                                        <td class="txt"><span class="fw-bold">5,000</span> <span
-                                                class="text-muted">تومان</span></td>
+                                       
+                                      
                                     </tr>
 									';
 									$ftr=$amount+5000;

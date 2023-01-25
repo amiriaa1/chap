@@ -340,16 +340,16 @@ $cooin=1;
 		$state='1';
 		
 		$unid=randomPassword();
-		if($amount==''){
+		if($amount=='تنوع را انتخاب کنید'){
 			echo json_encode(array(
 				"statusCode"=>210,
 				"state"=>"0"
-				
+
 
 			),JSON_UNESCAPED_UNICODE);
 			exit;
 		}
-		$counttttt = $fee->Addshoplist($productid,$uusername,$amount,$product,$product2,$acomment,$state,$unid);
+		$counttttt = $fee->Addshoplistbasket($productid,$uusername,$amount,$product,$product2,$unid);
 		
 
             if($counttttt==1){
@@ -392,14 +392,14 @@ $cooin=1;
             ),JSON_UNESCAPED_UNICODE);
             exit;
         }
-        $counttttt = $fee->Addshoplist($productid,$uusername,$amount,$product,$product2,$acomment,$state,$unid);
+        $counttttt = $fee->Addshoplistbasket($productid,$uusername,$amount,$product,$product2,$unid);
 
         if($counttttt==1){
 
             echo json_encode(array(
                 "statusCode"=>200,
                 "state"=>"1",
-                "url"=>'step2?unid='.$unid.'',
+                "url"=>'basket',
                 "unid"=>$unid
 
 
@@ -427,7 +427,7 @@ $cooin=1;
 			
 			$fee = new ManageFees();
 			$counttttt = $fee->Updateshoplist($json,$unid);
-			
+            $counttttt2 = $fee->deletebasketallitem($uusername);
 			if($counttttt==1){
 			
 			echo json_encode(array(

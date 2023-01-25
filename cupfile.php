@@ -80,7 +80,7 @@ if(isset($_POST['but_upload']) && $_POST['category']=="2"){
 			   
 
 
-echo "<script>window.location.href='step2?unid=$unid';</script>";
+echo "<script>window.location.href='basket';</script>";
 
 
 
@@ -100,8 +100,9 @@ echo "<script>window.location.href='step2?unid=$unid';</script>";
   
 } 
 if(isset($_POST['category']) && $_POST['category']=="1"){
-	
-	echo "<script>window.location.href='step2?unid=$unid';</script>";
+
+    echo "<script>window.location.href='basket';</script>";
+
 }
 $unid=$_GET['unid'];
 echo'
@@ -176,7 +177,7 @@ echo'
                                         <td class="txt"><span class="fw-bold">
 										<input id="upload" name="file" type="file" multiple/>
 										<input id="upload2" name="file2" type="file" multiple/>
-										<button name="but_upload" id="but_upload"  class="shadow-sm fw-bold btn-add-to-cart mt-sm-0 mt-2 waves-effect waves-light">آپلود</button>
+										<button name="but_upload" id="but_upload"  class="shadow-sm fw-bold btn-add-to-cart mt-sm-0 mt-2 waves-effect waves-light">افزودن به سبد خرید</button>
                                     </tr>
 									
               
