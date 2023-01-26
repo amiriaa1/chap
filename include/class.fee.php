@@ -189,6 +189,12 @@ function Getproducttanavolist($query) { global $table_prefix;
     { global $table_prefix; $query = $this->link->prepare("SELECT * FROM `nim_basket` WHERE `uusername`=?"); $values = array($uusername);
         $query->execute($values); $counts = $query->rowCount(); return $counts; }
 
+    function Getbloglist($qui)
+    { global $table_prefix; $query = $this->link->prepare("SELECT * FROM `nim_blog` WHERE `active`=?"); $values = array($qui);
+        $query->execute($values); $result = $query->fetchAll(); return $result; }
+
+
+
 
     function Getproducttanavolistbyidcount($id)
  { global $table_prefix; $query = $this->link->prepare("SELECT * FROM `nim_product_tanavo` WHERE `product_id`=?"); $values = array($id);
@@ -209,19 +215,19 @@ function Getproducttanavolist($query) { global $table_prefix;
 
    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     function Getsol1fromsol2($idproduct,$soalaval)
- { global $table_prefix; $query = $this->link->prepare("SELECT sol2,sid,fori,no_fori,yero,doro,price_fori_doro,price_fori_yero,price_no_fori_doro,price_no_fori_yero,   COUNT(*) AS CNT FROM nim_product_solutions where product_id=? AND sol1=? GROUP BY sol2;"); $values = array($idproduct,$soalaval);
+ { global $table_prefix; $query = $this->link->prepare("SELECT sol2,sid,fori,no_fori,yero,doro,price_fori_doro,price_fori_yero,price_no_fori_doro,price_no_fori_yero,deliver_time_fori,deliver_time_no_fori,   COUNT(*) AS CNT FROM nim_product_solutions where product_id=? AND sol1=? GROUP BY sol2;"); $values = array($idproduct,$soalaval);
  $query->execute($values);$counts = $query->rowCount(); $result = $query->fetchAll(); return $result; } 
 
    
    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
        function Getsol1fromsol3($idproduct,$soalaval,$soalaval2)
- { global $table_prefix; $query = $this->link->prepare("SELECT sol3,sid,fori,no_fori,yero,doro,price_fori_doro,price_fori_yero,price_no_fori_doro,price_no_fori_yero,   COUNT(*) AS CNT FROM nim_product_solutions where product_id=? AND sol1=? AND sol2=? GROUP BY sol3;"); $values = array($idproduct,$soalaval,$soalaval2);
+ { global $table_prefix; $query = $this->link->prepare("SELECT sol3,sid,fori,no_fori,yero,doro,price_fori_doro,price_fori_yero,price_no_fori_doro,price_no_fori_yero,deliver_time_fori,deliver_time_no_fori,   COUNT(*) AS CNT FROM nim_product_solutions where product_id=? AND sol1=? AND sol2=? GROUP BY sol3;"); $values = array($idproduct,$soalaval,$soalaval2);
  $query->execute($values);$counts = $query->rowCount(); $result = $query->fetchAll(); return $result; } 
 
    
    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
           function Getsol1fromsol4($idproduct,$soalaval,$soalaval2,$soalaval3)
- { global $table_prefix; $query = $this->link->prepare("SELECT sol4,sid,fori,no_fori,yero,doro,price_fori_doro,price_fori_yero,price_no_fori_doro,price_no_fori_yero,   COUNT(*) AS CNT FROM nim_product_solutions where product_id=? AND sol1=? AND sol2=? AND sol3=? GROUP BY sol4;"); $values = array($idproduct,$soalaval,$soalaval2,$soalaval3);
+ { global $table_prefix; $query = $this->link->prepare("SELECT sol4,sid,fori,no_fori,yero,doro,price_fori_doro,price_fori_yero,price_no_fori_doro,price_no_fori_yero,deliver_time_fori,deliver_time_no_fori,   COUNT(*) AS CNT FROM nim_product_solutions where product_id=? AND sol1=? AND sol2=? AND sol3=? GROUP BY sol4;"); $values = array($idproduct,$soalaval,$soalaval2,$soalaval3);
  $query->execute($values);$counts = $query->rowCount(); $result = $query->fetchAll(); return $result; } 
 
    

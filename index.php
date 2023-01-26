@@ -2,23 +2,14 @@
 
 include('main.php');
 include('header.php');
-
-
+$fee = new ManageFees();
+$qui="1";
+$discountList8877 = $fee->Getbloglist($qui);
 echo'
-
-
-
 
 <body>
 
 	
-	
-	
-	
-
-
-   
-				
 				<div class="main-category">
         <div class="container-fluid">
 		
@@ -113,132 +104,50 @@ echo'
                     <div class="swiper-wrapper">
 					
 					
-					<div class="category-filter">
-                                <div class="category-filter-box">
-                                    <div class="category-filter-box-title">
-                                        <h4 class="fw-bold">
-                                            فیلتر متنوع
-                                        </h4>
-                                    </div>
-                                    <div class="category-filter-box-desc">
-                                        <form action="">
-                                            <div class="form-group form-check form-switch">
-                                                <input class="form-check-input" type="checkbox"
-                                                    id="flexSwitchCheckDefault">
-                                                <label class="form-check-label" for="flexSwitchCheckDefault">چاپ و طراحی</label>
-                                                   
-                                            </div>
-                                            <div class="form-group form-check form-switch">
-                                                <input class="form-check-input" type="checkbox"
-                                                    id="flexSwitchCheckChecked" checked>
-                                                <label class="form-check-label" for="flexSwitchCheckChecked">کارت ویزیت</label>
-                                                
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                           
+				
 					
-                        <div class="swiper-slide">
+                     
 						
 						
 						
-						
-						
-                            <div class="al-item">
-                                <div class="al-img">
-                                    <img src="img/blog/children.jpg" class="img-fluid" alt="">
-                                </div>
-                                <div class="al-date rounded-pill">
-                                    20 آذر 1401
-                                </div>
-                                <div class="al-title">
-                                    10 نکته مهم درباره تغدیه و سلامت کودکان که باید بدانید
-                                    10 نکته مهم درباره تغدیه و سلامت کودکان که باید بدانید
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="blog-detail.html">
+						';
+                 foreach($discountList8877 as $discountProp69)
+                                    {
+
+
+                                        echo'
+                                        
+                                           <div class="swiper-slide">
+                            <a href="blog-detail?id='.$discountProp69["id"].'">
                                 <div class="al-item">
                                     <div class="al-img">
-                                        <img src="img/blog/01-Yoga-Nidra.jpg" class="img-fluid" alt="">
+                                        <img src="img/blog/'.$discountProp69["pic"].'" class="img-fluid" alt="">
                                     </div>
                                     <div class="al-overlay"></div>
                                     <div class="al-date rounded-pill">
-                                        20 آذر 1401
+                                        '.$discountProp69["timastammp"].'  
                                     </div>
                                     <div class="al-title">
-                                        10 نکته مهم درباره تغدیه و سلامت کودکان که باید بدانید
+                                         '.$discountProp69["title"].'
                                     </div>
                                 </div>
                             </a>
                         </div>
-                        <div class="swiper-slide">
-                            <a href="blog-detail.html">
-                                <div class="al-item">
-                                    <div class="al-img">
-                                        <img src="img/blog/important-blood-tests.jpg" class="img-fluid" alt="">
-                                    </div>
-                                    <div class="al-overlay"></div>
-                                    <div class="al-date rounded-pill">
-                                        20 آذر 1401
-                                    </div>
-                                    <div class="al-title">
-                                        10 نکته مهم درباره تغدیه و سلامت کودکان که باید بدانید
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="blog-detail.html">
-                                <div class="al-item">
-                                    <div class="al-img">
-                                        <img src="img/blog/01-Swimming.jpg" class="img-fluid" alt="">
-                                    </div>
-                                    <div class="al-overlay"></div>
-                                    <div class="al-date rounded-pill">
-                                        20 آذر 1401
-                                    </div>
-                                    <div class="al-title">
-                                        10 نکته مهم درباره تغدیه و سلامت کودکان که باید بدانید
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="blog-detail.html">
-                                <div class="al-item">
-                                    <div class="al-img">
-                                        <img src="img/blog/children.jpg" class="img-fluid" alt="">
-                                    </div>
-                                    <div class="al-overlay"></div>
-                                    <div class="al-date rounded-pill">
-                                        20 آذر 1401
-                                    </div>
-                                    <div class="al-title">
-                                        10 نکته مهم درباره تغدیه و سلامت کودکان که باید بدانید
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="blog-detail.html">
-                                <div class="al-item">
-                                    <div class="al-img">
-                                        <img src="img/blog/01-Yoga-Nidra.jpg" class="img-fluid" alt="">
-                                    </div>
-                                    <div class="al-overlay"></div>
-                                    <div class="al-date rounded-pill">
-                                        20 آذر 1401
-                                    </div>
-                                    <div class="al-title">
-                                        10 نکته مهم درباره تغدیه و سلامت کودکان که باید بدانید
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
+                                        
+                                        ';
+
+                                    }
+                        echo'
+						
+                            
+                       
+                     
+                        
+                        
+                        
+                        
+                        
+                   
                     </div>
                     <div class="swiper-button-next sb2"></div>
                     <div class="swiper-button-prev sb2"></div>
@@ -253,7 +162,7 @@ echo'
             <div class="partner-parrent">
                 <div class="d-flex align-items-center justify-content-between pb-3">
                     <div class="pbt-header-title">
-                        <h6 class="slider-title">برخی همکاران ما</h6>
+                        <h6 class="slider-title">برخی از مشتریان ما</h6>
                     </div>
                     <div class="pbt-header-link">
                         <a href="category?type=1" class="fromCenter border-animate">مشاهده همه</a>

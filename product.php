@@ -138,11 +138,13 @@ echo'
 								if(data.isfinal=="1"){
 								document.getElementById("countervibvib").style.visibility = "visible";
 								if (data.backbtn1 =="0") {
-                                           
-											 $("#niaz1").html(data.pop1);
-											 $("#niaz2").html(data.pop2);
-											 $("#niaz3").html(data.pop3);
-											 $("#niaz4").html(data.pop4);
+								
+                                             $("#niaz1matn").html(data.pop1matn);
+											 $("#niaz1").html(data.pop1 + data.pop2);
+											 $("#niaz2matn").html(data.pop2matn);
+											 $("#niaz2").html(data.pop3 + data.pop4);
+											
+											
                                                                            }  
 								}
 								else{
@@ -205,10 +207,11 @@ echo'
 										  document.getElementById("countervibvib").style.visibility = "visible";
 										 if (data.backbtn1 != "undefined") {
                                              $("#content5").html(data.backbtn1);
-											 $("#niaz1").html(data.pop1);
-											 $("#niaz2").html(data.pop2);
-											 $("#niaz3").html(data.pop3);
-											 $("#niaz4").html(data.pop4);
+											 
+											 $("#niaz1matn").html(data.pop1matn);
+											 $("#niaz1").html(data.pop1 + data.pop2);
+											 $("#niaz2matn").html(data.pop2matn);
+											 $("#niaz2").html(data.pop3 + data.pop4);
                                                                            }  
 										  
 										  
@@ -518,8 +521,15 @@ echo'
                     }
                     else{
                         echo'
+تیراژ را انتخاب کنید
+                        <select class="form-select select2-box" name="count" id="count" onchange="myFunction(this)">
                         
-                        <input type="text" name="count" id="count"  required data-validation-required-message="This field is required" minlength="1000" maxlength="1000000" class="counter" value="1000" onchange="myFunction(this)">
+                        <option value="1000" name="count" id="count" >1000</option>
+                        <option value="2000" name="count" id="count" >2000</option>
+                        <option value="3000" name="count" id="count" >3000</option>
+                        <option value="4000" name="count" id="count" >4000</option>
+                        </select>
+
                         ';
                     }
 
@@ -533,96 +543,34 @@ echo'
                                     <div class="col-lg-6">
                                       
                                         <div class="se-desc">
-							 
+                                       <center>
+							 <span name="niaz1matn" id="niaz1matn"></span>
+							 <br>
 							 <span name="niaz1" id="niaz1"></span>
+							 <br>
+							 <span name="niaz2matn" id="niaz2matn"></span>
+							 <br>
 							 <span name="niaz2" id="niaz2"></span>
-							 <span name="niaz3" id="niaz3"></span>
-							 <span name="niaz4" id="niaz4"></span>
+							 </center>
 							 
 							 
-							 
+							 ';
+if(!$isLogedIn){
+
+    echo'<a href="login"> <button  class="shadow-sm fw-bold btn-add-to-cart mt-sm-0 mt-2 waves-effect waves-light">برای خرید وارد شوید</button></a>';
+
+}
+else{echo'<button  class="shadow-sm fw-bold btn-add-to-cart mt-sm-0 mt-2 waves-effect waves-light" onclick="Myshoplist(this)">افزودن به سبد خرید</button>';
+}
+echo'
 							 </div></div></div></div>
 							 </div>        
 
 
                             </div>
 							
-							
-							
-							
-							
-                            <div class="se-body">
-                                <div class="row">
-                                    <div class="col-lg-6">
-                                      
-                                        <div class="se-desc">
-										
-                                        
-                                       ';
-											
-											
-											
-											
-											
-											
-											
-											echo'
-											
-									 </div> </div>
-									
-                                    <div class="col-lg-6 m-auto mt-lg-2 mt-3">
-									
-									
-									
-									
-									
 								
-                                        <div class="se-cart shadow-sm">
-                                            
-                                            
-                                            
-                                            <div class="se-cart-color">
-                                                <div class="color-box">
-                                                   
-												   
-												   
-                                                  <input type="hidden" name="productid" id="productid" class="form-control" value="'.$_GET['id'].'">
-												   <input type="hidden" name="tavlkkf" id="tavlkkf" class="form-control" value="">
-                                                   
-                                                   خلاصه انتخاب ها
-                                                    
-                                                </div>
-                                            </div>
-                                         
-                                            <div class="se-cart-form">
-                                               
-                                                    <div class="row align-items-center">
-                                                    
-                                                       <div class="se-cart-price">
-                                                
-                                                <span class="se-cart-price-new" name="price_show" id="price_show">تنوع را انتخاب کنید</span>تومان
-                                            </div>
-                                                        <div class="col-sm-6">
-                                                         ';
-														 if(!$isLogedIn){
-															 
-									echo'<a href="login"> <button  class="shadow-sm fw-bold btn-add-to-cart mt-sm-0 mt-2 waves-effect waves-light">برای خرید وارد شوید</button></a>';
-															 
-														 }
-									 else{echo'<button  class="shadow-sm fw-bold btn-add-to-cart mt-sm-0 mt-2 waves-effect waves-light" onclick="Myshoplist(this)">افزودن به سبد خرید</button>';
-									 }
-echo'														 
-                        
-                                                                
-                                                                
-                                                        </div>
-                                                    </div>
-                                               
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                          
                         </div>
                         
                         <div class="col-lg-4">
@@ -630,13 +578,7 @@ echo'
                             <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
                                 class="swiper product-gallery">
                                
-                                <div class="icon-product-box">
-                                    
-                                    
-                                 
-                                   
-                                    
-                                </div>
+                              
                                 <div class="swiper-wrapper" title="برای بزرگنمایی تصویر دابل کلیک کنید">
                                     
                                     <div class="swiper-slide">
@@ -650,7 +592,9 @@ echo'
                             </div>
                             
                         </div>
-                        
+                        <input type="hidden" name="productid" id="productid" class="form-control" value="'.$_GET['id'].'">
+												   <input type="hidden" name="tavlkkf" id="tavlkkf" class="form-control" value="">
+                                                   
                         <div class="col-12">
                             <div class="product-feature">
                                 <nav class="navbar">

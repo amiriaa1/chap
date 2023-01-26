@@ -86,6 +86,7 @@ $soalaval= $fgt2['fgt']['0']['farijavab'];
 	$btnsolcount = $fee->Getsol1fromsol3($idproduct,$soalaval,$soalaval2);
 	$btnsolcount2 = $fee->Getsol1fromsol3counts($idproduct,$soalaval,$soalaval2);
 
+
 	if($btnsolcount2==1){$btnsazi2='<button name="soal3" id="soal3" value="'.$btnsolcount['0']['sol3'].'-'.$idproduct.'-3"  type="button" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProp3(this)">'.$btnsolcount['0']['sol3'].'</button>';}
 	if($btnsolcount2==2){$btnsazi2='<button name="soal3" id="soal3" value="'.$btnsolcount['0']['sol3'].'-'.$idproduct.'-3"  type="button" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProp3(this)">'.$btnsolcount['0']['sol3'].'</button><button name="soal3" id="soal3" value="'.$btnsolcount['1']['sol2'].'-'.$idproduct.'-3"  type="button" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProp3(this)">'.$btnsolcount['1']['sol2'].'</button>';}
 	if($btnsolcount2==3){$btnsazi2='<button name="soal3" id="soal3" value="'.$btnsolcount['0']['sol3'].'-'.$idproduct.'-3"  type="button" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProp3(this)">'.$btnsolcount['0']['sol3'].'</button><button name="soal3" id="soal3" value="'.$btnsolcount['1']['sol3'].'-'.$idproduct.'-3"  type="button" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProp3(this)">'.$btnsolcount['1']['sol3'].'</button><button name="soal3" id="soal3" value="'.$btnsolcount['2']['sol3'].'-'.$idproduct.'-3"  type="button" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProp3(this)">'.$btnsolcount['2']['sol3'].'</button>';}
@@ -97,25 +98,32 @@ $soalaval= $fgt2['fgt']['0']['farijavab'];
                 $btnsazi2=0;
 
 
+                if($btnsolcount['0']['fori']==1 & $btnsolcount['0']['doro']==1){
+                    $pop1matn=$btnsolcount['0']['deliver_time_fori'];
+                    $pop1_price=$btnsolcount['0']['price_fori_doro'];
+                    $pop1='<button name="price1" id="price1" value="فوری دو رو-'.$idproduct.'-99-'.$pop1_price.'"  type="button" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProp4(this)">فوری دو رو--'.$pop1_price.'تومان</button>';}
+
+
                 if($btnsolcount['0']['fori']==1 & $btnsolcount['0']['yero']==1){
-                    $pop1_price=$btnsolcount['0']['price_fori_yero'];
-                    $pop1='<button name="price1" id="price1" value="فوری یه رو-'.$idproduct.'-99-'.$pop1_price.'"  type="button" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProp4(this)">فوری یه رو--'.$pop1_price.'تومان</button>';}
+                    $pop1matn=$btnsolcount['0']['deliver_time_fori'];
+                    $pop2_price=$btnsolcount['0']['price_fori_yero'];
+                    $pop2='<button name="price2" id="price2" value="فوری یک رو-'.$idproduct.'-99-'.$pop2_price.'"  type="button" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProp4(this)">فوری یک رو--'.$pop2_price.'تومان</button>';}
+
+                if($btnsolcount['0']['no_fori']==1 & $btnsolcount['0']['doro']==1){
+                    $pop2matn=$btnsolcount['0']['deliver_time_no_fori'];
+                    $pop3_price=$btnsolcount['0']['price_no_fori_doro'];
+                    $pop3='<button name="price3" id="price3" value="عادی دو رو-'.$idproduct.'-99-'.$pop3_price.'"  type="button" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProp4(this)">عادی دو رو--'.$pop3_price.'تومان</button>';}
 
 
                 if($btnsolcount['0']['no_fori']==1 & $btnsolcount['0']['yero']==1){
-                    $pop2_price=$btnsolcount['0']['price_no_fori_yero'];
-                    $pop2='<button name="price2" id="price2" value="عادی یه رو-'.$idproduct.'-99-'.$pop2_price.'"  type="button" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProp4(this)">عادی یه رو--'.$pop2_price.'تومان</button>';}
+                    $pop2matn=$btnsolcount['0']['deliver_time_no_fori'];
+                    $pop4_price=$btnsolcount['0']['price_no_fori_yero'];
+                    $pop4='<button name="price4" id="price4" value="عادی یک رو-'.$idproduct.'-99-'.$pop4_price.'"  type="button" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProp4(this)">عادی یک رو--'.$pop4_price.'تومان</button>';}
 
-                if($btnsolcount['0']['fori']==1 & $btnsolcount['0']['doro']==1){
-                    $pop3_price=$btnsolcount['0']['price_fori_doro'];
-                    $pop3='<button name="price3" id="price3" value="فوری دو رو-'.$idproduct.'-99-'.$pop3_price.'"  type="button" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProp4(this)">فوری دو رو--'.$pop3_price.'تومان</button>';}
-
-
-                if($btnsolcount['0']['no_fori']==1 & $btnsolcount['0']['doro']==1){
-                    $pop4_price=$btnsolcount['0']['price_no_fori_doro'];
-                    $pop4='<button name="price4" id="price4" value="عادی دو رو-'.$idproduct.'-99-'.$pop4_price.'"  type="button" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProp4(this)">عادی دو رو--'.$pop4_price.'تومان</button>';}
-
-
+                if($pop1=="" or $pop1==NULL){$pop1="";}
+                if($pop2=="" or $pop2==NULL){$pop2="";}
+                if($pop3=="" or $pop3==NULL){$pop3="";}
+                if($pop4=="" or $pop4==NULL){$pop4="";}
             }
             else{$isfinalsoal=0;}
 
@@ -133,6 +141,8 @@ $json=json_encode(array(
                 "pop2"=>$pop2,
                 "pop3"=>$pop3,
                 "pop4"=>$pop4,
+                "pop1matn"=>$pop1matn,
+                "pop2matn"=>$pop2matn,
                 "pop1_price"=>$pop1_price,
                 "pop2_price"=>$pop2_price,
                 "pop3_price"=>$pop3_price,
@@ -177,30 +187,38 @@ $soalaval2= $fgt2['fgt']['1']['farijavab'];
 	$fee = new ManageFees();
 	$btnsolcount = $fee->Getsol1fromsol4($idproduct,$soalaval,$soalaval2,$soalaval3);
 	$btnsolcount2 = $fee->Getsol1fromsol4counts($idproduct,$soalaval,$soalaval2,$soalaval3);
-	
-if($btnsolcount['0']['fori']==1 & $btnsolcount['0']['yero']==1){
-	$pop1_price=$btnsolcount['0']['price_fori_yero'];
-	$pop1='<button name="price1" id="price1" value="فوری یه رو-'.$idproduct.'-99-'.$pop1_price.'"  type="button" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProp4(this)">فوری یه رو--'.$pop1_price.'تومان</button>';}
+            $pop1matn=$btnsolcount['0']['deliver_time_fori'];
+            $pop2matn=$btnsolcount['0']['deliver_time_no_fori'];
+
+            if($btnsolcount['0']['fori']==1 & $btnsolcount['0']['doro']==1){
+                $pop1matn=$btnsolcount['0']['deliver_time_fori'];
+                $pop1_price=$btnsolcount['0']['price_fori_doro'];
+                $pop1='<button name="price1" id="price1" value="فوری دو رو-'.$idproduct.'-99-'.$pop1_price.'"  type="button" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProp4(this)">فوری دو رو--'.$pop1_price.'تومان</button>';}
 
 
-if($btnsolcount['0']['no_fori']==1 & $btnsolcount['0']['yero']==1){
-	$pop2_price=$btnsolcount['0']['price_no_fori_yero'];
-	$pop2='<button name="price2" id="price2" value="عادی یه رو-'.$idproduct.'-99-'.$pop2_price.'"  type="button" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProp4(this)">عادی یه رو--'.$pop2_price.'تومان</button>';}
+            if($btnsolcount['0']['fori']==1 & $btnsolcount['0']['yero']==1){
+                $pop1matn=$btnsolcount['0']['deliver_time_fori'];
+                $pop2_price=$btnsolcount['0']['price_fori_yero'];
+                $pop2='<button name="price2" id="price2" value="فوری یک رو-'.$idproduct.'-99-'.$pop2_price.'"  type="button" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProp4(this)">فوری یک رو--'.$pop2_price.'تومان</button>';}
 
-if($btnsolcount['0']['fori']==1 & $btnsolcount['0']['doro']==1){
-	$pop3_price=$btnsolcount['0']['price_fori_doro'];
-	$pop3='<button name="price3" id="price3" value="فوری دو رو-'.$idproduct.'-99-'.$pop3_price.'"  type="button" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProp4(this)">فوری دو رو--'.$pop3_price.'تومان</button>';}
-
-
-if($btnsolcount['0']['no_fori']==1 & $btnsolcount['0']['doro']==1){
-	$pop4_price=$btnsolcount['0']['price_no_fori_doro'];
-	$pop4='<button name="price4" id="price4" value="عادی دو رو-'.$idproduct.'-99-'.$pop4_price.'"  type="button" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProp4(this)">عادی دو رو--'.$pop4_price.'تومان</button>';}
+            if($btnsolcount['0']['no_fori']==1 & $btnsolcount['0']['doro']==1){
+                $pop2matn=$btnsolcount['0']['deliver_time_no_fori'];
+                $pop3_price=$btnsolcount['0']['price_no_fori_doro'];
+                $pop3='<button name="price3" id="price3" value="عادی دو رو-'.$idproduct.'-99-'.$pop3_price.'"  type="button" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProp4(this)">عادی دو رو--'.$pop3_price.'تومان</button>';}
 
 
-	
+            if($btnsolcount['0']['no_fori']==1 & $btnsolcount['0']['yero']==1){
+                $pop2matn=$btnsolcount['0']['deliver_time_no_fori'];
+                $pop4_price=$btnsolcount['0']['price_no_fori_yero'];
+                $pop4='<button name="price4" id="price4" value="عادی یک رو-'.$idproduct.'-99-'.$pop4_price.'"  type="button" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProp4(this)">عادی یک رو--'.$pop4_price.'تومان</button>';}
 
 
-	
+
+
+            if($pop1=="" or $pop1==NULL){$pop1="";}
+    if($pop2=="" or $pop2==NULL){$pop2="";}
+    if($pop3=="" or $pop3==NULL){$pop3="";}
+    if($pop4=="" or $pop4==NULL){$pop4="";}
 	if($btnsolcount2==1){$btnsazi3='<button name="soal4" id="soal4" value="'.$btnsolcount['0']['sol4'].'-'.$idproduct.'-3"  type="button" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProp3(this)">'.$btnsolcount['0']['sol4'].'</button>';}
 	if($btnsolcount2==2){$btnsazi3='<button name="soal4" id="soal4" value="'.$btnsolcount['0']['sol4'].'-'.$idproduct.'-3"  type="button" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProp3(this)">'.$btnsolcount['0']['sol4'].'</button><button name="tty" id="tty" value="'.$btnsolcount['1']['sol4'].'-'.$idproduct.'-2"  type="button" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProp(this)">'.$btnsolcount['1']['sol4'].'</button>';}
 	if($btnsolcount2==3){$btnsazi3='<button name="soal4" id="soal4" value="'.$btnsolcount['0']['sol4'].'-'.$idproduct.'-3"  type="button" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProp3(this)">'.$btnsolcount['0']['sol4'].'</button>';}
@@ -224,6 +242,8 @@ $json=json_encode(array(
 				"pop2"=>$pop2,
 				"pop3"=>$pop3,
 				"pop4"=>$pop4,
+                "pop1matn"=>$pop1matn,
+                "pop2matn"=>$pop2matn,
 				"pop1_price"=>$pop1_price,
 				"pop2_price"=>$pop2_price,
 				"pop3_price"=>$pop3_price,
@@ -362,6 +382,10 @@ $cooin=1;
 
 
                 ),JSON_UNESCAPED_UNICODE);
+
+            }
+            else{
+                echo'problem';
 
             }
 

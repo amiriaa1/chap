@@ -147,13 +147,7 @@ function addemalkhabar(item)
                                 
                             </div>
                            
-                             <div class="social-link justify-content-md-end justify-content-center">
-                            <a href="" class="bi bi-instagram"></a>
-                            <a href="" class="bi bi-twitter"></a>
-                            <a href="" class="bi bi-whatsapp"></a>
-                            <a href="" class="bi bi-youtube"></a>
-                            <a href="" class="bi bi-linkedin"></a>
-                        </div>
+                            
                         </div>
                     </div>
                     <div class="col-lg-3">
@@ -172,6 +166,13 @@ function addemalkhabar(item)
                                         <button class="feed-btn waves-effect waves-light" onclick="addemalkhabar(this)">ارسال</button>
                                     </div>
                                </form>
+                                <div class="social-link justify-content-md-end justify-content-center">
+                            <a href="" class="bi bi-instagram"></a>
+                            <a href="" class="bi bi-twitter"></a>
+                            <a href="" class="bi bi-whatsapp"></a>
+                            <a href="" class="bi bi-youtube"></a>
+                            <a href="" class="bi bi-linkedin"></a>
+                        </div>
                             </div>
                                 
                         </div>
@@ -202,7 +203,7 @@ function addemalkhabar(item)
                                     </div>
                                     <div class="col-lg-4">
                                         <ul class="nav justify-content-lg-end justify-content-start mt-lg-0 mt-3">
-                                            <li class="nav-item"><a href="" class="nav-link font-14 ps-0"
+                                            <li class="nav-item"><a href="tel:1702" class="nav-link font-14 ps-0"
                                                     style="color:#525252">
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                         fill="currentColor" class="bi bi-telephone" viewBox="0 0 16 16">
@@ -211,7 +212,8 @@ function addemalkhabar(item)
                                                     </svg>
                                                    021-91001702
                                                 </a></li>
-                                            <li class="nav-item"><a href="" class="nav-link font-14 ps-sm-1 ps-0"
+                                                
+                                            <li class="nav-item"><a href="email:info@harjachap.com" class="nav-link font-14 ps-sm-1 ps-0"
                                                     style="color:#525252">
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                         fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">

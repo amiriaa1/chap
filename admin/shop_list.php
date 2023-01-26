@@ -12,7 +12,7 @@ echo'
 <div class="box box-inverse bg-dark bg-hexagons-white">
 <div class="box-body">
 <div class="row">						
-<center><H2>لیست محصولات</H2></center>
+<center><H2>لیست سفارشات</H2></center>
 </div>
 </div>
 </div>
@@ -89,7 +89,7 @@ echo'
 									<div class="btn-group">
 									
 									<a href="vei_shop?id='.$discountProp['aid'].'">
-										<button type="submit" class="btn btn-rounded btn-info">غیر فعال</button></a>
+										<button type="submit" class="btn btn-rounded btn-info">مشاهده</button></a>
 										
 								';
 

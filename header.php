@@ -85,7 +85,7 @@ if($system_settings["maintenance"]==1)
                            
                         </ul>
 						   <ul class="nav header-contact-left">
-                                <li class="nav-item"><a href="login" class="nav-link font-14">
+                                <li class="nav-item"><a href="tel:1702" class="nav-link font-14">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                             fill="currentColor" class="bi bi-telephone" viewBox="0 0 16 16">
                                             <path
@@ -93,7 +93,8 @@ if($system_settings["maintenance"]==1)
                                         </svg>
                                         021-91001702
                                     </a></li>
-                                <li class="nav-item"><a href="login" class="nav-link font-14">
+                                    
+                                <li class="nav-item"><a href="email:info@harjachap.com" class="nav-link font-14">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                             fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
                                             <path
