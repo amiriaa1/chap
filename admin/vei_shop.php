@@ -10,7 +10,9 @@ $query = 'WHERE aid='.$aid.' ORDER BY `nim_shop_list`.`atimestamp`  DESC';
 
 $discountList = $fee->Getshoplistadmin($query);
 $json=$discountList["0"]["data1"];
+$json2=$discountList["0"]["data3"];
 $fgt2 = json_decode($json,true);
+$fgt3 = json_decode($json2,true);
 echo'
 
 <div class="col-12">
@@ -35,6 +37,8 @@ echo'
 									<div class="col-xxxl-4 col-xl-5 col-12">
 										<div class="pl-md-30 pt-md-30 pr-md-80 pb-md-30 p-0">
 											<h5 class="text-uppercase font-weight-700">کاربر : '.$discountList["0"]["user"].'</h5>
+											<h5 class="text-uppercase font-weight-700">کد سفارش : '.$discountList["0"]["unid"].'</h5>
+												<h5 class="text-uppercase font-weight-700">آدرس : '.$fgt3["addr"].' </h5>
 											<h1 class="font-weight-900 text-dark mt-30">مبلغ پرداختی : '.$discountList["0"]["amount"].' تومان</h1>
 											
 											';

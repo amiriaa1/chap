@@ -19,7 +19,10 @@ if(isset($_POST['name']))
 			
 			if($avtive2=="غیر فعال"){$avtive='0';}else{$avtive='1';}
 			
-			if($typ2e=="افست"){$type='1';}else{$type='2';}
+			if($typ2e=="افست"){$type='1';}
+            if($typ2e=="دیجیتال"){$type='2';}
+            if($typ2e=="فروشگاهی"){$type='3';}
+            if($typ2e=="اداری"){$type='4';}
 			
 		
 $discountList = $fee->Addproductt($name,$desc,$avtive,$baseprice,$type,$pic);			
@@ -92,6 +95,8 @@ $discountList = $fee->Addproductt($name,$desc,$avtive,$baseprice,$type,$pic);
 						
 						<option value"1" selected="selected">افست</option>
 						<option value"2">دیجیتال</option>
+						<option value"3">فروشگاهی</option>
+						<option value"4">اداری</option>
 						
 					
 					

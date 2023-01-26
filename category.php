@@ -84,7 +84,7 @@ echo'
                                     <div class="product-box-item">
                                         <div class="product-box-item-img">
                                         ';
-                               if ($type==4){echo'<a href="shop?id='.$discountProp['aid'].'">';}
+                               if ($type==4 or $type==3){echo'<a href="shop?id='.$discountProp['aid'].'">';}
                                else{
 
                                    echo'<a href="product?id='.$discountProp['aid'].'">';
