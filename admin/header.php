@@ -133,6 +133,7 @@ echo'
 		</li>
 		<li><a href="tanavo_product"><i class="icon-Chart-pie"><span class="path1"></span><span class="path2"></span></i>تنوع محصول</a>
 		<li><a href="shop_list"><i class="icon-Chart-pie"><span class="path1"></span><span class="path2"></span></i>لیست سفارش ها</a>	
+			<li><a href="add_blog"><i class="icon-Chart-pie"><span class="path1"></span><span class="path2"></span></i>افزودن مطلب</a>
 		</li>
 	
 	

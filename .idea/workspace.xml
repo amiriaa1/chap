@@ -6,10 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="bc047395-12cc-4474-b2fe-72233fb553d9" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/add_product.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/add_product.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/vei_shop.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/vei_shop.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/category.php" beforeDir="false" afterPath="$PROJECT_DIR$/category.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/header.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +52,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/SQL Dialect" value="MySQL" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../pezeshk-site" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -85,7 +82,7 @@
       <workItem from="1674637651241" duration="4877000" />
       <workItem from="1674717779650" duration="4971000" />
       <workItem from="1674725407522" duration="7682000" />
-      <workItem from="1674766234375" duration="520000" />
+      <workItem from="1674766234375" duration="959000" />
     </task>
     <servers />
   </component>
