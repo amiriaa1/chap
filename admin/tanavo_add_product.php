@@ -31,8 +31,11 @@ if(isset($_GET['product_id']))
             $no_fori_yero_price=$_POST['no_fori_yero_price'];
             $no_fori_doro_price=$_POST['no_fori_doro_price'];
 
+            $deliver_time_fori=$_POST['deliver_time_fori'];
+            $deliver_time_no_fori=$_POST['deliver_time_no_fori'];
+
 						
-$discountList = $fee->Addtanavoproduct($product_id,$name,$javab1,$javab2,$javab3,$javab4,$fori,$no_fori,$yero,$doro,$fori_yero_price,$fori_doro_price,$no_fori_yero_price,$no_fori_doro_price);
+$discountList = $fee->Addtanavoproduct($product_id,$name,$javab1,$javab2,$javab3,$javab4,$fori,$no_fori,$yero,$doro,$fori_yero_price,$fori_doro_price,$no_fori_yero_price,$no_fori_doro_price,$deliver_time_fori,$deliver_time_no_fori);
 			if($discountList==1){echo'با موفقیت اضافه شد';}
 		}
 			
@@ -211,7 +214,23 @@ $discountList = $fee->Addtanavoproduct($product_id,$name,$javab1,$javab2,$javab3
 					</div>
 							
 						
-					
+													<div class="col-md-6">
+	<div class="form-group">
+	<label for="1amount">متن تحویل فوری</label>
+	<div class="input-group">
+	<input type="text" name="deliver_time_fori" id="deliver_time_fori" class="form-control" value="" ></div>
+
+					</div>
+					</div>
+																<div class="col-md-6">
+	<div class="form-group">
+	<label for="1amount">متن تحویل عادی</label>
+	<div class="input-group">
+	<input type="text" name="deliver_time_no_fori" id="deliver_time_no_fori" class="form-control" value="" ></div>
+
+					</div>
+					</div>
+								
 						
 						
 						

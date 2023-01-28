@@ -563,6 +563,10 @@ if(!$isLogedIn){
 else{echo'<button  class="shadow-sm fw-bold btn-add-to-cart mt-sm-0 mt-2 waves-effect waves-light" onclick="Myshoplist(this)">افزودن به سبد خرید</button>';
 }
 echo'
+<br><center>
+<span name="price_show" id="price_show" class="se-cart-price-new">تنوع را انتخاب کنید</span>تومان
+</center>
+
 							 </div></div></div></div>
 							 </div>        
 

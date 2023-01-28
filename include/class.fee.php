@@ -71,12 +71,12 @@ function Addshoplist($productid,$uusername,$amount,$product,$product2,$acomment,
 
 
 
-    function Addtanavoproduct($product_id,$name,$javab1,$javab2,$javab3,$javab4,$fori,$no_fori,$yero,$doro,$fori_yero_price,$fori_doro_price,$no_fori_yero_price,$no_fori_doro_price)
+    function Addtanavoproduct($product_id,$name,$javab1,$javab2,$javab3,$javab4,$fori,$no_fori,$yero,$doro,$fori_yero_price,$fori_doro_price,$no_fori_yero_price,$no_fori_doro_price,$deliver_time_fori,$deliver_time_no_fori)
  { global $table_prefix;
- $query = $this->link->prepare("insert into `nim_product_solutions` (`product_id`,`acomment`,`sol1`,`sol2`,`sol3`,`sol4`,`fori`,`no_fori`,`yero`,`doro`,`price_fori_yero`,`price_fori_doro`,`price_no_fori_yero`,`price_no_fori_doro`)
-values (?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
+ $query = $this->link->prepare("insert into `nim_product_solutions` (`product_id`,`acomment`,`sol1`,`sol2`,`sol3`,`sol4`,`fori`,`no_fori`,`yero`,`doro`,`price_fori_yero`,`price_fori_doro`,`price_no_fori_yero`,`price_no_fori_doro`,`deliver_time_fori`,`deliver_time_no_fori`)
+values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
 
- $values = array($product_id,$name,$javab1,$javab2,$javab3,$javab4,$fori,$no_fori,$yero,$doro,$fori_yero_price,$fori_doro_price,$no_fori_yero_price,$no_fori_doro_price);
+ $values = array($product_id,$name,$javab1,$javab2,$javab3,$javab4,$fori,$no_fori,$yero,$doro,$fori_yero_price,$fori_doro_price,$no_fori_yero_price,$no_fori_doro_price,$deliver_time_fori,$deliver_time_no_fori);
  $query->execute($values); $counts = $query->rowCount();
  return $counts; }
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -308,13 +308,11 @@ function Deletecustomerapp($id)
 
 
 
-
- function updateproducttanavo($product_id,$javab1,$javab2,$javab3,$javab4,$fori,$no_fori,$yero,$doro,$acomment,$fori_yero_price,$fori_doro_price,$no_fori_yero_price,$no_fori_doro_price,$id)
- { global $table_prefix;
- $query = $this->link->prepare("update nim_product_solutions set  `product_id`=? , `sol1`=?  , `sol2`=? , `sol3`=? , `sol4`=? , `fori`=? , `no_fori`=? , `yero`=? , `doro`=? , `acomment`=? , `price_fori_yero`=? ,`price_fori_doro`=? , `price_no_fori_yero`=? , `price_no_fori_doro`=? WHERE `sid`=?");
- $values = array($product_id,$javab1,$javab2,$javab3,$javab4,$fori,$no_fori,$yero,$doro,$acomment,$fori_yero_price,$fori_doro_price,$no_fori_yero_price,$no_fori_doro_price,$id);
- $query->execute($values); $counts = $query->rowCount(); return $counts; }
-
+    function updateproducttanavo($product_id,$javab1,$javab2,$javab3,$javab4,$fori,$no_fori,$yero,$doro,$acomment,$fori_yero_price,$fori_doro_price,$no_fori_yero_price,$no_fori_doro_price,$deliver_time_fori,$deliver_time_no_fori,$id)
+    { global $table_prefix;
+        $query = $this->link->prepare("update nim_product_solutions set  `product_id`=? , `sol1`=?  , `sol2`=? , `sol3`=? , `sol4`=? , `fori`=? , `no_fori`=? , `yero`=? , `doro`=? , `acomment`=? , `price_fori_yero`=? ,`price_fori_doro`=? , `price_no_fori_yero`=? , `price_no_fori_doro`=? , `deliver_time_fori`=? , `deliver_time_no_fori`=? WHERE `sid`=?");
+        $values = array($product_id,$javab1,$javab2,$javab3,$javab4,$fori,$no_fori,$yero,$doro,$acomment,$fori_yero_price,$fori_doro_price,$no_fori_yero_price,$no_fori_doro_price,$deliver_time_fori,$deliver_time_no_fori,$id);
+        $query->execute($values); $counts = $query->rowCount(); return $counts; }
  ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
  
  function AddUserPaymentlog($Authority,$uusername,$status,$amount)
