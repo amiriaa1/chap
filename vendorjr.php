@@ -7,7 +7,7 @@ switch($_REQUEST['op'])
     case "vemon":
         $type= $_REQUEST['type'];
         $fee = new ManageFees();
-        $query = "WHERE type=$type  ORDER BY `nim_product`.`aid` ASC";
+        $query = "WHERE type=$type AND avtive=1   ORDER BY `nim_product`.`aid` ASC";
         $discountList = $fee->Getproductlist($query);
         $discountListcount = $fee->Getproductlistcount($query);
 

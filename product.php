@@ -120,18 +120,20 @@ echo'
 	<script type="text/javascript">
 							function showStudentProp1(item)
 							{
-								
+								document.getElementById("price_show").innerHTML = "تنوع را انتخاب کنید";
 								$("#contentnew").html("");
 								const myArray = $(item).attr("value").split("-");
 								var farijavab = myArray[0];
 								var idproduct = myArray[1];
 								var soalposit = myArray[2];
+								var type = document.getElementById("type").value;
+								
 								
 							$.ajax({
 							
 								    url: "aj.php",
 								    type: "POST",
-								    data: {op:"cioice2",farijavab:farijavab,idproduct:idproduct,soalposit:soalposit},
+								    data: {op:"cioice2",farijavab:farijavab,idproduct:idproduct,soalposit:soalposit,type:type},
 									dataType: "json",
 								    success: function(data){
 										
@@ -243,7 +245,7 @@ echo'
 							function myFunction(item)
 							{
 								
-								
+								var type = document.getElementById("type").value;
 								var x = document.getElementById("count").value;
 								
 								var pse1 = 1;
@@ -282,7 +284,7 @@ echo'
 							
 								    url: "aj.php",
 								    type: "POST",
-								    data: {op:"final",x:x,pse1:pse1,pse2:pse2,pse3:pse3,pse4:pse4},
+								    data: {op:"final",x:x,pse1:pse1,pse2:pse2,pse3:pse3,pse4:pse4,type:type},
 									dataType: "json",
 								    success: function(data){
 										if(data.statusCode==200){ 
@@ -316,7 +318,7 @@ echo'
 							{
 								
 								var x = document.getElementById("count").value;
-								
+								var type = document.getElementById("type").value;
 								const myArray = $(item).attr("value").split("-");
 								var name = myArray[0];
 								var idproduct = myArray[1];
@@ -326,7 +328,7 @@ echo'
 							
 								    url: "aj.php",
 								    type: "POST",
-								    data: {op:"basket",x:x,name:name,idproduct:idproduct,pricefinal:pricefinal},
+								    data: {op:"basket",x:x,name:name,idproduct:idproduct,pricefinal:pricefinal,type:type},
 									dataType: "json",
 								    success: function(data){
 										
@@ -450,7 +452,34 @@ echo'
 
 
     echo'
-
+<br>
+ <div class="row">
+                    <div class="col-12">
+                        <div class="product-meta-breadcrumb shadow-sm">
+                            <nav>
+                                <ol class="breadcrumb mb-0">
+                                    <li class="breadcrumb-item">
+                                        <a href="vendor" class="text-muted">
+									<button class="header-box pointer">
+                                     
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-bag" viewBox="0 0 16 16">
+                                        <path
+                                            d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z" />
+                                    </svg>
+                                 <-
+                                 بازگشت به صفحه محصولات
+                                </button>
+								</a>
+                                    </li>
+                                   
+                                   
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
+                                
+                            
     <div class="content" style="padding: 10px 0;">
         <!-- start product meta -->
         <div class="product-meta">
@@ -528,6 +557,8 @@ echo'
                         <option value="2000" name="count" id="count" >2000</option>
                         <option value="3000" name="count" id="count" >3000</option>
                         <option value="4000" name="count" id="count" >4000</option>
+                        <option value="5000" name="count" id="count" >5000</option>
+                        
                         </select>
 
                         ';
@@ -551,21 +582,7 @@ echo'
 							 <span name="niaz2matn" id="niaz2matn"></span>
 							 <br>
 							 <span name="niaz2" id="niaz2"></span>
-							 </center>
-							 
-							 
-							 ';
-if(!$isLogedIn){
-
-    echo'<a href="login"> <button  class="shadow-sm fw-bold btn-add-to-cart mt-sm-0 mt-2 waves-effect waves-light">برای خرید وارد شوید</button></a>';
-
-}
-else{echo'<button  class="shadow-sm fw-bold btn-add-to-cart mt-sm-0 mt-2 waves-effect waves-light" onclick="Myshoplist(this)">افزودن به سبد خرید</button>';
-}
-echo'
-<br><center>
-<span name="price_show" id="price_show" class="se-cart-price-new">تنوع را انتخاب کنید</span>تومان
-</center>
+						
 
 							 </div></div></div></div>
 							 </div>        
@@ -592,12 +609,28 @@ echo'
                                     </div>
                                    
                                 </div>
-                               
+                               	 </center>
+							 
+							 
+							 ';
+if(!$isLogedIn){
+
+    echo'<a href="login"> <button  class="shadow-sm fw-bold btn-add-to-cart mt-sm-0 mt-2 waves-effect waves-light">برای خرید وارد شوید</button></a>';
+
+}
+else{echo'<button  class="shadow-sm fw-bold btn-add-to-cart mt-sm-0 mt-2 waves-effect waves-light" onclick="Myshoplist(this)">افزودن به سبد خرید</button>';
+}
+echo'
+<br><center>
+<span name="price_show" id="price_show" class="se-cart-price-new">تنوع را انتخاب کنید</span>تومان
+</center>
                             </div>
                             
                         </div>
+                        
                         <input type="hidden" name="productid" id="productid" class="form-control" value="'.$_GET['id'].'">
 												   <input type="hidden" name="tavlkkf" id="tavlkkf" class="form-control" value="">
+												   <input type="hidden" name="type" id="type" class="form-control" value="'.$type.'">
                                                    
                         <div class="col-12">
                             <div class="product-feature">

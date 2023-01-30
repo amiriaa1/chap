@@ -80,7 +80,7 @@ echo'
                             </div>
                             <div class="cart-small-desc ms-lg-3 text-center">
                                 <h6>چاپ پلات و لمینت</h6>
-                               <p>براس سفارش تماس بگیرید 1702</p>
+                               <p>برای سفارش تماس بگیرید 1702</p>
                             </div>
                         </div>
                     
@@ -94,7 +94,7 @@ echo'
                             </div>
                             <div class="cart-small-desc ms-lg-3 text-center">
                                 <h6> چاپ بنر و فلکس ,اکوسالت</h6>
-                               <p>براس سفارش تماس بگیرید 1702</p>
+                               <p>برای سفارش تماس بگیرید 1702</p>
                             </div>
                         </div>
                    
@@ -111,7 +111,7 @@ echo'
                             </div>
                             <div class="cart-small-desc ms-lg-3 text-center">
                                 <h6>طراحی</h6>
-                               <p>براس سفارش تماس بگیرید 1702</p>
+                               <p>برای سفارش تماس بگیرید 1702</p>
                             </div>
                         </div>
                     
