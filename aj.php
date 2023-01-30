@@ -29,6 +29,8 @@ if($soalposit==1)
 	$soalaval=$farijavab;
 
 	$fee = new ManageFees();
+    $query = "WHERE aid=$idproduct  ORDER BY `nim_product`.`aid` ASC";
+    $discountList885999= $fee->Getproductlist($query);
 	$btnsolcount = $fee->Getsol1fromsol2($idproduct,$soalaval);
 	$btnsolcount2 = $fee->Getsol1fromsol2counts($idproduct,$soalaval);
     $btnsazi=0;
@@ -68,7 +70,7 @@ if($soalposit==1)
 $json=json_encode(array(
 				"statusCode"=>200,
 				"backbtn1"=>$btnsazi,
-				"html"=>'<div name="ttty" id="ttty"><div class="category-filter"><div class="category-filter-box"><div class="category-filter-box-title"><h4 class="fw-bold"></h4></div><div class="category-filter-box-desc"><div class="form-group form-check"><div name="content2" id="content2"></div><div name="content3" id="content3"></div></div></div></div></div></div>',
+				"html"=>'<div name="ttty" id="ttty"><div class="category-filter"><div class="category-filter-box"><div class="category-filter-box-title"><h4 class="fw-bold">'.$discountList885999["0"]["qsoal1"].'</h4></div><div class="category-filter-box-desc"><div class="form-group form-check"><div name="content2" id="content2"></div><div name="content3" id="content3"></div></div></div></div></div></div>',
 				 "fgt" => [
 [
 				"soalposit"=>$soalposit,
@@ -102,6 +104,8 @@ $soalaval= $fgt2['fgt']['0']['farijavab'];
       $soalaval2=$farijavab;
 
 	$fee = new ManageFees();
+            $query = "WHERE aid=$idproduct  ORDER BY `nim_product`.`aid` ASC";
+            $discountList885999= $fee->Getproductlist($query);
 	$btnsolcount = $fee->Getsol1fromsol3($idproduct,$soalaval,$soalaval2);
 	$btnsolcount2 = $fee->Getsol1fromsol3counts($idproduct,$soalaval,$soalaval2);
 
@@ -179,7 +183,7 @@ $json=json_encode(array(
                 "pop2_price"=>$pop2_price,
                 "pop3_price"=>$pop3_price,
                 "pop4_price"=>$pop4_price,
-				"html"=>'<div name="ttty" id="ttty"><div class="category-filter"><div class="category-filter-box"><div class="category-filter-box-title"><h4 class="fw-bold"></h4></div><div class="category-filter-box-desc"><div class="form-group form-check"><div name="content4" id="content4"></div></div></div></div></div></div>',
+				"html"=>'<div name="ttty" id="ttty"><div class="category-filter"><div class="category-filter-box"><div class="category-filter-box-title"><h4 class="fw-bold">'.$discountList885999["0"]["qsoal3"].'</h4></div><div class="category-filter-box-desc"><div class="form-group form-check"><div name="content4" id="content4"></div></div></div></div></div></div>',
 				 "fgt" => [
  [
 				"soalposit"=>$soalposit1,
@@ -217,6 +221,8 @@ $soalaval2= $fgt2['fgt']['1']['farijavab'];
       $soalaval3=$farijavab;
 
 	$fee = new ManageFees();
+            $query = "WHERE aid=$idproduct  ORDER BY `nim_product`.`aid` ASC";
+            $discountList885999= $fee->Getproductlist($query);
 	$btnsolcount = $fee->Getsol1fromsol4($idproduct,$soalaval,$soalaval2,$soalaval3);
 	$btnsolcount2 = $fee->Getsol1fromsol4counts($idproduct,$soalaval,$soalaval2,$soalaval3);
             $pop1matn=$btnsolcount['0']['deliver_time_fori'];
@@ -280,7 +286,7 @@ $json=json_encode(array(
 				"pop2_price"=>$pop2_price,
 				"pop3_price"=>$pop3_price,
 				"pop4_price"=>$pop4_price,
-				"html"=>'<div name="ttty" id="ttty"><div class="category-filter"><div class="category-filter-box"><div class="category-filter-box-title"><h4 class="fw-bold"></h4></div><div class="category-filter-box-desc"><div class="form-group form-check"><div name="content5" id="content5"></div></div></div></div></div></div>',
+				"html"=>'<div name="ttty" id="ttty"><div class="category-filter"><div class="category-filter-box"><div class="category-filter-box-title"><h4 class="fw-bold">'.$discountList885999["0"]["qsoal3"].'</h4></div><div class="category-filter-box-desc"><div class="form-group form-check"><div name="content5" id="content5"></div></div></div></div></div></div>',
 				 "fgt" => [
  [
 				"soalposit"=>$soalposit1,

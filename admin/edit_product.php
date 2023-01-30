@@ -20,10 +20,19 @@ if(isset($_GET['id']))
 				$pic=$_POST['pic'];
 				$baseprice=$_POST['baseprice'];
 				$avtive2=$_POST['avtive'];
+
+                $qsoal=$_POST['qsoal'];
+                $qsoal1=$_POST['qsoal1'];
+                $qsoal3=$_POST['qsoal3'];
+
+
 				if($avtive2=="غیر فعال"){$avtive='0';}else{$avtive='1';}
-				if($typ2e=="افست"){$type='1';}else{$type='2';}
+                if($typ2e=="افست"){$type='1';}
+                if($typ2e=="دیجیتال"){$type='2';}
+                if($typ2e=="فروشگاهی"){$type='3';}
+                if($typ2e=="اداری"){$type='4';}
 					
-$discountList = $fee->Productupdate($title,$description,$type,$pic,$baseprice,$avtive,$id);	
+$discountList = $fee->Productupdate($title,$description,$type,$pic,$baseprice,$avtive,$qsoal,$qsoal1,$qsoal3,$id);
 				
 			}
 			
@@ -46,8 +55,12 @@ $discountList = $fee->Getproductlist($query);
 							$type=$discountProp['type'];
 						$pic=$discountProp['pic'];
 						$baseprice=$discountProp['baseprice'];	
-						$avtive=$discountProp['avtive'];	
-					}
+						$avtive=$discountProp['avtive'];
+
+                        $qsoal=$discountProp['qsoal'];
+                        $qsoal1=$discountProp['qsoal1'];
+                        $qsoal3=$discountProp['qsoal3'];
+                    }
 					
 					echo'
 			
@@ -92,6 +105,32 @@ $discountList = $fee->Getproductlist($query);
 							</div>
 						</div>
 						
+						<div class="col-md-6">
+								<div class="form-group">
+									<label for="baseprice">سوال تنوع اول</label>
+								<div class="input-group">
+	<input type="text" name="qsoal" id="qsoal" class="form-control" value="'.$qsoal.'" required data-validation-required-message="This field is required"></div>
+    
+							</div>
+						</div>
+						
+						<div class="col-md-6">
+								<div class="form-group">
+									<label for="baseprice">سوال تنوع دوم</label>
+								<div class="input-group">
+	<input type="text" name="qsoal1" id="qsoal1" class="form-control" value="'.$qsoal1.'" required data-validation-required-message="This field is required"></div>
+    
+							</div>
+						</div>
+						
+						<div class="col-md-6">
+								<div class="form-group">
+									<label for="baseprice">سوال تنوع سوم</label>
+								<div class="input-group">
+	<input type="text" name="qsoal3" id="qsoal3" class="form-control" value="'.$qsoal3.'" required data-validation-required-message="This field is required"></div>
+    
+							</div>
+						</div>
 						
 					
 							<div class="col-md-6">
@@ -105,18 +144,41 @@ $discountList = $fee->Getproductlist($query);
 						
 						<option value"1" selected="selected">افست</option>
 						<option value"2">دیجیتال</option>
+						<option value"3">فروشگاهی</option>
+						<option value"4">اداری</option>
 						';
 						
 						}
-						else
+if($type==2)
 						{
 							echo'
 							<option  value"1">افست</option>
 							<option  value"2" selected="selected">دیجیتال</option>
-							
+						    <option value"3">فروشگاهی</option>
+					    	<option value"4">اداری</option>
 							';
 							
 						}
+if($type==3)
+{
+    echo'
+							<option  value"1">افست</option>
+							<option  value"2">دیجیتال</option>
+						    <option value"3" selected="selected">فروشگاهی</option>
+					    	<option value"4">اداری</option>
+							';
+
+}
+if($type==4)
+{
+    echo'
+							<option  value"1">افست</option>
+							<option  value"2">دیجیتال</option>
+						    <option value"3">فروشگاهی</option>
+					    	<option value"4"  selected="selected">اداری</option>
+							';
+
+}
 						echo'
 						</select>
 						<div class="col-md-6">

@@ -22,11 +22,11 @@ function AddUserUpload($name,$location,$uusername)
 
 
 
-function Addproductt($name,$desc,$davtive,$baseprice,$type,$pic)
+function Addproductt($name,$desc,$avtive,$baseprice,$type,$pic,$qsoal,$qsoal1,$qsoal3)
  { global $table_prefix;
- $query = $this->link->prepare("INSERT INTO `nim_product` (`title`,`description`,`avtive`,`baseprice`,`type`,`pic`) VALUES (?,?,?,?,?,?) ");
+ $query = $this->link->prepare("INSERT INTO `nim_product` (`title`,`description`,`avtive`,`baseprice`,`type`,`pic`,`qsoal`,`qsoal1`,`qsoal3`) VALUES (?,?,?,?,?,?,?,?,?) ");
 
- $values = array($name,$desc,$davtive,$baseprice,$type,$pic);
+ $values = array($name,$desc,$avtive,$baseprice,$type,$pic,$qsoal,$qsoal1,$qsoal3);
  $query->execute($values); $counts = $query->rowCount();
  return $counts; }
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -367,9 +367,9 @@ function Deletecustomerapp($id)
 
    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
    
-function Productupdate($title,$description,$type,$pic,$baseprice,$avtive,$id)
- { global $table_prefix; $query = $this->link->prepare("UPDATE `nim_product` SET `title`=? ,`description`=? ,`type`=?,`pic`=?,`baseprice`=?,`avtive`=? WHERE `aid`=?");
- $values = array($title,$description,$type,$pic,$baseprice,$avtive,$id); $query->execute($values); $counts = $query->rowCount(); return $counts; }
+function Productupdate($title,$description,$type,$pic,$baseprice,$avtive,$qsoal,$qsoal1,$qsoal3,$id)
+ { global $table_prefix; $query = $this->link->prepare("UPDATE `nim_product` SET `title`=? ,`description`=? ,`type`=?,`pic`=?,`baseprice`=?,`avtive`=? ,`qsoal`=? ,`qsoal1`=? ,`qsoal3`=? WHERE `aid`=?");
+ $values = array($title,$description,$type,$pic,$baseprice,$avtive,$qsoal,$qsoal1,$qsoal3,$id); $query->execute($values); $counts = $query->rowCount(); return $counts; }
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 

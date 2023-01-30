@@ -16,7 +16,9 @@ if(isset($_POST['name']))
 			$baseprice=$_POST['baseprice'];
 			$typ2e=$_POST['type'];
 			$pic=$_POST['pic'];
-			
+                $qsoal=$_POST['qsoal'];
+                $qsoal1=$_POST['qsoal1'];
+                $qsoal3=$_POST['qsoal3'];
 			if($avtive2=="غیر فعال"){$avtive='0';}else{$avtive='1';}
 			
 			if($typ2e=="افست"){$type='1';}
@@ -25,7 +27,7 @@ if(isset($_POST['name']))
             if($typ2e=="اداری"){$type='4';}
 			
 		
-$discountList = $fee->Addproductt($name,$desc,$avtive,$baseprice,$type,$pic);			
+$discountList = $fee->Addproductt($name,$desc,$avtive,$baseprice,$type,$pic,$qsoal,$qsoal1,$qsoal3);
 
 	if($discountList==1){
 		
@@ -84,6 +86,32 @@ $discountList = $fee->Addproductt($name,$desc,$avtive,$baseprice,$type,$pic);
 							</div>
 						</div>
 						
+						<div class="col-md-6">
+								<div class="form-group">
+									<label for="baseprice">سوال تنوع اول</label>
+								<div class="input-group">
+	<input type="text" name="qsoal" id="qsoal" class="form-control" value="'.$qsoal.'" required data-validation-required-message="This field is required"></div>
+    
+							</div>
+						</div>
+						
+						<div class="col-md-6">
+								<div class="form-group">
+									<label for="baseprice">سوال تنوع دوم</label>
+								<div class="input-group">
+	<input type="text" name="qsoal1" id="qsoal1" class="form-control" value="'.$qsoal1.'" required data-validation-required-message="This field is required"></div>
+    
+							</div>
+						</div>
+						
+						<div class="col-md-6">
+								<div class="form-group">
+									<label for="baseprice">سوال تنوع سوم</label>
+								<div class="input-group">
+	<input type="text" name="qsoal3" id="qsoal3" class="form-control" value="'.$qsoal3.'" required data-validation-required-message="This field is required"></div>
+    
+							</div>
+						</div>
 						
 					
 							<div class="col-md-6">

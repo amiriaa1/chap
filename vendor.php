@@ -25,7 +25,7 @@ echo'
 										$(basesoal1).css("background", "#FFFFFF");
                                         $(basesoal2).css("background", "#FFFFFF");
                                         
-											  $(item).css("background", "#007fee");
+											  $(item).css("background", "#4fcce9");
 										if (type == "1"){$("#hedrr").html("انتخاب شما افست ");}
 										if (type == "2"){$("#hedrr").html("انتخاب شما دیجیتال ");}
 									}
@@ -73,46 +73,49 @@ echo'
                     
                 </div>
 			<div class="col-lg-2 col-sm-4 col-6 mb-3">
-                   
+                   <a href="tel:1702">
                         <div class="cart-small" value="soon" onclick="myFunction2(this)"  name="basesoal3" id="basesoal3">
-                            <div class="cart-small-icon">
-                                <img width="50" src="img/4.jpg" alt="" class="img-fluid">
+                            <div class="cart-small-icon"><center>
+                                <img width="50" src="img/4.jpg" alt="" class="img-fluid"></center>
                             </div>
                             <div class="cart-small-desc ms-lg-3 text-center">
                                 <h6>چاپ پلات و لمینت</h6>
                                <p>برای سفارش تماس بگیرید 1702</p>
                             </div>
+                            </a>
                         </div>
                     
                 </div>
                 
                 <div class="col-lg-2 col-sm-4 col-6 mb-3">
-                   
+                   <a href="tel:1702">
                         <div class="cart-small"  name="basesoal4" id="basesoal4">
-                            <div class="cart-small-icon">
-                                <img width="50" src="img/1.jpg" alt="" class="img-fluid">
+                            <div class="cart-small-icon"><center>
+                                <img width="50" src="img/1.jpg" alt="" class="img-fluid"></center>
                             </div>
                             <div class="cart-small-desc ms-lg-3 text-center">
                                 <h6> چاپ بنر و فلکس ,اکوسالت</h6>
                                <p>برای سفارش تماس بگیرید 1702</p>
                             </div>
+                             </a>
                         </div>
-                   
+                  
                 </div>
 			
 			
 			
 			
 			<div class="col-lg-2 col-sm-4 col-6 mb-3">
-                  
+                  <a href="tel:1702">
                         <div class="cart-small"   name="basesoal5" id="basesoal5">
-                            <div class="cart-small-icon">
-                                <img width="50" src="img/3.jpg" alt="" class="img-fluid">
+                            <div class="cart-small-icon"><center>
+                                <img width="50" src="img/3.jpg" alt="" class="img-fluid"></center>
                             </div>
                             <div class="cart-small-desc ms-lg-3 text-center">
                                 <h6>طراحی</h6>
                                <p>برای سفارش تماس بگیرید 1702</p>
                             </div>
+                             </a>
                         </div>
                     
                 </div>

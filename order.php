@@ -119,8 +119,11 @@ echo'
 							$data2=$discountProp['data2'];
 						$state=$discountProp['state'];
 						$atimestamp=$discountProp['atimestamp'];	
-						$unid=$discountProp['unid'];	
-					
+						$unid=$discountProp['unid'];
+						date_default_timezone_set('Asia/Tehran');
+						list($gy, $gm, $gd) = explode('-', $atimestamp);
+						$j_date_array = gregorian_to_jalali($gy, $gm, $gd);
+						$today_date=implode("/", $j_date_array);
 
 
 echo'
@@ -174,7 +177,7 @@ echo'
                                                                 </div>
                                                                 <div class="order-item-detail">
                                                                     <ul class="nav">
-                                                                        <li class="nav-item text-muted">'.$atimestamp.'
+                                                                        <li class="nav-item text-muted">'.$today_date.'
                                                                         </li>
                                                                         <li class="nav-item">
                                                                             <span class="text-mute">کد سفارش</span>

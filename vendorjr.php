@@ -150,7 +150,7 @@ if ($discountListcount==1){
 <div class="product-box-item-title"><h6>' . $discountList["3"]['title'] . '</h6></div>
  <div class="product-box-price">                                           
  <div class="d-flex justify-content-between align-items-center"></div></div></div></a></div></div>
- 
+
  ';
         }
             if ($discountListcount==5) {

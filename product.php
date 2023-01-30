@@ -78,31 +78,31 @@ echo'
 										  
 											if (typeof basesoal1 != "undefined") {
                                               $(basesoal1).css("background", "transparent");
-											  $(item).css("background", "#007fee");
+											  $(item).css("background", "#4fcce9");
                                                                            }  
                                     if (typeof basesoal2 != "undefined") {
                                               $(basesoal2).css("background", "transparent");
-											  $(item).css("background", "#007fee");
+											  $(item).css("background", "#4fcce9");
                                                                            } 
 									if (typeof basesoal3 != "undefined") {
                                               $(basesoal3).css("background", "transparent");
-											  $(item).css("background", "#007fee");
+											  $(item).css("background", "#4fcce9");
                                                                            } 
 									if (typeof basesoal4 != "undefined") {
                                               $(basesoal4).css("background", "transparent");
-											  $(item).css("background", "#007fee");
+											  $(item).css("background", "#4fcce9");
                                                                            } 				
 									if (typeof basesoal5 != "undefined") {
                                               $(basesoal5).css("background", "transparent");
-											  $(item).css("background", "#007fee");
+											  $(item).css("background", "#4fcce9");
                                                                            } 
 									if (typeof basesoal6 != "undefined") {
                                               $(basesoal6).css("background", "transparent");
-											  $(item).css("background", "#007fee");
+											  $(item).css("background", "#4fcce9");
                                                                            } 
 									if (typeof basesoal7 != "undefined") {
                                               $(basesoal7).css("background", "transparent");
-											  $(item).css("background", "#007fee");
+											  $(item).css("background", "#4fcce9");
                                                                            } 
 									}
 							      });
@@ -163,7 +163,7 @@ echo'
 										  
 											 if (typeof soal2 != "undefined") {
                                               $(soal2).css("background", "transparent");
-											  $(item).css("background", "#007fee");
+											  $(item).css("background", "#4fcce9");
                                                                            } 
                                
 									}
@@ -221,7 +221,7 @@ echo'
 										  
 											if (typeof soal3 != "undefined") {
                                               $(soal3).css("background", "transparent");
-											  $(item).css("background", "#007fee");
+											  $(item).css("background", "#4fcce9");
                                                                            } 
 									}
 							      });
@@ -334,22 +334,22 @@ echo'
 										
 								if (typeof price1 != "undefined") {
                                               $(price1).css("background", "transparent");
-											  $(item).css("background", "#007fee");
+											  $(item).css("background", "#4fcce9");
                                                                            } 
 								
 														if (typeof price2 != "undefined") {
                                               $(price2).css("background", "transparent");
-											  $(item).css("background", "#007fee");
+											  $(item).css("background", "#4fcce9");
                                                                            } 
 								
 														if (typeof price3 != "undefined") {
                                               $(price3).css("background", "transparent");
-											  $(item).css("background", "#007fee");
+											  $(item).css("background", "#4fcce9");
                                                                            } 
 								
 														if (typeof price4 != "undefined") {
                                               $(price4).css("background", "transparent");
-											  $(item).css("background", "#007fee");
+											  $(item).css("background", "#4fcce9");
                                                                            } 
 								
 								document.getElementById("price_show").innerHTML = data.pricefinal;

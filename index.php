@@ -113,7 +113,10 @@ echo'
 						';
                  foreach($discountList8877 as $discountProp69)
                                     {
-
+                                        date_default_timezone_set('Asia/Tehran');
+                                        list($gy, $gm, $gd) = explode('-', $discountProp69["timastammp"]);
+                                        $j_date_array = gregorian_to_jalali($gy, $gm, $gd);
+                                        $today_date=implode("/", $j_date_array);
 
                                         echo'
                                         
@@ -125,7 +128,7 @@ echo'
                                     </div>
                                     <div class="al-overlay"></div>
                                     <div class="al-date rounded-pill">
-                                        '.$discountProp69["timastammp"].'  
+                                        '.$today_date.'  
                                     </div>
                                     <div class="al-title">
                                          '.$discountProp69["title"].'

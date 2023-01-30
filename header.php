@@ -43,7 +43,7 @@ if($system_settings["maintenance"]==1)
 }
 			echo '
     
-    
+             
 
 	<header>
         <div class="container-fluid">
@@ -72,9 +72,36 @@ if($system_settings["maintenance"]==1)
 							 <div class="top-menu-menu d-lg-flex d-none">
                         <ul class="navbar-nav">
                             
-                    
-                             
+                       <li class="position-relative m-0"></li>
+                            <li class="nav-item main-menu-head"><a href=""
+                                    class="nav-link border-animate fromCenter fw-bold"><i class="bi bi-list"></i>
+                                    محصولات
+                                </a>
+                                <ul class="main-menu">
+                                    <li class="main-menu-sub-active-li"><a href=""><i class="bi"></i>
+                                            دیجیتال</a>
+                                        <ul class="main-menu-sub back-menu">
+                                            ';
+$query = "WHERE type=1 AND avtive=1   ORDER BY `nim_product`.`aid` ASC";
+$discountList = $fee->Getproductlist($query);
+foreach($discountList as $discountProp)
+{
+echo'
+                                            <li><a href="product?id='.$discountProp['aid'].'">'.$discountProp['title'].'</a></li>
+                                         ';
+}
+echo'
+                                          
+                                        </ul>
+                                    </li>
+                                    <li><a href=""><i class="bi"></i>افست</a>
+                                        
+                                          
+                                    
+                                </ul>
                             </li>
+                             
+                           
                           
                            
                             <li class="nav-item"><a href="about-us" class="nav-link border-animate fromCenter">درباره ما</a>
@@ -82,6 +109,7 @@ if($system_settings["maintenance"]==1)
 							    <li class="nav-item"><a href="#" class="nav-link border-animate fromCenter">راهنمای خرید</a>
 								
                             </li>
+                   
                            
                         </ul>
 						   <ul class="nav header-contact-left">

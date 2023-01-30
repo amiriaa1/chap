@@ -31,7 +31,7 @@ $Authority=$unid;
 $status="packpay--token-err-خطا در دریافت توکن";
 $fee->AddUserPaymentlog($Authority,$uusername,$status,$amount);
 
-    echo "سلام";
+
     return; //your error
 }
 
@@ -104,11 +104,14 @@ $RefID=$_GET['reference_code'];
 $Authority=$unid;
 $fee->updateUserPaymentlog($comment,$RefID,$Authority);
 $fee->Updateshoplistafterpay($unid);
+$getdeloo=$fee->Getshoplist1($uusername,$unid);
 $llvm=$uusername;
 orderpayok($llvm);
 
-
-
+    date_default_timezone_set('Asia/Tehran');
+    list($gy, $gm, $gd) = explode('-', date('Y-n-d'));
+    $j_date_array = gregorian_to_jalali($gy, $gm, $gd);
+    $today_date=implode("/", $j_date_array);
 
 echo'
 
@@ -119,7 +122,7 @@ echo'
                         <div class="payment-title">
                             <img src="img/default-icon/iconOk.png" alt="" width="100" class="img-fluid">
                             <h2>سفارش <span class="payment-order-code">'.$unid.'</span> با موفقیت در سیستم ثبت شد</h2>
-                            <p class="text-muted mt-3">سفارش تا نهایتا یک روز آماده ارسال خواهد شد</p>
+                            <p class="text-muted mt-3">سفارش شما در حال پردازش است و  در سریع ترین زمان ممکن به دست شما میرسد</p>
                         </div>
                     </div>
                     <div class="category-filter">
@@ -129,12 +132,15 @@ echo'
                                     <h4 class="fw-bold">
                                         کد سفارش : <span>'.$unid.'</span>
                                     </h4>
-                                    <a class="btn-main btn-main-primary waves-effect waves-light btn-payment" href="">پیگیری سفارش</a>
+                                    <a href="order-detail?unid='.$unid.'" class="btn-main btn-main-primary waves-effect waves-light btn-payment">پیگیری سفارش</a>
                                 </div>
                                 <p class="text-muted my-2 font-14 text-payment">سفارش شما با موفقیت در سیستم ثبت شد و هم اکنون <span
-                                        class="success-span">تکمیل</span> شده است
-                                    جزییات این سفارش را میتوانید با کلیک بر روی دکمه <a href=""><span
-                                            class="danger-span-border">پیگیری سفارش</span></a> مشاهده نمایید
+                                        class="success-span">در حال پردازش</span> شده است
+                                        
+                                     <a href="order-detail?unid='.$unid.'">
+                                    جزییات این سفارش را میتوانید با کلیک بر روی دکمه
+                                    
+                                          <span class="danger-span-border">پیگیری سفارش</span></a> مشاهده نمایید
                                 </p>
                             </div>
                             
@@ -146,8 +152,7 @@ echo'
                                 <tr>
                                     <th scope="col">ردیف</th>
                                     <th scope="col">درگاه</th>
-                                    <th scope="col">شماره پیگیری</th>
-                                    
+                                    <th scope="col">شماره پیگیری بانکی</th>
                                     <th scope="col">مبلغ</th>
                                     <th scope="col">وضعیت</th>
                                 </tr>
@@ -155,10 +160,10 @@ echo'
                             <tbody>
                                 <tr class="text-center">
                                     <td>1</td>
-                                    <td>زرین پال</td>
-                                    <td>2546587</td>
+                                    <td>پی پک</td>
+                                    <td>'.$reference_code.'</td>
                                   
-                                    <td>4,900,000 تومان</td>
+                                    <td>'.$getdeloo["0"]["amount"].' تومان</td>
                                     <td><span class="success-span">پرداخت موفق</span></td>
                                 </tr>
                             </tbody>
@@ -175,25 +180,25 @@ echo'
                             <div class="trm">
                                 <div class="trm-item">درگاه</div>
                                 <div class="trm-item">
-                                    زرین پال
+                                   پی پک
                                 </div>
                             </div>
                             <div class="trm">
-                                <div class="trm-item">شماره پیگیری</div>
+                                <div class="trm-item">شماره پیگیری بانکی</div>
                                 <div class="trm-item">
-                                    2546587
+                                     '.$reference_code.'
                                 </div>
                             </div>
                             <div class="trm">
                                 <div class="trm-item">تاریخ</div>
                                 <div class="trm-item">
-                                    8 آبان 1401	
+                                    '.$today_date.'
                                 </div>
                             </div>
                             <div class="trm">
                                 <div class="trm-item">مبلغ</div>
                                 <div class="trm-item">
-                                    4,900,000 تومان	
+                                    '.$getdeloo["0"]["amount"].'  تومان 	
                                 </div>
                             </div>
                             <div class="trm">
