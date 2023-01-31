@@ -34,7 +34,7 @@ echo'
                                         <a href="index.html"><img src="img/default-icon/logo.jpg" class="img-fluid"
                                                 alt=""></a>
                                     </div><br><br><br><br><br><br>
-                                    <h3>وارد شوید یا ثبت نام کنید</h3>
+                                    <h3>ورود / عضویت</h3>
                                    <br>
                                 </div>
                                 <div class="auth-form">
@@ -42,7 +42,8 @@ echo'
                                         <div class="form-group">
                                             <div class="input-group">
                                                 <span class="input-group-text"><i class="bi bi-person"></i></span>
-                                                <input type="text" name="uusername" id="uusername" class="form-control" placeholder="نام کاربری">
+                                                <input type="text" name="uusername" id="uusername" class="form-control" placeholder="برای ورود شماره موبایل خود را وارد کنید">
+                                                
                                             </div>
                                         </div>
                                      

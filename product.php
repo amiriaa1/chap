@@ -53,7 +53,8 @@ echo'
 							$("#niaz2").html("");
 							$("#niaz3").html("");
 							$("#niaz4").html("");
-								
+							$("#niaz1matn").html("");
+							$("#niaz2matn").html("");
 								const myArray = $(item).attr("value").split("-");
 								var farijavab = myArray[0];
 								var idproduct = myArray[1];
@@ -575,13 +576,13 @@ echo'
                                       
                                         <div class="se-desc">
                                        <center>
-							 <span name="niaz1matn" id="niaz1matn"></span>
-							 <br>
-							 <span name="niaz1" id="niaz1"></span>
-							 <br>
 							 <span name="niaz2matn" id="niaz2matn"></span>
 							 <br>
 							 <span name="niaz2" id="niaz2"></span>
+							 <br>
+							 <span name="niaz1matn" id="niaz1matn"></span>
+							 <br>
+							 <span name="niaz1" id="niaz1"></span>
 						
 
 							 </div></div></div></div>
@@ -632,32 +633,7 @@ echo'
 												   <input type="hidden" name="tavlkkf" id="tavlkkf" class="form-control" value="">
 												   <input type="hidden" name="type" id="type" class="form-control" value="'.$type.'">
                                                    
-                        <div class="col-12">
-                            <div class="product-feature">
-                                <nav class="navbar">
-                                    <ul class="navbar-nav justify-content-md-between justify-content-center">
-                                        <li class="nav-item">
-                                            <img src="img/product-feature/product_feauture_1.png" alt="">
-                                            <span>تحویل فوری</span>
-                                        </li>
-                                        <li class="nav-item">
-                                            <img src="img/product-feature/product_feauture_2 (1).png" alt="">
-                                            <span>پرداخت در محل</span>
-                                        </li>
-                                        <li class="nav-item">
-                                            <img src="img/product-feature/product_feauture_3.png" alt="">
-                                            <span>ضمانت اصالت کالا
-                                            </span>
-                                        </li>
-                                        <li class="nav-item">
-                                            <img src="img/product-feature/product_feauture_4.png" alt="">
-                                            <span>ضمانت بازگشت وجه
-                                            </span>
-                                        </li>
-                                    </ul>
-                                </nav>
-                            </div>
-                        </div>
+                       
                     </div>
                 </div>
             </div>

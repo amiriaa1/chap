@@ -76,7 +76,7 @@ echo'
                    <a href="tel:1702">
                         <div class="cart-small" value="soon" onclick="myFunction2(this)"  name="basesoal3" id="basesoal3">
                             <div class="cart-small-icon"><center>
-                                <img width="50" src="img/4.jpg" alt="" class="img-fluid"></center>
+                                <img width="50" src="img/1.jpg" alt="" class="img-fluid"></center>
                             </div>
                             <div class="cart-small-desc ms-lg-3 text-center">
                                 <h6>چاپ پلات و لمینت</h6>
@@ -91,10 +91,10 @@ echo'
                    <a href="tel:1702">
                         <div class="cart-small"  name="basesoal4" id="basesoal4">
                             <div class="cart-small-icon"><center>
-                                <img width="50" src="img/1.jpg" alt="" class="img-fluid"></center>
+                                <img width="50" src="img/4.jpg" alt="" class="img-fluid"></center>
                             </div>
                             <div class="cart-small-desc ms-lg-3 text-center">
-                                <h6> چاپ بنر و فلکس ,اکوسالت</h6>
+                                <h6>چاپ بنر و فلکسی</h6>
                                <p>برای سفارش تماس بگیرید 1702</p>
                             </div>
                              </a>

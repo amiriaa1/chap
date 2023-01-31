@@ -91,7 +91,7 @@ echo'
                 <div class="row mb-4">
                     <div class="col-12">
                         <div class="al-header d-flex align-items-start justify-content-between">
-                            <h6 class="slider-title">آخرین مقالات سایت</h6>
+                            <h6 class="slider-title">مجله هرجا چاپ</h6>
                             <a href="blog" class="fromCenter border-animate">مشاهده همه</a>
                         </div>
                     </div>

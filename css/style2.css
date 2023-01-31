@@ -3620,6 +3620,7 @@ span.product-meta-item {
 
 .multi-seller .content-box {
     box-shadow: var(--shadow-box);
+
 }
 
 .table-responsive-mobile {
@@ -5298,7 +5299,7 @@ span.product-meta-item {
 /* end blog-detail */
 /* start page compare */
 .content-box {
-    background: #fff;
+    background: #4fcce9;
     padding: 20px 20px;
     border-radius: 10px;
     -webkit-border-radius: 10px;

@@ -48,8 +48,8 @@ if(isset($_GET['delete'])){
 
 $discountList = $fee->Getbasketforuser($uusername);
 $discountListsum = $fee->Getbasketforusersum($uusername);
-$haml="50000";
-$aftertotal=$discountListsum["0"]["total"]+$haml;
+
+$aftertotal=$discountListsum["0"]["total"];
 
 echo'
 
@@ -163,7 +163,8 @@ $counterr=1;
                                 </div>
                                
                                با ثبت خرید قوانین هرجا چاپ را میپذیرم
-                               
+                               <br>
+                               قیمت نمایش داده شده به صورت علی الحساب در نظر گرفته شده و ممکن است برحسب جزییات سفارش پس از تایید بخش سفارشات هرجا چاپ این مبلغ تغییر یابد
                             </div>
                         </div>
                         <div class="col-lg-4">
@@ -179,7 +180,7 @@ $counterr=1;
                                     </tr>
                                     <tr>
                                         <td class="fw-bold">حمل و نقل</td>
-                                        <td class="txt"><span class="fw-bold">'.$haml.'</span> <span
+                                        <td class="txt"><span class="fw-bold">رایگان</span> <span
                                                 class="text-muted">تومان</span></td>
                                     </tr>
                                     <tr>

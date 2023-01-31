@@ -1,12 +1,6 @@
 <?php
 include('main.php');
-$fee = new ManageFees();
-$query="ORDER BY `nim_product`.`aid` ASC";
-$allprcount=$discountList = $fee->Getproductlistcount($query);
-$allusercount=$discountList2 = $fee->Getuserscount($submitby);
-$allsjoplist=$discountList3 = $fee->Getproductlistcount($submitby2);
-$allprcount=$allprcount+52;
-$allusercount=$allusercount+100;
+
 echo'
 <script type="text/javascript">
 function addemalkhabar(item)
@@ -66,61 +60,8 @@ function addemalkhabar(item)
                 </div>
                 <div class="info-bar">
                     <div class="row justify-content-center">
-                        <div class="col-md-3 col-6 text-center">
-                            <div class="info-bar-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                    class="bi bi-bag" viewBox="0 0 16 16">
-                                    <path
-                                        d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z" />
-                                </svg>
-                            </div>
-                            <div class="info-bar-desc">
-                                <h6 class="counter">'.$allprcount.'</h6>
-                                <p>محصولات</p>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-6 text-center">
-                            <div class="info-bar-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                    class="bi bi-box2-heart" viewBox="0 0 16 16">
-                                    <path d="M8 7.982C9.664 6.309 13.825 9.236 8 13 2.175 9.236 6.336 6.31 8 7.982Z" />
-                                    <path
-                                        d="M3.75 0a1 1 0 0 0-.8.4L.1 4.2a.5.5 0 0 0-.1.3V15a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V4.5a.5.5 0 0 0-.1-.3L13.05.4a1 1 0 0 0-.8-.4h-8.5Zm0 1H7.5v3h-6l2.25-3ZM8.5 4V1h3.75l2.25 3h-6ZM15 5v10H1V5h14Z" />
-                                </svg>
-                            </div>
-                            <div class="info-bar-desc">
-                                <h6 class="counter">'.$allsjoplist.'</h6>
-                                <p>سفارش تکمیل شده</p>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-6 text-center">
-                            <div class="info-bar-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                    class="bi bi-people" viewBox="0 0 16 16">
-                                    <path
-                                        d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1h8Zm-7.978-1A.261.261 0 0 1 7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002a.274.274 0 0 1-.014.002H7.022ZM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816ZM4.92 10A5.493 5.493 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275ZM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0Zm3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4Z" />
-                                </svg>
-                            </div>
-                            <div class="info-bar-desc">
-                                <h6 class="counter">'.$allusercount.'</h6>
-                                <p>کاربران</p>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-6 text-center">
-                            <div class="info-bar-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                    class="bi bi-file-earmark-text" viewBox="0 0 16 16">
-                                    <path
-                                        d="M5.5 7a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5zM5 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5z" />
-                                    <path
-                                        d="M9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.5L9.5 0zm0 1v2A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5z" />
-                                </svg>
-                            </div>
-                            <div class="info-bar-desc">
-                                <h6 class="counter">82</h6>
-                                <p>مطالب وبلاگ</p>
-                            </div>
-                        </div>
+                     
+                      
                     </div>
                 </div>
             </div>
@@ -137,18 +78,30 @@ function addemalkhabar(item)
                         </div>
                     </div>
                     <div class="col-lg-3">
-                        <div class="footer-item">
-                            <div class="footer-desc-item">
-                                <ul class="d-flex justify-content-md-end justify-content-center">
-                                    <li><a href=""><img src="img/default-icon/enamad.png" alt=""></a></li>
-                                    <li><a href=""><img src="img/default-icon/kasbokar.png" alt=""></a></li>
-                                    <li><a href=""><img src="img/default-icon/rezi.png" alt=""></a></li>
-                                </ul>
-                                
-                            </div>
-                           
+                       
                             
+                          
+                   
+                        <div class="col-12">
+                            <div class="footer-desc-item">
+                                <h3>چاپ خانه هرجا چاپ ، بررسی ، انتخاب و خرید آنلاین</h3>
+                             هرجا چاپ به عنوان یک شرکت استارتاپ در عرصه خدمات چاپ و ماشین های اداری 
+                             <br>
+                             توانسته با حضور افراد متخصص و مجرب تحول عظیمی در کشور ایجاد نماید 
+                            </div>
                         </div>
+                      
+                            
+                               
+                                    
+                                    
+                               
+                            
+                            
+                       
+              
+                            
+                      
                     </div>
                     <div class="col-lg-3">
 
@@ -167,41 +120,20 @@ function addemalkhabar(item)
                                     </div>
                                </form>
                                 <div class="social-link justify-content-md-end justify-content-center">
-                            <a href="" class="bi bi-instagram"></a>
-                            <a href="" class="bi bi-twitter"></a>
+                            <a href="instagram.com/Harjachap" class="bi bi-instagram"></a>
                             <a href="" class="bi bi-whatsapp"></a>
-                            <a href="" class="bi bi-youtube"></a>
-                            <a href="" class="bi bi-linkedin"></a>
-                        </div>
-                            </div>
+                            
+<div class="footer-desc-item">
+                                <ul class="d-flex justify-content-md-end justify-content-center">
+                                                                        <li><a referrerpolicy="origin" target="_blank"  href="https://trustseal.enamad.ir/?id=294336&amp;Code=Hiv92OATSF8tMo4cITZy"><img src="img/default-icon/enamad.png" alt=""></a></li>
+
+                                </ul>
                                 
-                        </div>
-                    </div>
-                </div>
-                <div class="footer-desc">
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="footer-desc-item">
-                                <h3>چاپ خانه هرجا چاپ ، بررسی ، انتخاب و خرید آنلاین</h3>
-                               
                             </div>
-                        </div>
-                        <div class="row pe-0">
-                            <div class="col-sm-8">
-                                <div class="row">
-                                    <div class="col-lg-8">
-                                        <p class="font-14">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
-                                                <path
-                                                    d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z" />
-                                                <path
-                                                    d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
-                                            </svg>
-                                            استان تهران، شهر تهران، خیابان مرکزی، ساختمان مرکزی، پلاک 7
-                                        </p>
-                                    </div>
-                                    <div class="col-lg-4">
+                            
+                                     
+                                 
+                                 
                                         <ul class="nav justify-content-lg-end justify-content-start mt-lg-0 mt-3">
                                             <li class="nav-item"><a href="tel:1702" class="nav-link font-14 ps-0"
                                                     style="color:#525252">
@@ -223,13 +155,14 @@ function addemalkhabar(item)
                                                     info@harjachap.com
                                                 </a></li>
                                         </ul>
-                                    </div>
-                                </div>
+                        </div>
+
                             </div>
-                            
+                                
                         </div>
                     </div>
                 </div>
+                
             </div>
         </div>
     </footer>

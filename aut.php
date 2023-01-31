@@ -150,7 +150,7 @@ if($autver==$cod)
 {
 	$stat=2;
 	$llvm=$_POST['username'];
-	sendemailverfy($llvm,$stat);
+
 	if(isset($_POST['aut-up-submit'])){
 	
 	$studentProp2 = $student->UsetTwoFactorupdate($username);

@@ -182,7 +182,7 @@ foreach($discountList as $discountProp)
                                       
                                     </tr>
 									';
-									$ftr=$amount+5000;
+									$ftr=$amount;
 									echo'
                                     <tr>
                                         <td class="fw-bold">مجموع</td>
