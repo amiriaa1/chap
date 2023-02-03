@@ -5,18 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bc047395-12cc-4474-b2fe-72233fb553d9" name="Changes" comment="a">
-      <change afterPath="$PROJECT_DIR$/order-detail.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/add_product.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/add_product.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/edit_product.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/edit_product.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/aut.php" beforeDir="false" afterPath="$PROJECT_DIR$/aut.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cupfile.php" beforeDir="false" afterPath="$PROJECT_DIR$/cupfile.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/func.php" beforeDir="false" afterPath="$PROJECT_DIR$/func.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/class.fee.php" beforeDir="false" afterPath="$PROJECT_DIR$/include/class.fee.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product.php" beforeDir="false" afterPath="$PROJECT_DIR$/product.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/step2.php" beforeDir="false" afterPath="$PROJECT_DIR$/step2.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target.php" beforeDir="false" afterPath="$PROJECT_DIR$/target.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/product-feature/فروش ملزومات اداری و دفتری.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/product-feature/فروش و خدمات ماشین های اداری.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/category.php" beforeDir="false" afterPath="$PROJECT_DIR$/category.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/footer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product-feature/contact-us.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/product-feature/contact-us.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product-feature/contact-us.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product-feature/delivery.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/product-feature/delivery.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product-feature/delivery.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product-feature/origin-guarantee.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product-feature/payment-terms.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/product-feature/payment-terms.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product-feature/payment-terms.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product-feature/product_feauture_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product-feature/product_feauture_2 (1).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product-feature/product_feauture_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product-feature/product_feauture_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product-feature/product_feauture_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product-feature/return-policy.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/product-feature/return-policy.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product-feature/return-policy.svg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

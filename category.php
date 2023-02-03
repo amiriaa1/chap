@@ -97,7 +97,13 @@ echo'
                                             
                                         </div>
 										
-                                        <a href="product?id='.$discountProp['aid'].'">
+                                         ';
+                        if ($type==4 or $type==3){echo'<a href="shop?id='.$discountProp['aid'].'">';}
+                        else{
+
+                            echo'<a href="product?id='.$discountProp['aid'].'">';
+                        }
+                        echo'
                                             <div class="product-box-item-desc">
                                                 <div class="product-box-item-title">
                                                     <h6>

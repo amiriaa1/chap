@@ -37,7 +37,7 @@ function addemalkhabar(item)
                             <a href="#">
                                 <img src="img/product-feature/contact-us.png" alt="">
                             </a>
-                            <h6>پشتیبانی 24 ساعته</h6>
+                            <h6>پشتیبانی</h6>
                         </div>
                     </div>
                     <div class="col-md-3 col-6 text-center">
@@ -45,7 +45,7 @@ function addemalkhabar(item)
                             <a href="#">
                                 <img src="img/product-feature/payment-terms.png" alt="">
                             </a>
-                            <h6>پرداخت در محل</h6>
+                            <h6>ضمانت کیفیت</h6>
                         </div>
                     </div>
                     <div class="col-md-3 col-6 text-center">
@@ -53,7 +53,7 @@ function addemalkhabar(item)
                             <a href="#">
                                 <img src="img/product-feature/return-policy.png" alt="">
                             </a>
-                            <h6>۷ روز ضمانت بازگشت
+                            <h6>خرید با فاکتور رسمی
                             </h6>
                         </div>
                     </div>
