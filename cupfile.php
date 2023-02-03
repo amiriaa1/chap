@@ -107,7 +107,6 @@ if(isset($_POST['category']) && $_POST['category']=="1"){
 $unid=$_GET['unid'];
 echo'
 
-
  <div class="content">
         <div class="line-steps">
             <div class="container-fluid">
@@ -115,28 +114,28 @@ echo'
                     <div class="line-step">
                         <div class="line-step-boxs">
                             <div class="line-step-box complete">
-                                <a href="cart.html">
+                                
                                     <div class="icon">
                                         <i class="bi bi-bag"></i>
                                     </div>
                                     <p>سبد خرید</p>
-                                </a>
+                                
                             </div>
-                            <div class="line-step-box complete">
-                                <a href="cart.html">
+                            <div class="line-step-box">
+                                
                                     <div class="icon">
                                         <i class="bi bi-file-earmark-text"></i>
                                     </div>
                                     <p>جزییات پرداخت</p>
-                                </a>
+                               
                             </div>
                             <div class="line-step-box">
-                                <a href="cart.html">
+                                
                                     <div class="icon">
                                         <i class="bi bi-file-earmark-break"></i>
                                     </div>
                                     <p>تکمیل سفارش</p>
-                                </a>
+                               
                             </div>
                         </div>
                     </div>
@@ -148,8 +147,11 @@ echo'
                                                 
 								
 
-
-    
+<center>
+  <div class="container-fluid">
+                <div class="contenst-box shadow-box px-3">
+                
+                
             <div class="col-lg-5">
                             <div class="cart-payment">
                                 <div class="title text-center">
@@ -187,8 +189,19 @@ echo'
                                
                             </div>
 							
-							
-							
+						
+							فایل ارسالی شما توسط کارشناسان مجرب هرجا چاپ به صورت رایگان کنترل و بررسی خواهد شد و در صورت نداشتن استانداردهای چاپی به شما اطلاع‌رسانی خواهد شد.
+							<br>
+							از جمله مواردی که بررسی خواهد شد:
+							<br>
+							•	بررسی اندازه قابل قبول
+							<br>
+•	بررسی رزولوشن قابل قبول
+<br>
+•	بررسی نداشتن رمز در فایل‌های پی‌دی‌اف
+<br>
+•	بررسی درست بودن تعداد صفحات محصولات چند‌صفحه‌ای
+
 							
                         </div>
                     </div>
@@ -197,7 +210,7 @@ echo'
         </div>
 
     </div>
-
+</div></div>
   </form>
 <script src="js/jquery-3.6.1.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>

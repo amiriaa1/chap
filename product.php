@@ -143,9 +143,9 @@ echo'
 								if (data.backbtn1 =="0") {
 								
                                              $("#niaz1matn").html(data.pop1matn);
-											 $("#niaz1").html(data.pop1 + data.pop2);
+											 $("#niaz1").html(data.pop2 + data.pop1);
 											 $("#niaz2matn").html(data.pop2matn);
-											 $("#niaz2").html(data.pop3 + data.pop4);
+											 $("#niaz2").html(data.pop4 + data.pop3);
 											
 											
                                                                            }  

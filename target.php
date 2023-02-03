@@ -97,7 +97,7 @@ $reference_code = $_GET['reference_code'];
 $verify_result = verify($data,$secret_id,$client_id);
 
 if ($verify_result['status']=="0"){
-echo $verify_result['message'];
+
 
 $comment=$verify_result['message'];
 $RefID=$_GET['reference_code'];

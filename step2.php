@@ -9,7 +9,7 @@ if(isset($_GET['unid']))
 {
 	$unid=$_GET['unid'];
 
-					
+	$fetfet=$fee->Getshoplist1($uusername,$unid);
 }
 else{
 	
@@ -120,6 +120,7 @@ var unid = document.getElementById("unid").value;
                                                     <div class="form-group">
                                                         <label for="addr" class="form-label">آدرس ها <span
                                                             class="text-danger ms-1">*</span></label>
+                                                            
                                                     <select id="addr" class="form-select rounded-pill">
 													
 													';
@@ -137,6 +138,8 @@ foreach($discountList as $discountProp)
 												 echo'
                                                     </select>
                                                     </div>
+                                                    <a href="address?add" referrerpolicy="origin" target="_blank">
+                                                    <button name="add" id="add" value="add" type="button" class="btn btn-outline btn-rounded mb-5">افزودن آدرس</button></a>
                                                 </div>
                                              
 												
@@ -182,7 +185,7 @@ foreach($discountList as $discountProp)
                                       
                                     </tr>
 									';
-									$ftr=$amount;
+									$ftr=$fetfet["0"]["amount"];
 									echo'
                                     <tr>
                                         <td class="fw-bold">مجموع</td>

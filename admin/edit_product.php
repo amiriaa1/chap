@@ -31,9 +31,10 @@ if(isset($_GET['id']))
                 if($typ2e=="دیجیتال"){$type='2';}
                 if($typ2e=="فروشگاهی"){$type='3';}
                 if($typ2e=="اداری"){$type='4';}
-					
-$discountList = $fee->Productupdate($title,$description,$type,$pic,$baseprice,$avtive,$qsoal,$qsoal1,$qsoal3,$id);
-				
+                $decption1=$_POST['decption1'];
+                $decption2=$_POST['decption2'];
+$discountList = $fee->Productupdate($title,$description,$type,$pic,$baseprice,$avtive,$qsoal,$qsoal1,$qsoal3,$decption1,$decption2,$id);
+				if($discountList==1){echo"انجام شد";}
 			}
 			
 $query = "WHERE aid=$id  ORDER BY `nim_product`.`aid` ASC";			
@@ -60,6 +61,8 @@ $discountList = $fee->Getproductlist($query);
                         $qsoal=$discountProp['qsoal'];
                         $qsoal1=$discountProp['qsoal1'];
                         $qsoal3=$discountProp['qsoal3'];
+                        $decption1=$discountProp['decption1'];
+                        $decption2=$discountProp['decption2'];
                     }
 					
 					echo'
@@ -131,6 +134,27 @@ $discountList = $fee->Getproductlist($query);
     
 							</div>
 						</div>
+						
+						
+						<div class="col-md-6">
+								<div class="form-group">
+									<label for="decption1">توضیحات اول</label>
+								<div class="input-group">
+	<input type="text" name="decption1" id="decption1" class="form-control" value="'.$decption1.'" required data-validation-required-message="This field is required"></div>
+    
+							</div>
+						</div>
+						
+						
+						<div class="col-md-6">
+								<div class="form-group">
+									<label for="decption1">توصیحات دوم</label>
+								<div class="input-group">
+	<input type="text" name="decption2" id="decption2" class="form-control" value="'.$decption2.'" required data-validation-required-message="This field is required"></div>
+    
+							</div>
+						</div>
+						
 						
 					
 							<div class="col-md-6">

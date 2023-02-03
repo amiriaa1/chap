@@ -22,11 +22,11 @@ function AddUserUpload($name,$location,$uusername)
 
 
 
-function Addproductt($name,$desc,$avtive,$baseprice,$type,$pic,$qsoal,$qsoal1,$qsoal3)
+function Addproductt($name,$desc,$avtive,$baseprice,$type,$pic,$qsoal,$qsoal1,$qsoal3,$decption1,$decption2)
  { global $table_prefix;
- $query = $this->link->prepare("INSERT INTO `nim_product` (`title`,`description`,`avtive`,`baseprice`,`type`,`pic`,`qsoal`,`qsoal1`,`qsoal3`) VALUES (?,?,?,?,?,?,?,?,?) ");
+ $query = $this->link->prepare("INSERT INTO `nim_product` (`title`,`description`,`avtive`,`baseprice`,`type`,`pic`,`qsoal`,`qsoal1`,`qsoal3`,`decption1`,`decption2`) VALUES (?,?,?,?,?,?,?,?,?,?,?) ");
 
- $values = array($name,$desc,$avtive,$baseprice,$type,$pic,$qsoal,$qsoal1,$qsoal3);
+ $values = array($name,$desc,$avtive,$baseprice,$type,$pic,$qsoal,$qsoal1,$qsoal3,$decption1,$decption2);
  $query->execute($values); $counts = $query->rowCount();
  return $counts; }
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -182,7 +182,9 @@ function Getproducttanavolist($query) { global $table_prefix;
  $query->execute($values); $result = $query->fetchAll(); return $result; } 
 
    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
+    function Getshopusers2($uusername,$unid)
+    { global $table_prefix; $query = $this->link->prepare("SELECT * FROM `nim_shop_list`  WHERE `user`=? AND `unid`=? ORDER BY `nim_shop_list`.`aid` DESC"); $values = array($uusername,$unid);
+        $query->execute($values); $result = $query->fetchAll(); return $result; }
 
 
     function Getbasketforusercount($uusername)
@@ -367,9 +369,9 @@ function Deletecustomerapp($id)
 
    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
    
-function Productupdate($title,$description,$type,$pic,$baseprice,$avtive,$qsoal,$qsoal1,$qsoal3,$id)
- { global $table_prefix; $query = $this->link->prepare("UPDATE `nim_product` SET `title`=? ,`description`=? ,`type`=?,`pic`=?,`baseprice`=?,`avtive`=? ,`qsoal`=? ,`qsoal1`=? ,`qsoal3`=? WHERE `aid`=?");
- $values = array($title,$description,$type,$pic,$baseprice,$avtive,$qsoal,$qsoal1,$qsoal3,$id); $query->execute($values); $counts = $query->rowCount(); return $counts; }
+function Productupdate($title,$description,$type,$pic,$baseprice,$avtive,$qsoal,$qsoal1,$qsoal3,$decption1,$decption2,$id)
+ { global $table_prefix; $query = $this->link->prepare("UPDATE `nim_product` SET `title`=? ,`description`=? ,`type`=?,`pic`=?,`baseprice`=?,`avtive`=? ,`qsoal`=? ,`qsoal1`=? ,`qsoal3`=? ,`decption1`=? ,`decption2`=? WHERE `aid`=?");
+ $values = array($title,$description,$type,$pic,$baseprice,$avtive,$qsoal,$qsoal1,$qsoal3,$decption1,$decption2,$id); $query->execute($values); $counts = $query->rowCount(); return $counts; }
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 

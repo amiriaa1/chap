@@ -134,7 +134,7 @@ echo'
                     
                     
                      
-        <div class="main-category">
+        <div class="main-category"><div class="row" name="content" id="content">
             <div class="container-fluid">
                 <div class="row justify-content-center">
                    
@@ -146,7 +146,7 @@ echo'
                   
 					 <div class="col-lg-9">
                         <div class="category-item">
-                            <div class="row" name="content" id="content">
+                            
                              
           					
        

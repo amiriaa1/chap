@@ -25,9 +25,10 @@ if(isset($_POST['name']))
             if($typ2e=="دیجیتال"){$type='2';}
             if($typ2e=="فروشگاهی"){$type='3';}
             if($typ2e=="اداری"){$type='4';}
-			
+                $decption1=$_POST['decption1'];
+                $decption2=$_POST['decption2'];
 		
-$discountList = $fee->Addproductt($name,$desc,$avtive,$baseprice,$type,$pic,$qsoal,$qsoal1,$qsoal3);
+$discountList = $fee->Addproductt($name,$desc,$avtive,$baseprice,$type,$pic,$qsoal,$qsoal1,$qsoal3,$decption1,$decption2);
 
 	if($discountList==1){
 		
@@ -109,6 +110,26 @@ $discountList = $fee->Addproductt($name,$desc,$avtive,$baseprice,$type,$pic,$qso
 									<label for="baseprice">سوال تنوع سوم</label>
 								<div class="input-group">
 	<input type="text" name="qsoal3" id="qsoal3" class="form-control" value="'.$qsoal3.'" required data-validation-required-message="This field is required"></div>
+    
+							</div>
+						</div>
+						
+						
+						<div class="col-md-6">
+								<div class="form-group">
+									<label for="decption1">توضیحات اول</label>
+								<div class="input-group">
+	<input type="text" name="decption1" id="decption1" class="form-control" value="'.$decption1.'" required data-validation-required-message="This field is required"></div>
+    
+							</div>
+						</div>
+						
+						
+						<div class="col-md-6">
+								<div class="form-group">
+									<label for="decption1">توصیحات دوم</label>
+								<div class="input-group">
+	<input type="text" name="decption2" id="decption2" class="form-control" value="'.$decption2.'" required data-validation-required-message="This field is required"></div>
     
 							</div>
 						</div>
