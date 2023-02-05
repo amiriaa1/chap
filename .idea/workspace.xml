@@ -5,25 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bc047395-12cc-4474-b2fe-72233fb553d9" name="Changes" comment="a">
-      <change afterPath="$PROJECT_DIR$/img/product-feature/فروش ملزومات اداری و دفتری.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/product-feature/فروش و خدمات ماشین های اداری.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sadad.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target2.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/category.php" beforeDir="false" afterPath="$PROJECT_DIR$/category.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/footer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/product-feature/contact-us.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/product-feature/contact-us.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/product-feature/contact-us.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/product-feature/delivery.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/product-feature/delivery.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/product-feature/delivery.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/product-feature/origin-guarantee.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/product-feature/payment-terms.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/product-feature/payment-terms.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/product-feature/payment-terms.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/product-feature/product_feauture_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/product-feature/product_feauture_2 (1).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/product-feature/product_feauture_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/product-feature/product_feauture_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/product-feature/product_feauture_4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/product-feature/return-policy.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/product-feature/return-policy.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/product-feature/return-policy.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/aj.php" beforeDir="false" afterPath="$PROJECT_DIR$/aj.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.php" beforeDir="false" afterPath="$PROJECT_DIR$/main.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/step2.php" beforeDir="false" afterPath="$PROJECT_DIR$/step2.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,6 +90,7 @@
       <workItem from="1674891422350" duration="3783000" />
       <workItem from="1675168918564" duration="9000" />
       <workItem from="1675203856508" duration="3940000" />
+      <workItem from="1675629876999" duration="2652000" />
     </task>
     <servers />
   </component>
@@ -123,5 +111,16 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/category.php</url>
+          <line>74</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

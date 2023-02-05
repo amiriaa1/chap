@@ -482,9 +482,9 @@ $cooin=1;
         break;
 
 		case "send_getway":
-		
-		
 
+
+        $getway= $_REQUEST['getway'];
 		$addr= $_REQUEST['addr'];
 		$unid= $_REQUEST['unid'];
 
@@ -500,7 +500,7 @@ $cooin=1;
 			$counttttt = $fee->Updateshoplist($json,$unid);
             $counttttt2 = $fee->deletebasketallitem($uusername);
 			if($counttttt==1){
-			
+			if ($getway=="paypack"){
 			echo json_encode(array(
 				"statusCode"=>200,
 				"state"=>"1",
@@ -509,9 +509,22 @@ $cooin=1;
 				
 
 			),JSON_UNESCAPED_UNICODE);
+
+            }
+                if ($getway=="sadad"){
+                    echo json_encode(array(
+                        "statusCode"=>200,
+                        "state"=>"1",
+                        "url"=>'target2?GS='.$unid.'',
+                        "unid"=>$unid
+
+
+                    ),JSON_UNESCAPED_UNICODE);
+
+                }
 			
 		}
-			
+
 		break;
 
 }

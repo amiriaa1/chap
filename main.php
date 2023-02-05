@@ -46,6 +46,7 @@ if(!$db_connection->connect())
 include_once('include/class.admin.php');
 include_once('include/functions.php');
 include_once('bankApi.php');
+include_once('sadad.php');
 include_once('func.php');
 include_once('jdf.php');
 include_once('include/class.settings.php');

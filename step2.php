@@ -27,19 +27,20 @@ echo'
 
 var addr = document.getElementById("addr").value;
 var unid = document.getElementById("unid").value;
+var getway = document.getElementById("getway").value;
 
 							
 							$.ajax({
 							
 								    url: "aj.php",
 								    type: "POST",
-								    data: {op:"send_getway",addr:addr,unid:unid},
+								    data: {op:"send_getway",addr:addr,unid:unid,getway:getway},
 									dataType: "json",
 								    success: function(data){
 										
 										
-								
 								window.location.href = data.url;
+								
 										
 										
 										
@@ -132,11 +133,13 @@ foreach($discountList as $discountProp)
 					{
 						
 													echo'
+
                                                         <option>'.$discountProp['addr'].'-----'.$discountProp['name'].'</option>
                                                  ';
 					}
 												 echo'
                                                     </select>
+                                                    
                                                     </div>
                                                     <a href="address?add" referrerpolicy="origin" target="_blank">
                                                     <button name="add" id="add" value="add" type="button" class="btn btn-outline btn-rounded mb-5">افزودن آدرس</button></a>
@@ -174,6 +177,13 @@ foreach($discountList as $discountProp)
                                     <tr>
                                         <th class="pb-3">نوع</th>
                                         <th class="pb-3">مبلغ</th>
+                                         <th class="pb-3">درگاه پرداخت</th>
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
                                     </tr>
                                     <tr>
                                        
@@ -191,6 +201,17 @@ foreach($discountList as $discountProp)
                                         <td class="fw-bold">مجموع</td>
                                         <td class="txt"><span class="fw-bold">'.$ftr.'</span> <span
                                                 class="text-muted">تومان</span></td>
+                                                 <td class="fw-bold">
+                                                 
+                                                
+                                       <select id="getway" class="form-select rounded-pill">
+                                                        <option value="sadad">پرداخت با فاکتو رسمی +۹٪ مالیات</option>
+                                                        <option value="paypack">پرداخت با تمام کارت های شتاب</option>
+                                  
+                                                 </select>
+                                                 
+                                                 
+</td>
                                     </tr>
                                 </table>
 								<input type="hidden" id="unid" value="'.$unid.'">
