@@ -45,8 +45,14 @@ echo'
 if ($fgt2["prid1"]==!""){
     $query = 'WHERE aid='.$fgt2["prid1"].'  ORDER BY `nim_product`.`aid` ASC';
     $discountList = $fee->Getproductlist($query);
+    $query2 = 'WHERE name="'.$fgt2["uinid1"].'"';
+    $discountList2 = $fee->Getfiles22($query2);
+
 echo"محصول اول"; echo'<br>';
-    echo'<br>'.$discountList["0"]["title"].'<br>'.$fgt2["javab1"].'<br>'.$fgt2["noet1"].'<br>';
+    echo'<br><a href="/'.$discountList2["0"]["location"].'">
+فایل آپلود شده
+</a><br>';
+    echo'<br>'.$discountList["0"]["title"].'<br>'.$fgt2["javab1"].'<br>'.$fgt2["noet1"].'<br><br>';
 }
                                                 echo'
                                                 
@@ -54,7 +60,12 @@ echo"محصول اول"; echo'<br>';
 if ($fgt2["prid2"]==!""){
     $query = 'WHERE aid='.$fgt2["prid2"].'  ORDER BY `nim_product`.`aid` ASC';
     $discountList = $fee->Getproductlist($query);
+    $query2 = 'WHERE name="'.$fgt2["uinid2"].'"';
+    $discountList2 = $fee->Getfiles22($query2);
     echo"محصول دوم"; echo'<br>';
+    echo'<br><a href="/'.$discountList2["0"]["location"].'">
+فایل آپلود شده
+</a><br>';
     echo'--'.$discountList["0"]["title"].'<br>'.$fgt2["javab2"].'<br>'.$fgt2["noet2"].'<br>';
 }
 echo'

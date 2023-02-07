@@ -118,6 +118,7 @@ $counterr=1;
                                                {
                                                 $data1=$discountProp69["data1"];
                                                 $data2=$discountProp69["data2"];
+                                                   $uinid=$discountProp69["uinid"];
                                                    $fgt1 = json_decode($data1,true);
                                                    $fgt2 = json_decode($data2,true);
                                                    $id=$discountProp69["product_id"];
@@ -125,6 +126,7 @@ $counterr=1;
                                                    $dist = $fee->Getproductlist($query);
 
                                                    echo'
+                                                   <input type="hidden" name="uinid'.$counterr.'" id="uinid'.$counterr.'" class="form-control" value="'. $uinid.'">
                                                     <input type="hidden" name="prid'.$counterr.'" id="prid'.$counterr.'" class="form-control" value="'.$id.'">
                                                    <input type="hidden" name="javab'.$counterr.'" id="javab'.$counterr.'" class="form-control" value="'.$fgt1["fgt"]["0"]["farijavab"].'---'.$fgt1["fgt"]["1"]["farijavab"].''.$fgt1["fgt"]["2"]["farijavab"].''.$fgt1["fgt"]["3"]["farijavab"].'">
                                                     <input type="hidden" name="noet'.$counterr.'" id="noet'.$counterr.'" class="form-control" value="'.$fgt2["name"].'--'.$fgt2["count"].'">

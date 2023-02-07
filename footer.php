@@ -73,7 +73,7 @@ function addemalkhabar(item)
                             <ul class="footer-item-link">
                                 <li><a href="">نحوه ثبت سفارش</a></li>
                                 <li><a href="">رویه ارسال سفارش</a></li>
-                                <li><a href="privacy">حریم خصوصی</a></li>
+                                <li><a href="privacy">قوانین و مقررات</a></li>
                             </ul>
                         </div>
                     </div>
@@ -88,6 +88,17 @@ function addemalkhabar(item)
                              هرجا چاپ به عنوان یک شرکت استارتاپ در عرصه خدمات چاپ و ماشین های اداری 
                              <br>
                              توانسته با حضور افراد متخصص و مجرب تحول عظیمی در کشور ایجاد نماید 
+                             
+                             <p class="font-14">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z" />
+                                                <path
+                                                    d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                                            </svg>
+                                            تهران خیابان شهید بهشتی، مرکز تجاری گلدیس واحد: 205
+                                        </p>
                             </div>
                         </div>
                       
@@ -120,12 +131,12 @@ function addemalkhabar(item)
                                     </div>
                                </form>
                                 <div class="social-link justify-content-md-end justify-content-center">
-                            <a href="instagram.com/Harjachap" class="bi bi-instagram"></a>
+                            <a href="https://instagram.com/Harjachap" class="bi bi-instagram"></a>
                             <a href="" class="bi bi-whatsapp"></a>
                             
 <div class="footer-desc-item">
                                 <ul class="d-flex justify-content-md-end justify-content-center">
-                                                                        <li><a referrerpolicy="origin" target="_blank"  href="https://trustseal.enamad.ir/?id=294336&amp;Code=Hiv92OATSF8tMo4cITZy"><img src="img/default-icon/enamad.png" alt=""></a></li>
+                                                                        <li><a referrerpolicy="origin" target="_blank" href="https://trustseal.enamad.ir/?id=294336&amp;Code=Hiv92OATSF8tMo4cITZy"><img referrerpolicy="origin" src="https://Trustseal.eNamad.ir/logo.aspx?id=294336&amp;Code=Hiv92OATSF8tMo4cITZy" alt="" style="cursor:pointer" id="Hiv92OATSF8tMo4cITZy"></a></li>
 
                                 </ul>
                                 

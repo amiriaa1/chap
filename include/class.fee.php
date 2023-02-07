@@ -97,6 +97,14 @@ function Getproductlist($query) { global $table_prefix;
  $counts = $query->rowCount(); $result = $query->fetchAll();
  return $result; }
 
+
+
+    function Getfiles22($query2) { global $table_prefix;
+        $query = $this->link->query("SELECT * FROM `files` $query2");
+        $counts = $query->rowCount(); $result = $query->fetchAll();
+        return $result; }
+
+
     function Getproductlist34($query) { global $table_prefix;
         $query = $this->link->query("SELECT * FROM `nim_product` $query LIMIT 3");
         $counts = $query->rowCount(); $result = $query->fetchAll();
