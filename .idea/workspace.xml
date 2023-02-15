@@ -5,12 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bc047395-12cc-4474-b2fe-72233fb553d9" name="Changes" comment="a">
+      <change afterPath="$PROJECT_DIR$/blog.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_de.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/vei_shop.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/vei_shop.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/basket.php" beforeDir="false" afterPath="$PROJECT_DIR$/basket.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/footer.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/include/class.fee.php" beforeDir="false" afterPath="$PROJECT_DIR$/include/class.fee.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target2.php" beforeDir="false" afterPath="$PROJECT_DIR$/target2.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product.php" beforeDir="false" afterPath="$PROJECT_DIR$/product.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +91,10 @@
       <workItem from="1675168918564" duration="9000" />
       <workItem from="1675203856508" duration="3940000" />
       <workItem from="1675629876999" duration="5967000" />
-      <workItem from="1675807416673" duration="2495000" />
+      <workItem from="1675807416673" duration="2630000" />
+      <workItem from="1676067628377" duration="19000" />
+      <workItem from="1676435127332" duration="730000" />
+      <workItem from="1676445891169" duration="1891000" />
     </task>
     <servers />
   </component>

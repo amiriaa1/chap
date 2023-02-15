@@ -121,7 +121,7 @@ echo'
                                         echo'
                                         
                                            <div class="swiper-slide">
-                            <a href="blog-detail?id='.$discountProp69["id"].'">
+                            <a href="blog_de?id='.$discountProp69["id"].'">
                                 <div class="al-item">
                                     <div class="al-img">
                                         <img src="img/blog/'.$discountProp69["pic"].'" class="img-fluid" alt="">

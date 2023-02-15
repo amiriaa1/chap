@@ -474,8 +474,9 @@ echo'
 								</a>
                                     </li>
                                    
-                                   
+                                  
                                 </ol>
+                                
                             </nav>
                         </div>
                     </div>
@@ -488,10 +489,10 @@ echo'
                
                 <div class="summary shadow-sm">
                     <div class="row">
-                        
-                        <div class="col-lg-8 border-right-product">
+                       
+                        <div class="col-lg-8 border-right-product"> 
                             <div class="summary-entry mt-lg-0 mt-4">
-                                
+                                 
                                   <div class="col-sm-6"><center><div id="replyResult"></div>
 
 
@@ -603,8 +604,9 @@ echo'
                               
                                 <div class="swiper-wrapper" title="برای بزرگنمایی تصویر دابل کلیک کنید">
                                     
-                                    <div class="swiper-slide">
+                                    <div class="swiper-slide"> <center>'.$discountProp['title'].'</center>
                                         <div class="swiper-zoom-container">
+                                       
                                             <img class="img-fluid" src="img/product/'.$discountProp['pic'].'" />
                                         </div>
                                     </div>

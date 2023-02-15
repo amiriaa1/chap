@@ -204,6 +204,10 @@ function Getproducttanavolist($query) { global $table_prefix;
         $query->execute($values); $result = $query->fetchAll(); return $result; }
 
 
+    function Getblogids($qui)
+    { global $table_prefix; $query = $this->link->prepare("SELECT * FROM `nim_blog` WHERE `id`=?"); $values = array($qui);
+        $query->execute($values); $result = $query->fetchAll(); return $result; }
+
 
 
     function Getproducttanavolistbyidcount($id)
