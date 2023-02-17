@@ -199,7 +199,12 @@ function Getproducttanavolist($query) { global $table_prefix;
     { global $table_prefix; $query = $this->link->prepare("SELECT * FROM `nim_basket` WHERE `uusername`=?"); $values = array($uusername);
         $query->execute($values); $counts = $query->rowCount(); return $counts; }
 
-    function Getbloglist($qui)
+    function Getbloglist($qui,$type)
+    { global $table_prefix; $query = $this->link->prepare("SELECT * FROM `nim_blog` WHERE `active`=? AND `type`=?"); $values = array($qui,$type);
+        $query->execute($values); $result = $query->fetchAll(); return $result; }
+
+
+    function Getbloglist2($qui)
     { global $table_prefix; $query = $this->link->prepare("SELECT * FROM `nim_blog` WHERE `active`=?"); $values = array($qui);
         $query->execute($values); $result = $query->fetchAll(); return $result; }
 

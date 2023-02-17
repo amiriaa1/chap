@@ -18,8 +18,15 @@ $amp = $fee->Getshoplist1($uusername,$unid);
 foreach($amp as $final)
 {$amount=$final['amount'];}	
 $amount = (_RIAL==1?str_replace(",", "", $amount)/10:str_replace(",", "", $amount)); //Amount will be based on Toman
-echo''.$amount.'';
 
+
+
+    $percentage=9;
+    $totalWidth=$amount;
+    $amountp9 = ($percentage / 100) * $totalWidth;
+
+    $amount=$amountp9+$amount;
+    echo''.$amount.'';
 $_SESSION['course_amount']=str_replace
 	(",", "", $amount);
 	$_SESSION['gateway']=$unid;
@@ -103,7 +110,7 @@ $fee->updateUserPaymentlog($comment,$RefID,$Authority);
 $fee->Updateshoplistafterpay($unid);
 $getdeloo=$fee->Getshoplist1($uusername,$unid);
 $llvm=$uusername;
-orderpayok($llvm);
+orderpayok($llvm,$unid);
 
     date_default_timezone_set('Asia/Tehran');
     list($gy, $gm, $gd) = explode('-', date('Y-n-d'));
@@ -175,9 +182,9 @@ echo'
                                 </div>
                             </div>
                             <div class="trm">
-                                <div class="trm-item">درگاه</div>
+                                <div class="trm-item">فاکتور</div>
                                 <div class="trm-item">
-                                   پی پک
+                                   رسمی
                                 </div>
                             </div>
                             <div class="trm">

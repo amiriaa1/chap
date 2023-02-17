@@ -20,6 +20,36 @@ else{
 echo'
 
 
+<script type="text/javascript">
+
+function Myfactor()
+							{
+                     var getway = document.getElementById("getway").value;
+                     var price2 = document.getElementById("price2").value;
+                               
+                     
+                     $.ajax({
+							
+								    url: "vendorjr.php",
+								    type: "POST",
+								    data: {op:"maliat",price2:price2,getway:getway},
+									dataType: "json",
+								    success: function(data){
+										
+										
+								 $("#show_maliat").html(data.html1);
+                                  $("#show_maliat1").html(data.html2);
+								
+										
+										
+										
+									}
+							      });
+							
+                                
+							}
+</script>
+
 
 <script type="text/javascript">
 							function Mygetway()
@@ -177,7 +207,7 @@ foreach($discountList as $discountProp)
                                     <tr>
                                         <th class="pb-3">نوع</th>
                                         <th class="pb-3">مبلغ</th>
-                                         <th class="pb-3">درگاه پرداخت</th>
+                                         <th class="pb-3">نوع فاکتور</th>
                                         
                                         
                                         
@@ -196,6 +226,11 @@ foreach($discountList as $discountProp)
                                     </tr>
 									';
 									$ftr=$fetfet["0"]["amount"];
+$percentage=9;
+$totalWidth=$ftr;
+$amountp9 = ($percentage / 100) * $totalWidth;
+
+$amount=$amountp9+$ftr;
 									echo'
                                     <tr>
                                         <td class="fw-bold">مجموع</td>
@@ -204,18 +239,27 @@ foreach($discountList as $discountProp)
                                                  <td class="fw-bold">
                                                  
                                                 
-                                       <select id="getway" class="form-select rounded-pill">
-                                                        <option value="sadad">پرداخت با فاکتو رسمی +۹٪ مالیات</option>
-                                                        <option value="paypack">پرداخت با تمام کارت های شتاب</option>
+                                       <select onchange="Myfactor()" id="getway" class="form-select rounded-pill">
+                                                        <option value="sadad">فاکتور رسمی + ۹ ٪ مالیات </option>
+                                                        <option selected="selected" value="paypack">عادی</option>
                                   
                                                  </select>
                                                  
                                                  
 </td>
                                     </tr>
+                                   <td>
+           
+                                 <div name="show_maliat" id="show_maliat"></div>
+                                </td>
+                                 <td class="txt">
+                                   <div name="show_maliat1" id="show_maliat1"></div>
+</td>
+                                   
                                 </table>
 								<input type="hidden" id="unid" value="'.$unid.'">
 								<input type="hidden" id="price" value="'.$ftr.'">
+								<input type="hidden" id="price2" value="'.$amount.'">
 <button  class="shadow-sm fw-bold btn-add-to-cart mt-sm-0 mt-2 waves-effect waves-light" onclick="Mygetway()">پرداخت</button>
 
                                

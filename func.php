@@ -6,12 +6,13 @@ include_once('main.php');
 
 $tre=rand(999,9999);
 if($stat==1){
-    $userinput='هرجا چاپ  جهت تایید ورود کد زیر را وارد کنید '.$tre.'';
+    $userinput='هرجا چاپ  لطفاً جهت تایید کد زیر را وارد کنید '.$tre.'';
     $oop=urlencode($userinput);
 
 }
 if($stat==2){
-    $userinput='ثبت نام شما با موفقیت انجام شد به هرجا چاپ خوش آمدید';
+    $userinput='به هرجا چاپ خوش آمدید
+ثبت نام شما با موفقیت انجام شد';
     $oop=urlencode($userinput);
 
 }
@@ -43,16 +44,16 @@ $mobileInfo = $student->autveruserinsert($tre,$tre2,$llvm);
 
 }
 
-function orderpayok($llvm)
+function orderpayok($llvm,$unid)
 {	
 include_once('main.php');
 
 
-$oop='خرید%20شما%20با%20موفقیت%20انجام%20شد';
-
+    $userinput='سفارش شما با موفقیت با شماره '.$unid.' ثبت شد. هرجا چاپ';
+    $oop=urlencode($userinput);
 
                                                                                                                     
-$ch = curl_init('https://api.kavenegar.com/v1/48663355617733353946652F534659315A2F4B726A2F523767376E75496650586B397A50723076457474303D/sms/send.json?receptor='.$llvm.'&sender=90001702&message='.$oop.'');                                                                      
+$ch = curl_init('https://api.kavenegar.com/v1/48663355617733353946652F534659315A2F4B726A2F523767376E75496650586B397A50723076457474303D/sms/send.json?receptor='.$llvm.',09125111350,09127979628,09351043088,09123066891&sender=90001702&message='.$oop.'');
 curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET"); 
 curl_setopt($ch, CURLOPT_POSTFIELDS, $data_string);                                                                                                                                     
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);                                                                   

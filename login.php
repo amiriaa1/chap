@@ -1,5 +1,10 @@
 <?php
 include('main.php');
+if ($isLogedIn==1){
+    header("Location: index");
+    exit;
+                  }
+else{}
 
 
 echo'
@@ -42,19 +47,20 @@ echo'
                                         <div class="form-group">
                                             <div class="input-group">
                                                 <span class="input-group-text"><i class="bi bi-person"></i></span>
-                                                <input type="text" name="uusername" id="uusername" class="form-control" placeholder="برای ورود شماره موبایل خود را وارد کنید">
-                                                
+                                                <input type="text" name="uusername" id="uusername" class="form-control" required="required" minlength="11" maxlength="11" placeholder="برای ورود شماره موبایل خود را وارد کنید">
+                                               
                                             </div>
+                                        <center><p>با ورود یا ثبت نام در سایت هرجا چاپ <br>با 
+                                        <a class="text-primary" referrerpolicy="origin" target="_blank" href="privacy">قوانین و مقررات</a>
+                                         استفاده از سرویس های سایت هرجا چاپ موافقت میکنید.</p></center>
                                         </div>
-                                     
+                                  
                                        
                                         <div class="d-flex justify-content-center align-items-center">
-                                            <button type="submit" class="btn-login me-2 waves-effect waves-light"><i class="bi bi-person"></i>
+                                            <button type="submit" class="btn-login login w-50 waves-effect waves-light"><i class="bi bi-person"></i>
                                                 ورود به
                                                 سایت</button>
-                                            <a class="btn-login forget waves-effect waves-light" href="forget.html"><i class="bi bi-person"></i>
-                                                فراموشی رمز عبور
-                                            </a>
+                                            
                                         </div>
 
                                     </form>

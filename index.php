@@ -4,7 +4,7 @@ include('main.php');
 include('header.php');
 $fee = new ManageFees();
 $qui="1";
-$discountList8877 = $fee->Getbloglist($qui);
+$discountList8877 = $fee->Getbloglist2($qui);
 echo'
 
 <body>
@@ -19,7 +19,7 @@ echo'
                      <a href="vendor">
                         <div class="cart-small">
                             <div class="cart-small-icon">
-                                <img width="50" src="img/1.jpg" alt="" class="img-fluid">
+                                <img width="50" src="img/chap.jpg" alt="" class="img-fluid">
                             </div>
                             <div class="cart-small-desc ms-lg-3 text-center">
                               
@@ -40,7 +40,7 @@ echo'
                     <a href="category?type=4">
                         <div class="cart-small">
                             <div class="cart-small-icon">
-                                <img width="50" src="img/1.jpg" alt="" class="img-fluid">
+                                <img width="50" src="img/shop2.jpg" alt="" class="img-fluid">
                             </div>
                             <div class="cart-small-desc ms-lg-3 text-center">
                                <h6>فروش و خدمات ماشین های اداری</h6>
@@ -58,7 +58,7 @@ echo'
                     <a href="category?type=3">
                         <div class="cart-small">
                             <div class="cart-small-icon">
-                                <img width="50" src="img/1.jpg" alt="" class="img-fluid">
+                                <img width="50" src="img/shop1.jpg" alt="" class="img-fluid">
                             </div>
                             <div class="cart-small-desc ms-lg-3 text-center">
                                

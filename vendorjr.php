@@ -497,6 +497,35 @@ if ($discountListcount==1){
         break;
 
 
+    case "maliat":
+        $getway= $_REQUEST['getway'];
+        $price2= $_REQUEST['price2'];
+if ($getway=="sadad"){
+        $convem='مجموع + مالیات';
+    $convem2='<span class="fw-bold">'.$price2.'</span>  <span class="text-muted">تومان</span>';
+
+        echo json_encode(array(
+            "statusCode"=>200,
+            "html1"=>$convem,
+             "html2"=>$convem2
+
+
+        ),JSON_UNESCAPED_UNICODE);
+
+}
+        if ($getway=="paypack"){
+        $convem='';
+         $convem2='';
+        echo json_encode(array(
+            "statusCode"=>200,
+            "html1"=>$convem,
+            "html2"=>$convem2
+
+
+        ),JSON_UNESCAPED_UNICODE);
+        }
+        break;
+
 }
 
 

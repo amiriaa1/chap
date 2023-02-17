@@ -103,7 +103,7 @@ echo'
                                             <tr class="py-3">
                                                 <th scope="col">حذف از سبد خرید</th>
                                                 <th scope="col">محصول</th>
-                                                <th scope="col">تنوع</th>
+                                                <th scope="col">مشخصات</th>
                                                 <th scope="col">نوع</th>
                                                 <th scope="col">قیمت</th>
                                            

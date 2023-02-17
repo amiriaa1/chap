@@ -2,6 +2,11 @@
 
 include('main.php');
 
+if ($isLogedIn==1){
+	header("Location: index");
+	exit;
+}
+else{}
 
 
 if(isset($_POST['up-submit'])){
@@ -425,7 +430,7 @@ echo'
                                         <div class="form-group">
                                             <div class="input-group">
                                                 <span class="input-group-text"><i class="bi bi-person"></i></span>
-                                                <input type="text" name="up-username" id="up-username" class="form-control" placeholder="نام کاربری" value="'.$_POST['uusername'].'">
+                                                <input type="text" required="required" minlength="11" maxlength="11" name="up-username" id="up-username" class="form-control" placeholder="نام کاربری" value="'.$_POST['uusername'].'">
                                             </div>
                                         </div>
                                         <div class="form-group">
@@ -444,15 +449,10 @@ echo'
 										<div class="form-group">
                                             <div class="input-group">
                                                 <span class="input-group-text"><i class="bi bi-envelope"></i></span>
-                                                <input type="text" name="up-name" id="up-name" class="form-control" placeholder="نام">
+                                                <input type="text" name="up-name" id="up-name" class="form-control" placeholder="نام و نام خانوادگی ">
                                             </div>
                                         </div>
-                                        <div class="form-group">
-                                            <div class="input-group">
-                                                <span class="input-group-text"><i class="bi bi-key"></i></span>
-                                                <input type="password" name="up-pass" id="up-pass" placeholder="رمز عبور" class="form-control">
-                                            </div>
-                                        </div>
+                                      
                                         <div class="d-flex justify-content-center flex-column align-items-center flex-wrap">
                                             <button type="submit" name="up-submit" id="up-submit" class="btn-login w-50 waves-effect waves-light"><i class="bi bi-person"></i>
                                                  ثبت نام در سایت

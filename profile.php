@@ -1,12 +1,18 @@
 <?php
 include_once('main.php');
+
+
+if ($isLogedIn==1){echo'test';}
+else{
+    header("Location: login");
+    echo'hiiiii';
+    exit;
+}
+
 include_once('header.php');
 
 $student = new ManageStudents();
-$fee = new ManageFees();	
-
-
-
+$fee = new ManageFees();
 
 
 

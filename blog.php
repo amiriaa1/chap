@@ -19,33 +19,26 @@ echo'
                           
                         
                         
-                            <div class="category-filter">
+                              <div class="category-filter">
                                 <div class="category-filter-box">
                                     <div class="category-filter-box-title">
                                         <h4 class="fw-bold">
-                                            مقالات تصادفی
+                                            دسته بندی مقالات
                                         </h4>
                                     </div>
                                     <div class="category-filter-box-desc">
-                                        <div class="best-articles">
-                                          
+                                        <div class="d-flex flex-wrap align-items-center justify-content-center">
+                                            <a href="blog?type=1" class="blog-tag">چاپ و طراحی</a>
+                                            <a href="blog?type=2" class="blog-tag">فروش و خدمات ماشین های اداری</a>
+                                            <a href="blog?type=3" class="blog-tag">فروش ملزومات اداری و دفتری</a>
                                          
-                                           
-                                            <a href="blog-detail.html">
-                                                <div class="best-article">
-                                                    <img src="img/blog/01-Swimming.jpg" alt="" class="rounded">
-                                                    <h5>
-                                                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم
-                                                        لورم ایپسوم متن ساختگی
-                                                    </h5>
-                                                </div>
-                                            </a>
-
-
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                            
+                            
+                            
                         </div>
                     </div>
                     <div class="col-lg-9">
@@ -58,12 +51,17 @@ echo'
                               
                               ';
 $qui="1";
-$discountList8877 = $fee->Getbloglist($qui);
+$type="1";
+if(isset($_GET['type'])){
+if ($_GET['type']==1){$type="1";}
+if ($_GET['type']==2){$type="2";}
+if ($_GET['type']==3){$type="3";}
+
+}
+
+$discountList8877 = $fee->Getbloglist($qui,$type);
 foreach($discountList8877 as $discountProp69) {
-    date_default_timezone_set('Asia/Tehran');
-    list($gy, $gm, $gd) = explode('-', $discountProp69["timastammp"]);
-    $j_date_array = gregorian_to_jalali($gy, $gm, $gd);
-    $today_date = implode("/", $j_date_array);
+
 echo'
 
    <div class="col-md-4 col-sm-6">
@@ -87,7 +85,7 @@ echo'
                                                         class="img-fluid rounded-circle" alt="">
                                                     <div class="date ms-2">
                                                         <p class="fw-bold text-muted">هرجا چاپ</p>
-                                                        <span class="text-muted">'.$today_date.'   </span>
+                                                       
                                                     </div>
                                                 </div>
                                                 <div class="cat">

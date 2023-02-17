@@ -106,7 +106,8 @@ $fee->updateUserPaymentlog($comment,$RefID,$Authority);
 $fee->Updateshoplistafterpay($unid);
 $getdeloo=$fee->Getshoplist1($uusername,$unid);
 $llvm=$uusername;
-orderpayok($llvm);
+
+    orderpayok($llvm,$unid);
 
     date_default_timezone_set('Asia/Tehran');
     list($gy, $gm, $gd) = explode('-', date('Y-n-d'));
@@ -151,7 +152,7 @@ echo'
                             <thead>
                                 <tr>
                                     <th scope="col">ردیف</th>
-                                    <th scope="col">درگاه</th>
+                                    <th scope="col">فاکتور</th>
                                     <th scope="col">شماره پیگیری بانکی</th>
                                     <th scope="col">مبلغ</th>
                                     <th scope="col">وضعیت</th>
@@ -160,7 +161,7 @@ echo'
                             <tbody>
                                 <tr class="text-center">
                                     <td>1</td>
-                                    <td>پی پک</td>
+                                    <td>عادی</td>
                                     <td>'.$reference_code.'</td>
                                   
                                     <td>'.$getdeloo["0"]["amount"].' تومان</td>
