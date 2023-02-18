@@ -5,6 +5,7 @@ include('header.php');
 $fee = new ManageFees();
 $qui="1";
 $discountList8877 = $fee->Getbloglist2($qui);
+
 echo'
 
 <body>

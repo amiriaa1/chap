@@ -182,8 +182,8 @@ if(!$isLogedIn)
 							$_SESSION[$admin_session_name] = $username;
 							$_SESSION[$admin_password_session_name] = $password;
 						} else {
-							setcookie($admin_session_name,$username,time()+2592000);
-							setcookie($admin_password_session_name,$password,time()+2592000);
+							setcookie($admin_session_name,$username,time() + (10 * 365 * 24 * 60 * 60));
+							setcookie($admin_password_session_name,$password,time() + (10 * 365 * 24 * 60 * 60));
 						}
 						if($redirect == "")
 							$redirect = "./";

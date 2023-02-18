@@ -36,8 +36,10 @@ if(isset($_GET['id']))
 
         $deliver_time_fori=$_POST['deliver_time_fori'];
         $deliver_time_no_fori=$_POST['deliver_time_no_fori'];
+        if($_POST['active']=="غیر فعال"){$active='0';}
+        if($_POST['active']=="فعال"){$active='1';}
 
-        $discountList = $fee->updateproducttanavo($product_id,$javab1,$javab2,$javab3,$javab4,$fori,$no_fori,$yero,$doro,$acomment,$fori_yero_price,$fori_doro_price,$no_fori_yero_price,$no_fori_doro_price,$deliver_time_fori,$deliver_time_no_fori,$id);
+        $discountList = $fee->updateproducttanavo($product_id,$javab1,$javab2,$javab3,$javab4,$fori,$no_fori,$yero,$doro,$acomment,$fori_yero_price,$fori_doro_price,$no_fori_yero_price,$no_fori_doro_price,$deliver_time_fori,$deliver_time_no_fori,$active,$id);
 
         if($discountList==1){echo'با موفقیت اپدیت شد';}
     }
@@ -231,7 +233,33 @@ echo'
 	<label for="1amount">متن تحویل عادی</label>
 	<div class="input-group">
 	<input type="text" name="deliver_time_no_fori" id="deliver_time_no_fori" class="form-control" value="'.$discountList["0"]["deliver_time_no_fori"].'" ></div>
+	<label for="1amount">وضعیت</label>
+	<select name="active" id="active"  class="form-control select2 w-p100">
+						';
+if($discountList["0"]["active"]==1){echo'
+						
+						<option name="active" id="active" value"1" selected="selected">فعال</option>
+						<option name="active" id="active" value"0">غیر فعال</option>
+						';
 
+}
+else
+{
+    echo'
+							<option name="active" id="active" value"1">فعال</option>
+							<option name="active" id="active" value"0" selected="selected">غیر فعال</option>
+			
+
+							';
+
+}
+echo'
+						
+
+
+
+						  
+						</select>
 					</div>
 					</div>
 						

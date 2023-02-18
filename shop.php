@@ -56,11 +56,11 @@ $uptrack_code= $_REQUEST['btn'];
 <script type="text/javascript">
 							function Myshoplist(item)
 							{
-								$("#replyResult").html(\'<img src="img/default-icon/wait.gif">\');
+								
 								var x = $(productid).attr("value");
 								
-							var y =	document.getElementById("price_show").innerHTML;
-                            
+						
+                            var y =	document.getElementById("price_show2").value;
 								
 							$.ajax({
 							
@@ -135,7 +135,7 @@ $uptrack_code= $_REQUEST['btn'];
                                         
                                        ';
 
-											
+$baseprice_change=number_format($baseprice,0,'.',',');
 											echo'
 											
 									 </div> </div>
@@ -147,6 +147,7 @@ $uptrack_code= $_REQUEST['btn'];
                                              
                                                   <input type="hidden" name="productid" id="productid" class="form-control" value="'.$_GET['id'].'">
 												   <input type="hidden" name="tavlkkf" id="tavlkkf" class="form-control" value="">
+												   <input type="hidden" name="price_show2" id="price_show2" class="form-control" value="'.$baseprice.'">
                                                    
                                                    
                                             <div class="se-cart-form">
@@ -155,7 +156,7 @@ $uptrack_code= $_REQUEST['btn'];
                                                     
                                                        <div class="se-cart-price">
                                                 
-                                                <span class="se-cart-price-new" name="price_show" id="price_show">'. $baseprice.'</span> تومان
+                                                <span class="se-cart-price-new" name="price_show" id="price_show">'. $baseprice_change.'</span> تومان
                                             </div>
                                                         <div class="col-sm-6">
                                                          ';
@@ -206,32 +207,7 @@ echo'
                             
                         </div>
                         
-                        <div class="col-12">
-                            <div class="product-feature">
-                                <nav class="navbar">
-                                    <ul class="navbar-nav justify-content-md-between justify-content-center">
-                                        <li class="nav-item">
-                                            <img src="img/product-feature/product_feauture_1.png" alt="">
-                                            <span>تحویل فوری</span>
-                                        </li>
-                                        <li class="nav-item">
-                                            <img src="img/product-feature/product_feauture_2 (1).png" alt="">
-                                            <span>پرداخت در محل</span>
-                                        </li>
-                                        <li class="nav-item">
-                                            <img src="img/product-feature/product_feauture_3.png" alt="">
-                                            <span>ضمانت اصالت کالا
-                                            </span>
-                                        </li>
-                                        <li class="nav-item">
-                                            <img src="img/product-feature/product_feauture_4.png" alt="">
-                                            <span>ضمانت بازگشت وجه
-                                            </span>
-                                        </li>
-                                    </ul>
-                                </nav>
-                            </div>
-                        </div>
+                        
                     </div>
                 </div>
             </div>
@@ -254,11 +230,7 @@ echo'
                                     href="#prodesc"><i class="bi bi-file-richtext"></i> معرفی</a></button>
                         </li>
                      
-                        <li class="nav-item">
-                            <button class=" waves-effect waves-light" id="productTable" data-bs-toggle="tab"
-                                data-bs-target="#productTable-pane" role="tab" type="button" aria-selected="false"><a
-                                    href="#prodesc"><i class="bi bi-grid"></i> توضیحات تکمیلی</a></button>
-                        </li>
+                     
                        
                        
                     </ul>

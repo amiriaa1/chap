@@ -50,6 +50,7 @@ $discountList = $fee->Getbasketforuser($uusername);
 $discountListsum = $fee->Getbasketforusersum($uusername);
 
 $aftertotal=$discountListsum["0"]["total"];
+$aftertotal2=number_format($discountListsum["0"]["total"],0,'.',',');
 
 echo'
 
@@ -146,9 +147,10 @@ $counterr=1;
                                                    else{
                                                        echo'<td class="title">'.$fgt2["name"].'</td>';
                                                    }
+                                                   $dispricesh_change=number_format($discountProp69["price"],0,'.',',');
                                                    echo'
                                                 
-                                                <td class="price"><span class="num">'.$discountProp69["price"].'</span> <span class="text-muted">تومان</span></td>
+                                                <td class="price"><span class="num">'.$dispricesh_change.'</span> <span class="text-muted">تومان</span></td>
                                                 
                                             </tr>
                                             
@@ -156,6 +158,7 @@ $counterr=1;
                                                    ';
 
                                                    $counterr++; }
+$dispricesh2_change=number_format($discountListsum["0"]["total"],0,'.',',');
                                        echo'
                                           
                                             
@@ -177,7 +180,8 @@ $counterr=1;
                                 <table class="table main-table">
                                     <tr>
                                         <td class="fw-bold">قیمت کل</td>
-                                        <td class="txt"><span class="fw-bold">'.$discountListsum["0"]["total"].'</span> <span
+                                        
+                                        <td class="txt"><span class="fw-bold">'.$dispricesh2_change.'</span> <span
                                                 class="text-muted">تومان</span></td>
                                     </tr>
                                     <tr>
@@ -187,7 +191,7 @@ $counterr=1;
                                     </tr>
                                     <tr>
                                         <td class="fw-bold">مجموع</td>
-                                        <td class="txt"><span class="fw-bold">'.$aftertotal.'</span> <span
+                                        <td class="txt"><span class="fw-bold">'.$aftertotal2.'</span> <span
                                                 class="text-muted">تومان</span></td>
                                     </tr>
 

@@ -231,10 +231,12 @@ $totalWidth=$ftr;
 $amountp9 = ($percentage / 100) * $totalWidth;
 
 $amount=$amountp9+$ftr;
+$ftr_change=number_format($ftr,0,'.',',');
+
 									echo'
                                     <tr>
                                         <td class="fw-bold">مجموع</td>
-                                        <td class="txt"><span class="fw-bold">'.$ftr.'</span> <span
+                                        <td class="txt"><span class="fw-bold">'.$ftr_change.'</span> <span
                                                 class="text-muted">تومان</span></td>
                                                  <td class="fw-bold">
                                                  

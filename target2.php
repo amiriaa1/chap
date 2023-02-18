@@ -7,19 +7,17 @@ include_once('header.php');
 
 if((isset($_GET['GS'])))
 {
-	if (isset($_COOKIE['cid'])) {
-		setcookie("cid",'',time()-1200);
-	}
-	setcookie("cid",$_GET['GS'],time()+1200);
-$unid=$_GET['GS'];
-$fee=new ManageFees();	
+    if (isset($_COOKIE['cid'])) {
+        setcookie("cid",'',time()-1200);
+    }
+    setcookie("cid",$_GET['GS'],time()+1200);
+    $unid=$_GET['GS'];
+    $fee=new ManageFees();
 
-$amp = $fee->Getshoplist1($uusername,$unid);
-foreach($amp as $final)
-{$amount=$final['amount'];}	
-$amount = (_RIAL==1?str_replace(",", "", $amount)/10:str_replace(",", "", $amount)); //Amount will be based on Toman
-
-
+    $amp = $fee->Getshoplist1($uusername,$unid);
+    foreach($amp as $final)
+    {$amount=$final['amount'];}
+    $amount = (_RIAL==1?str_replace(",", "", $amount)/10:str_replace(",", "", $amount)); //Amount will be based on Toman
 
     $percentage=9;
     $totalWidth=$amount;
@@ -27,16 +25,17 @@ $amount = (_RIAL==1?str_replace(",", "", $amount)/10:str_replace(",", "", $amoun
 
     $amount=$amountp9+$amount;
     echo''.$amount.'';
-$_SESSION['course_amount']=str_replace
-	(",", "", $amount);
-	$_SESSION['gateway']=$unid;
+
+    $_SESSION['course_amount']=str_replace
+    (",", "", $amount);
+    $_SESSION['gateway']=$unid;
     $amount*=10;
     $key = "XDG4VIrHqsCXFezWODxii03VneQ/6VDs";
     $MerchantId = "140341573";
     $TerminalId = "24102838";
     $OrderId =$unid;
     $LocalDateTime = date("m/d/Y g:i:s a");
-    $ReturnUrl = "http://harjachap.com/target2.php";
+    $ReturnUrl = "https://harjachap.com/target2.php";
     $SignData = encrypt_pkcs7("$TerminalId;$OrderId;$amount", "$key");
     $data = array(
         'TerminalId' => $TerminalId,
@@ -45,19 +44,20 @@ $_SESSION['course_amount']=str_replace
         'SignData' => $SignData,
         'ReturnUrl' => $ReturnUrl,
         'LocalDateTime' => $LocalDateTime,
+        'UserId' => $uusername,
         'OrderId' => $OrderId
     );
 
     $result = CallAPI('https://sadad.shaparak.ir/vpg/api/v0/Request/PaymentRequest', $data);
-	if ($result->ResCode !== 0){
-$fee = new ManageFees();
-$Authority=$unid;
-$status="sadad--PaymentRequest-err-'.$result->Description.'";
-$fee->AddUserPaymentlog($Authority,$uusername,$status,$amount);
+    if (!$result->ResCode == 0){
+        $fee = new ManageFees();
+        $Authority=$unid;
+        $status="sadad--PaymentRequest-err-'.$result->Description.'";
+        $fee->AddUserPaymentlog($Authority,$uusername,$status,$amount);
 
 
-    return; //your error
-}
+        return; //your error
+    }
     else{
         $_SESSION['order_id']=$unid;
         $_SESSION['pay_amount']=$amount/10;
@@ -67,57 +67,58 @@ $fee->AddUserPaymentlog($Authority,$uusername,$status,$amount);
         $Authority=$unid;
         $status='sadad--send to getway--'.$Token.'';
         $fee->AddUserPaymentlog($Authority,$uusername,$status,$amount);
-
+        echo "<script>window.location.href='$url';</script>";
         header("Location:$url");
         exit;
 
 
 
     }
-			
+
 
 
 
 }
 
-elseif(isset($_SESSION['gateway'])){
-	$fee=new ManageFees();	
-	$unid=$_SESSION['gateway'];
-	$autvc=count($fee->getcountshoplistpart($uusername,$unid));
-	if($autvc!==0){
-	
+elseif(isset($_POST["ResCode"])){
+    $fee=new ManageFees();
+    $unid=$_POST["OrderId"];
+    $autvc=count($fee->getcountshoplistpart($uusername,$unid));
+    if($autvc!==0){
+        $key = "XDG4VIrHqsCXFezWODxii03VneQ/6VDs";
+        $OrderId = $_POST["OrderId"];
+        $Token = $_POST["token"];
+        $ResCode = $_POST["ResCode"];
 
 
-		    if((isset($_GET['reference_code']))){
-				
-$token = refresh_token($refresh_token,$secret_id,$client_id);
-$reference_code = $_GET['reference_code'];	
+        if ($ResCode == 0) {
 
-		  $data = [
-    'access_token' => $token,
-    'reference_code' => $reference_code,
-];
+            $verifyData = array(
+                'Token' => $Token,
+                'SignData' => encrypt_pkcs7($Token, $key)
+            );
 
-$verify_result = verify($data,$secret_id,$client_id);
-
-if ($verify_result['status']=="0"){
+            $result = CallAPI('https://sadad.shaparak.ir/vpg/api/v0/Advice/Verify', $verifyData);
 
 
-$comment=$verify_result['message'];
-$RefID=$_GET['reference_code'];
-$Authority=$unid;
-$fee->updateUserPaymentlog($comment,$RefID,$Authority);
-$fee->Updateshoplistafterpay($unid);
-$getdeloo=$fee->Getshoplist1($uusername,$unid);
-$llvm=$uusername;
-orderpayok($llvm,$unid);
+            if ($result->ResCode != -1 && $result->ResCode == 0) {
 
-    date_default_timezone_set('Asia/Tehran');
-    list($gy, $gm, $gd) = explode('-', date('Y-n-d'));
-    $j_date_array = gregorian_to_jalali($gy, $gm, $gd);
-    $today_date=implode("/", $j_date_array);
 
-echo'
+                $comment="$result->RetrivalRefNo--$result->SystemTraceNo--$result->OrderId--$result->Description--$result->CardHolderFullName";
+                $RefID=$result->SystemTraceNo;
+                $Authority=$unid;
+                $fee->updateUserPaymentlog($comment,$RefID,$Authority);
+                $fee->Updateshoplistafterpay($unid);
+                $getdeloo=$fee->Getshoplist1($uusername,$unid);
+                $llvm=$uusername;
+                orderpayok($llvm,$unid);
+
+                date_default_timezone_set('Asia/Tehran');
+                list($gy, $gm, $gd) = explode('-', date('Y-n-d'));
+                $j_date_array = gregorian_to_jalali($gy, $gm, $gd);
+                $today_date=implode("/", $j_date_array);
+
+                echo'
 
 <div class="cart">
             <div class="container-fluid">
@@ -155,7 +156,7 @@ echo'
                             <thead>
                                 <tr>
                                     <th scope="col">ردیف</th>
-                                    <th scope="col">درگاه</th>
+                                    <th scope="col">فاکتور</th>
                                     <th scope="col">شماره پیگیری بانکی</th>
                                     <th scope="col">مبلغ</th>
                                     <th scope="col">وضعیت</th>
@@ -164,10 +165,10 @@ echo'
                             <tbody>
                                 <tr class="text-center">
                                     <td>1</td>
-                                    <td>پی پک</td>
+                                    <td>رسمی</td>
                                     <td>'.$reference_code.'</td>
                                   
-                                    <td>'.$getdeloo["0"]["amount"].' تومان</td>
+                                    <td>'.$result->Amount.' ریال</td>
                                     <td><span class="success-span">پرداخت موفق</span></td>
                                 </tr>
                             </tbody>
@@ -182,9 +183,9 @@ echo'
                                 </div>
                             </div>
                             <div class="trm">
-                                <div class="trm-item">فاکتور</div>
+                                <div class="trm-item">درگاه</div>
                                 <div class="trm-item">
-                                   رسمی
+                                   پی پک
                                 </div>
                             </div>
                             <div class="trm">
@@ -224,26 +225,26 @@ echo'
 
 
 
-}
-else{
-	
-$comment=$verify_result['message'];
-$RefID=$_GET['reference_code'];
-$Authority=$unid;
-$fee->updateUserPaymentlog($comment,$RefID,$Authority);
-    echo $verify_result['message'];
-    return;
-		
-		
-	
-			
-			
-			
-			}
-	
-}
+            }
+            else{
 
-}
+                $comment="err";
+                $RefID="err";
+                $Authority=$unid;
+                $fee->updateUserPaymentlog($comment,$RefID,$Authority);
+
+                return;
+
+
+
+
+
+
+            }
+
+        }
+
+    }
 
 
 }

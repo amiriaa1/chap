@@ -500,9 +500,10 @@ if ($discountListcount==1){
     case "maliat":
         $getway= $_REQUEST['getway'];
         $price2= $_REQUEST['price2'];
+        $price2_change=number_format( $price2,0,'.',',');
 if ($getway=="sadad"){
         $convem='مجموع + مالیات';
-    $convem2='<span class="fw-bold">'.$price2.'</span>  <span class="text-muted">تومان</span>';
+    $convem2='<span class="fw-bold">'.$price2_change.'</span>  <span class="text-muted">تومان</span>';
 
         echo json_encode(array(
             "statusCode"=>200,

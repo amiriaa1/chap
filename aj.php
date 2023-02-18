@@ -125,10 +125,12 @@ $soalaval= $fgt2['fgt']['0']['farijavab'];
 
                     $pop1matn=$btnsolcount['0']['deliver_time_fori'];
                     $pop1_price=$btnsolcount['0']['price_fori_doro'];
+
                     if($type==1){
                         $pop1_price= $pop1_price * 1000;
                     }
-                    $pop1='<button name="price1" id="price1" value="فوری دو رو-'.$idproduct.'-99-'.$pop1_price.'"  type="button" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProp4(this)">فوری دو رو--'.$pop1_price.'تومان</button>';}
+                    $pop1_price_change=number_format($pop1_price,0,'.',',');
+                    $pop1='<button name="price1" id="price1" value="فوری دو رو-'.$idproduct.'-99-'.$pop1_price.'"  type="button" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProp4(this)">فوری دو رو--'.$pop1_price_change.'تومان</button>';}
 
 
                 if($btnsolcount['0']['fori']==1 & $btnsolcount['0']['yero']==1){
@@ -137,7 +139,8 @@ $soalaval= $fgt2['fgt']['0']['farijavab'];
                     if($type==1){
                         $pop2_price= $pop2_price * 1000;
                     }
-                    $pop2='<button name="price2" id="price2" value="فوری یک رو-'.$idproduct.'-99-'.$pop2_price.'"  type="button" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProp4(this)">فوری یک رو--'.$pop2_price.'تومان</button>';}
+                    $pop2_price_change=number_format($pop2_price,0,'.',',');
+                    $pop2='<button name="price2" id="price2" value="فوری یک رو-'.$idproduct.'-99-'.$pop2_price.'"  type="button" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProp4(this)">فوری یک رو--'.$pop2_price_change.'تومان</button>';}
 
                 if($btnsolcount['0']['no_fori']==1 & $btnsolcount['0']['doro']==1){
                     $pop2matn=$btnsolcount['0']['deliver_time_no_fori'];
@@ -145,7 +148,8 @@ $soalaval= $fgt2['fgt']['0']['farijavab'];
                     if($type==1){
                         $pop3_price= $pop3_price * 1000;
                     }
-                    $pop3='<button name="price3" id="price3" value="عادی دو رو-'.$idproduct.'-99-'.$pop3_price.'"  type="button" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProp4(this)">عادی دو رو--'.$pop3_price.'تومان</button>';}
+                    $pop3_price_change=number_format($pop3_price,0,'.',',');
+                    $pop3='<button name="price3" id="price3" value="عادی دو رو-'.$idproduct.'-99-'.$pop3_price.'"  type="button" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProp4(this)">عادی دو رو--'.$pop3_price_change.'تومان</button>';}
 
 
                 if($btnsolcount['0']['no_fori']==1 & $btnsolcount['0']['yero']==1){
@@ -154,7 +158,8 @@ $soalaval= $fgt2['fgt']['0']['farijavab'];
                     if($type==1){
                         $pop4_price= $pop4_price * 1000;
                     }
-                    $pop4='<button name="price4" id="price4" value="عادی یک رو-'.$idproduct.'-99-'.$pop4_price.'"  type="button" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProp4(this)">عادی یک رو--'.$pop4_price.'تومان</button>';}
+                    $pop4_price_change=number_format($pop4_price,0,'.',',');
+                    $pop4='<button name="price4" id="price4" value="عادی یک رو-'.$idproduct.'-99-'.$pop4_price.'"  type="button" class="btn btn-outline btn-rounded mb-5" onclick="showStudentProp4(this)">عادی یک رو--'.$pop4_price_change.'تومان</button>';}
 
                 if($pop1=="" or $pop1==NULL){$pop1="";}
                 if($pop2=="" or $pop2==NULL){$pop2="";}
@@ -337,11 +342,14 @@ $cooin=1;
 			$fglprice2 = $price2 * $val;
 			$fglprice3 = $price3 * $val;
 			$fglprice4 = $price4 * $val;
-			
-			$btn_fglprice1 ='فوری یک رو - '.$fglprice1.' تومان';
-			$btn_fglprice2 ='فوری دو رو - '.$fglprice2.' تومان';
-			$btn_fglprice3 ='عادی یک رو '.$fglprice3.' تومان';
-			$btn_fglprice4 ='عادی دو رو '.$fglprice4.' تومان';
+             $fglprice1_change=number_format($fglprice1,0,'.',',');
+             $fglprice2_change=number_format($fglprice2,0,'.',',');
+             $fglprice3_change=number_format($fglprice3,0,'.',',');
+             $fglprice4_change=number_format($fglprice4,0,'.',',');
+			$btn_fglprice1 ='فوری یک رو - '.$fglprice1_change.' تومان';
+			$btn_fglprice2 ='فوری دو رو - '.$fglprice2_change.' تومان';
+			$btn_fglprice3 ='عادی یک رو '.$fglprice3_change.' تومان';
+			$btn_fglprice4 ='عادی دو رو '.$fglprice4_change.' تومان';
 			echo json_encode(array(
 				"statusCode"=>200,
 				"fori_yero"=>$fglprice1,
@@ -376,12 +384,14 @@ $cooin=1;
                 $pricefinal=$pricefinal / 1000;
             }
           $fglprice1 = $pricefinal * $x;
+            $fglprice1_change=number_format($fglprice1,0,'.',',');
 		session_start();
 		$json=json_encode(array(
 				"statusCode"=>200,
 				"count"=>$x,
                 "name"=>$name,
                 "idproduct"=>$idproduct,
+            "pricefinal_show"=>$fglprice1_change,
 				"pricefinal"=>$fglprice1
 				
 

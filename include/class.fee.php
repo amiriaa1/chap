@@ -229,7 +229,7 @@ function Getproducttanavolist($query) { global $table_prefix;
 
 
     function Getsol1fromsol($id)
- { global $table_prefix; $query = $this->link->prepare("SELECT sol1,   COUNT(*) AS CNT FROM nim_product_solutions where product_id=? GROUP BY sol1; "); $values = array($id);
+ { global $table_prefix; $query = $this->link->prepare("SELECT sol1,   COUNT(*) AS CNT FROM nim_product_solutions where product_id=? AND active='1' GROUP BY sol1; "); $values = array($id);
  $query->execute($values);$counts = $query->rowCount(); $result = $query->fetchAll(); return $result; } 
 
    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -327,10 +327,10 @@ function Deletecustomerapp($id)
 
 
 
-    function updateproducttanavo($product_id,$javab1,$javab2,$javab3,$javab4,$fori,$no_fori,$yero,$doro,$acomment,$fori_yero_price,$fori_doro_price,$no_fori_yero_price,$no_fori_doro_price,$deliver_time_fori,$deliver_time_no_fori,$id)
+    function updateproducttanavo($product_id,$javab1,$javab2,$javab3,$javab4,$fori,$no_fori,$yero,$doro,$acomment,$fori_yero_price,$fori_doro_price,$no_fori_yero_price,$no_fori_doro_price,$deliver_time_fori,$deliver_time_no_fori,$active,$id)
     { global $table_prefix;
-        $query = $this->link->prepare("update nim_product_solutions set  `product_id`=? , `sol1`=?  , `sol2`=? , `sol3`=? , `sol4`=? , `fori`=? , `no_fori`=? , `yero`=? , `doro`=? , `acomment`=? , `price_fori_yero`=? ,`price_fori_doro`=? , `price_no_fori_yero`=? , `price_no_fori_doro`=? , `deliver_time_fori`=? , `deliver_time_no_fori`=? WHERE `sid`=?");
-        $values = array($product_id,$javab1,$javab2,$javab3,$javab4,$fori,$no_fori,$yero,$doro,$acomment,$fori_yero_price,$fori_doro_price,$no_fori_yero_price,$no_fori_doro_price,$deliver_time_fori,$deliver_time_no_fori,$id);
+        $query = $this->link->prepare("update nim_product_solutions set  `product_id`=? , `sol1`=?  , `sol2`=? , `sol3`=? , `sol4`=? , `fori`=? , `no_fori`=? , `yero`=? , `doro`=? , `acomment`=? , `price_fori_yero`=? ,`price_fori_doro`=? , `price_no_fori_yero`=? , `price_no_fori_doro`=? , `deliver_time_fori`=? , `deliver_time_no_fori`=? , `active`=? WHERE `sid`=?");
+        $values = array($product_id,$javab1,$javab2,$javab3,$javab4,$fori,$no_fori,$yero,$doro,$acomment,$fori_yero_price,$fori_doro_price,$no_fori_yero_price,$no_fori_doro_price,$deliver_time_fori,$deliver_time_no_fori,$active,$id);
         $query->execute($values); $counts = $query->rowCount(); return $counts; }
  ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
  

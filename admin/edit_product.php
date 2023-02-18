@@ -209,7 +209,7 @@ if($type==4)
 								<div class="form-group">
 								
 									<div class="controls">
-										<label>نوع محصول</label>
+										<label>وضعیت</label>
 						<select name="avtive" id="avtive"  class="form-control select2 w-p100">
 						';
 						if($avtive==1){echo'

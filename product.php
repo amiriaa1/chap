@@ -353,7 +353,9 @@ echo'
 											  $(item).css("background", "#4fcce9");
                                                                            } 
 								
-								document.getElementById("price_show").innerHTML = data.pricefinal;
+								document.getElementById("price_show").innerHTML = data.pricefinal_show;
+								
+								 document.getElementById("price_show2").value=data.pricefinal;
 								
 								
 										
@@ -412,7 +414,8 @@ echo'
 								
 								var x = $(productid).attr("value");
 								
-							var y =	document.getElementById("price_show").innerHTML;
+							var y =	document.getElementById("price_show2").value;
+							
 								
 							$.ajax({
 							
@@ -469,14 +472,16 @@ echo'
                                             d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z" />
                                     </svg>
                                  <-
-                                 بازگشت به صفحه محصولات
+                                 بازگشت به صفحه محصولات 
                                 </button>
+                              
 								</a>
+								 
                                     </li>
-                                   
-                                  
+                            
+                                 
                                 </ol>
-                                
+                               <center><h3> '.$discountProp['title'].' </h3></center>
                             </nav>
                         </div>
                     </div>
@@ -604,7 +609,7 @@ echo'
                               
                                 <div class="swiper-wrapper" title="برای بزرگنمایی تصویر دابل کلیک کنید">
                                     
-                                    <div class="swiper-slide"> <center>'.$discountProp['title'].'</center>
+                                    <div class="swiper-slide"> 
                                         <div class="swiper-zoom-container">
                                        
                                             <img class="img-fluid" src="img/product/'.$discountProp['pic'].'" />
@@ -632,6 +637,7 @@ echo'
                         </div>
                         
                         <input type="hidden" name="productid" id="productid" class="form-control" value="'.$_GET['id'].'">
+                         <input type="hidden" name="price_show2" id="price_show2" class="form-control" value="">
 												   <input type="hidden" name="tavlkkf" id="tavlkkf" class="form-control" value="">
 												   <input type="hidden" name="type" id="type" class="form-control" value="'.$type.'">
                                                    
@@ -658,11 +664,7 @@ echo'
                                     href="#prodesc"><i class="bi bi-file-richtext"></i> معرفی</a></button>
                         </li>
                      
-                        <li class="nav-item">
-                            <button class=" waves-effect waves-light" id="productTable" data-bs-toggle="tab"
-                                data-bs-target="#productTable-pane" role="tab" type="button" aria-selected="false"><a
-                                    href="#prodesc"><i class="bi bi-grid"></i> توضیحات تکمیلی</a></button>
-                        </li>
+                       
                        
                        
                     </ul>
