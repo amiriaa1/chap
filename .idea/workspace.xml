@@ -5,22 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bc047395-12cc-4474-b2fe-72233fb553d9" name="Changes" comment="a">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/7ff1c0ba-e02c-409f-9700-d7b8f0643607.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/7ff1c0ba-e02c-409f-9700-d7b8f0643607.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/edit_product.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/edit_product.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/tanavo_edit_product.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/tanavo_edit_product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/address.php" beforeDir="false" afterPath="$PROJECT_DIR$/address.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/aj.php" beforeDir="false" afterPath="$PROJECT_DIR$/aj.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/basket.php" beforeDir="false" afterPath="$PROJECT_DIR$/basket.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/include/class.fee.php" beforeDir="false" afterPath="$PROJECT_DIR$/include/class.fee.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product.php" beforeDir="false" afterPath="$PROJECT_DIR$/product.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop.php" beforeDir="false" afterPath="$PROJECT_DIR$/shop.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/step2.php" beforeDir="false" afterPath="$PROJECT_DIR$/step2.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target.php" beforeDir="false" afterPath="$PROJECT_DIR$/target.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target2.php" beforeDir="false" afterPath="$PROJECT_DIR$/target2.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendorjr.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendorjr.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,6 +62,7 @@
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="database.main" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -105,7 +97,9 @@
       <workItem from="1676067628377" duration="19000" />
       <workItem from="1676435127332" duration="730000" />
       <workItem from="1676445891169" duration="2383000" />
-      <workItem from="1676634032726" duration="16370000" />
+      <workItem from="1676634032726" duration="22994000" />
+      <workItem from="1676804300556" duration="509000" />
+      <workItem from="1676975522276" duration="1191000" />
     </task>
     <servers />
   </component>
@@ -134,6 +128,11 @@
           <url>file://$PROJECT_DIR$/category.php</url>
           <line>74</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/aj.php</url>
+          <line>112</line>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

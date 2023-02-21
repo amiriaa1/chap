@@ -221,6 +221,26 @@ function Getproducttanavolist($query) { global $table_prefix;
 
    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+
+    function Getprovince($active)
+    { global $table_prefix; $query = $this->link->prepare("SELECT * FROM `provinces` where active=?"); $values = array($active);
+        $query->execute($values);$counts = $query->rowCount(); $result = $query->fetchAll(); return $result; }
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    function Getprovince2($proviid)
+    { global $table_prefix; $query = $this->link->prepare("SELECT * FROM `cities` where province_id=?"); $values = array($proviid);
+        $query->execute($values);$counts = $query->rowCount(); $result = $query->fetchAll(); return $result; }
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    function Getprovince2count($proviid)
+    { global $table_prefix; $query = $this->link->prepare("SELECT * FROM `cities` where province_id=?"); $values = array($proviid);
+        $query->execute($values);$counts = $query->rowCount(); $result = $query->fetchAll(); return $counts; }
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
     function Getcountsoloutpos1($id)
  { global $table_prefix; $query = $this->link->prepare("SELECT * FROM `nim_product_solutions` WHERE `product_id`=?"); $values = array($id);
  $query->execute($values);$counts = $query->rowCount(); $result = $query->fetchAll(); return $counts; } 
@@ -373,6 +393,13 @@ function Deletecustomerapp($id)
  $values = array($unid); $query->execute($values); $counts = $query->rowCount(); return $counts; } 
 
   ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    function Updateshoplistafterpay2($unid)
+    { global $table_prefix; $query = $this->link->prepare("UPDATE `nim_shop_list` SET `state`=4  WHERE `unid`=?");
+        $values = array($unid); $query->execute($values); $counts = $query->rowCount(); return $counts; }
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 
 
     function Getuserscount($submitby)

@@ -232,6 +232,110 @@ elseif(isset($_POST["ResCode"])){
                 $RefID="err";
                 $Authority=$unid;
                 $fee->updateUserPaymentlog($comment,$RefID,$Authority);
+                $fee->Updateshoplistafterpay2($unid);
+
+
+
+                echo'
+
+<div class="cart">
+            <div class="container-fluid">
+                <div class="cart-content shadow-box">
+                    <div class="payment">
+                        <div class="payment-title">
+                            <img src="img/default-icon/iconNok.jpg" alt="" width="100" class="img-fluid">
+                            <h2>سفارش <span class="payment-order-code">'.$unid.'</span> پرداخت ناموفق بود</h2>
+                            <p class="text-muted mt-3">ناچه طی این فرآیند مبلغی از حساب شما کسر شده است ، طی 72 ساعت آینده به حساب شما باز خواهد گشت.</p>
+                        </div>
+                    </div>
+                    <div class="category-filter">
+                        <div class="category-filter-box">
+                            <div class="category-filter-box-title">
+                                <div class="d-flex justify-content-between align-items-center flex-wrap">
+                                    <h4 class="fw-bold">
+                                       <span class="danger-span">(سفارش نا موفق بود )</span>
+                                    </h4>
+                                   
+                                </div>
+                               
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="table-responsive-md d-lg-block d-none">
+                        <table class="table main-table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">ردیف</th>
+                                    <th scope="col">فاکتور</th>
+                                    <th scope="col">شماره پیگیری بانکی</th>
+                                    <th scope="col">مبلغ</th>
+                                    <th scope="col">وضعیت</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="text-center">
+                                    <td>1</td>
+                                    <td>  رسمی + ۹ درصد مالیات</td>
+                                    <td>'.$reference_code.'</td>
+                                  
+                                    <td>0 تومان</td>
+                                    <td><span class="success-span">پرداخت نا موفق</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="table-responsive-mobile d-lg-none d-block">
+                        <div class="trm-parent">
+                            <div class="trm">
+                                <div class="trm-item">ردیف</div>
+                                <div class="trm-item">
+                                    1
+                                </div>
+                            </div>
+                            <div class="trm">
+                                <div class="trm-item">فاکتور</div>
+                                <div class="trm-item">
+                                  رسمی + ۹ درصد مالیات
+                                </div>
+                            </div>
+                            <div class="trm">
+                                <div class="trm-item">شماره پیگیری بانکی</div>
+                                <div class="trm-item">
+                                    انجام نشد
+                                </div>
+                            </div>
+                            <div class="trm">
+                                <div class="trm-item">تاریخ</div>
+                                <div class="trm-item">
+                                    '.$today_date.'
+                                </div>
+                            </div>
+                            <div class="trm">
+                                <div class="trm-item">مبلغ</div>
+                                <div class="trm-item">
+                                   تومان
+                                </div>
+                            </div>
+                            <div class="trm">
+                                <div class="trm-item">وضعیت</div>
+                                <div class="trm-item">
+                                    <span class="success-span">پرداخت نا موفق</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+';
+
+
+
+
 
                 return;
 

@@ -28,10 +28,38 @@ if(isset($_POST['addr'])){
 }
 
 if(isset($_GET['add'])){
-	
+
 	
 	echo'
+	<script type="text/javascript">
 	
+	function showcityProp(item)
+							{
+                                $("#shahr").empty();
+                                var proviid = document.getElementById("ostan").value; 
+                              
+                              
+                              	$.ajax({
+							
+								    url: "aj.php",
+								    type: "POST",
+								    data: {op:"getcity",proviid:proviid},
+									dataType: "json",
+								    success: function(data){
+                                        
+                                       optText = "New elemenet";
+                                        optValue = "newElement";
+                                         $("#shahr").append(`${data.optsazi}`);
+                                       
+									   
+								    }
+								   });
+                                
+							}
+	
+	
+	
+	</script>
 	
  <div class="content">
         <div class="dashboard">
@@ -162,12 +190,20 @@ if(isset($_GET['add'])){
                                                     <div class="form-group">
                                                         <label for="ostan" class="form-label">استان <span
                                                             class="text-danger ms-1">*</span></label>
-                                                    <select id="ostan" name="ostan" class="form-select rounded-pill">
-                                                        <option>تهران</option>
-                                                        <option>یزد</option>
-                                                        <option>اصفهان</option>
-                                                        <option>لرستان</option>
-                                                        <option>کردستان</option>
+                                                    <select onchange="showcityProp(this)" id="ostan" name="ostan" class="form-select rounded-pill">
+                                                    ';
+	$active='1';
+	$loadprovince = $fee->Getprovince($active);
+
+                                      foreach($loadprovince as $loadprovinceprob)
+                                                     {
+
+														 echo'
+														 
+														   <option name="'.$loadprovinceprob["id"].'" id="'.$loadprovinceprob["id"].'" value="'.$loadprovinceprob["id"].'">'.$loadprovinceprob["name"].'</option>
+														 ';
+													 }
+	echo'  <option selected="selected" name="-" id="-" value="-">-</option>
                                                     </select>
                                                     </div>
                                                 </div>
@@ -176,11 +212,7 @@ if(isset($_GET['add'])){
                                                         <label for="shahr" class="form-label">شهر <span
                                                             class="text-danger ms-1">*</span></label>
                                                     <select id="shahr" name="shahr" class="form-select rounded-pill">
-                                                        <option>کرج</option>
-                                                        <option>خرم آباد</option>
-                                                        <option>کرمانشاه</option>
-                                                        <option>مهاباد</option>
-                                                        <option>بروجرد</option>
+                                                         <div id="shahr_show" name="shahr_show"></div>
                                                     </select>
                                                     </div>
                                                 </div>
