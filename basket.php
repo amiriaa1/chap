@@ -44,11 +44,16 @@ if(isset($_GET['delete'])){
     }
 
 }
+if(!$isLogedIn){
 
+    $discountList = $fee->Getbasketforuser($_SESSION["bfslogin"]);
+    $discountListsum = $fee->Getbasketforusersum($_SESSION["bfslogin"]);
+
+}else{
 
 $discountList = $fee->Getbasketforuser($uusername);
 $discountListsum = $fee->Getbasketforusersum($uusername);
-
+}
 $aftertotal=$discountListsum["0"]["total"];
 $aftertotal2=number_format($discountListsum["0"]["total"],0,'.',',');
 
@@ -199,9 +204,19 @@ $dispricesh2_change=number_format($discountListsum["0"]["total"],0,'.',',');
                                 
                                  
                                   <input type="hidden" name="priceget" id="priceget" class="form-control" value="'.$aftertotal.'">
-                                    <button name="submit" id="submit"  class="btn-bank waves-effect waves-light">اقدام به پرداخت
+                                  ';
+if($isLogedIn){echo'<button name="submit" id="submit"  class="btn-bank waves-effect waves-light">اقدام به پرداخت</button>';}
+                                       echo'
+                                   </form>
+                                  ';
 
-                                    </button>
+if(!$isLogedIn)
+{echo'<a href="login"><center><div name="frs" id="frs" class="btn-bank waves-effect waves-light">ثبت نام کنید</div></center></a>';}
+
+                                       echo'
+                                  
+
+                                    
                                 
                             </div>
                         </div>
@@ -209,9 +224,8 @@ $dispricesh2_change=number_format($discountListsum["0"]["total"],0,'.',',');
                 </div>
             </div>
         </div>
-
     </div>
-    </form>
+   
     
         <script src="js/jquery-3.6.1.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>

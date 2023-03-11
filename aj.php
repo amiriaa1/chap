@@ -426,7 +426,23 @@ $cooin=1;
 			),JSON_UNESCAPED_UNICODE);
 			exit;
 		}
-		$counttttt = $fee->Addshoplistbasket($productid,$uusername,$amount,$product,$product2,$unid);
+            if(!$isLogedIn){
+if($_SESSION["bfslogin"]==""){
+
+    session_start();
+    $bfslognrand=rand(1000,900000);
+    $_SESSION["bfslogin"] = $bfslognrand;
+
+}else{
+    $bfslognrand=$_SESSION["bfslogin"];
+}
+                $counttttt = $fee->Addshoplistbasket($productid,$bfslognrand,$amount,$product,$product2,$unid);
+
+            }else{
+                $counttttt = $fee->Addshoplistbasket($productid,$uusername,$amount,$product,$product2,$unid);
+
+            }
+
 		
 
             if($counttttt==1){

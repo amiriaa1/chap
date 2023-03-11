@@ -120,7 +120,7 @@ function addemalkhabar(item)
                     <div class="col-lg-3">
                         <div class="footer-item">
                             <div class="feed">
-                                <h6>از تخفیف‌ها چاپ خانه باخبر شوید:
+                                <h6>از تخفیف‌ها هرجا چاپ باخبر شوید:
                                 </h6>
                               <form action="">
                                     <div class="form-group">

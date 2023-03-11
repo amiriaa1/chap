@@ -32,9 +32,20 @@ function Addusersaddr($uusername,$name,$ostan,$shahr,$postcod,$number,$addr)
 function UsetTwoFactorupdate($username)
  { global $table_prefix; 
  $query = $this->link->prepare("UPDATE `".$table_prefix."users` SET `uactive`=1 WHERE `uusername`=?");
- $values = array($username); $query->execute($values); $counts = $query->rowCount(); return $counts; } 
+ $values = array($username); $query->execute($values); $counts = $query->rowCount(); return $counts; }
  
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+    function userupdatebasketbtyuu($username,$btyyu)
+    { global $table_prefix;
+        $query = $this->link->prepare("UPDATE `nim_basket` SET `uusername`=? WHERE `uusername`=?");
+        $values = array($username,$btyyu); $query->execute($values); $counts = $query->rowCount(); return $counts; }
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
 
 function Useraddtoken($token,$username)
  { global $table_prefix; 

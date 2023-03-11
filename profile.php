@@ -2,7 +2,7 @@
 include_once('main.php');
 
 
-if ($isLogedIn==1){echo'test';}
+if ($isLogedIn==1){}
 else{
     header("Location: login");
     echo'hiiiii';

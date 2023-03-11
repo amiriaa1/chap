@@ -153,14 +153,22 @@ $autver=$studentProp['autver'];
 $password=$autver;
 if($autver==$cod)
 {
+	$btyyu=$_SESSION["bfslogin"];
+	$changebasketusername = $student->userupdatebasketbtyuu($username,$btyyu);
+	unset($_SESSION['bfslogin']);
 	$stat=2;
 	$llvm=$_POST['username'];
 
 	if(isset($_POST['aut-up-submit'])){
 	
 	$studentProp2 = $student->UsetTwoFactorupdate($username);
+
 	$studentProp3 = $student->GetStudentInfo($username);
-	
+
+
+
+
+
 }
 	
 $counts=1;
@@ -198,11 +206,14 @@ if(!$counts==1)
 								$domain = (preg_match("/localhost/",$_SERVER['SERVER_NAME'])==true?"localhost":($_SERVER['SERVER_NAME']==$_SERVER['SERVER_ADDR']?"localhost":get_domain('http://'.$_SERVER['SERVER_NAME'])));
 								setcookie($user_session_name,$username,time()+2592000,"/",$domain);
 								setcookie($user_password_session_name,$password,time()+2592000,"/",$domain);
+
 							}
 							else
 							{
 								setcookie($user_session_name,$username,time()+2592000);
 								setcookie($user_password_session_name,$password,time()+2592000);
+
+
 							}
 						}
 						
