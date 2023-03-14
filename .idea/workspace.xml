@@ -6,15 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="bc047395-12cc-4474-b2fe-72233fb553d9" name="Changes" comment="a">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/aj.php" beforeDir="false" afterPath="$PROJECT_DIR$/aj.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/aut.php" beforeDir="false" afterPath="$PROJECT_DIR$/aut.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/basket.php" beforeDir="false" afterPath="$PROJECT_DIR$/basket.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/footer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/class.student.php" beforeDir="false" afterPath="$PROJECT_DIR$/include/class.student.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nesting.php" beforeDir="false" afterPath="$PROJECT_DIR$/nesting.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product.php" beforeDir="false" afterPath="$PROJECT_DIR$/product.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/profile.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +51,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/SQL Dialect" value="MySQL" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../crepto/crepi" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -104,7 +95,8 @@
       <workItem from="1676804300556" duration="509000" />
       <workItem from="1676975522276" duration="7135000" />
       <workItem from="1677410883759" duration="360000" />
-      <workItem from="1678567982918" duration="3495000" />
+      <workItem from="1678567982918" duration="4445000" />
+      <workItem from="1678749530996" duration="27000" />
     </task>
     <servers />
   </component>

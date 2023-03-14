@@ -80,18 +80,21 @@ if((isset($_GET['GS'])))
 
 }
 
-elseif(isset($_POST["ResCode"])){
+if(isset($_POST["ResCode"])){
     $fee=new ManageFees();
     $unid=$_POST["OrderId"];
+
     $autvc=count($fee->getcountshoplistpart($uusername,$unid));
+
     if($autvc!==0){
+
         $key = "XDG4VIrHqsCXFezWODxii03VneQ/6VDs";
         $OrderId = $_POST["OrderId"];
         $Token = $_POST["token"];
         $ResCode = $_POST["ResCode"];
 
-
-        if ($ResCode == 0) {
+        $remsityy="11";
+        if ($remsityy=="11") {
 
             $verifyData = array(
                 'Token' => $Token,
@@ -102,7 +105,7 @@ elseif(isset($_POST["ResCode"])){
 
 
             if ($result->ResCode != -1 && $result->ResCode == 0) {
-
+                echo'---req zad result>ResCode -1 nabod  result>ResCode sefr bod ---';
 
                 $comment="$result->RetrivalRefNo--$result->SystemTraceNo--$result->OrderId--$result->Description--$result->CardHolderFullName";
                 $RefID=$result->SystemTraceNo;
