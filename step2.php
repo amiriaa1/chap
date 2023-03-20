@@ -185,8 +185,7 @@ foreach($discountList as $discountProp)
                                      
                                       
                                         <div class="form-group">
-                                            <label for="descOrder" class="form-label">یادداشت های سفارش اختیاری<span
-                                                    class="text-danger ms-1">*</span></label>
+                                            <label for="descOrder" class="form-label">یادداشت های سفارش اختیاری</label>
                                             <textarea id="descOrder" rows="5" class="form-control rounded-3"
                                                 placeholder="نکاتی در مورد سفارش به عنوان مثال نکاتی برای تحویل"></textarea>
 												
@@ -205,7 +204,7 @@ foreach($discountList as $discountProp)
                                 </div>
                                 <table class="table main-table">
                                     <tr>
-                                        <th class="pb-3">نوع</th>
+                                        <th class="pb-3"></th>
                                         <th class="pb-3">مبلغ</th>
                                          <th class="pb-3">نوع فاکتور</th>
                                         

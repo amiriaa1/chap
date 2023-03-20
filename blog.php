@@ -29,8 +29,8 @@ echo'
                                     <div class="category-filter-box-desc">
                                         <div class="d-flex flex-wrap align-items-center justify-content-center">
                                             <a href="blog?type=1" class="blog-tag">چاپ و طراحی</a>
-                                            <a href="blog?type=2" class="blog-tag">فروش و خدمات ماشین های اداری</a>
-                                            <a href="blog?type=3" class="blog-tag">فروش ملزومات اداری و دفتری</a>
+                                            <a href="blog?type=2" class="blog-tag">ماشین های اداری</a>
+                                            <a href="blog?type=3" class="blog-tag">ملزومات اداری و دفتری</a>
                                          
                                         </div>
                                     </div>

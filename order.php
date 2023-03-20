@@ -61,7 +61,7 @@ echo'
                                             <li class="nav-item">
                                                 <a href="profile" class="nav-link text-muted">
                                                     <i class="bi bi-house"></i>
-                                                    <span>ناحیه کاربری</span>
+                                                    <span>اطلاعات حساب</span>
                                                 </a>
                                             </li>
                                            
@@ -77,7 +77,7 @@ echo'
                                             <li class="nav-item">
                                                 <a href="address" class="nav-link text-muted">
                                                     <i class="bi bi-pin-map"></i>
-                                                    <span>آدرس ها</span>
+                                                    <span>آدرس های من</span>
                                                 </a>
                                             </li>
                                           

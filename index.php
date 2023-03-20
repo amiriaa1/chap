@@ -24,7 +24,7 @@ echo'
                             </div>
                             <div class="cart-small-desc ms-lg-3 text-center">
                               
-                               <h6>چاپ طراحی</h6>
+                               <h6>چاپ و طراحی</h6>
                               
                             </div>
                         </div>
@@ -43,8 +43,8 @@ echo'
                             <div class="cart-small-icon">
                                 <img width="50" src="img/shop2.jpg" alt="" class="img-fluid">
                             </div>
-                            <div class="cart-small-desc ms-lg-3 text-center">
-                               <h6>فروش و خدمات ماشین های اداری</h6>
+                            <div class="cart-small-desc ms-lg-2 text-center">
+                               <h7>فروش و خدمات ماشین های اداری</h7>
                               
                             </div>
                         </div>
@@ -114,10 +114,7 @@ echo'
 						';
                  foreach($discountList8877 as $discountProp69)
                                     {
-                                        date_default_timezone_set('Asia/Tehran');
-                                        list($gy, $gm, $gd) = explode('-', $discountProp69["timastammp"]);
-                                        $j_date_array = gregorian_to_jalali($gy, $gm, $gd);
-                                        $today_date=implode("/", $j_date_array);
+
 
                                         echo'
                                         
@@ -128,9 +125,7 @@ echo'
                                         <img src="img/blog/'.$discountProp69["pic"].'" class="img-fluid" alt="">
                                     </div>
                                     <div class="al-overlay"></div>
-                                    <div class="al-date rounded-pill">
-                                        '.$today_date.'  
-                                    </div>
+                                  
                                     <div class="al-title">
                                          '.$discountProp69["title"].'
                                     </div>

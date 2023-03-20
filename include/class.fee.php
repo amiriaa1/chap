@@ -223,13 +223,13 @@ function Getproducttanavolist($query) { global $table_prefix;
 
 
     function Getprovince($active)
-    { global $table_prefix; $query = $this->link->prepare("SELECT * FROM `provinces` where active=?"); $values = array($active);
+    { global $table_prefix; $query = $this->link->prepare("SELECT * FROM `provinces` where active=? ORDER BY `provinces`.`name`  ASC"); $values = array($active);
         $query->execute($values);$counts = $query->rowCount(); $result = $query->fetchAll(); return $result; }
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     function Getprovince2($proviid)
-    { global $table_prefix; $query = $this->link->prepare("SELECT * FROM `cities` where province_id=?"); $values = array($proviid);
+    { global $table_prefix; $query = $this->link->prepare("SELECT * FROM `cities` where province_id=? ORDER BY `cities`.`name` ASC"); $values = array($proviid);
         $query->execute($values);$counts = $query->rowCount(); $result = $query->fetchAll(); return $result; }
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////

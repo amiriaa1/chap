@@ -417,7 +417,7 @@ $cooin=1;
 		$state='1';
 		
 		$unid=randomPassword();
-		if($amount=='تنوع را انتخاب کنید'){
+		if($amount=='فرم سفارش را تکمیل کنید' OR$amount==""){
 			echo json_encode(array(
 				"statusCode"=>210,
 				"state"=>"0"

@@ -22,7 +22,13 @@ if(isset($_POST['submit'])){
     $acomment="submit from basket";
     $state='1';
     $unid=randomPassword();
+	if($amount=="0" OR $amount==""){
+		
+		echo'سبد خرید خالی است';
+		exit;
+	}
     $counttttt = $fee->Addshoplist($productid,$uusername,$amount,$product,$product2,$acomment,$state,$unid);
+	
 if ($counttttt==1){
     echo "<script>window.location.href='step2?unid=$unid';</script>";
 }

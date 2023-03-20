@@ -6,7 +6,9 @@ include_once('main.php');
 
 $tre=rand(999,9999);
 if($stat==1){
-    $userinput='هرجا چاپ  لطفاً جهت تایید کد زیر را وارد کنید '.$tre.'';
+    $userinput='هرجا چاپ
+کد احراز هویت شما برای ورود به سایت:
+    '.$tre.'';
     $oop=urlencode($userinput);
 
 }

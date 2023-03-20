@@ -100,7 +100,7 @@ if(isset($_GET['add'])){
                                             <li class="nav-item">
                                                 <a href="profile" class="nav-link text-muted">
                                                     <i class="bi bi-house"></i>
-                                                    <span>ناحیه کاربری</span>
+                                                    <span>اطلاعات حساب</span>
                                                 </a>
                                             </li>
                                           
@@ -116,7 +116,7 @@ if(isset($_GET['add'])){
                                             <li class="nav-item active">
                                                 <a href="address" class="nav-link text-muted">
                                                     <i class="bi bi-pin-map"></i>
-                                                    <span>آدرس ها</span>
+                                                    <span>آدرس های من</span>
                                                 </a>
                                             </li>
                                             
@@ -138,9 +138,9 @@ if(isset($_GET['add'])){
                                                 <div class="ui-box-item-title" style="padding: 15px;">
                                                     <div class="d-flex justify-content-between align-items-center">
                                                         <h4 class="fw-bold">
-                                                            آدرس ها
+                                                          آدرس های من
                                                         </h4>
-                                                        <a class="btn btn-danger btn-sm waves-effect waves-light" href="address?add=1">ثبت آدرس جدید <i
+                                                        <a class="btn btn-danger btn-sm waves-effect waves-light" href="address?add">ثبت آدرس جدید <i
                                                                 class="bi bi-plus-circle-dotted"></i></a>
                                                     </div>
                                                 </div>
@@ -164,22 +164,23 @@ if(isset($_GET['add'])){
                                                 <div class="col-md-6">
                                                     <div class="form-group">
 													
-                                                        <label for="name" class="form-label">نام<span
+                                                        <label for="name" class="form-label">نام و نام خانوادگی<span
                                                             class="text-danger ms-1">*</span></label>
-                                                        <input type="text" id="name" name="name" class="form-control rounded-pill">
+                                                        <input type="text" id="name" required name="name" class="form-control rounded-pill">
                                                     </div>
                                                 </div>
 												
 												<div class="col-md-6">
                                                     <div class="form-group">
-                                                        <label for="postcod" class="form-label">کد پستی</label>
-                                                        <input type="text" id="postcod" name="postcod" class="form-control rounded-pill">
+                                                        <label for="postcod" class="form-label">کد پستی<span
+                                                            class="text-danger ms-1">*</span></label>
+                                                        <input type="text" id="postcod" required name="postcod" class="form-control rounded-pill">
                                                     </div>
                                                 </div>
 												<div class="col-md-6">
                                                     <div class="form-group">
                                                         <label for="number" class="form-label">شماره موبایل </label>
-                                                        <input type="text" id="number" name="number" class="form-control rounded-pill">
+                                                        <input type="text"  id="number" name="number" class="form-control rounded-pill">
                                                     </div>
                                                 </div>
                                             </div>
@@ -191,6 +192,7 @@ if(isset($_GET['add'])){
                                                         <label for="ostan" class="form-label">استان <span
                                                             class="text-danger ms-1">*</span></label>
                                                     <select onchange="showcityProp(this)" id="ostan" name="ostan" class="form-select rounded-pill">
+                                                    <option selected="selected" name="-" id="-" value="-">-</option>
                                                     ';
 	$active='1';
 	$loadprovince = $fee->Getprovince($active);
@@ -203,7 +205,7 @@ if(isset($_GET['add'])){
 														   <option name="'.$loadprovinceprob["id"].'" id="'.$loadprovinceprob["id"].'" value="'.$loadprovinceprob["id"].'">'.$loadprovinceprob["name"].'</option>
 														 ';
 													 }
-	echo'  <option selected="selected" name="-" id="-" value="-">-</option>
+	echo'  
                                                     </select>
                                                     </div>
                                                 </div>
@@ -219,9 +221,9 @@ if(isset($_GET['add'])){
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label for="addr" class="form-label">خیابان<span
+                                            <label for="addr" class="form-label">آدرس<span
                                                     class="text-danger ms-1">*</span></label>
-                                            <input type="text" name="addr"  placeholder="پلاک خانه و نام خیابان" id="addr"
+                                            <input type="text" name="addr" required  placeholder="نام خیابان  پلاک و واحد" id="addr"
                                                 class="form-control rounded-pill">
                                         </div>
                                        
@@ -313,7 +315,7 @@ echo'
                                             <li class="nav-item">
                                                 <a href="profile" class="nav-link text-muted">
                                                     <i class="bi bi-house"></i>
-                                                    <span>ناحیه کاربری</span>
+                                                    <span>اطلاعات حساب</span>
                                                 </a>
                                             </li>
                                           
@@ -329,7 +331,7 @@ echo'
                                             <li class="nav-item active">
                                                 <a href="address" class="nav-link text-muted">
                                                     <i class="bi bi-pin-map"></i>
-                                                    <span>آدرس ها</span>
+                                                    <span>آدرس های من</span>
                                                 </a>
                                             </li>
                                             
@@ -351,7 +353,7 @@ echo'
                                                 <div class="ui-box-item-title" style="padding: 15px;">
                                                     <div class="d-flex justify-content-between align-items-center">
                                                         <h4 class="fw-bold">
-                                                            آدرس ها
+                                                            آدرس های من
                                                         </h4>
                                                         <a class="btn btn-danger btn-sm waves-effect waves-light" href="address?add">ثبت آدرس جدید <i
                                                                 class="bi bi-plus-circle-dotted"></i></a>

@@ -121,7 +121,7 @@ echo'
 	<script type="text/javascript">
 							function showStudentProp1(item)
 							{
-								document.getElementById("price_show").innerHTML = "تنوع را انتخاب کنید";
+								document.getElementById("price_show").innerHTML = "فرم سفارش را تکمیل کنید";
 								$("#contentnew").html("");
 								const myArray = $(item).attr("value").split("-");
 								var farijavab = myArray[0];
@@ -629,7 +629,7 @@ else{echo'<button  class="shadow-sm fw-bold btn-add-to-cart mt-sm-0 mt-2 waves-e
 }
 echo'
 <br><center>
-<span name="price_show" id="price_show" class="se-cart-price-new">تنوع را انتخاب کنید</span>تومان
+قیمت  <span name="price_show" id="price_show" class="se-cart-price-new">فرم سفارش را تکمیل کنید</span> تومان
 </center>
                             </div>
                             

@@ -1,19 +1,39 @@
 <?php
 include_once('main.php');
 
-
 if ($isLogedIn==1){}
 else{
     header("Location: login");
-    echo'hiiiii';
     exit;
 }
+
 
 include_once('header.php');
 
 $student = new ManageStudents();
 $fee = new ManageFees();
 
+if ($_POST["uusername"]){
+
+  if ($_POST["uusername"]==$uusername){
+
+      $username2=$_POST["uusername"];
+      $ufaname=$_POST["ufaname"];
+      $uemail=$_POST["uemail"];
+      $profileedit=$student->Updateuserdataprofile($ufaname,$uemail,$uusername);
+
+  }
+  else{
+      $username2=$_POST["uusername"];
+      $ufaname=$_POST["ufaname"];
+      $uemail=$_POST["uemail"];
+
+      $profileedit2=$student->Updateuserdataprofile2($ufaname,$uemail, $username2,$uusername);
+      header("Location: logout");
+      exit;
+
+  }
+}
 
 
 echo'
@@ -61,7 +81,7 @@ echo'
                                     </div>
                                     <div class="ui-box-item-desc p-0">
                                         <ul class="nav flex-column sidebar-menu">
-                                            <li class="nav-item  active">
+                                            <li class="nav-item">
                                                 <a href="profile" class="nav-link text-muted">
                                                     <i class="bi bi-house"></i>
                                                     <span>اطلاعات حساب</span>
@@ -104,37 +124,43 @@ echo'
                                                 <div class="ui-box-item-title">
                                                     <div class="d-flex justify-content-between align-items-center">
                                                         <h4 class="fw-bold">
-                                                            اطلاعات شخصی
+                                                            ویرایش اطلاعات شخصی
                                                         </h4>
-                                                        <a href="profile-edit">
-           <button class="btn-main btn-main-primary waves-effect waves-light">ویرایش<i class="bi bi-pencil-fill"></i></button></a>
-           
-                                                            
-                                                                
+                                                    
                                                     </div>
                                                 </div>
+                                                <form method="post" action="profile-edit">
                                                 <div class="ui-box-item-desc p-0">
                                                     <table class="table main-table shadow-none main-table-2">
                                                         <tr>
                                                             <td colspan="2">
                                                                 <h6 class="text-muted">نام و نام خانوادگی</h6>
-                                                                <p class="fw-bold mt-2">'.$ufaname.'</p>
+                                                                <input type="text" id="ufaname" name="ufaname" value="'.$ufaname.'">
                                                             </td>
                                                             <td colspan="2">
                                                                 <h6 class="text-muted">شماره تلفن</h6>
-                                                                <p class="fw-bold mt-2">'.$uusername.'</p>
+                                                                <input type="text" id="uusername" name="uusername" value="'.$uusername.'">
+                                                            <br>
+                                                            <h6> در صورت ویرایش شماره همراه از حساب کاربری خارج خواهید شد با شماره جدید مجدد وارد شوید</h6>
                                                             </td>
                                                         </tr>
                                                         <tr>
                                                             <td colspan="2">
                                                                 <h6>پست الکترونیک</h6>
-                                                                <p class="fw-bold mt-2">'.$uemail.'</p>
+                                                                <input type="text" id="uemail" name="uemail" value="'.$uemail.'">
+                                                              
                                                             </td>
                                                          
                                                         
                                                     </table>
+                                                    <center>
+                                                       <button data-bs-toggle="modal" data-bs-target="#editUser"
+                                                            class="btn-main btn-main-primary waves-effect waves-light" href="profile-edit">ویرایش 
+                                                            
+                                                                <i class="bi bi-pencil-fill"></i></button>
+                                                                </form>
 													<br>
-													
+													<br>
 													
 													
                                                 </div>
@@ -182,5 +208,10 @@ echo'
 
 </html>
 ';
+
+
+
+
+
 
 ?>

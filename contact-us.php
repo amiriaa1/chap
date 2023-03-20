@@ -19,7 +19,7 @@ echo'
                                     </li>
                                    
                                     <li class="breadcrumb-item active" aria-current="page">
-                                        <span>تماس با ما</span>
+                                        <span>ارتباط با ما</span>
                                     </li>
                                 </ol>
                             </nav>
@@ -36,7 +36,7 @@ echo'
             <div class="container-fluid">
                 <div class="content-box shadow-box px-3">
                     <h4 class="text-muted-2 fw-bold title-heading">
-                        تماس با ما
+                        ارتباط با ما
                     </h4>
                     <p class="text-muted-2 lh-lg my-3" style="text-align: justify;">
                برای تماس با کارشناسان هرجا چاپ میتوانید با شماره های زیر تماس حاصل فرمایید

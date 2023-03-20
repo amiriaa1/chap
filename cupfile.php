@@ -167,7 +167,7 @@ echo'
                                         <td class="txt">
 										
 										  <select id="category" name="category" class="form-select form-select-lg shadow-none">
-	   <option  id="category" name="category" selected value="1">ارسال فایل بعدا</option>
+	   <option  id="category" name="category" selected value="1">بعدا ارسال میکنم</option>
 	   <option  id="category" name="category" value="2">الان آپلود میکنم</option>
 	   </select>
 												

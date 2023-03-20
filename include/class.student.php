@@ -31,10 +31,27 @@ function Addusersaddr($uusername,$name,$ostan,$shahr,$postcod,$number,$addr)
 
 function UsetTwoFactorupdate($username)
  { global $table_prefix; 
- $query = $this->link->prepare("UPDATE `".$table_prefix."users` SET `uactive`=1 WHERE `uusername`=?");
+ $query = $this->link->prepare("UPDATE `".$table_prefix."users` SET `uactive`=?  WHERE `uusername`=?");
  $values = array($username); $query->execute($values); $counts = $query->rowCount(); return $counts; }
  
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+    function Updateuserdataprofile($ufaname,$uemail,$uusername)
+    { global $table_prefix;
+        $query = $this->link->prepare("UPDATE `".$table_prefix."users` SET `ufaname`=? , `uemail`=? WHERE `uusername`=?");
+        $values = array($ufaname,$uemail,$uusername); $query->execute($values); $counts = $query->rowCount(); return $counts; }
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///
+///
+    function Updateuserdataprofile2($ufaname,$uemail, $username2,$uusername)
+    { global $table_prefix;
+        $query = $this->link->prepare("UPDATE `".$table_prefix."users` SET `ufaname`=? , `uemail`=? , `uusername`=? WHERE `uusername`=?");
+        $values = array($ufaname,$uemail, $username2,$uusername); $query->execute($values); $counts = $query->rowCount(); return $counts; }
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 
 
     function userupdatebasketbtyuu($username,$btyyu)

@@ -73,7 +73,7 @@ sendemailverfy($llvm,$stat);
                                         <div class="form-group">
                                             <div class="input-group">
                                                 <span class="input-group-text"><i class="bi bi-person"></i></span>
-                                                <input type="text" name="aut" id="aut" class="form-control" placeholder="کد احراز هویت">
+                                                <input type="text" name="aut" id="aut" class="form-control" placeholder="کد احراز هویت را وارد کنید">
 												<input type="hidden" name="username" id="username" value="'.$llvm.'">
                                             </div>
                                         </div>
@@ -319,14 +319,16 @@ echo'ersal nashod time limit';
                                 <div class="auth-title">
 							<br><br><br><br><br><br>
                                     <h3>ورود به حساب کاربری</h3>
-                                    <p class="my-3 text-muted">کد احراز برای شما ارسال شد</p>
+                                  
+                                      <p class="my-3 text-muted">کد احراز هویت برای شماره '.$uusername.'  ارسال شد</p>
                                 </div>
                                 <div class="auth-form">
                                    <form method="post" action="">
                                         <div class="form-group">
                                             <div class="input-group">
+                                            
                                                 <span class="input-group-text"><i class="bi bi-person"></i></span>
-                                                <input type="text" name="aut" id="aut" class="form-control" placeholder="کد احراز هویت">
+                                                <input type="text" name="aut" id="aut" class="form-control" placeholder="کد احراز هویت را وارد کنید">
 												<input type="hidden" name="username" id="username" value="'.$uusername.'">
                                             </div>
                                         </div>
