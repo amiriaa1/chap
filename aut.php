@@ -66,7 +66,8 @@ sendemailverfy($llvm,$stat);
                                 <div class="auth-title">
 							<br><br><br><br><br><br>
                                     <h3>ورود به حساب کاربری</h3>
-                                    <p class="my-3 text-muted">کد احراز برای شما ارسال شد</p>
+                               
+                                     <p class="my-3 text-muted">کد احراز هویت برای شماره '.$uusername.'  ارسال شد</p>
                                 </div>
                                 <div class="auth-form">
                                    <form method="post" action="">
@@ -162,7 +163,7 @@ if($autver==$cod)
 	if(isset($_POST['aut-up-submit'])){
 	
 	$studentProp2 = $student->UsetTwoFactorupdate($username);
-
+if($studentProp2==1){}else{exit;}
 	$studentProp3 = $student->GetStudentInfo($username);
 
 
@@ -436,7 +437,7 @@ echo'
                                 </div>
                                 <div class="auth-title">
                                     <h3>ثبت نام کنید</h3>
-                                    <p class="my-3 text-muted">اگر قبلا ثبت نام کرده اید وارد شوید</p>
+                                   <br>
                                 </div>
                                 <div class="auth-form">
                                     <form method="post" action="">
@@ -446,33 +447,37 @@ echo'
                                                 <input type="text" required="required" minlength="11" maxlength="11" name="up-username" id="up-username" class="form-control" placeholder="نام کاربری" value="'.$_POST['uusername'].'">
                                             </div>
                                         </div>
-                                        <div class="form-group">
-                                            <div class="input-group">
-                                                <span class="input-group-text"><i class="bi bi-envelope"></i></span>
-                                                <input type="text" name="up-email" id="up-email" class="form-control" placeholder="ایمیل">
-                                            </div>
-                                        </div>
-										 <div class="form-group">
-                                            <div class="input-group">
-                                                <span class="input-group-text"><i class="bi bi-envelope"></i></span>
-                                                <input type="text" name="up-codmeli" id="up-codmeli" class="form-control" placeholder="کدملی">
-                                            </div>
-                                        </div>
-										
-										<div class="form-group">
+                                        
+                                        	<div class="form-group">
                                             <div class="input-group">
                                                 <span class="input-group-text"><i class="bi bi-envelope"></i></span>
                                                 <input type="text" name="up-name" id="up-name" class="form-control" placeholder="نام و نام خانوادگی ">
                                             </div>
                                         </div>
+                                        
+                                        
+                                        	 <div class="form-group">
+                                            <div class="input-group">
+                                                <span class="input-group-text"><i class="bi bi-envelope"></i></span>
+                                                <input type="text" name="up-codmeli" id="up-codmeli" class="form-control" placeholder="کد ملی (اختیاری)">
+                                            </div>
+                                        </div>
+										
+									
+                                        
+                                        <div class="form-group">
+                                            <div class="input-group">
+                                                <span class="input-group-text"><i class="bi bi-envelope"></i></span>
+                                                <input type="text" name="up-email" id="up-email" class="form-control" placeholder="ایمیل (اختیاری)">
+                                            </div>
+                                        </div>
+									
                                       
                                         <div class="d-flex justify-content-center flex-column align-items-center flex-wrap">
                                             <button type="submit" name="up-submit" id="up-submit" class="btn-login w-50 waves-effect waves-light"><i class="bi bi-person"></i>
                                                  ثبت نام در سایت
                                             </button>
-                                            <a class="btn-login login w-50 waves-effect waves-light" href="login"><i class="bi bi-lock"></i> 
-                                                ورود به سایت
-                                            </a>
+                                           
                                         </div>
             
                                     </form>

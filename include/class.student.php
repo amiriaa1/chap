@@ -31,7 +31,7 @@ function Addusersaddr($uusername,$name,$ostan,$shahr,$postcod,$number,$addr)
 
 function UsetTwoFactorupdate($username)
  { global $table_prefix; 
- $query = $this->link->prepare("UPDATE `".$table_prefix."users` SET `uactive`=?  WHERE `uusername`=?");
+ $query = $this->link->prepare("UPDATE `".$table_prefix."users` SET `uactive`=1  WHERE `uusername`=?");
  $values = array($username); $query->execute($values); $counts = $query->rowCount(); return $counts; }
  
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////

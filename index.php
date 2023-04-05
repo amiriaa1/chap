@@ -44,7 +44,7 @@ echo'
                                 <img width="50" src="img/shop2.jpg" alt="" class="img-fluid">
                             </div>
                             <div class="cart-small-desc ms-lg-2 text-center">
-                               <h7>فروش و خدمات ماشین های اداری</h7>
+                               <h6>فروش و خدمات  <br>  ماشین های اداری</h6>
                               
                             </div>
                         </div>

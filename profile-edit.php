@@ -21,7 +21,8 @@ if ($_POST["uusername"]){
       $ufaname=$_POST["ufaname"];
       $uemail=$_POST["uemail"];
       $profileedit=$student->Updateuserdataprofile($ufaname,$uemail,$uusername);
-
+      echo "<script>window.location.href='profile';</script>";
+      exit;
   }
   else{
       $username2=$_POST["uusername"];
@@ -29,7 +30,7 @@ if ($_POST["uusername"]){
       $uemail=$_POST["uemail"];
 
       $profileedit2=$student->Updateuserdataprofile2($ufaname,$uemail, $username2,$uusername);
-      header("Location: logout");
+      echo "<script>window.location.href='logout';</script>";
       exit;
 
   }
@@ -141,7 +142,7 @@ echo'
                                                                 <h6 class="text-muted">شماره تلفن</h6>
                                                                 <input type="text" id="uusername" name="uusername" value="'.$uusername.'">
                                                             <br>
-                                                            <h6> در صورت ویرایش شماره همراه از حساب کاربری خارج خواهید شد با شماره جدید مجدد وارد شوید</h6>
+                                                            <h6> در صورت ویرایش شماره همراه از حساب کاربری خارج خواهید شد و باید با شماره جدید مجدد وارد شوید</h6>
                                                             </td>
                                                         </tr>
                                                         <tr>

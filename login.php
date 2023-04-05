@@ -52,7 +52,7 @@ echo'
                                             </div>
                                         <center><p>با ورود یا ثبت نام در سایت هرجا چاپ <br>با 
                                         <a class="text-primary" referrerpolicy="origin" target="_blank" href="privacy">قوانین و مقررات</a>
-                                         استفاده از سرویس های سایت هرجا چاپ موافقت میکنید.</p></center>
+                                         استفاده از سرویس های سایت هرجا چاپ موافقت می کنم.</p></center>
                                         </div>
                                   
                                        
