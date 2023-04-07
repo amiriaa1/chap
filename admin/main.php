@@ -24,19 +24,7 @@ if($cookie==0)
 $isLogedIn = ($cookie==0?isset($_SESSION[$admin_session_name]):isset($_COOKIE[$admin_session_name]));
 
 
-if (!$isLogedIn && !preg_match("/login/i", $_SERVER['REQUEST_URI']))
-{
-	$redirect = explode('/',$_SERVER['REQUEST_URI']);
-	$redirect = $redirect[count($redirect)-1];
-	if($redirect=="")
-	{
-		header("Location: login"); exit;
-	}
-	else
-	{
-		header("Location: login?redirect=".urlencode($redirect).""); exit;
-	}
-}
+
 
 include_once('../include/class.database.php');
 $db_connection = new dbConnection();

@@ -321,6 +321,14 @@ function Deletecustomerapp($id)
     { global $table_prefix; $query = $this->link->prepare("DELETE FROM `nim_basket` WHERE `id`=?");
         $values = array($delet); $query->execute($values); $counts = $query->rowCount(); if($counts==1) return 1; else return $counts; }
 
+    function deleteaddruser($aid)
+    { global $table_prefix; $query = $this->link->prepare("DELETE FROM `nim_users_addr` WHERE `aid`=?");
+        $values = array($aid); $query->execute($values); $counts = $query->rowCount(); if($counts==1) return 1; else return $counts; }
+
+
+
+
+
     function deletebasketallitem($uusername)
     { global $table_prefix; $query = $this->link->prepare("DELETE FROM `nim_basket` WHERE `uusername`=?");
         $values = array($uusername); $query->execute($values); $counts = $query->rowCount(); if($counts==1) return 1; else return $counts; }
@@ -358,6 +366,15 @@ function Deletecustomerapp($id)
  { global $table_prefix; $now = gmdate("Y-m-d H:i:s");
  $query = $this->link->prepare("INSERT INTO `nim_payment_log` (`Authority`,`uid`,`status`,`amount`) VALUES (?,?,?,?) ");
  $values = array($Authority,$uusername,$status,$amount); $query->execute($values); $counts = $query->rowCount(); return $counts;}
+
+
+    function addbloginserter($name,$textarea,$active,$type,$pic)
+    { global $table_prefix; $now = gmdate("Y-m-d H:i:s");
+        $query = $this->link->prepare("INSERT INTO `nim_blog` (`title`,`content`,`active`,`type`,`pic`) VALUES (?,?,?,?,?) ");
+        $values = array($name,$textarea,$active,$type,$pic); $query->execute($values); $counts = $query->rowCount(); return $counts;}
+
+
+
 
 
     function emailadd($mail)

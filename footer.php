@@ -132,7 +132,7 @@ function addemalkhabar(item)
                                </form>
                                 <div class="social-link justify-content-md-end justify-content-center">
                             <a href="https://instagram.com/Harjachap" class="bi bi-instagram"></a>
-                            <a href="" class="bi bi-whatsapp"></a>
+                            <a href="https://wa.me/982191001702" class="bi bi-whatsapp"></a>
                             
 <div class="footer-desc-item">
                                 <ul class="d-flex justify-content-md-end justify-content-center">

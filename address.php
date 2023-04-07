@@ -6,7 +6,18 @@ include('header.php');
 $student = new ManageStudents();
 $fee = new ManageFees();
 
+if(isset($_GET['delete'])){
 
+	$aid=$_GET['delete'];
+
+	$discountList = $fee->deleteaddruser($aid);
+
+	if($discountList==1){
+
+		echo'<center>آدرس با موفقیت حذف شد</center>';
+	}
+
+}
 
 if(isset($_POST['addr'])){
 	
@@ -398,10 +409,8 @@ foreach($discountList as $discountProp)
 
                                                                         <ul class="dropdown-menu flex-column"
                                                                             aria-labelledby="dropdownMenuLink">
-                                                                            <li><a class="dropdown-item" href="#"><i
-                                                                                        class="bi bi-pencil"></i> ویرایش
-                                                                                </a></li>
-                                                                            <li><a class="dropdown-item" href="#"><i
+                                                                           
+                                                                            <li><a class="dropdown-item" href="address?delete='.$discountProp['aid'].'"><i
                                                                                         class="bi bi-trash text-danger"></i>
                                                                                     حذف </a></li>
                                                                         </ul>
