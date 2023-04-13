@@ -451,7 +451,7 @@ echo'
                                         	<div class="form-group">
                                             <div class="input-group">
                                                 <span class="input-group-text"><i class="bi bi-envelope"></i></span>
-                                                <input type="text" name="up-name" id="up-name" class="form-control" placeholder="نام و نام خانوادگی ">
+                                                <input type="text" name="up-name" id="up-name" required="required" class="form-control" placeholder="نام و نام خانوادگی ">
                                             </div>
                                         </div>
                                         

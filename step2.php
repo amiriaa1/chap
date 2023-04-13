@@ -241,7 +241,7 @@ $ftr_change=number_format($ftr,0,'.',',');
                                                  
                                                 
                                        <select onchange="Myfactor()" id="getway" class="form-select rounded-pill">
-                                                        <option value="sadad">فاکتور رسمی + ۹ ٪ مالیات </option>
+                                                        <option value="sadad">فاکتور رسمی + ۹ ٪   مالیات ارزش افزوده </option>
                                                         <option selected="selected" value="paypack">عادی</option>
                                   
                                                  </select>

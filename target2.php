@@ -130,7 +130,7 @@ if(isset($_POST["ResCode"])){
                         <div class="payment-title">
                             <img src="img/default-icon/iconOk.png" alt="" width="100" class="img-fluid">
                             <h2>سفارش <span class="payment-order-code">'.$unid.'</span> با موفقیت در سیستم ثبت شد</h2>
-                            <p class="text-muted mt-3">سفارش شما در حال پردازش است و  در سریع ترین زمان ممکن به دست شما میرسد</p>
+                            <p class="text-muted mt-3">سفارش شما در حال پردازش می باشد و  در سریع ترین زمان ممکن به دست شما میرسد</p>
                         </div>
                     </div>
                     <div class="category-filter">
@@ -248,7 +248,7 @@ if(isset($_POST["ResCode"])){
                         <div class="payment-title">
                             <img src="img/default-icon/iconNok.jpg" alt="" width="100" class="img-fluid">
                             <h2>سفارش <span class="payment-order-code">'.$unid.'</span> پرداخت ناموفق بود</h2>
-                            <p class="text-muted mt-3">ناچه طی این فرآیند مبلغی از حساب شما کسر شده است ، طی 72 ساعت آینده به حساب شما باز خواهد گشت.</p>
+                            <p class="text-muted mt-3">چنانچه طی این فرآیند مبلغی از حساب شما کسر شده است ، طی 72 ساعت آینده به حساب شما باز خواهد گشت.</p>
                         </div>
                     </div>
                     <div class="category-filter">
@@ -279,7 +279,7 @@ if(isset($_POST["ResCode"])){
                             <tbody>
                                 <tr class="text-center">
                                     <td>1</td>
-                                    <td>  رسمی + ۹ درصد مالیات</td>
+                                    <td>  رسمی + ۹ درصد مالیات ارزش افزوده</td>
                                     <td>'.$reference_code.'</td>
                                   
                                     <td>0 تومان</td>
@@ -299,7 +299,7 @@ if(isset($_POST["ResCode"])){
                             <div class="trm">
                                 <div class="trm-item">فاکتور</div>
                                 <div class="trm-item">
-                                  رسمی + ۹ درصد مالیات
+                                  رسمی + ۹ درصد مالیات ارزش افزوده
                                 </div>
                             </div>
                             <div class="trm">

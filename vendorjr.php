@@ -502,7 +502,7 @@ if ($discountListcount==1){
         $price2= $_REQUEST['price2'];
         $price2_change=number_format( $price2,0,'.',',');
 if ($getway=="sadad"){
-        $convem='مجموع + مالیات';
+        $convem='مجموع + ۹ درصد مالیات ارزش افزوده';
     $convem2='<span class="fw-bold">'.$price2_change.'</span>  <span class="text-muted">تومان</span>';
 
         echo json_encode(array(

@@ -20,7 +20,8 @@ if ($_POST["uusername"]){
       $username2=$_POST["uusername"];
       $ufaname=$_POST["ufaname"];
       $uemail=$_POST["uemail"];
-      $profileedit=$student->Updateuserdataprofile($ufaname,$uemail,$uusername);
+      $nacode=$_POST["nacode"];
+      $profileedit=$student->Updateuserdataprofile($ufaname,$uemail,$nacode,$uusername);
       echo "<script>window.location.href='profile';</script>";
       exit;
   }
@@ -28,8 +29,8 @@ if ($_POST["uusername"]){
       $username2=$_POST["uusername"];
       $ufaname=$_POST["ufaname"];
       $uemail=$_POST["uemail"];
-
-      $profileedit2=$student->Updateuserdataprofile2($ufaname,$uemail, $username2,$uusername);
+      $nacode=$_POST["nacode"];
+      $profileedit2=$student->Updateuserdataprofile2($ufaname,$uemail,$nacode,$username2,$uusername);
       echo "<script>window.location.href='logout';</script>";
       exit;
 
@@ -151,7 +152,11 @@ echo'
                                                                 <input type="text" id="uemail" name="uemail" value="'.$uemail.'">
                                                               
                                                             </td>
-                                                         
+                                                          <td colspan="2">
+                                                                <h6>کد ملی</h6>
+                                                                <input type="text" id="nacode" name="nacode" value="'.$nacode.'">
+                                                              
+                                                            </td>
                                                         
                                                     </table>
                                                     <center>

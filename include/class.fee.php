@@ -145,7 +145,7 @@ function Getproducttanavolist($query) { global $table_prefix;
  { global $table_prefix; $query = $this->link->prepare("SELECT * FROM `nim_product_solutions` WHERE `product_id`=?"); $values = array($id);
  $query->execute($values); $result = $query->fetchAll(); return $result; } 
 
-   ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
@@ -249,18 +249,18 @@ function Getproducttanavolist($query) { global $table_prefix;
 
 
     function Getsol1fromsol($id)
- { global $table_prefix; $query = $this->link->prepare("SELECT sol1,   COUNT(*) AS CNT FROM nim_product_solutions where product_id=? AND active='1' GROUP BY sol1; "); $values = array($id);
+ { global $table_prefix; $query = $this->link->prepare("SELECT sol1,   COUNT(*) AS CNT FROM nim_product_solutions where product_id=? AND active='1' GROUP BY sol1 ORDER BY `nim_product_solutions`.`sid` ASC; "); $values = array($id);
  $query->execute($values);$counts = $query->rowCount(); $result = $query->fetchAll(); return $result; } 
 
    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     function Getsol1fromsol2($idproduct,$soalaval)
- { global $table_prefix; $query = $this->link->prepare("SELECT sol2,sid,fori,no_fori,yero,doro,price_fori_doro,price_fori_yero,price_no_fori_doro,price_no_fori_yero,deliver_time_fori,deliver_time_no_fori,   COUNT(*) AS CNT FROM nim_product_solutions where product_id=? AND sol1=? GROUP BY sol2;"); $values = array($idproduct,$soalaval);
+ { global $table_prefix; $query = $this->link->prepare("SELECT sol2,sid,fori,no_fori,yero,doro,price_fori_doro,price_fori_yero,price_no_fori_doro,price_no_fori_yero,deliver_time_fori,deliver_time_no_fori,   COUNT(*) AS CNT FROM nim_product_solutions where product_id=? AND sol1=? GROUP BY sol2 ORDER BY `nim_product_solutions`.`sid` ASC;"); $values = array($idproduct,$soalaval);
  $query->execute($values);$counts = $query->rowCount(); $result = $query->fetchAll(); return $result; } 
 
    
    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
        function Getsol1fromsol3($idproduct,$soalaval,$soalaval2)
- { global $table_prefix; $query = $this->link->prepare("SELECT sol3,sid,fori,no_fori,yero,doro,price_fori_doro,price_fori_yero,price_no_fori_doro,price_no_fori_yero,deliver_time_fori,deliver_time_no_fori,   COUNT(*) AS CNT FROM nim_product_solutions where product_id=? AND sol1=? AND sol2=? GROUP BY sol3;"); $values = array($idproduct,$soalaval,$soalaval2);
+ { global $table_prefix; $query = $this->link->prepare("SELECT sol3,sid,fori,no_fori,yero,doro,price_fori_doro,price_fori_yero,price_no_fori_doro,price_no_fori_yero,deliver_time_fori,deliver_time_no_fori,   COUNT(*) AS CNT FROM nim_product_solutions where product_id=? AND sol1=? AND sol2=? GROUP BY sol3 ORDER BY `nim_product_solutions`.`sid` ASC;"); $values = array($idproduct,$soalaval,$soalaval2);
  $query->execute($values);$counts = $query->rowCount(); $result = $query->fetchAll(); return $result; } 
 
    

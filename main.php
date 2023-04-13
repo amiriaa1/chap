@@ -96,6 +96,7 @@ if($isLogedIn)
 		$ufaname=$studentProp['ufaname'];
 		
 		$uemail=$studentProp['uemail'];
+    $nacode=$studentProp['nacode'];
 		
 }
 

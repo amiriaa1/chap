@@ -124,6 +124,10 @@ echo'
                                                                 <h6 class="text-muted">شماره تلفن</h6>
                                                                 <p class="fw-bold mt-2">'.$uusername.'</p>
                                                             </td>
+                                                              <td colspan="2">
+                                                                <h6 class="text-muted">کد ملی</h6>
+                                                                <p class="fw-bold mt-2">'.$nacode.'</p>
+                                                            </td>
                                                         </tr>
                                                         <tr>
                                                             <td colspan="2">

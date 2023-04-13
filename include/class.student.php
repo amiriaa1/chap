@@ -37,17 +37,17 @@ function UsetTwoFactorupdate($username)
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
-    function Updateuserdataprofile($ufaname,$uemail,$uusername)
+    function Updateuserdataprofile($ufaname,$uemail,$nacode,$uusername)
     { global $table_prefix;
-        $query = $this->link->prepare("UPDATE `".$table_prefix."users` SET `ufaname`=? , `uemail`=? WHERE `uusername`=?");
-        $values = array($ufaname,$uemail,$uusername); $query->execute($values); $counts = $query->rowCount(); return $counts; }
+        $query = $this->link->prepare("UPDATE `".$table_prefix."users` SET `ufaname`=? , `uemail`=?, `nacode`=? WHERE `uusername`=?");
+        $values = array($ufaname,$uemail,$nacode,$uusername); $query->execute($values); $counts = $query->rowCount(); return $counts; }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///
 ///
-    function Updateuserdataprofile2($ufaname,$uemail, $username2,$uusername)
+    function Updateuserdataprofile2($ufaname,$uemail,$nacode,$username2,$uusername)
     { global $table_prefix;
-        $query = $this->link->prepare("UPDATE `".$table_prefix."users` SET `ufaname`=? , `uemail`=? , `uusername`=? WHERE `uusername`=?");
+        $query = $this->link->prepare("UPDATE `".$table_prefix."users` SET `ufaname`=? , `uemail`=?, `nacode`=? , `uusername`=? WHERE `uusername`=?");
         $values = array($ufaname,$uemail, $username2,$uusername); $query->execute($values); $counts = $query->rowCount(); return $counts; }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
