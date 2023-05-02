@@ -105,7 +105,7 @@ if(isset($_POST["ResCode"])){
 
 
             if ($result->ResCode != -1 && $result->ResCode == 0) {
-                echo'---req zad result>ResCode -1 nabod  result>ResCode sefr bod ---';
+
 
                 $comment="$result->RetrivalRefNo--$result->SystemTraceNo--$result->OrderId--$result->Description--$result->CardHolderFullName";
                 $RefID=$result->SystemTraceNo;
